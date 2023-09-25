@@ -3,14 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SyncDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
