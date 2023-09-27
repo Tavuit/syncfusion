@@ -5,7 +5,9 @@
   [target]="targetElement"
   [buttons]="buttons"
   isModal="true"
+  [visible]="visible"
   showCloseIcon="true"
+  (close)="visibleChange.emit(false)"
   (overlayClick)="onOverlayClick()"
 >
   <ng-template #header>
@@ -27,7 +29,7 @@
 </ejs-dialog>
 
 <ng-template #defaultHeaderTpl>
-  <div>
+  <div class="sync-header">
     {{title}}
   </div>
 </ng-template>
@@ -37,14 +39,5 @@
     <button ejs-button cssClass="e-danger">Danger</button>
   </div>
 </ng-template>
-
-<button
-  class="e-control e-btn"
-  style="position: absolute"
-  id="targetButton"
-  (click)="onOpenDialog($event)"
->
-  Open Dialog
-</button>
 
 <div #container class="root-container"></div>

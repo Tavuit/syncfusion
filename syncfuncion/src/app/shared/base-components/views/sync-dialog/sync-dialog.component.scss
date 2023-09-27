@@ -1,3 +1,26 @@
 :host {
+  .sync-header {
+    color: var(--gray-700);
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    font-weight: 600;
+  }
 
+  .e-dialog {
+    border-radius: 8px;
+    .e-dlg-header-content {
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+    }
+
+    .e-footer-content {
+      padding: 18px;
+      border-bottom-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+  }
 }

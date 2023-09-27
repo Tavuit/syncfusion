@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit, ElementRef, Input, TemplateRef } from '@angular/core';
+import { Component, ViewChild, OnInit, ElementRef, Input, Output, TemplateRef, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DialogComponent, DialogModule } from '@syncfusion/ej2-angular-popups';
 import { EmitType } from '@syncfusion/ej2/base';
@@ -15,6 +15,8 @@ export class SyncDialogComponent implements OnInit {
   @ViewChild('ejDialog') ejDialog: DialogComponent;
   @ViewChild('container', { read: ElementRef, static: true }) container: ElementRef | any;
   @Input() title: string = '';
+  @Input() visible = false;
+  @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() headerTpl?: TemplateRef<void>;
   @Input() footerTpl?: TemplateRef<void>;
 
@@ -39,6 +41,7 @@ export class SyncDialogComponent implements OnInit {
 
   public onOverlayClick: EmitType<object> = () => {
     this.ejDialog.hide();
+    this.visibleChange.emit(false);
   }
 
   public buttons: Object = [
