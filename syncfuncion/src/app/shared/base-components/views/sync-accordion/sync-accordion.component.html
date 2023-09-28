@@ -1,0 +1,12 @@
+<ejs-accordion expandMode='Single'>
+  <e-accordionitems>
+    <e-accordionitem *ngFor="let item of accordionData" [expanded]='item.expanded'>
+      <ng-template #header>
+        <div>{{item.headerText}}</div>
+      </ng-template>
+      <ng-template #content>
+        <div>{{item.contentText}}</div>
+      </ng-template>
+    </e-accordionitem>
+  </e-accordionitems>
+</ejs-accordion>
