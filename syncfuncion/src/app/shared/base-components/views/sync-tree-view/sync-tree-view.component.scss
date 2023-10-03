@@ -1,0 +1,22 @@
+:host {
+  .tree-node {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 5px;
+    height: 40px;
+    min-width: max-content;
+    user-select: none;
+    gap: 5px;
+
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  .e-treeview > .e-ul {
+    margin: 0;
+    padding: 0;
+  }
+}
