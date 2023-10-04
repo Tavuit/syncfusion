@@ -1,13 +1,7 @@
 <ejs-treeview id="tree" [fields]="field">
   <ng-template #nodeTemplate="" let-data="">
     <div class="tree-node">
-      <img
-        class="eimage"
-        src="https://ej2.syncfusion.com/demos/src/treeview/images/employees/{{
-          data.eimg
-        }}.png"
-        alt="{{ data.eimg }}"
-      />
+      <sync-icon-href [iconName]="data.eimg"></sync-icon-href>
       <div class="ename">{{ data.name }}</div>
     </div>
   </ng-template>
