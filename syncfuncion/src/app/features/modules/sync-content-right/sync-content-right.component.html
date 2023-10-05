@@ -3,9 +3,8 @@
     <div class="section-header">
       Models
     </div>
-
     <div class="section-content">
-      <sync-tree-view></sync-tree-view>
+      <sync-tree-view [dataSource]="treeViewData" (clickTreeItem)="handleClickTreeItem($event)"></sync-tree-view>
     </div>
   </div>
 
@@ -13,7 +12,6 @@
     <div class="section-header">
       Task List
     </div>
-
     <div class="section-content">
       <div class="section-options">
         <div class="option">Task Name</div>

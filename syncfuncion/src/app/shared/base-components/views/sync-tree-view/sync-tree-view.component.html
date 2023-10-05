@@ -1,7 +1,7 @@
 <ejs-treeview id="tree" [fields]="field">
   <ng-template #nodeTemplate="" let-data="">
-    <div class="tree-node">
-      <sync-icon-href [iconName]="data.eimg"></sync-icon-href>
+    <div (click)="handleClickTreeItem(data)" class="tree-node">
+      <sync-icon-href [iconName]="data.iconName"></sync-icon-href>
       <div class="ename">{{ data.name }}</div>
     </div>
   </ng-template>
