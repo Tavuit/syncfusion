@@ -120,7 +120,7 @@ export class SyncSymbolPaletteComponent {
   }
   public getSymbolInfo(symbol: any) {
     //Defines the symbol description
-      return { width: 75, height: 40, description: { text: symbol.shape['shape'] } }
+      return { width: 300, height: 75, description: { text: symbol.shape['shape'] } }
     };
 
   ngOnInit(): void {
@@ -130,7 +130,7 @@ export class SyncSymbolPaletteComponent {
         //Sets the id of the palette
         id: 'quickEntities',
         //Sets whether the palette expands/collapse its children
-        expanded: true,
+        expanded: false,
         //Adds the palette items to palette
         symbols: this.getFlowShapes(),
         //Sets the header text of the palette
@@ -139,70 +139,70 @@ export class SyncSymbolPaletteComponent {
       },
       {
         id: 'person',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Person',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'communication',
-        expanded: true,
+        expanded: false,
         symbols: this.getConnectors(),
         title: 'Communication',
         iconCss: 'e-ddb-icons e-connector',
       },
       {
         id: 'application',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Application',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'communicationLink',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Communication Link',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'analysis',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Analysis',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'communicationSignal',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Communication Signal',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'areAndLocation',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Area and Location',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'otherCommunicationElement',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Other Communication Element',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'label',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Label',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'equation',
-        expanded: true,
+        expanded: false,
         symbols: this.getBasicShapes(),
         title: 'Equations',
         iconCss: 'e-ddb-icons e-basic',
