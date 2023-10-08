@@ -2,11 +2,17 @@
   <e-ribbon-tabs>
     <e-ribbon-tab header="Home">
       <e-ribbon-groups>
-        <e-ribbon-group header="Clipboard" id="clipboard" groupIconCss="e-icons e-paste" [showLauncherIcon]=true>
+        <e-ribbon-group header="Clipboard" id="clipboard" groupIconCss="e-icons e-paste" [showLauncherIcon]=false>
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="SplitButton" [allowedSizes]="largeSize" [splitButtonSettings]="pasteSettings">
+                <e-ribbon-item type="Button" [buttonSettings]="copyButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="pasteSettings">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -14,14 +20,33 @@
               <e-ribbon-items>
                 <e-ribbon-item type="Button" [buttonSettings]="cutButton">
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [buttonSettings]="copyButton">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="deleteButton">
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [buttonSettings]="formatButton">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="exportButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
+
+        <e-ribbon-group header="Undo Action">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="undoButton"></e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+
         <e-ribbon-group header="Font" orientation="Row" [enableGroupOverflow]=true [isCollapsible]=false
           groupIconCss="e-icons e-bold" cssClass="font-group">
           <e-ribbon-collections>
@@ -76,7 +101,7 @@
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Illustrations" id="illustration" [showLauncherIcon]=true orientation="Row"
+        <e-ribbon-group header="Illustrations" id="illustration" orientation="Row"
           [enableGroupOverflow]=true>
           <e-ribbon-collections>
             <e-ribbon-collection>

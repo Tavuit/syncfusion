@@ -23,11 +23,6 @@ import {
 export class SyncRibbonComponent {
   public pasteSettings: RibbonSplitButtonSettingsModel = {
     iconCss: 'e-icons e-paste',
-    items: [
-      { text: 'Keep Source Format' },
-      { text: 'Merge format' },
-      { text: 'Keep text only' },
-    ],
     content: 'Paste',
   };
   public tableSettings: RibbonDropDownSettingsModel = {
@@ -44,6 +39,18 @@ export class SyncRibbonComponent {
   public cutButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-cut',
     content: 'Cut',
+  };
+  public deleteButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-cut',
+    content: 'Delete'
+  };
+  public exportButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-cut',
+    content: 'Export'
+  };
+  public undoButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-cut',
+    content: 'Undo'
   };
   public copyButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-copy',
