@@ -1,0 +1,19 @@
+:host ::ng-deep #default {
+  height: 158px;
+
+  .e-content {
+    height: calc(158px - 44px) !important;
+
+    .e-item {
+      height: 100% !important;
+
+      .e-ribbon-tab-item {
+        height: 100% !important;
+
+        .e-ribbon-group {
+          height: 100% !important;
+        }
+      }
+    }
+  }
+}

@@ -47,41 +47,137 @@
           </e-ribbon-collections>
         </e-ribbon-group>
 
-        <e-ribbon-group header="Font" orientation="Row" [enableGroupOverflow]=true [isCollapsible]=false
+        <e-ribbon-group header="Format" orientation="Column" [enableGroupOverflow]=true [isCollapsible]=false
           groupIconCss="e-icons e-bold" cssClass="font-group">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="ComboBox" [comboBoxSettings]="fontstyleSettings">
+                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="alignLeftButton">
                 </e-ribbon-item>
-                <e-ribbon-item type="ComboBox" [comboBoxSettings]="fontsizeSettings">
+                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="boldButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="ColorPicker" [allowedSizes]="smallSize" [displayOptions]='Simplified'
-                  [colorPickerSettings]="colorSettings">
-                </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="boldButton">
+                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="alginCenterButton">
                 </e-ribbon-item>
                 <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="italicButton">
                 </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="alignRightButton">
+                </e-ribbon-item>
                 <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="underlineButton">
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="strikethroughButton">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="ComboBox" [comboBoxSettings]="fontstyleSettings">
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="changecaseButton">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="ComboBox" [comboBoxSettings]="fontsizeSettings">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Editor" [isCollapsible]=false groupIconCss="e-icons e-edit">
+
+        <e-ribbon-group header="Style" [isCollapsible]=false groupIconCss="e-icons e-edit">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="editorButton">
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="fillButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="lineButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="textButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="startButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="endButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+
+        <e-ribbon-group header="Annotation" [isCollapsible]=false groupIconCss="e-icons e-edit">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="pointerButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="text2Button">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="line2Button">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="rectangularButton">
+                </e-ribbon-item>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="curvedLineButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="ellipseButton">
+                </e-ribbon-item>
+                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="ascendantButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+
+        <e-ribbon-group header="Communication Link">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="autoConnectorButton"></e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+
+        <e-ribbon-group header="Node Item">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="SplitButton" [splitButtonSettings]="nodeSplitButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -89,6 +185,7 @@
         </e-ribbon-group>
       </e-ribbon-groups>
     </e-ribbon-tab>
+
     <e-ribbon-tab header="Insert">
       <e-ribbon-groups>
         <e-ribbon-group header="tables" [isCollapsible]="false">
@@ -130,9 +227,13 @@
         </e-ribbon-group>
       </e-ribbon-groups>
     </e-ribbon-tab>
+
     <e-ribbon-tab header="Equations"></e-ribbon-tab>
+
     <e-ribbon-tab header="Edit"></e-ribbon-tab>
+
     <e-ribbon-tab header="Project"></e-ribbon-tab>
+
     <e-ribbon-tab header="View">
       <e-ribbon-groups>
         <e-ribbon-group header="Views" orientation="Row" groupIconCss="e-icons e-print">
@@ -163,7 +264,9 @@
         </e-ribbon-group>
       </e-ribbon-groups>
     </e-ribbon-tab>
+
     <e-ribbon-tab header="Layout"></e-ribbon-tab>
+
     <e-ribbon-tab header="Edit"></e-ribbon-tab>
   </e-ribbon-tabs>
 </ejs-ribbon>

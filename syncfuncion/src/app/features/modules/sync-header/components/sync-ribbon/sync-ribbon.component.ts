@@ -11,6 +11,7 @@ import {
   RibbonColorPickerSettingsModel,
   DisplayMode,
   RibbonAllModule,
+  RibbonGroupButtonSettingsModel,
 } from '@syncfusion/ej2-angular-ribbon';
 
 @Component({
@@ -21,6 +22,14 @@ import {
   styleUrls: ['./sync-ribbon.component.scss']
 })
 export class SyncRibbonComponent {
+  public groupButtonIcon: RibbonGroupButtonSettingsModel = {
+    items: [
+      {iconCss: 'e-icons e-align-left'},
+      {iconCss: 'e-icons e-align-center'},
+      {iconCss: 'e-icons e-align-right'},
+      {iconCss: 'e-icons e-justify'}
+    ]
+  }
   public pasteSettings: RibbonSplitButtonSettingsModel = {
     iconCss: 'e-icons e-paste',
     content: 'Paste',
@@ -63,26 +72,98 @@ export class SyncRibbonComponent {
   public boldButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-bold',
     content: 'Bold',
+    isToggle: true
+  };
+  public alignLeftButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-align-left',
+    content: '',
+  };
+  public alginCenterButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-align-center',
+    content: '',
+  };
+  public alignRightButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-align-right',
+    content: '',
   };
   public italicButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-italic',
     content: 'Italic',
+    isToggle: true
   };
   public underlineButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-underline',
     content: 'Underline',
+    isToggle: true
   };
   public strikethroughButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-strikethrough',
     content: 'Strikethrough',
+    isToggle: true
   };
   public changecaseButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-change-case',
     content: 'Change Case',
   };
-  public editorButton: RibbonButtonSettingsModel = {
+  public fillButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-edit',
-    content: 'Editor',
+    content: 'Fill',
+  };
+  public lineButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Line',
+  };
+  public textButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Text',
+  };
+  public startButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Start',
+  };
+  public endButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'End',
+  };
+  public pointerButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Pointer',
+  };
+  public text2Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Text',
+  };
+  public line2Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Line',
+  };
+  public rectangularButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: '',
+  };
+  public curvedLineButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: '',
+  };
+  public ellipseButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: '',
+  };
+  public ascendantButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: '',
+  };
+  public autoConnectorButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Auto Connector',
+  };
+  public nodeSplitButton: RibbonSplitButtonSettingsModel = {
+    iconCss: 'e-icons e-edit',
+    content: 'Node',
+    items: [
+      { text: 'Add Note at Node' },
+      { text: 'List of Note at Node' }
+    ]
   };
   public chartButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-chart',
@@ -98,53 +179,31 @@ export class SyncRibbonComponent {
   };
 
   public fontSize: string[] = [
-    '8',
-    '9',
-    '10',
-    '11',
-    '12',
-    '14',
-    '16',
-    '18',
-    '20',
-    '22',
-    '24',
-    '26',
-    '28',
-    '36',
-    '48',
-    '72',
-    '96',
+    '1pt',
+    '2pt',
+    '3pt',
+    '4pt',
+    '5pt',
   ];
   public fontStyle: string[] = [
-    'Algerian',
-    'Arial',
-    'Calibri',
-    'Cambria',
-    'Cambria Math',
-    'Courier New',
-    'Candara',
-    'Georgia',
-    'Impact',
-    'Segoe Print',
-    'Segoe Script',
     'Segoe UI',
-    'Symbol',
     'Times New Roman',
-    'Verdana',
-    'Windings',
+    'Arial',
+    'Time New Roman',
+    'Tahoma',
+    'Helvetica',
   ];
 
   public fontstyleSettings: RibbonComboBoxSettingsModel = {
     dataSource: this.fontStyle,
-    index: 3,
-    width: '150px',
+    index: 0,
+    width: '100px',
     allowFiltering: true,
   };
   public fontsizeSettings: RibbonComboBoxSettingsModel = {
     dataSource: this.fontSize,
-    index: 3,
-    width: '65px',
+    index: 0,
+    width: '62px',
     allowFiltering: true,
   };
 
