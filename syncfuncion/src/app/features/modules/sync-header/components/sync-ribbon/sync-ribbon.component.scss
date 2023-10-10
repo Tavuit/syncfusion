@@ -10,10 +10,21 @@
       .e-ribbon-tab-item {
         height: 100% !important;
 
-        .e-ribbon-group {
+        .e-ribbon-group, .e-ribbon-group-container {
           height: 100% !important;
+
+          .e-ribbon-group-content {
+            height: 78% !important;
+          }
         }
       }
     }
   }
+}
+
+.min-w-90 {
+  min-width: 90px !important;
+}
+.min-w-120 {
+  min-width: 120px !important;
 }

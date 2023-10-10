@@ -34,16 +34,6 @@ export class SyncRibbonComponent {
     iconCss: 'e-icons e-paste',
     content: 'Paste',
   };
-  public tableSettings: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
-    content: 'Table',
-    items: [
-      { text: 'Insert Table' },
-      { text: 'This device' },
-      { text: 'Convert Table' },
-      { text: 'Excel SpreadSheet' },
-    ],
-  };
 
   public cutButton: RibbonButtonSettingsModel = {
     iconCss: 'e-icons e-cut',
@@ -230,6 +220,305 @@ export class SyncRibbonComponent {
       { text: 'Save as', iconCss: 'e-icons e-save', id: 'save' },
     ],
     visible: true,
+  };
+
+  // insert tab
+  public containerSettings: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Container ',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public listSettings: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'List',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public pictureButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Picture',
+    cssClass: ''
+  };
+  public fromClipboardButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'From Clipboard',
+    cssClass: 'min-w-90'
+  };
+  public funcButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Function',
+    cssClass: ''
+  };
+  public applicationSettings: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Application',
+    cssClass: ''
+  };
+  public resultButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Result',
+    cssClass: ''
+  };
+  public collectionButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Collection',
+    cssClass: ''
+  };
+  public dictionaryButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Dictionary',
+    cssClass: ''
+  };
+  public areaButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Main Area',
+    cssClass: ''
+  };
+  public funcDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Function',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public wordDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Word',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public applicationDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Application',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public relationshipDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Relationship',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+
+  // Equations tab
+  public bracketDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Bracket',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public decoratorDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Decorator',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public sumProductDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Sum & Products',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public integralDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Integral',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public scriptDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Script',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public factionRadicalDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Fraction & Radical',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public labeledArrowDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Labeled Arrow',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public underbarOverbarDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Underbar & Overbar',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public accentPrimeDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Accent & Prime',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public matrixDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Matrix',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public boxesDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Boxes',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public operatorDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Operator',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public greekCapitalDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Greek Capital',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public greekSmallDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Greek Small',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+  public arrowDropdown: RibbonDropDownSettingsModel = {
+    iconCss: 'e-icons e-table',
+    content: 'Arrow',
+    items: [
+      { text: 'Plain' },
+      { text: 'Classic' },
+      { text: 'Corners' },
+      { text: 'Alternating' },
+      { text: 'Banner' }
+    ]
+  };
+
+  // Edit tab
+  public selectedEntityButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Selected Entity',
+    cssClass: 'min-w-120'
+  };
+  public undoLastActionButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Undo Last Action',
+    cssClass: 'min-w-120'
+  };
+
+  // Domain tab
+  public communicationButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Communication',
+    cssClass: 'min-w-120'
+  };
+  public theoryButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Theory',
+    cssClass: 'min-w-90'
   };
 
   public largeSize: RibbonItemSize = RibbonItemSize.Large;

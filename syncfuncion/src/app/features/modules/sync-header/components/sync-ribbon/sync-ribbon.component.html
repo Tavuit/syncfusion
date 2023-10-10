@@ -188,38 +188,101 @@
 
     <e-ribbon-tab header="Insert">
       <e-ribbon-groups>
-        <e-ribbon-group header="tables" [isCollapsible]="false">
+        <e-ribbon-group header="Diagram Parts" [isCollapsible]="false">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="tableSettings">
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="containerSettings">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="listSettings">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" [buttonSettings]="pictureButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Illustrations" id="illustration" orientation="Row"
-          [enableGroupOverflow]=true>
+        <e-ribbon-group header="" id="illustration" orientation="Row" [enableGroupOverflow]=true>
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" [buttonSettings]="chartButton">
+                <e-ribbon-item [allowedSizes]="largeSize" [buttonSettings]="fromClipboardButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Media" [isCollapsible]="false">
+        <e-ribbon-group header="Container" [isCollapsible]="false">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Template" [itemTemplate]="itemTemplate">
-                  <ng-template #itemTemplate let-data="">
-                    <span class="ribbonTemplate ">
-                      <span class="e-icons e-video"></span>
-                      <span class="text">Video</span>
-                    </span>
-                  </ng-template>
+                <e-ribbon-item type="Button" [buttonSettings]="funcButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="applicationSettings">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="resultButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="collectionButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="dictionaryButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="areaButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Speak Logic">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="funcDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="wordDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="applicationDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="relationshipDropdown">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -228,9 +291,129 @@
       </e-ribbon-groups>
     </e-ribbon-tab>
 
-    <e-ribbon-tab header="Equations"></e-ribbon-tab>
+    <e-ribbon-tab header="Equations">
+      <e-ribbon-groups>
+        <e-ribbon-group header="">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="bracketDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="decoratorDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="sumProductDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="integralDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="scriptDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="factionRadicalDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="labeledArrowDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="underbarOverbarDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="accentPrimeDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="matrixDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="boxesDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="operatorDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="greekCapitalDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="greekSmallDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="arrowDropdown">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+      </e-ribbon-groups>
+    </e-ribbon-tab>
 
-    <e-ribbon-tab header="Edit"></e-ribbon-tab>
+    <e-ribbon-tab header="Edit">
+      <e-ribbon-groups>
+        <e-ribbon-group header="Entity">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="selectedEntityButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Undo Action">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="undoLastActionButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+      </e-ribbon-groups>
+    </e-ribbon-tab>
 
     <e-ribbon-tab header="Project"></e-ribbon-tab>
 
@@ -267,6 +450,36 @@
 
     <e-ribbon-tab header="Layout"></e-ribbon-tab>
 
-    <e-ribbon-tab header="Edit"></e-ribbon-tab>
+    <e-ribbon-tab header="Domain">
+      <e-ribbon-groups>
+        <e-ribbon-group header="Identification">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="communicationButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="theoryButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+      </e-ribbon-groups>
+    </e-ribbon-tab>
   </e-ribbon-tabs>
 </ejs-ribbon>
+
+
+<!-- template ribbon item -->
+<!-- <e-ribbon-item type="Template" [itemTemplate]="itemTemplate">
+  <ng-template #itemTemplate let-data="">
+    <span class="ribbonTemplate ">
+      <span class="e-icons e-video"></span>
+      <span class="text">Video</span>
+    </span>
+  </ng-template>
+</e-ribbon-item> -->
