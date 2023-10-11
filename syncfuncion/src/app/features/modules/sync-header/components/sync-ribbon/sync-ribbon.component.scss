@@ -22,9 +22,22 @@
   }
 }
 
+.min-w-70 {
+  min-width: 70px !important;
+}
 .min-w-90 {
   min-width: 90px !important;
 }
+.min-w-100 {
+  min-width: 100px !important;
+}
 .min-w-120 {
   min-width: 120px !important;
+}
+.min-w-200 {
+  min-width: 200px !important;
+}
+
+.justify-left {
+  justify-content: left;
 }

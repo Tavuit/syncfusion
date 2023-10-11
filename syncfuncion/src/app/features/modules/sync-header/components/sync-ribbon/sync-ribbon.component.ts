@@ -521,6 +521,312 @@ export class SyncRibbonComponent {
     cssClass: 'min-w-90'
   };
 
+  // Project tab
+  public startProjectButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Start Project',
+    cssClass: 'min-w-100'
+  };
+  public configureWarningMsgButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Configure Warning Message',
+    cssClass: 'min-w-120'
+  };
+  public applicationSettingButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Application Setting',
+    cssClass: 'min-w-100'
+  };
+  public captureImgButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Capture Image',
+    cssClass: 'min-w-90'
+  };
+  public editImgButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Edit Image',
+    cssClass: 'min-w-90'
+  };
+  public recordVideoButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Record Video',
+    cssClass: 'min-w-90'
+  };
+  public editVideoButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Edit Video',
+    cssClass: 'min-w-90'
+  };
+  public recordAudioButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Record Audio',
+    cssClass: 'min-w-90'
+  };
+  public settingsButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Settings',
+    cssClass: 'min-w-90'
+  };
+  public simulateButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Simulate',
+    cssClass: 'min-w-70'
+  };
+  public debugButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Debug',
+    cssClass: 'min-w-70'
+  };
+  public stepIntoButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Step Into',
+    cssClass: 'min-w-70'
+  };
+  public abortButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Abort',
+    cssClass: 'min-w-70'
+  };
+  public stopButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Stop',
+    cssClass: 'min-w-70'
+  };
+  public simulationSettingButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Simulation Setting',
+    cssClass: 'min-w-70'
+  };
+  public closeProjectButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Close project',
+    cssClass: 'min-w-120'
+  };
+  public openProjectButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Open Project',
+    cssClass: 'min-w-120'
+  };
+
+  // View tab
+  public subFuncButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Sub Function',
+    cssClass: 'min-w-100'
+  };
+  public subApplicationButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Sub Application',
+    cssClass: 'min-w-120'
+  };
+  public subResultButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Sub Result',
+    cssClass: 'min-w-90'
+  };
+  public fitWindowButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Fit To Window',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public pageWidthButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Page width',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public showTooltipButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Show Tooltip',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public allowCrossButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Allow Cross',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public imgWidthFrameButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Image With Frame',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public rulerButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Ruler',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public gridButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Grid',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public pageBreakButton: RibbonButtonSettingsModel = {
+    iconCss: '',
+    content: 'Page Breaks',
+    cssClass: 'min-w-120 justify-left'
+  };
+  public entityLibraryButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Entity Library',
+    cssClass: 'min-w-100'
+  };
+  public panZoomButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Pan & Zoom',
+    cssClass: 'min-w-100'
+  };
+  public modelViewButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Model View',
+    cssClass: 'min-w-100'
+  };
+  public viewListButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'View List',
+    cssClass: 'min-w-100'
+  };
+  public showHideModelButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Show & Hide Models',
+    cssClass: 'min-w-120'
+  };
+  public showHideConnectionPointButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Show & Hide Connection Points',
+    cssClass: 'min-w-200'
+  };
+
+  // Layout tab
+  public panToolButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Pan tool',
+    cssClass: 'min-w-100'
+  };
+  public arrowLeftButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public arrowRightButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public arrowUpButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public arrowDownButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public align1Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public align2Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public align3Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public align4Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public align5Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public align6Button: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public equalHorizonButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public equalVerticalButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public increaseHorizonButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public increaseVerticalButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public decreaseHorizonButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public decreaseVerticalButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public sameWidthButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Same Width',
+    cssClass: 'min-w-100'
+  };
+  public sameHeightButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Same Height',
+    cssClass: 'min-w-100'
+  };
+  public sameSizeButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Same Size ',
+    cssClass: 'min-w-100'
+  };
+  public snapGridButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public snapRulerButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public snapGuideLineButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: '',
+    cssClass: 'min-w-70'
+  };
+  public modelHorizonButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Model Horizon',
+    cssClass: 'min-w-100'
+  };
+  public modelVerticalButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Model Vertical',
+    cssClass: 'min-w-100'
+  };
+  public sizeToWindowPointButton: RibbonButtonSettingsModel = {
+    iconCss: 'e-icons e-chart',
+    content: 'Size To Window',
+    cssClass: 'min-w-100'
+  };
+
   public largeSize: RibbonItemSize = RibbonItemSize.Large;
   public smallSize: RibbonItemSize = RibbonItemSize.Small;
 

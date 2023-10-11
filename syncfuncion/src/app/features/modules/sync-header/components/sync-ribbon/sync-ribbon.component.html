@@ -415,31 +415,121 @@
       </e-ribbon-groups>
     </e-ribbon-tab>
 
-    <e-ribbon-tab header="Project"></e-ribbon-tab>
-
-    <e-ribbon-tab header="View">
+    <e-ribbon-tab header="Project">
       <e-ribbon-groups>
-        <e-ribbon-group header="Views" orientation="Row" groupIconCss="e-icons e-print">
+        <e-ribbon-group header="Start">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="printButton">
+                <e-ribbon-item type="Button" [buttonSettings]="startProjectButton">
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="webButton">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="configureWarningMsgButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="applicationSettingButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="show" [isCollapsible]=false>
+        <e-ribbon-group header="Video & Image">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="CheckBox" [checkBoxSettings]="ruler">
+                <e-ribbon-item type="Button" [buttonSettings]="captureImgButton">
                 </e-ribbon-item>
-                <e-ribbon-item type="CheckBox" [checkBoxSettings]="grid">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="editImgButton">
                 </e-ribbon-item>
-                <e-ribbon-item type="CheckBox" [checkBoxSettings]="navigation">
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="recordVideoButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="editVideoButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="recordAudioButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="settingsButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Simulation">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="simulateButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="debugButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="stepIntoButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="abortButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="stopButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="simulationSettingButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Finish">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="closeProjectButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="openProjectButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -448,7 +538,232 @@
       </e-ribbon-groups>
     </e-ribbon-tab>
 
-    <e-ribbon-tab header="Layout"></e-ribbon-tab>
+    <e-ribbon-tab header="View">
+      <e-ribbon-groups>
+        <e-ribbon-group header="Open" orientation="Row" groupIconCss="e-icons e-print">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="subFuncButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="subApplicationButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="subResultButton ">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Zoom" orientation="Column" [isCollapsible]=false>
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="fitWindowButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="pageWidthButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Show" orientation="Column" [isCollapsible]=false>
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="showTooltipButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="allowCrossButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="imgWidthFrameButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="rulerButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="gridButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="pageBreakButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Show Entities" [isCollapsible]=false orientation="Row">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="entityLibraryButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="panZoomButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="modelViewButton">
+                </e-ribbon-item>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="viewListButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="" [isCollapsible]=false>
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="showHideModelButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="" [isCollapsible]=false>
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="showHideConnectionPointButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+      </e-ribbon-groups>
+    </e-ribbon-tab>
+
+    <e-ribbon-tab header="Layout">
+      <e-ribbon-groups>
+        <e-ribbon-group header="Nudge and Pan">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="panToolButton"></e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="arrowLeftButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="arrowUpButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="arrowRightButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="arrowDownButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Align" orientation="Column">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="align1Button">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="align2Button">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="align3Button">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="align4Button">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="align5Button">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="align6Button">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Size" orientation="Column">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="equalHorizonButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="equalVerticalButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="increaseHorizonButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="increaseVerticalButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="decreaseHorizonButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="decreaseVerticalButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="" orientation="Column">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="sameWidthButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="sameHeightButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="sameSizeButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Snap" orientation="Column">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="snapGridButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="snapRulerButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="snapGuideLineButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+        <e-ribbon-group header="Center" orientation="Row">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item  type="Button" [buttonSettings]="modelHorizonButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="modelVerticalButton">
+                </e-ribbon-item>
+                <e-ribbon-item  type="Button" [buttonSettings]="sizeToWindowPointButton">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
+        </e-ribbon-group>
+      </e-ribbon-groups>
+    </e-ribbon-tab>
 
     <e-ribbon-tab header="Domain">
       <e-ribbon-groups>
