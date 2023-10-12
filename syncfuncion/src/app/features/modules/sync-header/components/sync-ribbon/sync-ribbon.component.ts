@@ -31,28 +31,29 @@ export class SyncRibbonComponent {
     ]
   }
   public pasteSettings: RibbonSplitButtonSettingsModel = {
-    iconCss: 'e-icons e-paste',
+    iconCss: 'icon icon-paste',
     content: 'Paste',
   };
 
   public cutButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-cut',
+    iconCss: 'icon icon-cut',
     content: 'Cut',
   };
   public deleteButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-cut',
+    iconCss: 'icon icon-delete',
     content: 'Delete'
   };
   public exportButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-cut',
+    iconCss: 'icon icon-clipBoard',
     content: 'Export'
   };
   public undoButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-cut',
-    content: 'Undo'
+    iconCss: 'icon icon-undo1',
+    content: 'Undo',
+    cssClass: 'min-w-70'
   };
   public copyButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-copy',
+    iconCss: 'icon icon-copy',
     content: 'Copy',
   };
   public formatButton: RibbonButtonSettingsModel = {
@@ -96,35 +97,35 @@ export class SyncRibbonComponent {
     content: 'Change Case',
   };
   public fillButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-fill-menu',
     content: 'Fill',
   };
   public lineButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-lineMenu',
     content: 'Line',
   };
   public textButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-text-menu',
     content: 'Text',
   };
   public startButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-start-menu',
     content: 'Start',
   };
   public endButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-end-menu',
     content: 'End',
   };
   public pointerButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-point-menu',
     content: 'Pointer',
   };
   public text2Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-text-menu2',
     content: 'Text',
   };
   public line2Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-line-menu',
     content: 'Line',
   };
   public rectangularButton: RibbonButtonSettingsModel = {
@@ -144,12 +145,14 @@ export class SyncRibbonComponent {
     content: '',
   };
   public autoConnectorButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-autoconnector',
     content: 'Auto Connector',
+    cssClass: 'min-w-90'
   };
   public nodeSplitButton: RibbonSplitButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon icon-node-menu',
     content: 'Node',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Add Note at Node' },
       { text: 'List of Note at Node' }
@@ -195,6 +198,7 @@ export class SyncRibbonComponent {
     index: 0,
     width: '62px',
     allowFiltering: true,
+    cssClass: 'border-1'
   };
 
   public colorSettings: RibbonColorPickerSettingsModel = { value: '#123456' };
@@ -332,7 +336,8 @@ export class SyncRibbonComponent {
 
   // Equations tab
   public bracketDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-brackets',
+    cssClass: 'min-w-70',
     content: 'Bracket',
     items: [
       { text: 'Plain' },
@@ -343,8 +348,9 @@ export class SyncRibbonComponent {
     ]
   };
   public decoratorDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-decoratedEquation',
     content: 'Decorator',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -354,8 +360,9 @@ export class SyncRibbonComponent {
     ]
   };
   public sumProductDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-sumproduct',
     content: 'Sum & Products',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -365,8 +372,9 @@ export class SyncRibbonComponent {
     ]
   };
   public integralDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-integrals',
     content: 'Integral',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -376,8 +384,9 @@ export class SyncRibbonComponent {
     ]
   };
   public scriptDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-script',
     content: 'Script',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -387,8 +396,9 @@ export class SyncRibbonComponent {
     ]
   };
   public factionRadicalDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-divroot',
     content: 'Fraction & Radical',
+    cssClass: 'min-w-100',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -398,8 +408,9 @@ export class SyncRibbonComponent {
     ]
   };
   public labeledArrowDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-arrowEquation',
     content: 'Labeled Arrow',
+    cssClass: 'min-w-90',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -409,8 +420,9 @@ export class SyncRibbonComponent {
     ]
   };
   public underbarOverbarDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-underbar',
     content: 'Underbar & Overbar',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -420,8 +432,9 @@ export class SyncRibbonComponent {
     ]
   };
   public accentPrimeDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-decoratedCharacter',
     content: 'Accent & Prime',
+    cssClass: 'min-w-90',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -431,8 +444,9 @@ export class SyncRibbonComponent {
     ]
   };
   public matrixDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-matrix',
     content: 'Matrix',
+    cssClass: 'min-w-90',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -442,8 +456,9 @@ export class SyncRibbonComponent {
     ]
   };
   public boxesDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-boxes',
     content: 'Boxes',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -453,8 +468,9 @@ export class SyncRibbonComponent {
     ]
   };
   public operatorDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-symbols',
     content: 'Operator',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -464,8 +480,9 @@ export class SyncRibbonComponent {
     ]
   };
   public greekCapitalDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-greekcapital',
     content: 'Greek Capital',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -475,8 +492,9 @@ export class SyncRibbonComponent {
     ]
   };
   public greekSmallDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-greeksmall',
     content: 'Greek Small',
+    cssClass: 'min-w-70',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -486,7 +504,8 @@ export class SyncRibbonComponent {
     ]
   };
   public arrowDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-arrows',
+    cssClass: 'min-w-70',
     content: 'Arrow',
     items: [
       { text: 'Plain' },
@@ -499,128 +518,128 @@ export class SyncRibbonComponent {
 
   // Edit tab
   public selectedEntityButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-selectedentityedit',
     content: 'Selected Entity',
     cssClass: 'min-w-120'
   };
   public undoLastActionButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-undolastactionedit',
     content: 'Undo Last Action',
     cssClass: 'min-w-120'
   };
 
   // Domain tab
   public communicationButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-communicationdomain',
     content: 'Communication',
     cssClass: 'min-w-120'
   };
   public theoryButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-theorydomain',
     content: 'Theory',
     cssClass: 'min-w-90'
   };
 
   // Project tab
   public startProjectButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-startproject1',
     content: 'Start Project',
     cssClass: 'min-w-100'
   };
   public configureWarningMsgButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-error',
     content: 'Configure Warning Message',
     cssClass: 'min-w-120'
   };
   public applicationSettingButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-optionmix1',
     content: 'Application Setting',
     cssClass: 'min-w-100'
   };
   public captureImgButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-captureimageproject',
     content: 'Capture Image',
     cssClass: 'min-w-90'
   };
   public editImgButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-editimageproject',
     content: 'Edit Image',
     cssClass: 'min-w-90'
   };
   public recordVideoButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-reconrdvideoproject1',
     content: 'Record Video',
     cssClass: 'min-w-90'
   };
   public editVideoButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-editvideoproject',
     content: 'Edit Video',
     cssClass: 'min-w-90'
   };
   public recordAudioButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-recordaudioproject1',
     content: 'Record Audio',
     cssClass: 'min-w-90'
   };
   public settingsButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-settingproject1',
     content: 'Settings',
     cssClass: 'min-w-90'
   };
   public simulateButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-simulationproject',
     content: 'Simulate',
     cssClass: 'min-w-70'
   };
   public debugButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-simulationproject',
     content: 'Debug',
     cssClass: 'min-w-70'
   };
   public stepIntoButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-simulationproject',
     content: 'Step Into',
     cssClass: 'min-w-70'
   };
   public abortButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-simulationproject',
     content: 'Abort',
     cssClass: 'min-w-70'
   };
   public stopButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-simulationproject',
     content: 'Stop',
     cssClass: 'min-w-70'
   };
   public simulationSettingButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-settingproject1',
     content: 'Simulation Setting',
     cssClass: 'min-w-70'
   };
   public closeProjectButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-closeproject',
     content: 'Close project',
     cssClass: 'min-w-120'
   };
   public openProjectButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'e-icons',
     content: 'Open Project',
     cssClass: 'min-w-120'
   };
 
   // View tab
   public subFuncButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-subfunction',
     content: 'Sub Function',
     cssClass: 'min-w-100'
   };
   public subApplicationButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-subapplication',
     content: 'Sub Application',
     cssClass: 'min-w-120'
   };
   public subResultButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-subresult',
     content: 'Sub Result',
     cssClass: 'min-w-90'
   };
@@ -665,32 +684,32 @@ export class SyncRibbonComponent {
     cssClass: 'min-w-120 justify-left'
   };
   public entityLibraryButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-entityview',
     content: 'Entity Library',
     cssClass: 'min-w-100'
   };
   public panZoomButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-panzoomview',
     content: 'Pan & Zoom',
     cssClass: 'min-w-100'
   };
   public modelViewButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-modelview',
     content: 'Model View',
     cssClass: 'min-w-100'
   };
   public viewListButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-tasklistview',
     content: 'View List',
     cssClass: 'min-w-100'
   };
   public showHideModelButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-showhidemodelsview',
     content: 'Show & Hide Models',
     cssClass: 'min-w-120'
   };
   public showHideConnectionPointButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-simulationproject',
     content: 'Show & Hide Connection Points',
     cssClass: 'min-w-200'
   };
