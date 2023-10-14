@@ -24,6 +24,13 @@
                 width: 40px;
                 height: 40px;
               }
+              .icon-small {
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+                width: 14px;
+                height: 14px;
+              }
               .icon-copy {
                 background-image: url("/assets/images/clipboardcopy.png");
               }
@@ -183,44 +190,107 @@
               .icon-arrows {
                 background-image: url("/assets/images/arrows.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-container-menu-insert {
+                background-image: url("/assets/images/container-menu-insert.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-list-menu-insert {
+                background-image: url("/assets/images/list-menu-insert.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-picture-menu-insert {
+                background-image: url("/assets/images/picture-menu-insert.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-Function_Icon1 {
+                background-image: url("/assets/images/Function_Icon1.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-Word_Icon1 {
+                background-image: url("/assets/images/Word_Icon1.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-Application_Icon1 {
+                background-image: url("/assets/images/Application_Icon1.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-Relationship_Icon1 {
+                background-image: url("/assets/images/Relationship_Icon1.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-point {
+                background-image: url("/assets/images/point.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-left-arrow {
+                background-image: url("/assets/images/left-arrow.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-right-arrow {
+                background-image: url("/assets/images/right-arrow.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-up-arrow {
+                background-image: url("/assets/images/up-arrow.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-down-arrow {
+                background-image: url("/assets/images/down-arrow.png");
               }
-              .icon-panzoomview {
-                background-image: url("/assets/images/panzoomview.png");
+              .icon-align-left {
+                background-image: url("/assets/images/align-left.png");
+              }
+              .icon-align-right {
+                background-image: url("/assets/images/align-right.png");
+              }
+              .icon-align-center {
+                background-image: url("/assets/images/align-center.png");
+              }
+              .icon-sort-down {
+                background-image: url("/assets/images/sort-down.png");
+              }
+              .icon-top-align {
+                background-image: url("/assets/images/top-align.png");
+              }
+              .icon-align {
+                background-image: url("/assets/images/align.png");
+              }
+              .icon-width {
+                background-image: url("/assets/images/width.png");
+              }
+              .icon-height {
+                background-image: url("/assets/images/height.png");
+              }
+              .icon-size-square {
+                background-image: url("/assets/images/size-square.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }.icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }.icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }
+              .icon-alignment {
+                background-image: url("/assets/images/alignment.png");
+              }.icon-alignment {
+                background-image: url("/assets/images/alignment.png");
               }
 
             }
@@ -236,6 +306,9 @@
   }
 }
 
+.min-w-40 {
+  min-width: 40px !important;
+}
 .min-w-70 {
   min-width: 70px !important;
 }

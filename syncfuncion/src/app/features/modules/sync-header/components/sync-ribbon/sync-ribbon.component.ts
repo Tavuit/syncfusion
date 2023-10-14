@@ -228,7 +228,7 @@ export class SyncRibbonComponent {
 
   // insert tab
   public containerSettings: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-container-menu-insert',
     content: 'Container ',
     items: [
       { text: 'Plain' },
@@ -239,7 +239,7 @@ export class SyncRibbonComponent {
     ]
   };
   public listSettings: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-list-menu-insert',
     content: 'List',
     items: [
       { text: 'Plain' },
@@ -250,47 +250,47 @@ export class SyncRibbonComponent {
     ]
   };
   public pictureButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-picture-menu-insert',
     content: 'Picture',
     cssClass: ''
   };
   public fromClipboardButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-copy',
     content: 'From Clipboard',
     cssClass: 'min-w-90'
   };
   public funcButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-copy',
     content: 'Function',
     cssClass: ''
   };
   public applicationSettings: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-paste',
     content: 'Application',
     cssClass: ''
   };
   public resultButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-paste',
     content: 'Result',
     cssClass: ''
   };
   public collectionButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-copy',
     content: 'Collection',
     cssClass: ''
   };
   public dictionaryButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-paste',
     content: 'Dictionary',
     cssClass: ''
   };
   public areaButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-paste',
     content: 'Main Area',
     cssClass: ''
   };
   public funcDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-Function_Icon1',
     content: 'Function',
     items: [
       { text: 'Plain' },
@@ -301,7 +301,7 @@ export class SyncRibbonComponent {
     ]
   };
   public wordDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-Word_Icon1',
     content: 'Word',
     items: [
       { text: 'Plain' },
@@ -312,7 +312,7 @@ export class SyncRibbonComponent {
     ]
   };
   public applicationDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-Application_Icon1',
     content: 'Application',
     items: [
       { text: 'Plain' },
@@ -323,7 +323,7 @@ export class SyncRibbonComponent {
     ]
   };
   public relationshipDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'e-icons e-table',
+    iconCss: 'icon icon-Relationship_Icon1',
     content: 'Relationship',
     items: [
       { text: 'Plain' },
@@ -716,102 +716,102 @@ export class SyncRibbonComponent {
 
   // Layout tab
   public panToolButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-point',
     content: 'Pan tool',
     cssClass: 'min-w-100'
   };
   public arrowLeftButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-left-arrow',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public arrowRightButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-right-arrow',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public arrowUpButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-up-arrow',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public arrowDownButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-down-arrow',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public align1Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-align-right',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public align2Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-sort-down',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public align3Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-align-center',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public align4Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-align',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public align5Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-align-left',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public align6Button: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-top-align',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public equalHorizonButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-width',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public equalVerticalButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-height',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public increaseHorizonButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-width',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public increaseVerticalButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-height',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public decreaseHorizonButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-width',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public decreaseVerticalButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-height',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-40'
   };
   public sameWidthButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-width',
     content: 'Same Width',
     cssClass: 'min-w-100'
   };
   public sameHeightButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-height',
     content: 'Same Height',
     cssClass: 'min-w-100'
   };
   public sameSizeButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-size-square',
     content: 'Same Size ',
     cssClass: 'min-w-100'
   };
