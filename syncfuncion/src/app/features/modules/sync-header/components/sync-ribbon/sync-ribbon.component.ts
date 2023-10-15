@@ -129,19 +129,19 @@ export class SyncRibbonComponent {
     content: 'Line',
   };
   public rectangularButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon-small icon-minus',
     content: '',
   };
   public curvedLineButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon-small icon-ease',
     content: '',
   };
   public ellipseButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon-small icon-ellipse',
     content: '',
   };
   public ascendantButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-edit',
+    iconCss: 'icon-small icon-line-chart',
     content: '',
   };
   public autoConnectorButton: RibbonButtonSettingsModel = {
@@ -336,7 +336,7 @@ export class SyncRibbonComponent {
 
   // Equations tab
   public bracketDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-brackets',
+    iconCss: 'icon-medium icon-brackets',
     cssClass: 'min-w-70',
     content: 'Bracket',
     items: [
@@ -348,7 +348,7 @@ export class SyncRibbonComponent {
     ]
   };
   public decoratorDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-decoratedEquation',
+    iconCss: 'icon-medium icon-decoratedEquation',
     content: 'Decorator',
     cssClass: 'min-w-70',
     items: [
@@ -360,9 +360,9 @@ export class SyncRibbonComponent {
     ]
   };
   public sumProductDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-sumproduct',
+    iconCss: 'icon-medium icon-sumproduct',
     content: 'Sum & Products',
-    cssClass: 'min-w-70',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -372,7 +372,7 @@ export class SyncRibbonComponent {
     ]
   };
   public integralDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-integrals',
+    iconCss: 'icon-medium icon-integrals',
     content: 'Integral',
     cssClass: 'min-w-70',
     items: [
@@ -384,7 +384,7 @@ export class SyncRibbonComponent {
     ]
   };
   public scriptDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-script',
+    iconCss: 'icon-medium icon-script',
     content: 'Script',
     cssClass: 'min-w-70',
     items: [
@@ -396,9 +396,9 @@ export class SyncRibbonComponent {
     ]
   };
   public factionRadicalDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-divroot',
+    iconCss: 'icon-medium icon-divroot',
     content: 'Fraction & Radical',
-    cssClass: 'min-w-100',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -408,9 +408,9 @@ export class SyncRibbonComponent {
     ]
   };
   public labeledArrowDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-arrowEquation',
+    iconCss: 'icon-medium icon-arrowEquation',
     content: 'Labeled Arrow',
-    cssClass: 'min-w-90',
+    cssClass: 'min-w-100',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -420,7 +420,7 @@ export class SyncRibbonComponent {
     ]
   };
   public underbarOverbarDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-underbar',
+    iconCss: 'icon-medium icon-underbar',
     content: 'Underbar & Overbar',
     cssClass: 'min-w-120',
     items: [
@@ -432,9 +432,9 @@ export class SyncRibbonComponent {
     ]
   };
   public accentPrimeDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-decoratedCharacter',
+    iconCss: 'icon-medium icon-decoratedCharacter',
     content: 'Accent & Prime',
-    cssClass: 'min-w-90',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -444,9 +444,9 @@ export class SyncRibbonComponent {
     ]
   };
   public matrixDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-matrix',
+    iconCss: 'icon-medium icon-matrix',
     content: 'Matrix',
-    cssClass: 'min-w-90',
+    cssClass: 'min-w-100',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -456,9 +456,9 @@ export class SyncRibbonComponent {
     ]
   };
   public boxesDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-boxes',
+    iconCss: 'icon-medium icon-boxes',
     content: 'Boxes',
-    cssClass: 'min-w-70',
+    cssClass: 'min-w-100',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -468,9 +468,9 @@ export class SyncRibbonComponent {
     ]
   };
   public operatorDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-symbols',
+    iconCss: 'icon-medium icon-symbols',
     content: 'Operator',
-    cssClass: 'min-w-70',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -480,9 +480,9 @@ export class SyncRibbonComponent {
     ]
   };
   public greekCapitalDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-greekcapital',
+    iconCss: 'icon-medium icon-greekcapital',
     content: 'Greek Capital',
-    cssClass: 'min-w-70',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -492,9 +492,9 @@ export class SyncRibbonComponent {
     ]
   };
   public greekSmallDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-greeksmall',
+    iconCss: 'icon-medium icon-greeksmall',
     content: 'Greek Small',
-    cssClass: 'min-w-70',
+    cssClass: 'min-w-120',
     items: [
       { text: 'Plain' },
       { text: 'Classic' },
@@ -504,8 +504,8 @@ export class SyncRibbonComponent {
     ]
   };
   public arrowDropdown: RibbonDropDownSettingsModel = {
-    iconCss: 'icon icon-arrows',
-    cssClass: 'min-w-70',
+    iconCss: 'icon-medium icon-arrows',
+    cssClass: 'min-w-120',
     content: 'Arrow',
     items: [
       { text: 'Plain' },
@@ -813,35 +813,35 @@ export class SyncRibbonComponent {
   public sameSizeButton: RibbonButtonSettingsModel = {
     iconCss: 'icon-small icon-size-square',
     content: 'Same Size ',
-    cssClass: 'min-w-100'
+    cssClass: 'min-w-100 flex-row-center'
   };
   public snapGridButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-grid',
     content: '',
     cssClass: 'min-w-70'
   };
   public snapRulerButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-axis',
     content: '',
     cssClass: 'min-w-70'
   };
   public snapGuideLineButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon-small icon-length',
     content: '',
-    cssClass: 'min-w-70'
+    cssClass: 'min-w-70 length-setting'
   };
   public modelHorizonButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-left-alignment',
     content: 'Model Horizon',
     cssClass: 'min-w-100'
   };
   public modelVerticalButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-top-align',
     content: 'Model Vertical',
     cssClass: 'min-w-100'
   };
   public sizeToWindowPointButton: RibbonButtonSettingsModel = {
-    iconCss: 'e-icons e-chart',
+    iconCss: 'icon icon-program',
     content: 'Size To Window',
     cssClass: 'min-w-100'
   };
