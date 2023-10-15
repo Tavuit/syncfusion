@@ -1,6 +1,12 @@
 :host ::ng-deep #default {
   height: 158px;
-
+  #default_filemenu {
+    background-color: var(--green-600);
+    color: var(--white);
+    &:hover {
+      color: var(--white);
+    }
+  }
   .e-content {
     height: calc(158px - 44px) !important;
 
