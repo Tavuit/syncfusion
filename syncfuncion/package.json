@@ -22,6 +22,7 @@
     "@syncfusion/ej2-angular-buttons": "^23.1.36",
     "@syncfusion/ej2-angular-diagrams": "^23.1.38",
     "@syncfusion/ej2-angular-grids": "^23.1.36",
+    "@syncfusion/ej2-angular-lists": "^23.1.36",
     "@syncfusion/ej2-angular-navigations": "^23.1.36",
     "@syncfusion/ej2-angular-popups": "^23.1.36",
     "@syncfusion/ej2-angular-ribbon": "^23.1.36",

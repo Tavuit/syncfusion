@@ -798,3 +798,56 @@
     </span>
   </ng-template>
 </e-ribbon-item> -->
+
+<ejs-listview id='container-dropdown' [dataSource]='containerDropdownData' headerTitle='' cssClass='container-dropdown-wrapper' [showHeader]='false'>
+  <ng-template #template let-data="">
+    <div class="container-dropdown-item">
+      <img [src]="data.img" alt="img">
+      <span>{{data.text}}</span>
+    </div>
+  </ng-template>
+</ejs-listview>
+
+<div id="list-dropdown">
+  <div *ngFor="let item of listDropdownData" class="group">
+    <div class="group-title">
+      {{item.group}}
+    </div>
+    <div class="group-content">
+      <div class="group-content-item" *ngFor="let data of item.items">
+        <img [src]="data.img" alt="img">
+        <span>{{data.text}}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="function-dropdown">
+  <div *ngFor="let item of functionDropdownData" class="function-dropdown-item">
+    <img [src]="item.img" alt="img">
+  </div>
+</div>
+
+<div id="word-dropdown">
+  <div *ngFor="let item of wordDropdownData" class="function-dropdown-item">
+    <img [src]="item.img" alt="img">
+  </div>
+</div>
+
+<div id="application-dropdown">
+  <div *ngFor="let item of applicationDropdownData" class="function-dropdown-item">
+    <img [src]="item.img" alt="img">
+  </div>
+</div>
+
+<div id="relationship-dropdown">
+  <div *ngFor="let item of relationshipDropdownData" class="function-dropdown-item">
+    <img [src]="item.img" alt="img">
+  </div>
+</div>
+
+<div id="boxes-dropdown">
+  <div *ngFor="let item of boxesDropdownData" class="function-dropdown-item">
+    <img [src]="item.img" alt="img">
+  </div>
+</div>

@@ -361,3 +361,75 @@
 .length-setting {
   padding: 7px !important;
 }
+
+::ng-deep {
+  ejs-listview {
+    .e-list-parent {
+      display: flex;
+      align-items: center;
+      .e-list-item {
+        height: 100% !important;
+      }
+    }
+  }
+}
+
+// Dropdown CSS
+.container-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--gray-300);
+
+  .container-dropdown-item {
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+#function-dropdown, #word-dropdown, #application-dropdown, #relationship-dropdown, #boxes-dropdown {
+  padding: 12px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+
+  .function-dropdown-item {
+    padding: 18px;
+    &:hover {
+      cursor: pointer;
+      background: var(--blue-400);
+    }
+  }
+}
+
+#list-dropdown {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gray-300);
+
+  .group {
+    display: flex;
+    flex-direction: column;
+    &-title {
+      background: var(--blue-100);
+      padding: 8px;
+      margin: 12px 0;
+    }
+    &-content {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      &-item {
+        &:hover {
+          background: var(--blue-400);
+          cursor: pointer;
+        }
+        padding: 18px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+    }
+  }
+}

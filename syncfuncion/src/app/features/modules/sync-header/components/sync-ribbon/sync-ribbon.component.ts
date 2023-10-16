@@ -13,11 +13,12 @@ import {
   RibbonAllModule,
   RibbonGroupButtonSettingsModel,
 } from '@syncfusion/ej2-angular-ribbon';
+import { ListViewAllModule } from '@syncfusion/ej2-angular-lists';
 
 @Component({
   selector: 'sync-ribbon',
   standalone: true,
-  imports: [CommonModule, RibbonAllModule],
+  imports: [CommonModule, RibbonAllModule, ListViewAllModule],
   templateUrl: './sync-ribbon.component.html',
   styleUrls: ['./sync-ribbon.component.scss'],
 })
@@ -251,25 +252,112 @@ export class SyncRibbonComponent {
   public containerSettings: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-container-menu-insert',
     content: 'Container ',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#container-dropdown'
   };
+  public containerDropdownData = [
+    {
+      id: '1',
+      text: 'Plain',
+      img: '/assets/images/plainsubmenucontainerinsert.png'
+    },
+    {
+      id: '2',
+      text: 'Classic',
+      img: '/assets/images/classicsubmenucontainerinsert.png'
+    },
+    {
+      id: '3',
+      text: 'Corners',
+      img: '/assets/images/cornerssubmenucontainerinsert.png'
+    },
+    {
+      id: '4',
+      text: 'Alternating',
+      img: '/assets/images/alternatingsubmenucontainerinsert.png'
+    },
+    {
+      id: '5',
+      text: 'Banner',
+      img: '/assets/images/bannersubmenucontainerinsert.png'
+    }
+  ]
   public listSettings: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-list-menu-insert',
     content: 'List',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#list-dropdown'
   };
+  public listDropdownData = [
+    {
+      group: 'Vertical',
+      items: [
+        {
+          id: 'list1',
+          text: 'Plain',
+          img: '/assets/images/plainsubmenucontainerinsert.png',
+          group: 'Vertical'
+        },
+        {
+          id: 'list2',
+          text: 'Classic',
+          img: '/assets/images/classicsubmenucontainerinsert.png',
+          group: 'Vertical'
+        },
+        {
+          id: 'list3',
+          text: 'Corners',
+          img: '/assets/images/cornerssubmenucontainerinsert.png',
+          group: 'Vertical'
+        },
+        {
+          id: 'list4',
+          text: 'Alternating',
+          img: '/assets/images/alternatingsubmenucontainerinsert.png',
+          group: 'Vertical'
+        },
+        {
+          id: 'list5',
+          text: 'Banner',
+          img: '/assets/images/bannersubmenucontainerinsert.png',
+          group: 'Vertical'
+        }
+      ]
+    },
+    {
+      group: 'Horizontal',
+      items: [
+        {
+          id: 'list6',
+          text: 'Plain',
+          img: '/assets/images/plainsubmenucontainerinsert.png',
+          group: 'Horizontal'
+        },
+        {
+          id: 'list7',
+          text: 'Classic',
+          img: '/assets/images/classicsubmenucontainerinsert.png',
+          group: 'VertHorizontalical'
+        },
+        {
+          id: 'list8',
+          text: 'Corners',
+          img: '/assets/images/cornerssubmenucontainerinsert.png',
+          group: 'Horizontal'
+        },
+        {
+          id: 'list0',
+          text: 'Alternating',
+          img: '/assets/images/alternatingsubmenucontainerinsert.png',
+          group: 'Horizontal'
+        },
+        {
+          id: 'list10',
+          text: 'Banner',
+          img: '/assets/images/bannersubmenucontainerinsert.png',
+          group: 'Horizontal'
+        }
+      ]
+    }
+  ];
   public pictureButton: RibbonButtonSettingsModel = {
     iconCss: 'icon icon-picture-menu-insert',
     content: 'Picture',
@@ -313,47 +401,203 @@ export class SyncRibbonComponent {
   public funcDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Function_Icon1',
     content: 'Function',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#function-dropdown'
   };
+  public functionDropdownData = [
+    {
+      id: 'func1',
+      img: '/assets/images/function_1.png'
+    },
+    {
+      id: 'func2',
+      img: '/assets/images/function_2.png'
+    },
+    {
+      id: 'func3',
+      img: '/assets/images/function_3.png'
+    },
+    {
+      id: 'func4',
+      img: '/assets/images/function_4.png'
+    },
+    {
+      id: 'func5',
+      img: '/assets/images/function_5.png'
+    },
+    {
+      id: 'func6',
+      img: '/assets/images/function_6.png'
+    },
+    {
+      id: 'func7',
+      img: '/assets/images/function_7.png'
+    },
+    {
+      id: 'func8',
+      img: '/assets/images/function_8.png'
+    },
+    {
+      id: 'func9',
+      img: '/assets/images/function_9.png'
+    },
+    {
+      id: 'func10',
+      img: '/assets/images/function_10.png'
+    },
+    {
+      id: 'func11',
+      img: '/assets/images/function_11.png'
+    },
+    {
+      id: 'func12',
+      img: '/assets/images/function_12.png'
+    },
+    {
+      id: 'func13',
+      img: '/assets/images/function_13.png'
+    },
+    {
+      id: 'func14',
+      img: '/assets/images/function_14.png'
+    }
+  ];
   public wordDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Word_Icon1',
     content: 'Word',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#word-dropdown'
   };
+  public wordDropdownData = [
+    {
+      id: 'word1',
+      img: '/assets/images/word_1.png'
+    },
+    {
+      id: 'word2',
+      img: '/assets/images/word_2.png'
+    },
+    {
+      id: 'word3',
+      img: '/assets/images/word_3.png'
+    },
+    {
+      id: 'word4',
+      img: '/assets/images/word_4.png'
+    },
+    {
+      id: 'word5',
+      img: '/assets/images/word_5.png'
+    },
+    {
+      id: 'word6',
+      img: '/assets/images/word_6.png'
+    },
+    {
+      id: 'word7',
+      img: '/assets/images/word_7.png'
+    },
+    {
+      id: 'word8',
+      img: '/assets/images/word_8.png'
+    },
+    {
+      id: 'word9',
+      img: '/assets/images/word_9.png'
+    },
+    {
+      id: 'word',
+      img: '/assets/images/word_10.png'
+    },
+    {
+      id: 'word11',
+      img: '/assets/images/word_11.png'
+    },
+    {
+      id: 'word12',
+      img: '/assets/images/word_12.png'
+    },
+    {
+      id: 'word13',
+      img: '/assets/images/word_13.png'
+    }
+  ];
   public applicationDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Application_Icon1',
     content: 'Application',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#application-dropdown'
   };
+  public applicationDropdownData = [
+    {
+      id: 'appl1',
+      img: '/assets/images/Application_1.png'
+    },
+    {
+      id: 'appl2',
+      img: '/assets/images/Application_2.png'
+    },
+    {
+      id: 'appl3',
+      img: '/assets/images/Application_3.png'
+    },
+    {
+      id: 'appl4',
+      img: '/assets/images/Application_4.png'
+    },
+    {
+      id: 'appl5',
+      img: '/assets/images/Application_5.png'
+    },
+    {
+      id: 'appl6',
+      img: '/assets/images/Application_6.png'
+    }
+  ];
   public relationshipDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Relationship_Icon1',
     content: 'Relationship',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#relationship-dropdown'
   };
+  public relationshipDropdownData = [
+    {
+      id: 'rela1',
+      img: '/assets/images/Relationship_1.png'
+    },
+    {
+      id: 'rela2',
+      img: '/assets/images/Relationship_2.png'
+    },
+    {
+      id: 'rela3',
+      img: '/assets/images/Relationship_3.png'
+    },
+    {
+      id: 'rela4',
+      img: '/assets/images/Relationship_4.png'
+    },
+    {
+      id: 'rela5',
+      img: '/assets/images/Relationship_5.png'
+    },
+    {
+      id: 'rela6',
+      img: '/assets/images/Relationship_6.png'
+    },
+    {
+      id: 'rela7',
+      img: '/assets/images/Relationship_7.png'
+    },
+    {
+      id: 'rela8',
+      img: '/assets/images/Relationship_8.png'
+    },
+    {
+      id: 'rela9',
+      img: '/assets/images/Relationship_9.png'
+    },
+    {
+      id: 'rela10',
+      img: '/assets/images/Relationship_10.png'
+    }
+  ];
 
   // Equations tab
   public bracketDropdown: RibbonDropDownSettingsModel = {
@@ -480,14 +724,30 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-boxes',
     content: 'Boxes',
     cssClass: 'min-w-100',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#boxes-dropdown'
   };
+  public boxesDropdownData = [
+    {
+      id: 'boxes_1',
+      img: '/assets/images/all.png'
+    },
+    {
+      id: 'boxes_2',
+      img: '/assets/images/leftBottom.png'
+    },
+    {
+      id: 'boxes_3',
+      img: 'assets/images/leftTop.png'
+    },
+    {
+      id: 'boxes_4',
+      img: '/assets/images/rightBottom.png'
+    },
+    {
+      id: 'boxes_5',
+      img: '/assets/images/rightTop.png'
+    }
+  ]
   public operatorDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-symbols',
     content: 'Operator',
