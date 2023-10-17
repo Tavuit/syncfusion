@@ -616,26 +616,206 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-decoratedEquation',
     content: 'Decorator',
     cssClass: 'min-w-70',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#decorator-dropdown'
   };
+  public decoratorDropdownData = [
+    {
+      id: 'decorator_1',
+      img: '/assets/images/equation/bottomBar.png'
+    },
+    {
+      id: 'decorator_2',
+      img: '/assets/images/equation/bottomDoubleArrow.png'
+    },
+    {
+      id: 'decorator_3',
+      img: '/assets/images/equation/bottomDoubleBar.png'
+    },
+    {
+      id: 'decorator_4',
+      img: '/assets/images/equation/bottomLeftArrow.png'
+    },
+    {
+      id: 'decorator_5',
+      img: '/assets/images/equation/bottomLeftHalfArrow.png'
+    },
+    {
+      id: 'decorator_6',
+      img: '/assets/images/equation/bottomRightArrow.png'
+    },
+    {
+      id: 'decorator_7',
+      img: '/assets/images/equation/bottomRightHalfArrow.png'
+    },
+    {
+      id: 'decorator_8',
+      img: '/assets/images/equation/cross.png'
+    },
+    {
+      id: 'decorator_9',
+      img: '/assets/images/equation/hat.png'
+    },
+    {
+      id: 'decorator_10',
+      img: '/assets/images/equation/leftCross.png'
+    },
+    {
+      id: 'decorator_11',
+      img: '/assets/images/equation/parenthesis.png'
+    },
+    {
+      id: 'decorator_12',
+      img: '/assets/images/equation/rightCross.png'
+    },
+    {
+      id: 'decorator_13',
+      img: '/assets/images/equation/strikeThrough.png'
+    },
+    {
+      id: 'decorator_14',
+      img: '/assets/images/equation/tilde.png'
+    },
+    {
+      id: 'decorator_15',
+      img: '/assets/images/equation/topBar.png'
+    },
+    {
+      id: 'decorator_16',
+      img: '/assets/images/equation/topDoubleArrow.png'
+    },
+    {
+      id: 'decorator_17',
+      img: '/assets/images/equation/topDoubleBar.png'
+    },
+    {
+      id: 'decorator_18',
+      img: '/assets/images/equation/topLeftArrow.png'
+    },
+    {
+      id: 'decorator_19',
+      img: '/assets/images/equation/topLeftHalfArrow.png'
+    },
+    {
+      id: 'decorator_20',
+      img: '/assets/images/equation/topRightArrow.png'
+    },
+    {
+      id: 'decorator_21',
+      img: '/assets/images/equation/topRightHalfArrow.png'
+    },
+    {
+      id: 'decorator_22',
+      img: '/assets/images/equation/tortoise.png'
+    }
+  ];
   public sumProductDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-sumproduct',
     content: 'Sum & Products',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#sum-dropdown'
   };
+  public sumDropdownData = [
+    {
+      id: 'sum_1',
+      img: '/assets/images/sumsProducts/coProduct.png'
+    },
+    {
+      id: 'sum_2',
+      img: '/assets/images/sumsProducts/coProductBottom.png'
+    },
+    {
+      id: 'sum_3',
+      img: '/assets/images/sumsProducts/coProductBottomTop.png'
+    },
+    {
+      id: 'sum_4',
+      img: '/assets/images/sumsProducts/coProductSub.png'
+    },
+    {
+      id: 'sum_5',
+      img: '/assets/images/sumsProducts/coProductSubSuper.png'
+    },
+    {
+      id: 'sum_6',
+      img: '/assets/images/sumsProducts/intersection.png'
+    },
+    {
+      id: 'sum_7',
+      img: '/assets/images/sumsProducts/intersectionBottom.png'
+    },
+    {
+      id: 'sum_8',
+      img: '/assets/images/sumsProducts/intersectionBottomTop.png'
+    },
+    {
+      id: 'sum_9',
+      img: '/assets/images/sumsProducts/intersectionSub.png'
+    },
+    {
+      id: 'sum_10',
+      img: '/assets/images/sumsProducts/intersectionSubSuper.png'
+    },
+    {
+      id: 'sum_11',
+      img: '/assets/images/sumsProducts/product.png'
+    },
+    {
+      id: 'sum_12',
+      img: '/assets/images/sumsProducts/productBottom.png'
+    },
+    {
+      id: 'sum_13',
+      img: '/assets/images/sumsProducts/ProductBottomTop.png'
+    },
+    {
+      id: 'sum_14',
+      img: '/assets/images/sumsProducts/productSub.png'
+    },
+    {
+      id: 'sum_15',
+      img: '/assets/images/sumsProducts/productSubSuper.png'
+    },
+    {
+      id: 'sum_16',
+      img: '/assets/images/sumsProducts/sum.png'
+    },
+    {
+      id: 'sum_17',
+      img: '/assets/images/sumsProducts/sumBottom.png'
+    },
+    {
+      id: 'sum_18',
+      img: '/assets/images/sumsProducts/sumBottomTop.png'
+    },
+    {
+      id: 'sum_19',
+      img: '/assets/images/sumsProducts/sumSub.png'
+    },
+    {
+      id: 'sum_20',
+      img: '/assets/images/sumsProducts/sumSubSuper.png'
+    },
+    {
+      id: 'sum_21',
+      img: '/assets/images/sumsProducts/union.png'
+    },
+    {
+      id: 'sum_22',
+      img: '/assets/images/sumsProducts/unionBottom.png'
+    },
+    {
+      id: 'sum_23',
+      img: '/assets/images/sumsProducts/unionBottomTop.png'
+    },
+    {
+      id: 'sum_24',
+      img: '/assets/images/sumsProducts/unionSub.png'
+    },
+    {
+      id: 'sum_25',
+      img: '/assets/images/sumsProducts/unionSubSuper.png'
+    }
+  ];
   public integralDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-integrals',
     content: 'Integral',
@@ -652,50 +832,262 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-script',
     content: 'Script',
     cssClass: 'min-w-70',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#script-dropdown'
   };
+  public scriptDropdownData = [
+    {
+      id: 'script_1',
+      img: '/assets/images/Sub.png'
+    },
+    {
+      id: 'script2',
+      img: '/assets/images/SubLeft.png'
+    },
+    {
+      id: 'script_3',
+      img: '/assets/images/SubSuper.png'
+    },
+    {
+      id: 'script_4',
+      img: '/assets/images/SubSuperLeft.png'
+    },
+    {
+      id: 'script_5',
+      img: '/assets/images/Super.png'
+    },
+    {
+      id: 'script_6',
+      img: '/assets/images/SuperLeft.png'
+    }
+  ]
   public factionRadicalDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-divroot',
     content: 'Fraction & Radical',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#frac-dropdown'
   };
+  public fracDropdownData = [
+    {
+      id: 'frac_1',
+      img: '/assets/images/Div.png'
+    },
+    {
+      id: 'frac_2',
+      img: '/assets/images/DivDoubleBar.png'
+    },
+    {
+      id: 'frac_3',
+      img: '/assets/images/DivHoriz.png'
+    },
+    {
+      id: 'frac_4',
+      img: '/assets/images/DivMath.png'
+    },
+    {
+      id: 'frac_5',
+      img: '/assets/images/DivMathInverted.png'
+    },
+    {
+      id: 'frac_6',
+      img: '/assets/images/DivMathInvertedWithBottom.png'
+    },
+    {
+      id: 'frac_7',
+      img: '/assets/images/DivMathWithTop.png'
+    },
+    {
+      id: 'frac_8',
+      img: '/assets/images/DivSlant.png'
+    },
+    {
+      id: 'frac_9',
+      img: '/assets/images/DivTriangleExpanding.png'
+    },
+    {
+      id: 'frac_10',
+      img: '/assets/images/DivTriangleFixed.png'
+    },
+    {
+      id: 'frac_11',
+      img: '/assets/images/DivTripleBar.png'
+    },
+    {
+      id: 'frac_12',
+      img: '/assets/images/nRoot.png'
+    },
+    {
+      id: 'frac_13',
+      img: '/assets/images/SmallDiv.png'
+    },
+    {
+      id: 'frac_14',
+      img: '/assets/images/SmallDivHoriz.png'
+    },
+    {
+      id: 'frac_15',
+      img: '/assets/images/SmallDivSlant.png'
+    },
+    {
+      id: 'frac_16',
+      img: '/assets/images/SqRoot.png'
+    }
+  ];
   public labeledArrowDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-arrowEquation',
     content: 'Labeled Arrow',
     cssClass: 'min-w-100',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#arrow-dropdown'
   };
+  public arrowDropdownData = [
+    {
+      id: 'arrow_1',
+      img: '/assets/images/arrow/DoubleBottom.png'
+    },
+    {
+      id: 'arrow_2',
+      img: '/assets/images/arrow/DoubleBottomTop.png'
+    },
+    {
+      id: 'arrow_3',
+      img: '/assets/images/arrow/DoubleTop.png'
+    },
+    {
+      id: 'arrow_4',
+      img: '/assets/images/arrow/LeftBottom.png'
+    },
+    {
+      id: 'arrow_5',
+      img: '/assets/images/arrow/LeftBottomTop.png'
+    },
+    {
+      id: 'arrow_6',
+      img: '/assets/images/arrow/LeftTop.png'
+    },
+    {
+      id: 'arrow_7',
+      img: '/assets/images/arrow/RightBottom.png'
+    },
+    {
+      id: 'arrow_8',
+      img: '/assets/images/arrow/RightBottomTop.png'
+    },
+    {
+      id: 'arrow_9',
+      img: '/assets/images/arrow/RightLeftBottom.png'
+    },
+    {
+      id: 'arrow_10',
+      img: '/assets/images/arrow/RightLeftBottomTop.png'
+    },
+    {
+      id: 'arrow_11',
+      img: '/assets/images/arrow/RightLeftHarpBottom.png'
+    },
+    {
+      id: 'arrow_12',
+      img: '/assets/images/arrow/RightLeftHarpBottomTop.png'
+    },
+    {
+      id: 'arrow_13',
+      img: '/assets/images/arrow/RightLeftHarpTop.png'
+    },
+    {
+      id: 'arrow_14',
+      img: '/assets/images/arrow/RightLeftTop.png'
+    },
+    {
+      id: 'arrow_15',
+      img: '/assets/images/arrow/RightSmallLeftBottom.png'
+    },
+    {
+      id: 'arrow_16',
+      img: '/assets/images/arrow/RightSmallLeftBottomTop.png'
+    },
+    {
+      id: 'arrow_17',
+      img: '/assets/images/arrow/RightSmallLeftHarpBottom.png'
+    },
+    {
+      id: 'arrow_18',
+      img: '/assets/images/arrow/RightSmallLeftHarpBottomTop.png'
+    },
+    {
+      id: 'arrow_19',
+      img: '/assets/images/arrow/RightSmallLeftHarpTop.png'
+    },
+    {
+      id: 'frac_20',
+      img: '/assets/images/arrow/RightSmallLeftTop.png'
+    },
+    {
+      id: 'arrow_21',
+      img: '/assets/images/arrow/RightTop.png'
+    },
+    {
+      id: 'arrow_22',
+      img: '/assets/images/arrow/SmallRightLeftBottom.png'
+    },
+    {
+      id: 'arrow_23',
+      img: '/assets/images/arrow/SmallRightLeftHarpBottom.png'
+    },
+    {
+      id: 'arrow_24',
+      img: '/assets/images/arrow/SmallRightLeftHarpBottomTop.png'
+    },
+    {
+      id: 'arrow_25',
+      img: '/assets/images/arrow/SmallRightLeftHarpTop.png'
+    },
+    {
+      id: 'arrow_26',
+      img: '/assets/images/arrow/SmallRightLeftTop.png'
+    }
+  ];
   public underbarOverbarDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-underbar',
     content: 'Underbar & Overbar',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#bar-dropdown'
   };
+  public barDropdownData = [
+    {
+      id: 'bar_1',
+      img: '/assets/images/BigBottom.png'
+    },
+    {
+      id: 'bar_2',
+      img: '/assets/images/BigBottomTop.png'
+    },
+    {
+      id: 'bar_3',
+      img: 'assets/images/BigSub.png'
+    },
+    {
+      id: 'bar_4',
+      img: '/assets/images/BigSubSuper.png'
+    },
+    {
+      id: 'bar_5',
+      img: '/assets/images/BigSuper.png'
+    },
+    {
+      id: 'bar_6',
+      img: '/assets/images/BigTop.png'
+    },
+    {
+      id: 'bar_7',
+      img: '/assets/images/CompositeBottom.png'
+    },
+    {
+      id: 'bar_8',
+      img: '/assets/images/CompositeBottomTop.png'
+    },
+    {
+      id: 'bar_9',
+      img: '/assets/images/CompositeTop.png'
+    }
+  ]
   public accentPrimeDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-decoratedCharacter',
     content: 'Accent & Prime',
@@ -712,14 +1104,46 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-matrix',
     content: 'Matrix',
     cssClass: 'min-w-100',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#matrix-dropdown'
   };
+  public matrixDropdownData = [
+    {
+      id: 'matrix_1',
+      img: '/assets/images/2cellColumn.png'
+    },
+    {
+      id: 'matrix_2',
+      img: '/assets/images/2cellRow.png'
+    },
+    {
+      id: 'matrix_3',
+      img: 'assets/images/2Square.png'
+    },
+    {
+      id: 'matrix_4',
+      img: '/assets/images/3cellColumn.png'
+    },
+    {
+      id: 'matrix_5',
+      img: '/assets/images/3cellRow.png'
+    },
+    {
+      id: 'matrix_6',
+      img: '/assets/images/3Square.png'
+    },
+    {
+      id: 'matrix_7',
+      img: '/assets/images/column.png'
+    },
+    {
+      id: 'matrix_8',
+      img: '/assets/images/custom.png'
+    },
+    {
+      id: 'matrix_9',
+      img: '/assets/images/row.png'
+    }
+  ];
   public boxesDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-boxes',
     content: 'Boxes',
@@ -764,26 +1188,214 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-greekcapital',
     content: 'Greek Capital',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#greek-capital-dropdown'
   };
+  public greekCapitalDropdownData = [
+    {
+      id: 'cap_1',
+      text: 'A'
+    },
+    {
+      id: 'cap_2',
+      text: 'B'
+    },
+    {
+      id: 'cap_3',
+      text: 'Γ'
+    },
+    {
+      id: 'cap_4',
+      text: 'Δ'
+    },
+    {
+      id: 'cap_5',
+      text: 'Ε'
+    },
+    {
+      id: 'cap_6',
+      text: 'Z'
+    },
+    {
+      id: 'cap_7',
+      text: 'H'
+    },
+    {
+      id: 'cap_8',
+      text: 'Θ'
+    },
+    {
+      id: 'cap_9',
+      text: 'I'
+    },
+    {
+      id: 'cap_10',
+      text: 'K'
+    },
+    {
+      id: 'cap_11',
+      text: 'Λ'
+    },
+    {
+      id: 'cap_12',
+      text: 'M'
+    },
+    {
+      id: 'cap_13',
+      text: 'N'
+    },
+    {
+      id: 'cap_14',
+      text: 'Ξ'
+    },
+    {
+      id: 'cap_15',
+      text: 'Ο'
+    },
+    {
+      id: 'cap_16',
+      text: 'Π'
+    },
+    {
+      id: 'cap_17',
+      text: 'P'
+    },
+    {
+      id: 'cap_18',
+      text: 'Σ'
+    },
+    {
+      id: 'cap_19',
+      text: 'T'
+    },
+    {
+      id: 'cap_20',
+      text: 'Y'
+    },
+    {
+      id: 'cap_21',
+      text: 'Φ'
+    },
+    {
+      id: 'cap_22',
+      text: 'X'
+    },
+    {
+      id: 'cap_23',
+      text: 'Ψ'
+    },
+    {
+      id: 'cap_24',
+      text: 'Ω'
+    }
+  ];
   public greekSmallDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-greeksmall',
     content: 'Greek Small',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#greek-small-dropdown'
   };
+  public greekSmallDropdownData = [
+    {
+      id: 'small_1',
+      text: 'α'
+    },
+    {
+      id: 'small_2',
+      text: 'β'
+    },
+    {
+      id: 'small_3',
+      text: 'γ'
+    },
+    {
+      id: 'small_4',
+      text: 'δ'
+    },
+    {
+      id: 'small_5',
+      text: 'ε'
+    },
+    {
+      id: 'small_6',
+      text: 'ζ'
+    },
+    {
+      id: 'small_7',
+      text: 'η'
+    },
+    {
+      id: 'small_8',
+      text: 'θ'
+    },
+    {
+      id: 'small_9',
+      text: 'ι'
+    },
+    {
+      id: 'small_10',
+      text: 'κ'
+    },
+    {
+      id: 'small_11',
+      text: 'λ'
+    },
+    {
+      id: 'small_12',
+      text: 'μ'
+    },
+    {
+      id: 'small_13',
+      text: 'ν'
+    },
+    {
+      id: 'small_14',
+      text: 'ξ'
+    },
+    {
+      id: 'small_15',
+      text: 'ο'
+    },
+    {
+      id: 'small_16',
+      text: 'π'
+    },
+    {
+      id: 'small_17',
+      text: 'ρ'
+    },
+    {
+      id: 'small_18',
+      text: 'ς'
+    },
+    {
+      id: 'small_19',
+      text: 'σ'
+    },
+    {
+      id: 'small_20',
+      text: 'τ'
+    },
+    {
+      id: 'small_21',
+      text: 'υ'
+    },
+    {
+      id: 'small_22',
+      text: 'φ'
+    },
+    {
+      id: 'small_23',
+      text: 'χ'
+    },
+    {
+      id: 'small_24',
+      text: 'ψ'
+    },
+    {
+      id: 'small_25',
+      text: 'ω'
+    }
+  ];
   public arrowDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-arrows',
     cssClass: 'min-w-120',

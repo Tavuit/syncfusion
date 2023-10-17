@@ -1,12 +1,15 @@
 :host ::ng-deep #default {
   height: 158px;
+
   #default_filemenu {
     background-color: var(--green-600);
     color: var(--white);
+
     &:hover {
       color: var(--white);
     }
   }
+
   .e-content {
     height: calc(158px - 44px) !important;
 
@@ -16,7 +19,8 @@
       .e-ribbon-tab-item {
         height: 100% !important;
 
-        .e-ribbon-group, .e-ribbon-group-container {
+        .e-ribbon-group,
+        .e-ribbon-group-container {
           height: 100% !important;
 
           .e-ribbon-group-content {
@@ -30,6 +34,7 @@
                 width: 40px;
                 height: 40px;
               }
+
               .icon-small {
                 background-size: contain;
                 background-position: center center;
@@ -37,6 +42,7 @@
                 width: 14px;
                 height: 14px;
               }
+
               .icon-large {
                 background-size: contain;
                 background-position: center center;
@@ -44,6 +50,7 @@
                 width: 120px;
                 height: 120px;
               }
+
               .icon-medium {
                 background-size: contain;
                 background-position: center center;
@@ -51,264 +58,353 @@
                 width: 70px;
                 height: 70px;
               }
+
               .icon-copy {
                 background-image: url("/assets/images/clipboardcopy.png");
               }
+
               .icon-paste {
                 background-image: url("/assets/images/icon-paste1.jpg");
               }
+
               .icon-cut {
                 background-image: url("/assets/images/ClipboardCut.png");
               }
+
               .icon-delete {
                 background-image: url("/assets/images/clipboardelete.png");
               }
+
               .icon-clipBoard {
                 background-image: url("/assets/icons/copy-to-clipboard.svg");
               }
+
               .icon-undo1 {
                 background-image: url("/assets/images/undo1.png");
               }
+
               .icon-fill-menu {
                 background-image: url("/assets/images/fill-menu.png");
               }
+
               .icon-lineMenu {
                 background-image: url("/assets/icons/linemenu.svg");
               }
+
               .icon-text-menu {
                 background-image: url("/assets/icons/text-menu.svg");
               }
+
               .icon-start-menu {
                 background-image: url("/assets/icons/start-menu.svg");
               }
+
               .icon-end-menu {
                 background-image: url("/assets/icons/end-menu.svg");
               }
+
               .icon-point-menu {
                 background-image: url("/assets/icons/point-menu.svg");
               }
+
               .icon-text-menu2 {
                 background-image: url("/assets/icons/text-menu2.svg");
               }
+
               .icon-line-menu {
                 background-image: url("/assets/icons/line-menu.svg");
               }
+
               .icon-autoconnector {
                 background-image: url("/assets/icons/autoconnector.svg");
               }
+
               .icon-node-menu {
                 background-image: url("/assets/icons/node-menu.svg");
               }
+
               .icon-selectedentityedit {
                 background-image: url("/assets/images/selectedentityedit.png");
               }
+
               .icon-undolastactionedit {
                 background-image: url("/assets/images/undolastactionedit.png");
               }
+
               .icon-theorydomain {
                 background-image: url("/assets/images/theorydomain.png");
               }
+
               .icon-communicationdomain {
                 background-image: url("/assets/images/communicationdomain.png");
               }
+
               .icon-error {
                 background-image: url("/assets/images/error.png");
               }
+
               .icon-optionmix1 {
                 background-image: url("/assets/images/optionmix1.png");
               }
+
               .icon-captureimageproject {
                 background-image: url("/assets/images/captureimageproject.png");
               }
+
               .icon-editimageproject {
                 background-image: url("/assets/images/editimageproject.png");
               }
+
               .icon-editvideoproject {
                 background-image: url("/assets/images/editvideoproject.png");
               }
+
               .icon-recordaudioproject1 {
                 background-image: url("/assets/images/recordaudioproject1.png");
               }
+
               .icon-settingproject1 {
                 background-image: url("/assets/images/settingproject1.png");
               }
+
               .icon-startproject1 {
                 background-image: url("/assets/images/startproject1.png");
               }
+
               .icon-simulationproject {
                 background-image: url("/assets/images/simulationproject.png");
               }
+
               .icon-closeproject {
                 background-image: url("/assets/images/closeproject.png");
               }
+
               .icon-subfunction {
                 background-image: url("/assets/images/subfunction.png");
               }
+
               .icon-subapplication {
                 background-image: url("/assets/images/subapplication.png");
               }
+
               .icon-subresult {
                 background-image: url("/assets/images/subresult.png");
               }
+
               .icon-entityview {
                 background-image: url("/assets/images/entityview.png");
               }
+
               .icon-panzoomview {
                 background-image: url("/assets/images/panzoomview.png");
               }
+
               .icon-modelview {
                 background-image: url("/assets/images/modelview.png");
               }
+
               .icon-tasklistview {
                 background-image: url("/assets/images/tasklistview.png");
               }
+
               .icon-showhidemodelsview {
                 background-image: url("/assets/images/showhidemodelsview.png");
               }
+
               .icon-brackets {
                 background-image: url("/assets/images/brackets.png");
               }
+
               .icon-decoratedEquation {
                 background-image: url("/assets/images/decoratedEquation.png");
               }
+
               .icon-sumproduct {
                 background-image: url("/assets/images/sumproduct.png");
               }
+
               .icon-integrals {
                 background-image: url("/assets/images/integrals.png");
               }
+
               .icon-script {
                 background-image: url("/assets/images/script.png");
               }
+
               .icon-divroot {
                 background-image: url("/assets/images/divroot.png");
               }
+
               .icon-arrowEquation {
                 background-image: url("/assets/images/arrowEquation.png");
               }
+
               .icon-underbar {
                 background-image: url("/assets/images/underbar.png");
               }
+
               .icon-decoratedCharacter {
                 background-image: url("/assets/images/decoratedCharacter.png");
               }
+
               .icon-matrix {
                 background-image: url("/assets/images/matrix.png");
               }
+
               .icon-boxes {
                 background-image: url("/assets/images/boxes.png");
               }
+
               .icon-symbols {
                 background-image: url("/assets/images/symbols.png");
               }
+
               .icon-greekcapital {
                 background-image: url("/assets/images/greekcapital.png");
               }
+
               .icon-greeksmall {
                 background-image: url("/assets/images/greeksmall.png");
               }
+
               .icon-arrows {
                 background-image: url("/assets/images/arrows.png");
               }
+
               .icon-container-menu-insert {
                 background-image: url("/assets/images/container-menu-insert.png");
               }
+
               .icon-list-menu-insert {
                 background-image: url("/assets/images/list-menu-insert.png");
               }
+
               .icon-picture-menu-insert {
                 background-image: url("/assets/images/picture-menu-insert.png");
               }
+
               .icon-Function_Icon1 {
                 background-image: url("/assets/images/Function_Icon1.png");
               }
+
               .icon-Word_Icon1 {
                 background-image: url("/assets/images/Word_Icon1.png");
               }
+
               .icon-Application_Icon1 {
                 background-image: url("/assets/images/Application_Icon1.png");
               }
+
               .icon-Relationship_Icon1 {
                 background-image: url("/assets/images/Relationship_Icon1.png");
               }
+
               .icon-point {
                 background-image: url("/assets/images/point.png");
               }
+
               .icon-left-arrow {
                 background-image: url("/assets/images/left-arrow.png");
               }
+
               .icon-right-arrow {
                 background-image: url("/assets/images/right-arrow.png");
               }
+
               .icon-up-arrow {
                 background-image: url("/assets/images/up-arrow.png");
               }
+
               .icon-down-arrow {
                 background-image: url("/assets/images/down-arrow.png");
               }
+
               .icon-align-left {
                 background-image: url("/assets/images/align-left.png");
               }
+
               .icon-align-right {
                 background-image: url("/assets/images/align-right.png");
               }
+
               .icon-align-center {
                 background-image: url("/assets/images/align-center.png");
               }
+
               .icon-sort-down {
                 background-image: url("/assets/images/sort-down.png");
               }
+
               .icon-top-align {
                 background-image: url("/assets/images/top-align.png");
               }
+
               .icon-align {
                 background-image: url("/assets/images/align.png");
               }
+
               .icon-width {
                 background-image: url("/assets/images/width.png");
               }
+
               .icon-height {
                 background-image: url("/assets/images/height.png");
               }
+
               .icon-size-square {
                 background-image: url("/assets/images/size-square.png");
               }
+
               .icon-grid {
                 background-image: url("/assets/images/grid.png");
               }
+
               .icon-axis {
                 background-image: url("/assets/images/axis.png");
-              }.icon-length {
+              }
+
+              .icon-length {
                 background-image: url("/assets/images/length.png");
               }
+
               .icon-left-alignment {
                 background-image: url("/assets/images/left-alignment.png");
               }
+
               .icon-program {
                 background-image: url("/assets/images/program.png");
               }
+
               .icon-reconrdvideoproject1 {
                 background-image: url("/assets/images/reconrdvideoproject1.png");
               }
+
               .icon-minus {
                 background-image: url("/assets/images/minus.png");
               }
+
               .icon-ease {
                 background-image: url("/assets/images/ease.png");
               }
+
               .icon-ellipse {
                 transform: rotate(90deg);
                 background-image: url("/assets/images/ellipse.png");
               }
+
               .icon-line-chart {
                 background-image: url("/assets/images/line-chart.png");
               }
+
               .icon-alignment {
                 background-image: url("/assets/images/alignment.png");
               }
+
               .icon-alignment {
                 background-image: url("/assets/images/alignment.png");
-              }.icon-alignment {
+              }
+
+              .icon-alignment {
                 background-image: url("/assets/images/alignment.png");
               }
 
@@ -328,18 +424,23 @@
 .min-w-40 {
   min-width: 40px !important;
 }
+
 .min-w-70 {
   min-width: 70px !important;
 }
+
 .min-w-90 {
   min-width: 90px !important;
 }
+
 .min-w-100 {
   min-width: 100px !important;
 }
+
 .min-w-120 {
   min-width: 120px !important;
 }
+
 .min-w-200 {
   min-width: 200px !important;
 }
@@ -349,7 +450,7 @@
 }
 
 .border-1 {
-  border: 1px solid black ;
+  border: 1px solid black;
 }
 
 .flex-row-center {
@@ -367,6 +468,7 @@
     .e-list-parent {
       display: flex;
       align-items: center;
+
       .e-list-item {
         height: 100% !important;
       }
@@ -389,13 +491,27 @@
   }
 }
 
-#function-dropdown, #word-dropdown, #application-dropdown, #relationship-dropdown, #boxes-dropdown {
+#function-dropdown,
+#word-dropdown,
+#application-dropdown,
+#relationship-dropdown,
+#boxes-dropdown,
+#greek-capital-dropdown,
+#greek-small-dropdown,
+#script-dropdown,
+#matrix-dropdown,
+#bar-dropdown,
+#frac-dropdown,
+#arrow-dropdown,
+#decorator-dropdown,
+#sum-dropdown {
   padding: 12px;
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto;
 
   .function-dropdown-item {
     padding: 18px;
+
     &:hover {
       cursor: pointer;
       background: var(--blue-400);
@@ -411,20 +527,24 @@
   .group {
     display: flex;
     flex-direction: column;
+
     &-title {
       background: var(--blue-100);
       padding: 8px;
       margin: 12px 0;
     }
+
     &-content {
       display: flex;
       align-items: center;
       padding: 12px;
+
       &-item {
         &:hover {
           background: var(--blue-400);
           cursor: pointer;
         }
+
         padding: 18px;
         display: flex;
         align-items: center;
