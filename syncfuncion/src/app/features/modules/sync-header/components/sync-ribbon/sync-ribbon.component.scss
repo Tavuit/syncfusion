@@ -504,7 +504,10 @@
 #frac-dropdown,
 #arrow-dropdown,
 #decorator-dropdown,
-#sum-dropdown {
+#sum-dropdown,
+#bracket-dropdown,
+#integral-dropdown,
+#accent-dropdown {
   padding: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;

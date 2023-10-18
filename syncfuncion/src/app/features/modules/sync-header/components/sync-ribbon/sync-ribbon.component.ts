@@ -604,14 +604,154 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-brackets',
     cssClass: 'min-w-70',
     content: 'Bracket',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#bracket-dropdown'
   };
+  public bracketDropdownData = [
+    {
+      id: 'accent_1',
+      img: '/assets/images/brackets/AngleBar.png'
+    },
+    {
+      id: 'accent_2',
+      img: '/assets/images/brackets/BarAngle.png'
+    },
+    {
+      id: 'accent_3',
+      img: '/assets/images/brackets/BottomCurlyBracket.png'
+    },
+    {
+      id: 'accent_4',
+      img: '/assets/images/brackets/BottomSquareBracket.png'
+    },
+    {
+      id: 'bracket_5',
+      img: '/assets/images/brackets/Ceiling.png'
+    },
+    {
+      id: 'bracket_6',
+      img: '/assets/images/brackets/CurlyBracket.png'
+    },
+    {
+      id: 'bracket_7',
+      img: '/assets/images/brackets/DoubleArrowBarBracket.png'
+    },
+    {
+      id: 'bracket_8',
+      img: '/assets/images/brackets/DoubleBar.png'
+    },
+    {
+      id: 'bracket_9',
+      img: '/assets/images/brackets/Floor.png'
+    },
+    {
+      id: 'bracket_10',
+      img: '/assets/images/brackets/LeftAngle.png'
+    },
+    {
+      id: 'bracket_11',
+      img: '/assets/images/brackets/LeftBar.png'
+    },
+    {
+      id: 'bracket_12',
+      img: '/assets/images/brackets/LeftCurlyBracket.png'
+    },
+    {
+      id: 'bracket_13',
+      img: '/assets/images/brackets/LeftDoubleBar.png'
+    },
+    {
+      id: 'bracket_14',
+      img: '/assets/images/brackets/LeftLeftSquareBracket.png'
+    },
+    {
+      id: 'bracket_15',
+      img: '/assets/images/brackets/LeftParenthesis.png'
+    },
+    {
+      id: 'bracket_16',
+      img: '/assets/images/brackets/LeftSquareBar.png'
+    },
+    {
+      id: 'bracket_17',
+      img: '/assets/images/brackets/LeftSquareBracket.png'
+    },
+    {
+      id: 'bracket_18',
+      img: '/assets/images/brackets/Parentheses.png'
+    },
+    {
+      id: 'bracket_19',
+      img: '/assets/images/brackets/ParenthesisSquare.png'
+    },
+    {
+      id: 'frac_20',
+      img: '/assets/images/brackets/PointingAngles.png'
+    },
+    {
+      id: 'bracket_21',
+      img: '/assets/images/brackets/RightAngle.png'
+    },
+    {
+      id: 'bracket_22',
+      img: '/assets/images/brackets/RightBar.png'
+    },
+    {
+      id: 'bracket_23',
+      img: '/assets/images/brackets/RightCurlyBracket.png'
+    },
+    {
+      id: 'bracket_24',
+      img: '/assets/images/brackets/RightDoubleBar.png'
+    },
+    {
+      id: 'bracket_25',
+      img: '/assets/images/brackets/RightLeftSquareBracket.png'
+    },
+    {
+      id: 'bracket_26',
+      img: '/assets/images/brackets/RightParenthesis.png'
+    },
+    {
+      id: 'bracket_27',
+      img: '/assets/images/brackets/RightRightSquareBracket.png'
+    },
+    {
+      id: 'bracket_28',
+      img: '/assets/images/brackets/RightSquareBar.png'
+    },
+    {
+      id: 'bracket_29',
+      img: '/assets/images/brackets/RightSquareBracket.png'
+    },
+    {
+      id: 'bracket_30',
+      img: '/assets/images/brackets/SingleBar.png'
+    },
+    {
+      id: 'bracket_31',
+      img: '/assets/images/brackets/SquareBar.png'
+    },
+    {
+      id: 'bracket_32',
+      img: '/assets/images/brackets/SquareBracket.png'
+    },
+    {
+      id: 'bracket_33',
+      img: '/assets/images/brackets/SquareParenthesesBracket.png'
+    },
+    {
+      id: 'bracket_34',
+      img: '/assets/images/brackets/SquareParenthesis.png'
+    },
+    {
+      id: 'bracket_35',
+      img: '/assets/images/brackets/TopCurlyBracket.png'
+    },
+    {
+      id: 'bracket_36',
+      img: '/assets/images/brackets/TopSquareBracket.png'
+    }
+  ];
   public decoratorDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-decoratedEquation',
     content: 'Decorator',
@@ -820,14 +960,130 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-integrals',
     content: 'Integral',
     cssClass: 'min-w-70',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#integral-dropdown'
   };
+  public integralDropdownData = [
+    {
+      id: 'integral_1',
+      img: '/assets/images/integrals/Single/Bottom.png'
+    },
+    {
+      id: 'integral_2',
+      img: '/assets/images/integrals/Single/BottomTop.png'
+    },
+    {
+      id: 'integral_3',
+      img: '/assets/images/integrals/Single/Simple.png'
+    },
+    {
+      id: 'integral_4',
+      img: '/assets/images/integrals/Single/Sub.png'
+    },
+    {
+      id: 'integral_5',
+      img: '/assets/images/integrals/Single/SubSuper.png'
+    },
+    {
+      id: 'integral_6',
+      img: '/assets/images/integrals/Double/Bottom.png'
+    },
+    {
+      id: 'integral_7',
+      img: '/assets/images/integrals/Double/BottomTop.png'
+    },
+    {
+      id: 'integral_8',
+      img: '/assets/images/integrals/Double/Simple.png'
+    },
+    {
+      id: 'integral_9',
+      img: '/assets/images/integrals/Double/Sub.png'
+    },
+    {
+      id: 'integral_10',
+      img: '/assets/images/integrals/Double/SubSuper.png'
+    },
+    {
+      id: 'integral_11',
+      img: '/assets/images/integrals/Triple/Bottom.png'
+    },
+    {
+      id: 'integral_12',
+      img: '/assets/images/integrals/Triple/BottomTop.png'
+    },
+    {
+      id: 'integral_13',
+      img: '/assets/images/integrals/Triple/Simple.png'
+    },
+    {
+      id: 'integral_14',
+      img: '/assets/images/integrals/Triple/Sub.png'
+    },
+    {
+      id: 'integral_15',
+      img: '/assets/images/integrals/Triple/SubSuper.png'
+    },
+    {
+      id: 'integral_16',
+      img: '/assets/images/integrals/Clock/Bottom.png'
+    },
+    {
+      id: 'integral_17',
+      img: '/assets/images/integrals/Clock/BottomTop.png'
+    },
+    {
+      id: 'integral_18',
+      img: '/assets/images/integrals/Clock/Simple.png'
+    },
+    {
+      id: 'integral_19',
+      img: '/assets/images/integrals/Clock/Sub.png'
+    },
+    {
+      id: 'integral_20',
+      img: '/assets/images/integrals/Clock/SubSuper.png'
+    },
+    {
+      id: 'integral_21',
+      img: '/assets/images/integrals/Surface/Bottom.png'
+    },
+    {
+      id: 'integral_22',
+      img: '/assets/images/integrals/Surface/BottomTop.png'
+    },
+    {
+      id: 'integral_23',
+      img: '/assets/images/integrals/Surface/Simple.png'
+    },
+    {
+      id: 'integral_24',
+      img: '/assets/images/integrals/Surface/Sub.png'
+    },
+    {
+      id: 'integral_25',
+      img: '/assets/images/integrals/Surface/SubSuper.png'
+    },
+    {
+      id: 'integral_26',
+      img: '/assets/images/integrals/volume/Bottom.png'
+    },
+    {
+      id: 'integral_27',
+      img: '/assets/images/integrals/volume/BottomTop.png'
+    },
+    {
+      id: 'integral_28',
+      img: '/assets/images/integrals/volume/Simple.png'
+    },
+    {
+      id: 'integral_29',
+      img: '/assets/images/integrals/volume/Sub.png'
+    },
+    {
+      id: 'integral_30',
+      img: '/assets/images/integrals/volume/SubSuper.png'
+    }
+  ];
   public scriptDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-script',
     content: 'Script',
@@ -1092,14 +1348,198 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-decoratedCharacter',
     content: 'Accent & Prime',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#accent-dropdown'
   };
+  public accentDropdownData = [
+    {
+      id: 'accent_1',
+      img: '/assets/images/character/AcuteAccent.png'
+    },
+    {
+      id: 'accent_2',
+      img: '/assets/images/character/BottomBar.png'
+    },
+    {
+      id: 'accent_3',
+      img: '/assets/images/character/BottomBreve.png'
+    },
+    {
+      id: 'accent_4',
+      img: '/assets/images/character/BottomDDot.png'
+    },
+    {
+      id: 'accent_5',
+      img: '/assets/images/character/BottomDot.png'
+    },
+    {
+      id: 'accent_6',
+      img: '/assets/images/character/BottomDoubleArrow.png'
+    },
+    {
+      id: 'accent_7',
+      img: '/assets/images/character/BottomFourDot.png'
+    },
+    {
+      id: 'accent_8',
+      img: '/assets/images/character/BottomInvertedBreve.png'
+    },
+    {
+      id: 'accent_9',
+      img: '/assets/images/character/BottomLeftArrow.png'
+    },
+    {
+      id: 'accent_10',
+      img: '/assets/images/character/BottomLeftHarpoon.png'
+    },
+    {
+      id: 'accent_11',
+      img: '/assets/images/character/BottomRightArrow.png'
+    },
+    {
+      id: 'accent_12',
+      img: '/assets/images/character/BottomRightHarpoon.png'
+    },
+    {
+      id: 'accent_13',
+      img: '/assets/images/character/BottomTDot.png'
+    },
+    {
+      id: 'accent_14',
+      img: '/assets/images/character/BottomTilde.png'
+    },
+    {
+      id: 'accent_15',
+      img: '/assets/images/character/Cross.png'
+    },
+    {
+      id: 'accent_16',
+      img: '/assets/images/character/DoublePrime.png'
+    },
+    {
+      id: 'accent_17',
+      img: '/assets/images/character/DoubleStrikeThrough.png'
+    },
+    {
+      id: 'accent_18',
+      img: '/assets/images/character/GraveAccent.png'
+    },
+    {
+      id: 'accent_19',
+      img: '/assets/images/character/LeftCross.png'
+    },
+    {
+      id: 'accent_20',
+      img: '/assets/images/character/LeftUprightCross.png'
+    },
+    {
+      id: 'accent_21',
+      img: '/assets/images/character/None.png'
+    },
+    {
+      id: 'accent_22',
+      img: '/assets/images/character/Prime.png'
+    },
+    {
+      id: 'accent_23',
+      img: '/assets/images/character/ReverseDoublePrime.png'
+    },
+    {
+      id: 'accent_24',
+      img: '/assets/images/character/ReversePrime.png'
+    },
+    {
+      id: 'accent_25',
+      img: '/assets/images/character/RightCross.png'
+    },
+    {
+      id: 'accent_26',
+      img: '/assets/images/character/RightUprightCross.png'
+    },
+    {
+      id: 'accent_27',
+      img: '/assets/images/character/StrikeThrough.png'
+    },
+    {
+      id: 'accent_28',
+      img: '/assets/images/character/TopBar.png'
+    },
+    {
+      id: 'accent_29',
+      img: '/assets/images/character/TopBreve.png'
+    },
+    {
+      id: 'accent_30',
+      img: '/assets/images/character/TopCaron.png'
+    },
+    {
+      id: 'accent_31',
+      img: '/assets/images/character/TopCircumflex.png'
+    },
+    {
+      id: 'accent_32',
+      img: '/assets/images/character/TopDDot.png'
+    },
+    {
+      id: 'accent_33',
+      img: '/assets/images/character/TopDot.png'
+    },
+    {
+      id: 'accent_34',
+      img: '/assets/images/character/TopDoubleArrow.png'
+    },
+    {
+      id: 'accent_35',
+      img: '/assets/images/character/TopFourDot.png'
+    },
+    {
+      id: 'accent_36',
+      img: '/assets/images/character/TopInvertedBreve.png'
+    },
+    {
+      id: 'accent_37',
+      img: '/assets/images/character/TopLeftArrow.png'
+    },
+    {
+      id: 'accent_38',
+      img: '/assets/images/character/TopLeftHarpoon.png'
+    },
+    {
+      id: 'accent_39',
+      img: '/assets/images/character/TopRightArrow.png'
+    },
+    {
+      id: 'accent_40',
+      img: '/assets/images/character/TopRightHarpoon.png'
+    },
+    {
+      id: 'accent_41',
+      img: '/assets/images/character/TopRightRing.png'
+    },
+    {
+      id: 'accent_42',
+      img: '/assets/images/character/TopRing.png'
+    },
+    {
+      id: 'accent_43',
+      img: '/assets/images/character/TopTDot.png'
+    },
+    {
+      id: 'accent_44',
+      img: '/assets/images/character/TopTilde.png'
+    },
+    {
+      id: 'accent_45',
+      img: '/assets/images/character/TriplePrime.png'
+    },
+    {
+      id: 'accent_46',
+      img: '/assets/images/character/VDoubleStrikeThrough.png'
+    },
+    {
+      id: 'accent_47',
+      img: '/assets/images/character/VStrikeThrough.png'
+    }
+  ];
   public matrixDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-matrix',
     content: 'Matrix',
