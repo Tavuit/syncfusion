@@ -507,10 +507,14 @@
 #sum-dropdown,
 #bracket-dropdown,
 #integral-dropdown,
-#accent-dropdown {
+#accent-dropdown,
+#arrow-code-dropdown,
+#operator-dropdown {
   padding: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;
+  max-height: 700px;
+  overflow-y: auto;
 
   .function-dropdown-item {
     padding: 18px;

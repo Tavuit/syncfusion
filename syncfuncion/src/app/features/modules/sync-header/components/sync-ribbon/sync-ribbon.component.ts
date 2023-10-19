@@ -14,6 +14,7 @@ import {
   RibbonGroupButtonSettingsModel,
 } from '@syncfusion/ej2-angular-ribbon';
 import { ListViewAllModule } from '@syncfusion/ej2-angular-lists';
+import { ARROW, GREEKCAPTITAL, GREEKSMALL, OPERATOR } from 'src/app/utils/constants';
 
 @Component({
   selector: 'sync-ribbon',
@@ -23,6 +24,7 @@ import { ListViewAllModule } from '@syncfusion/ej2-angular-lists';
   styleUrls: ['./sync-ribbon.component.scss'],
 })
 export class SyncRibbonComponent {
+  public selectedTabIndex = 0;
   public groupButtonIcon: RibbonGroupButtonSettingsModel = {
     items: [
       { iconCss: 'e-icons e-align-left' },
@@ -252,7 +254,8 @@ export class SyncRibbonComponent {
   public containerSettings: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-container-menu-insert',
     content: 'Container ',
-    target: '#container-dropdown'
+    target: '#container-dropdown',
+    createPopupOnClick: true
   };
   public containerDropdownData = [
     {
@@ -284,7 +287,8 @@ export class SyncRibbonComponent {
   public listSettings: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-list-menu-insert',
     content: 'List',
-    target: '#list-dropdown'
+    target: '#list-dropdown',
+    createPopupOnClick: true
   };
   public listDropdownData = [
     {
@@ -401,7 +405,8 @@ export class SyncRibbonComponent {
   public funcDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Function_Icon1',
     content: 'Function',
-    target: '#function-dropdown'
+    target: '#function-dropdown',
+    createPopupOnClick: true
   };
   public functionDropdownData = [
     {
@@ -464,7 +469,8 @@ export class SyncRibbonComponent {
   public wordDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Word_Icon1',
     content: 'Word',
-    target: '#word-dropdown'
+    target: '#word-dropdown',
+    createPopupOnClick: true
   };
   public wordDropdownData = [
     {
@@ -523,7 +529,8 @@ export class SyncRibbonComponent {
   public applicationDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Application_Icon1',
     content: 'Application',
-    target: '#application-dropdown'
+    target: '#application-dropdown',
+    createPopupOnClick: true
   };
   public applicationDropdownData = [
     {
@@ -554,7 +561,8 @@ export class SyncRibbonComponent {
   public relationshipDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon icon-Relationship_Icon1',
     content: 'Relationship',
-    target: '#relationship-dropdown'
+    target: '#relationship-dropdown',
+    createPopupOnClick: true
   };
   public relationshipDropdownData = [
     {
@@ -604,7 +612,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-brackets',
     cssClass: 'min-w-70',
     content: 'Bracket',
-    target: '#bracket-dropdown'
+    target: '#bracket-dropdown',
+    createPopupOnClick: true
   };
   public bracketDropdownData = [
     {
@@ -756,7 +765,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-decoratedEquation',
     content: 'Decorator',
     cssClass: 'min-w-70',
-    target: '#decorator-dropdown'
+    target: '#decorator-dropdown',
+    createPopupOnClick: true
   };
   public decoratorDropdownData = [
     {
@@ -852,7 +862,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-sumproduct',
     content: 'Sum & Products',
     cssClass: 'min-w-120',
-    target: '#sum-dropdown'
+    target: '#sum-dropdown',
+    createPopupOnClick: true
   };
   public sumDropdownData = [
     {
@@ -960,7 +971,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-integrals',
     content: 'Integral',
     cssClass: 'min-w-70',
-    target: '#integral-dropdown'
+    target: '#integral-dropdown',
+    createPopupOnClick: true
   };
   public integralDropdownData = [
     {
@@ -1088,7 +1100,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-script',
     content: 'Script',
     cssClass: 'min-w-70',
-    target: '#script-dropdown'
+    target: '#script-dropdown',
+    createPopupOnClick: true
   };
   public scriptDropdownData = [
     {
@@ -1120,7 +1133,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-divroot',
     content: 'Fraction & Radical',
     cssClass: 'min-w-120',
-    target: '#frac-dropdown'
+    target: '#frac-dropdown',
+    createPopupOnClick: true
   };
   public fracDropdownData = [
     {
@@ -1304,7 +1318,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-underbar',
     content: 'Underbar & Overbar',
     cssClass: 'min-w-120',
-    target: '#bar-dropdown'
+    target: '#bar-dropdown',
+    createPopupOnClick: true
   };
   public barDropdownData = [
     {
@@ -1348,7 +1363,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-decoratedCharacter',
     content: 'Accent & Prime',
     cssClass: 'min-w-120',
-    target: '#accent-dropdown'
+    target: '#accent-dropdown',
+    createPopupOnClick: true
   };
   public accentDropdownData = [
     {
@@ -1544,7 +1560,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-matrix',
     content: 'Matrix',
     cssClass: 'min-w-100',
-    target: '#matrix-dropdown'
+    target: '#matrix-dropdown',
+    createPopupOnClick: true
   };
   public matrixDropdownData = [
     {
@@ -1588,7 +1605,8 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-boxes',
     content: 'Boxes',
     cssClass: 'min-w-100',
-    target: '#boxes-dropdown'
+    target: '#boxes-dropdown',
+    createPopupOnClick: true
   };
   public boxesDropdownData = [
     {
@@ -1616,238 +1634,46 @@ export class SyncRibbonComponent {
     iconCss: 'icon-medium icon-symbols',
     content: 'Operator',
     cssClass: 'min-w-120',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#operator-dropdown',
+    createPopupOnClick: true
   };
+  public operatorDropdownData = OPERATOR.map((value, index) => ({
+    id: `operator_${index}`,
+    text: value
+  }));
   public greekCapitalDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-greekcapital',
     content: 'Greek Capital',
     cssClass: 'min-w-120',
-    target: '#greek-capital-dropdown'
+    target: '#greek-capital-dropdown',
+    createPopupOnClick: true
   };
-  public greekCapitalDropdownData = [
-    {
-      id: 'cap_1',
-      text: 'A'
-    },
-    {
-      id: 'cap_2',
-      text: 'B'
-    },
-    {
-      id: 'cap_3',
-      text: 'Γ'
-    },
-    {
-      id: 'cap_4',
-      text: 'Δ'
-    },
-    {
-      id: 'cap_5',
-      text: 'Ε'
-    },
-    {
-      id: 'cap_6',
-      text: 'Z'
-    },
-    {
-      id: 'cap_7',
-      text: 'H'
-    },
-    {
-      id: 'cap_8',
-      text: 'Θ'
-    },
-    {
-      id: 'cap_9',
-      text: 'I'
-    },
-    {
-      id: 'cap_10',
-      text: 'K'
-    },
-    {
-      id: 'cap_11',
-      text: 'Λ'
-    },
-    {
-      id: 'cap_12',
-      text: 'M'
-    },
-    {
-      id: 'cap_13',
-      text: 'N'
-    },
-    {
-      id: 'cap_14',
-      text: 'Ξ'
-    },
-    {
-      id: 'cap_15',
-      text: 'Ο'
-    },
-    {
-      id: 'cap_16',
-      text: 'Π'
-    },
-    {
-      id: 'cap_17',
-      text: 'P'
-    },
-    {
-      id: 'cap_18',
-      text: 'Σ'
-    },
-    {
-      id: 'cap_19',
-      text: 'T'
-    },
-    {
-      id: 'cap_20',
-      text: 'Y'
-    },
-    {
-      id: 'cap_21',
-      text: 'Φ'
-    },
-    {
-      id: 'cap_22',
-      text: 'X'
-    },
-    {
-      id: 'cap_23',
-      text: 'Ψ'
-    },
-    {
-      id: 'cap_24',
-      text: 'Ω'
-    }
-  ];
+  public greekCapitalDropdownData = GREEKCAPTITAL.map((value, index) => ({
+    id: `cap_${index}`,
+    text: value
+  }));
   public greekSmallDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-greeksmall',
     content: 'Greek Small',
     cssClass: 'min-w-120',
-    target: '#greek-small-dropdown'
+    target: '#greek-small-dropdown',
+    createPopupOnClick: true
   };
-  public greekSmallDropdownData = [
-    {
-      id: 'small_1',
-      text: 'α'
-    },
-    {
-      id: 'small_2',
-      text: 'β'
-    },
-    {
-      id: 'small_3',
-      text: 'γ'
-    },
-    {
-      id: 'small_4',
-      text: 'δ'
-    },
-    {
-      id: 'small_5',
-      text: 'ε'
-    },
-    {
-      id: 'small_6',
-      text: 'ζ'
-    },
-    {
-      id: 'small_7',
-      text: 'η'
-    },
-    {
-      id: 'small_8',
-      text: 'θ'
-    },
-    {
-      id: 'small_9',
-      text: 'ι'
-    },
-    {
-      id: 'small_10',
-      text: 'κ'
-    },
-    {
-      id: 'small_11',
-      text: 'λ'
-    },
-    {
-      id: 'small_12',
-      text: 'μ'
-    },
-    {
-      id: 'small_13',
-      text: 'ν'
-    },
-    {
-      id: 'small_14',
-      text: 'ξ'
-    },
-    {
-      id: 'small_15',
-      text: 'ο'
-    },
-    {
-      id: 'small_16',
-      text: 'π'
-    },
-    {
-      id: 'small_17',
-      text: 'ρ'
-    },
-    {
-      id: 'small_18',
-      text: 'ς'
-    },
-    {
-      id: 'small_19',
-      text: 'σ'
-    },
-    {
-      id: 'small_20',
-      text: 'τ'
-    },
-    {
-      id: 'small_21',
-      text: 'υ'
-    },
-    {
-      id: 'small_22',
-      text: 'φ'
-    },
-    {
-      id: 'small_23',
-      text: 'χ'
-    },
-    {
-      id: 'small_24',
-      text: 'ψ'
-    },
-    {
-      id: 'small_25',
-      text: 'ω'
-    }
-  ];
+  public greekSmallDropdownData = GREEKSMALL.map((value, index) => ({
+    id: `small_${index}`,
+    text: value
+  }));
   public arrowDropdown: RibbonDropDownSettingsModel = {
     iconCss: 'icon-medium icon-arrows',
     cssClass: 'min-w-120',
     content: 'Arrow',
-    items: [
-      { text: 'Plain' },
-      { text: 'Classic' },
-      { text: 'Corners' },
-      { text: 'Alternating' },
-      { text: 'Banner' },
-    ],
+    target: '#arrow-code-dropdown',
+    createPopupOnClick: true
   };
+  public arrowCodeDropdownData = ARROW.map((value, idx) => ({
+    id: `arrowCode_${idx}`,
+    text: value
+  }))
 
   // Edit tab
   public selectedEntityButton: RibbonButtonSettingsModel = {
@@ -2184,4 +2010,13 @@ export class SyncRibbonComponent {
 
   public Simplified: DisplayMode = DisplayMode.Simplified;
   public Overflow: DisplayMode = DisplayMode.Overflow;
+
+
+  tabSelected(value: any) {
+    console.log('tabSelected', value);
+    this.selectedTabIndex = value?.selectedIndex;
+  }
+  created(value: Event) {
+    console.log('created', value);
+  }
 }

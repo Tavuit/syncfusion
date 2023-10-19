@@ -1,8 +1,18 @@
-<ejs-ribbon id="default" [fileMenu]="fileSettings">
+<ejs-ribbon
+  (created)="created($event)"
+  (tabSelected)="tabSelected($event)"
+  id="default"
+  [fileMenu]="fileSettings"
+>
   <e-ribbon-tabs>
     <e-ribbon-tab header="Home">
       <e-ribbon-groups>
-        <e-ribbon-group header="Clipboard" id="clipboard" groupIconCss="e-icons e-paste" [showLauncherIcon]=false>
+        <e-ribbon-group
+          header="Clipboard"
+          id="clipboard"
+          groupIconCss="e-icons e-paste"
+          [showLauncherIcon]="false"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
@@ -12,7 +22,11 @@
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="pasteSettings">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="pasteSettings"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -41,122 +55,217 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="undoButton"></e-ribbon-item>
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="undoButton"
+                ></e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
 
-        <e-ribbon-group header="Format" orientation="Column" [enableGroupOverflow]=true [isCollapsible]=false
-          groupIconCss="e-icons e-bold" cssClass="font-group">
+        <e-ribbon-group
+          header="Format"
+          orientation="Column"
+          [enableGroupOverflow]="true"
+          [isCollapsible]="false"
+          groupIconCss="e-icons e-bold"
+          cssClass="font-group"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="alignLeftButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="smallSize"
+                  [buttonSettings]="alignLeftButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="boldButton">
-                </e-ribbon-item>
-              </e-ribbon-items>
-            </e-ribbon-collection>
-            <e-ribbon-collection>
-              <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="alginCenterButton">
-                </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="italicButton">
-                </e-ribbon-item>
-              </e-ribbon-items>
-            </e-ribbon-collection>
-            <e-ribbon-collection>
-              <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="alignRightButton">
-                </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="smallSize" [buttonSettings]="underlineButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="smallSize"
+                  [buttonSettings]="boldButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="ComboBox" [comboBoxSettings]="fontstyleSettings">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="smallSize"
+                  [buttonSettings]="alginCenterButton"
+                >
+                </e-ribbon-item>
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="smallSize"
+                  [buttonSettings]="italicButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="ComboBox" [comboBoxSettings]="fontsizeSettings">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="smallSize"
+                  [buttonSettings]="alignRightButton"
+                >
+                </e-ribbon-item>
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="smallSize"
+                  [buttonSettings]="underlineButton"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="ComboBox"
+                  [comboBoxSettings]="fontstyleSettings"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="ComboBox"
+                  [comboBoxSettings]="fontsizeSettings"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
 
-        <e-ribbon-group header="Style" [isCollapsible]=false groupIconCss="e-icons e-edit">
+        <e-ribbon-group
+          header="Style"
+          [isCollapsible]="false"
+          groupIconCss="e-icons e-edit"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="fillButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="fillButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="lineButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="lineButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="textButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="textButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="startButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="startButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="endButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="endButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
 
-        <e-ribbon-group header="Annotation" [isCollapsible]=false groupIconCss="e-icons e-edit">
+        <e-ribbon-group
+          header="Annotation"
+          [isCollapsible]="false"
+          groupIconCss="e-icons e-edit"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="pointerButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="pointerButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="text2Button">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="text2Button"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="line2Button">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="line2Button"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="rectangularButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="rectangularButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="curvedLineButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="curvedLineButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="ellipseButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="ellipseButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item type="Button" [allowedSizes]="largeSize" [buttonSettings]="ascendantButton">
+                <e-ribbon-item
+                  type="Button"
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="ascendantButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -167,7 +276,10 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="autoConnectorButton"></e-ribbon-item>
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="autoConnectorButton"
+                ></e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
@@ -177,7 +289,10 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="SplitButton" [splitButtonSettings]="nodeSplitButton">
+                <e-ribbon-item
+                  type="SplitButton"
+                  [splitButtonSettings]="nodeSplitButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -192,29 +307,48 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="containerSettings">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="containerSettings"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="listSettings">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="listSettings"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" [buttonSettings]="pictureButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="pictureButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="" id="illustration" orientation="Row" [enableGroupOverflow]=true>
+        <e-ribbon-group
+          header=""
+          id="illustration"
+          orientation="Row"
+          [enableGroupOverflow]="true"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" [buttonSettings]="fromClipboardButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  [buttonSettings]="fromClipboardButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -230,7 +364,10 @@
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="applicationSettings">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="applicationSettings"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -242,13 +379,19 @@
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="collectionButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="collectionButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="dictionaryButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="dictionaryButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -264,25 +407,41 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="funcDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="funcDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="wordDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="wordDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="applicationDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="applicationDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="relationshipDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="relationshipDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -297,91 +456,151 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="bracketDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="bracketDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="decoratorDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="decoratorDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="sumProductDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="sumProductDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="integralDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="integralDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="scriptDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="scriptDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="factionRadicalDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="factionRadicalDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="labeledArrowDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="labeledArrowDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="underbarOverbarDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="underbarOverbarDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="accentPrimeDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="accentPrimeDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="matrixDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="matrixDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="boxesDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="boxesDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="operatorDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="operatorDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="greekCapitalDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="greekCapitalDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="greekSmallDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="greekSmallDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="DropDown" [allowedSizes]="largeSize" [dropDownSettings]="arrowDropdown">
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="arrowDropdown"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -396,7 +615,10 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="selectedEntityButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="selectedEntityButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -406,7 +628,10 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="undoLastActionButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="undoLastActionButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -421,19 +646,28 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="startProjectButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="startProjectButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="configureWarningMsgButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="configureWarningMsgButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="applicationSettingButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="applicationSettingButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -443,7 +677,10 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="captureImgButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="captureImgButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -455,7 +692,10 @@
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="recordVideoButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="recordVideoButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -467,7 +707,10 @@
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="recordAudioButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="recordAudioButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -513,7 +756,10 @@
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="simulationSettingButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="simulationSettingButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -523,13 +769,19 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="closeProjectButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="closeProjectButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="openProjectButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="openProjectButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -540,87 +792,171 @@
 
     <e-ribbon-tab header="View">
       <e-ribbon-groups>
-        <e-ribbon-group header="Open" orientation="Row" groupIconCss="e-icons e-print">
+        <e-ribbon-group
+          header="Open"
+          orientation="Row"
+          groupIconCss="e-icons e-print"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="subFuncButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="subFuncButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="subApplicationButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="subApplicationButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="subResultButton ">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="subResultButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Zoom" orientation="Column" [isCollapsible]=false>
+        <e-ribbon-group
+          header="Zoom"
+          orientation="Column"
+          [isCollapsible]="false"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="fitWindowButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="fitWindowButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="pageWidthButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="pageWidthButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Show" orientation="Column" [isCollapsible]=false>
+        <e-ribbon-group
+          header="Show"
+          orientation="Column"
+          [isCollapsible]="false"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="showTooltipButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="showTooltipButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="allowCrossButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="allowCrossButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="imgWidthFrameButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="imgWidthFrameButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="rulerButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="rulerButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="gridButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="gridButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="pageBreakButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="pageBreakButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="Show Entities" [isCollapsible]=false orientation="Row">
+        <e-ribbon-group
+          header="Show Entities"
+          [isCollapsible]="false"
+          orientation="Row"
+        >
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="entityLibraryButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="entityLibraryButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="panZoomButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="panZoomButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="modelViewButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="modelViewButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="viewListButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="viewListButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="" [isCollapsible]=false>
+        <e-ribbon-group header="" [isCollapsible]="false">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="showHideModelButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="showHideModelButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group header="" [isCollapsible]=false>
+        <e-ribbon-group header="" [isCollapsible]="false">
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item [allowedSizes]="largeSize" type="Button" [buttonSettings]="showHideConnectionPointButton">
+                <e-ribbon-item
+                  [allowedSizes]="largeSize"
+                  type="Button"
+                  [buttonSettings]="showHideConnectionPointButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -635,22 +971,28 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="panToolButton"></e-ribbon-item>
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="panToolButton"
+                ></e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="arrowLeftButton">
+                <e-ribbon-item type="Button" [buttonSettings]="arrowLeftButton">
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="arrowUpButton">
+                <e-ribbon-item type="Button" [buttonSettings]="arrowUpButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="arrowRightButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="arrowRightButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="arrowDownButton">
+                <e-ribbon-item type="Button" [buttonSettings]="arrowDownButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -660,25 +1002,25 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="align1Button">
+                <e-ribbon-item type="Button" [buttonSettings]="align1Button">
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="align2Button">
-                </e-ribbon-item>
-              </e-ribbon-items>
-            </e-ribbon-collection>
-            <e-ribbon-collection>
-              <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="align3Button">
-                </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="align4Button">
+                <e-ribbon-item type="Button" [buttonSettings]="align2Button">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="align5Button">
+                <e-ribbon-item type="Button" [buttonSettings]="align3Button">
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="align6Button">
+                <e-ribbon-item type="Button" [buttonSettings]="align4Button">
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item type="Button" [buttonSettings]="align5Button">
+                </e-ribbon-item>
+                <e-ribbon-item type="Button" [buttonSettings]="align6Button">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -688,25 +1030,43 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="equalHorizonButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="equalHorizonButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="equalVerticalButton">
-                </e-ribbon-item>
-              </e-ribbon-items>
-            </e-ribbon-collection>
-            <e-ribbon-collection>
-              <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="increaseHorizonButton">
-                </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="increaseVerticalButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="equalVerticalButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="decreaseHorizonButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="increaseHorizonButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="decreaseVerticalButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="increaseVerticalButton"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="decreaseHorizonButton"
+                >
+                </e-ribbon-item>
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="decreaseVerticalButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -716,15 +1076,18 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="sameWidthButton">
+                <e-ribbon-item type="Button" [buttonSettings]="sameWidthButton">
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="sameHeightButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="sameHeightButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="sameSizeButton">
+                <e-ribbon-item type="Button" [buttonSettings]="sameSizeButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -734,15 +1097,18 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="snapGridButton">
+                <e-ribbon-item type="Button" [buttonSettings]="snapGridButton">
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="snapRulerButton">
+                <e-ribbon-item type="Button" [buttonSettings]="snapRulerButton">
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="snapGuideLineButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="snapGuideLineButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -752,11 +1118,20 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item  type="Button" [buttonSettings]="modelHorizonButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="modelHorizonButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="modelVerticalButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="modelVerticalButton"
+                >
                 </e-ribbon-item>
-                <e-ribbon-item  type="Button" [buttonSettings]="sizeToWindowPointButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="sizeToWindowPointButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -771,7 +1146,10 @@
           <e-ribbon-collections>
             <e-ribbon-collection>
               <e-ribbon-items>
-                <e-ribbon-item type="Button" [buttonSettings]="communicationButton">
+                <e-ribbon-item
+                  type="Button"
+                  [buttonSettings]="communicationButton"
+                >
                 </e-ribbon-item>
               </e-ribbon-items>
             </e-ribbon-collection>
@@ -788,7 +1166,6 @@
   </e-ribbon-tabs>
 </ejs-ribbon>
 
-
 <!-- template ribbon item -->
 <!-- <e-ribbon-item type="Template" [itemTemplate]="itemTemplate">
   <ng-template #itemTemplate let-data="">
@@ -799,127 +1176,214 @@
   </ng-template>
 </e-ribbon-item> -->
 
-<ejs-listview id='container-dropdown' [dataSource]='containerDropdownData' headerTitle='' cssClass='container-dropdown-wrapper' [showHeader]='false'>
+<ejs-listview
+  id="container-dropdown"
+  [dataSource]="containerDropdownData"
+  headerTitle=""
+  cssClass="container-dropdown-wrapper"
+  [showHeader]="false"
+>
   <ng-template #template let-data="">
-    <div class="container-dropdown-item">
-      <img [src]="data.img" alt="img">
-      <span>{{data.text}}</span>
-    </div>
+    <ng-container *ngIf="selectedTabIndex === 1">
+      <div class="container-dropdown-item">
+        <img [src]="data.img" alt="img" />
+        <span>{{ data.text }}</span>
+      </div>
+    </ng-container>
   </ng-template>
 </ejs-listview>
 
 <div id="list-dropdown">
-  <div *ngFor="let item of listDropdownData" class="group">
-    <div class="group-title">
-      {{item.group}}
-    </div>
-    <div class="group-content">
-      <div class="group-content-item" *ngFor="let data of item.items">
-        <img [src]="data.img" alt="img">
-        <span>{{data.text}}</span>
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div *ngFor="let item of listDropdownData" class="group">
+      <div class="group-title">
+        {{ item.group }}
+      </div>
+      <div class="group-content">
+        <div class="group-content-item" *ngFor="let data of item.items">
+          <img [src]="data.img" alt="img" />
+          <span>{{ data.text }}</span>
+        </div>
       </div>
     </div>
-  </div>
+  </ng-container>
 </div>
 
 <div id="function-dropdown">
-  <div *ngFor="let item of functionDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div
+      *ngFor="let item of functionDropdownData"
+      class="function-dropdown-item"
+    >
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="word-dropdown">
-  <div *ngFor="let item of wordDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div *ngFor="let item of wordDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="application-dropdown">
-  <div *ngFor="let item of applicationDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div
+      *ngFor="let item of applicationDropdownData"
+      class="function-dropdown-item"
+    >
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="relationship-dropdown">
-  <div *ngFor="let item of relationshipDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div
+      *ngFor="let item of relationshipDropdownData"
+      class="function-dropdown-item"
+    >
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="boxes-dropdown">
-  <div *ngFor="let item of boxesDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of boxesDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="greek-capital-dropdown">
-  <div *ngFor="let item of greekCapitalDropdownData" class="function-dropdown-item">
-    {{item.text}}
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of greekCapitalDropdownData"
+      class="function-dropdown-item"
+    >
+      {{ item.text }}
+    </div>
+  </ng-container>
 </div>
 
 <div id="greek-small-dropdown">
-  <div *ngFor="let item of greekSmallDropdownData" class="function-dropdown-item">
-    {{item.text}}
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of greekSmallDropdownData"
+      class="function-dropdown-item"
+    >
+      {{ item.text }}
+    </div>
+  </ng-container>
 </div>
-
+<div id="arrow-code-dropdown">
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of arrowCodeDropdownData"
+      class="function-dropdown-item"
+    >
+      {{ item.text }}
+    </div>
+  </ng-container>
+</div>
+<div id="operator-dropdown">
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of operatorDropdownData"
+      class="function-dropdown-item"
+    >
+      {{ item.text }}
+    </div>
+  </ng-container>
+</div>
 <div id="script-dropdown">
-  <div *ngFor="let item of scriptDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of scriptDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="matrix-dropdown">
-  <div *ngFor="let item of matrixDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of matrixDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="bar-dropdown">
-  <div *ngFor="let item of barDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of barDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="frac-dropdown">
-  <div *ngFor="let item of fracDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of fracDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="arrow-dropdown">
-  <div *ngFor="let item of arrowDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of arrowDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="decorator-dropdown">
-  <div *ngFor="let item of decoratorDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of decoratorDropdownData"
+      class="function-dropdown-item"
+    >
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="sum-dropdown">
-  <div *ngFor="let item of sumDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of sumDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="bracket-dropdown">
-  <div *ngFor="let item of bracketDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of bracketDropdownData"
+      class="function-dropdown-item"
+    >
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="integral-dropdown">
-  <div *ngFor="let item of integralDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div
+      *ngFor="let item of integralDropdownData"
+      class="function-dropdown-item"
+    >
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
 
 <div id="accent-dropdown">
-  <div *ngFor="let item of accentDropdownData" class="function-dropdown-item">
-    <img [src]="item.img" alt="img">
-  </div>
+  <ng-container *ngIf="selectedTabIndex === 2">
+    <div *ngFor="let item of accentDropdownData" class="function-dropdown-item">
+      <img [src]="item.img" alt="img" />
+    </div>
+  </ng-container>
 </div>
