@@ -1176,33 +1176,27 @@
   </ng-template>
 </e-ribbon-item> -->
 
-<ejs-listview
-  id="container-dropdown"
-  [dataSource]="containerDropdownData"
-  headerTitle=""
-  cssClass="container-dropdown-wrapper"
-  [showHeader]="false"
->
-  <ng-template #template let-data="">
-    <ng-container *ngIf="selectedTabIndex === 1">
-      <div class="container-dropdown-item">
-        <img [src]="data.img" alt="img" />
-        <span>{{ data.text }}</span>
-      </div>
-    </ng-container>
-  </ng-template>
-</ejs-listview>
+<div id="container-dropdown">
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div *ngFor="let item of containerDropdownData" class="container-dropdown-item">
+      <img [src]="item.img" alt="img" />
+      <span>{{ item.text }}</span>
+    </div>
+  </ng-container>
+</div>
 
 <div id="list-dropdown">
   <ng-container *ngIf="selectedTabIndex === 1">
-    <div *ngFor="let item of listDropdownData" class="group">
-      <div class="group-title">
-        {{ item.group }}
-      </div>
-      <div class="group-content">
-        <div class="group-content-item" *ngFor="let data of item.items">
-          <img [src]="data.img" alt="img" />
-          <span>{{ data.text }}</span>
+    <div class="list-wrapper">
+      <div *ngFor="let item of listDropdownData" class="group">
+        <div class="group-title">
+          {{ item.group }}
+        </div>
+        <div class="group-content">
+          <div class="group-content-item" *ngFor="let data of item.items">
+            <img [src]="data.img" alt="img" />
+            <span>{{ data.text }}</span>
+          </div>
         </div>
       </div>
     </div>

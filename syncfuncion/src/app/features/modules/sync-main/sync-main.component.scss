@@ -21,18 +21,16 @@
 
       .sync-content-left-wrapper {
         height: 100%;
-        flex: 2;
         margin-right: 5px;
       }
 
       .sync-content-center-wrapper {
         height: 100%;
-        flex: 8;
+        width: calc(100% - 574px);
       }
 
       .sync-content-right-wrapper {
         height: 100%;
-        flex: 2;
         margin-left: 5px;
       }
     }
