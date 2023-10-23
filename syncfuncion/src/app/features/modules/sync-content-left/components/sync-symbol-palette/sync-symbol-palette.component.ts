@@ -1,12 +1,24 @@
-import { Component, ViewEncapsulation } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, ViewEncapsulation} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {
-  ConnectorModel,
-  NodeModel,
   PaletteModel,
   SymbolPaletteModule,
+  SymbolPreviewModel,
+  MarginModel
 } from '@syncfusion/ej2-angular-diagrams';
-import { ExpandMode } from '@syncfusion/ej2-angular-navigations';
+import {ExpandMode} from '@syncfusion/ej2-angular-navigations';
+import {getEquationsShape} from "../constants/equation-symbol-palette"
+import {getLabelShapes} from '../constants/label-symbol-palette';
+import {getOtherCommunicationElementShapes} from '../constants/other-communication-element.symbol-palette';
+import {getAreaAndLocationShapes} from '../constants/area-location.symbol-palette';
+import {getCommunicationSignalShapes} from '../constants/communication-signal.symbol-palette';
+import {getCommunicationLinksShapes} from '../constants/communication-link.symbol-palette';
+import {getAnalysisShapes} from '../constants/analysis.symbol-palette';
+import {getApplicationShapes} from '../constants/application.symbol-palette';
+import {getCommunicationShapes} from '../constants/communication.symbol-palette';
+import {getPersonShapes} from '../constants/persion.symbol-palette';
+import {getQuickEntitiesShapes} from '../constants/quick.symbol-palette';
+import {height, width} from '../constants/common';
 
 @Component({
   selector: 'sync-symbol-palette',
@@ -19,194 +31,103 @@ import { ExpandMode } from '@syncfusion/ej2-angular-navigations';
 export class SyncSymbolPaletteComponent {
   public expandMode?: ExpandMode;
   public palettes?: PaletteModel[];
-  public getBasicShapes(): NodeModel[] {
-    let basicShapes: NodeModel[] = [
-      {
-        id: 'Rectangle',
-        shape: {
-          type: 'Basic',
-          shape: 'Rectangle',
-        },
-      },
-      {
-        id: 'Ellipse',
-        shape: {
-          type: 'Basic',
-          shape: 'Ellipse',
-        },
-      },
-      {
-        id: 'Hexagon',
-        shape: {
-          type: 'Basic',
-          shape: 'Hexagon',
-        },
-      },
-    ];
-    return basicShapes;
-  }
-  public getFlowShapes(): NodeModel[] {
-    let flowShapes: NodeModel[] = [
-      {
-        id: 'process',
-        shape: {
-          type: 'Flow',
-          shape: 'Process',
-        }
-      },
-      {
-        id: 'event',
-        shape: {
-          type: 'Bpmn',
-          shape: 'Event'
-        }
-      }
-    ];
-    return flowShapes;
-  }
-
-  public getConnectors(): ConnectorModel[] {
-    let connectorSymbols: ConnectorModel[] = [
-      {
-        id: 'Link1',
-        type: 'Orthogonal',
-        sourcePoint: {
-          x: 0,
-          y: 0,
-        },
-        targetPoint: {
-          x: 40,
-          y: 40,
-        },
-        targetDecorator: {
-          shape: 'Arrow',
-        },
-      },
-      {
-        id: 'Link21',
-        type: 'Straight',
-        sourcePoint: {
-          x: 0,
-          y: 0,
-        },
-        targetPoint: {
-          x: 40,
-          y: 40,
-        },
-        targetDecorator: {
-          shape: 'Arrow',
-        },
-      },
-      {
-        id: 'link33',
-        type: 'Bezier',
-        sourcePoint: {
-          x: 0,
-          y: 0,
-        },
-        targetPoint: {
-          x: 40,
-          y: 40,
-        },
-        style: {
-          strokeWidth: 2,
-        },
-        targetDecorator: {
-          shape: 'None',
-        },
-      },
-    ];
-    return connectorSymbols;
-  }
-  public getSymbolInfo(symbol: any) {
-    //Defines the symbol description
-      return { width: 300, height: 75, description: { text: symbol.shape['shape'] } }
-    };
+  public symbolPreview: SymbolPreviewModel[] = [{
+    height,
+    width
+  }];
+  public height: number = 80;
+  public width: number = 250;
+  public symbolMargin: MarginModel = {
+    left: 15,
+    right: 15,
+    top: 15,
+    bottom: 15
+  };
 
   ngOnInit(): void {
     this.expandMode = 'Single';
     this.palettes = [
       {
-        //Sets the id of the palette
         id: 'quickEntities',
-        //Sets whether the palette expands/collapse its children
         expanded: false,
-        //Adds the palette items to palette
-        symbols: this.getFlowShapes(),
-        //Sets the header text of the palette
+        symbols: getQuickEntitiesShapes(),
         title: 'Quick Entities',
         iconCss: 'e-ddb-icons e-flow',
       },
       {
         id: 'person',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getPersonShapes(),
         title: 'Person',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'communication',
         expanded: false,
-        symbols: this.getConnectors(),
+        symbols: getCommunicationShapes(),
         title: 'Communication',
         iconCss: 'e-ddb-icons e-connector',
       },
       {
         id: 'application',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getApplicationShapes(),
         title: 'Application',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'communicationLink',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getCommunicationLinksShapes(),
         title: 'Communication Link',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'analysis',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getAnalysisShapes(),
         title: 'Analysis',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'communicationSignal',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getCommunicationSignalShapes(),
         title: 'Communication Signal',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'areAndLocation',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getAreaAndLocationShapes(),
         title: 'Area and Location',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'otherCommunicationElement',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getOtherCommunicationElementShapes(),
         title: 'Other Communication Element',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'label',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getLabelShapes(),
         title: 'Label',
         iconCss: 'e-ddb-icons e-basic',
       },
       {
         id: 'equation',
         expanded: false,
-        symbols: this.getBasicShapes(),
+        symbols: getEquationsShape(),
         title: 'Equations',
         iconCss: 'e-ddb-icons e-basic',
       },
     ];
   }
+
+  public getSymbolInfo(symbol: any) {
+    return {fill: "white", fontSize: 10, description: {text: symbol?.['addInfo']?.['tooltip']}};
+  };
 }

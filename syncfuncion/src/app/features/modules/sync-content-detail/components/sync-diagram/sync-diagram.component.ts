@@ -1,17 +1,27 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ContextMenuSettingsModel, DiagramAllModule, NodeModel, RulerSettingsModel, ShapeStyleModel } from '@syncfusion/ej2-angular-diagrams';
+import {
+  ContextMenuSettingsModel,
+  DiagramAllModule, DiagramConstraints, DiagramTooltipModel, NodeConstraints,
+  NodeModel,
+  RulerSettingsModel,
+  ShapeStyleModel,
+  SymbolPaletteModule
+} from '@syncfusion/ej2-angular-diagrams';
 
 @Component({
   selector: 'sync-diagram',
   standalone: true,
-  imports: [CommonModule, DiagramAllModule],
+  imports: [CommonModule, DiagramAllModule, SymbolPaletteModule],
   templateUrl: './sync-diagram.component.html',
   styleUrls: ['./sync-diagram.component.scss']
 })
 export class SyncDiagramComponent {
   public contextMenuSettings: ContextMenuSettingsModel;
-  public horizontalAlignment: any;
+  public tooltip?: DiagramTooltipModel = {
+    content: 'Nodes',
+    position: 'TopLeft'
+  };
   public rulerSettings: RulerSettingsModel = {
     showRulers: true,
     horizontalRuler: {
@@ -64,13 +74,5 @@ export class SyncDiagramComponent {
       ],
       showCustomMenuOnly: true,
     };
-  }
-
-  public getNodeDefaults(node: NodeModel): NodeModel {
-    node.height = 100;
-    node.width = 100;
-   ((node as NodeModel).style as ShapeStyleModel).fill = "#6BA5D7";
-   ((node as NodeModel).style as ShapeStyleModel ).strokeColor = "White";
-    return node;
   }
 }
