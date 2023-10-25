@@ -29,3 +29,16 @@ body {
   font-size: 14px;
   line-height: 20px;
 }
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.symbol-text-element {
+  text-align: center;
+  font-size: 10px;
+  font-weight: Bold;
+  line-height: 90%;
+}
