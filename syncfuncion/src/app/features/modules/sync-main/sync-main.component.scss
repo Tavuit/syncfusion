@@ -18,20 +18,21 @@
       width: 100%;
       display: flex;
       padding: 0 5px;
-
       .sync-content-left-wrapper {
         height: 100%;
         margin-right: 5px;
+        min-width: 15vw;
       }
 
       .sync-content-center-wrapper {
         height: 100%;
-        width: calc(100% - 574px);
+        flex-grow: 1;
       }
 
       .sync-content-right-wrapper {
         height: 100%;
         margin-left: 5px;
+        min-width: 15vw;
       }
     }
   }

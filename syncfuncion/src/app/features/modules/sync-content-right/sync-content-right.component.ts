@@ -92,6 +92,5 @@ export class SyncContentRightComponent {
   ]
 
   public handleClickTreeItem(data: ITreeViewDataSourceType) {
-    console.log('data', data)
   }
 }
