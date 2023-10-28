@@ -3,6 +3,8 @@ import {CoreService} from "src/app/shared/services/core.service";
 import {IRibbon} from "../../../../../../shared/interfaces/ribbon.interface";
 import {EDomain} from "src/app/shared/enums/core.enum";
 import {ERibbon} from "../constants/header.constant";
+import {DiagramService} from "../../../../../../shared/services/diagram.service";
+import {EDiagramAction} from "../../../../../../shared/enums/diagram.enum";
 
 @Injectable({
   providedIn: 'root'
@@ -166,7 +168,8 @@ export class RibbonService {
   };
 
   constructor(
-    private coreService: CoreService
+    private coreService: CoreService,
+    private diagramSerivce: DiagramService
   ) {
     this.injectFunctionToRibbon(ERibbon);
   }
@@ -178,10 +181,16 @@ export class RibbonService {
   private injectFunctionToRibbon(ribbon: IRibbon): void {
     ribbon.communicationButton.clicked = () => this.setDomain(EDomain.COMMUNICATION);
     ribbon.theoryButton.clicked = () => this.setDomain(EDomain.THEORY);
+    ribbon.copyButton.clicked = () => this.diagramHandler(EDiagramAction.COPY);
+    ribbon.pasteSettings.clicked = () => this.diagramHandler(EDiagramAction.PARSE);
     this._ribbon = ribbon
   }
 
   private setDomain(domain: EDomain): void {
     this.coreService.setDomain(domain);
+  }
+
+  private diagramHandler(action: EDiagramAction): void {
+    this.diagramSerivce.regiterAction(action);
   }
 }

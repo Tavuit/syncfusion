@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {
   ContextMenuSettingsModel,
-  DiagramAllModule, DiagramConstraints, DiagramTooltipModel, NodeConstraints,
-  NodeModel,
+  DiagramAllModule,
+  DiagramComponent,
+  DiagramTooltipModel,
   RulerSettingsModel,
-  ShapeStyleModel,
   SymbolPaletteModule
 } from '@syncfusion/ej2-angular-diagrams';
+import {DiagramService} from "../../../../../shared/services/diagram.service";
 
 @Component({
   selector: 'sync-diagram',
@@ -16,7 +17,8 @@ import {
   templateUrl: './sync-diagram.component.html',
   styleUrls: ['./sync-diagram.component.scss']
 })
-export class SyncDiagramComponent {
+export class SyncDiagramComponent implements OnInit {
+  @ViewChild('diagram', {static: true}) diagram: DiagramComponent
   public contextMenuSettings: ContextMenuSettingsModel;
   public tooltip?: DiagramTooltipModel = {
     content: 'Nodes',
@@ -37,7 +39,16 @@ export class SyncDiagramComponent {
       tickAlignment: 'RightOrBottom',
     },
   };
+
+  constructor(
+    private diagramService: DiagramService,
+  ) {
+  }
+
   ngOnInit(): void {
+    if (!!this.diagram) {
+      this.diagramService.setDiagram(this.diagram);
+    }
     this.contextMenuSettings = {
       show: true,
       items: [
