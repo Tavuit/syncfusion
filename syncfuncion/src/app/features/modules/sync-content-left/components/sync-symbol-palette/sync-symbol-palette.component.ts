@@ -1,4 +1,4 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, OnDestroy, ViewEncapsulation} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   PaletteModel,
@@ -21,7 +21,7 @@ import { palettesCommunication, palettesTheory } from '../constants/symbol-palet
   styleUrls: ['./sync-symbol-palette.component.scss'],
   encapsulation: ViewEncapsulation.None,
 })
-export class SyncSymbolPaletteComponent {
+export class SyncSymbolPaletteComponent implements OnDestroy{
   private _destroyed: Subject<void> = new Subject<void>();
   public expandMode?: ExpandMode;
   public palettes?: PaletteModel[];
@@ -61,4 +61,9 @@ export class SyncSymbolPaletteComponent {
   public getSymbolInfo(symbol: any) {
     return {fill: "white", fontSize: 10, description: {text: symbol?.['addInfo']?.['tooltip']}};
   };
+
+  ngOnDestroy() {
+    this._destroyed.next();
+    this._destroyed.complete();
+  }
 }
