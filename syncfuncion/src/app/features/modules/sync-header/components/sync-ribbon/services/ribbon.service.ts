@@ -4,7 +4,7 @@ import {IRibbon} from "../../../../../../shared/interfaces/ribbon.interface";
 import {EDomain} from "src/app/shared/enums/core.enum";
 import {ERibbon} from "../constants/header.constant";
 import {DiagramService} from "../../../../../../shared/services/diagram.service";
-import {EDiagramAction} from "../../../../../../shared/enums/diagram.enum";
+import {EDiagramAction, EDiagramModel} from "../../../../../../shared/enums/diagram.enum";
 
 @Injectable({
   providedIn: 'root'

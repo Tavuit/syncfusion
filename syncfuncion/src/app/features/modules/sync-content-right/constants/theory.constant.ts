@@ -1,3 +1,4 @@
+import {EDiagramModel} from "src/app/shared/enums/diagram.enum";
 import {
   ITreeViewDataSourceType
 } from "../../../../shared/base-components/views/sync-tree-view/sync-tree-view.component";
@@ -16,6 +17,7 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     name: 'Main Theory Application Model',
     iconName: 'flow-chart-1',
     hasChild: false,
+    enums: EDiagramModel.THEORY_MAIN_APPLICATION_MODEL
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     name: 'System Apply Theory Circular',
     iconName: 'flow-chart-1',
     hasChild: false,
+    enums: EDiagramModel.SYSTEM_APPLY_THEORY_MODEL
   },
   {
     id: 5,

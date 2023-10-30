@@ -6,7 +6,7 @@ import {
 } from 'src/app/shared/base-components/views/sync-tree-view/sync-tree-view.component';
 import {CTreeViewDataComm} from "./constants/communication.constant";
 import {CTreeViewDataTheory} from "./constants/theory.constant";
-import { CoreService } from 'src/app/shared/services/core.service';
+import {CoreService, TDiagramModel} from 'src/app/shared/services/core.service';
 import {map, Subject, takeUntil} from "rxjs";
 import {EDomain} from "../../../shared/enums/core.enum";
 
@@ -19,6 +19,9 @@ import {EDomain} from "../../../shared/enums/core.enum";
 })
 export class SyncContentRightComponent implements OnDestroy {
   private _destroyed: Subject<void> = new Subject<void>();
+  private _domain: EDomain;
+  private _diagramProject: TDiagramModel;
+
   public treeViewData: ITreeViewDataSourceType[] = [];
 
   constructor(
@@ -27,6 +30,7 @@ export class SyncContentRightComponent implements OnDestroy {
     this.coreService.getDomain()
       .pipe(
         map((domain: EDomain) => {
+          this._domain = domain;
           if (domain === EDomain.COMMUNICATION) {
             return CTreeViewDataComm;
           }
@@ -34,9 +38,21 @@ export class SyncContentRightComponent implements OnDestroy {
         }),
         takeUntil(this._destroyed)
       )
-      .subscribe((treeViewData)=> this.treeViewData = treeViewData);
+      .subscribe((treeViewData) => this.treeViewData = treeViewData);
+    this.coreService.getModel()
+      .pipe(
+        takeUntil(this._destroyed)
+      )
+      .subscribe((diagramProject)=> this._diagramProject = diagramProject);
   }
+
   public handleClickTreeItem(data: ITreeViewDataSourceType) {
+    const updatedData = this._diagramProject[this._domain];
+    if (!!data?.enums && !updatedData?.includes(data.enums)) {
+      updatedData?.push(data.enums);
+    }
+    this.coreService.setModel({...this._diagramProject, [this._domain]: updatedData});
+    this.coreService.setCurrentModel(data.enums);
   }
 
   ngOnDestroy() {

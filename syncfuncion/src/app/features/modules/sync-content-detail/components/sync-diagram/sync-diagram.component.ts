@@ -1,14 +1,17 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
-  ContextMenuSettingsModel,
   DiagramAllModule,
-  DiagramComponent,
-  DiagramTooltipModel,
-  RulerSettingsModel,
   SymbolPaletteModule
 } from '@syncfusion/ej2-angular-diagrams';
 import {DiagramService} from "../../../../../shared/services/diagram.service";
+import {CoreService} from 'src/app/shared/services/core.service';
+import {Subject, map, switchMap, takeUntil} from "rxjs";
+import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
 
 @Component({
   selector: 'sync-diagram',
@@ -17,73 +20,48 @@ import {DiagramService} from "../../../../../shared/services/diagram.service";
   templateUrl: './sync-diagram.component.html',
   styleUrls: ['./sync-diagram.component.scss']
 })
-export class SyncDiagramComponent implements OnInit {
-  @ViewChild('diagram', {static: true}) diagram: DiagramComponent
-  public contextMenuSettings: ContextMenuSettingsModel;
-  public tooltip?: DiagramTooltipModel = {
-    content: 'Nodes',
-    position: 'TopLeft'
-  };
-  public rulerSettings: RulerSettingsModel = {
-    showRulers: true,
-    horizontalRuler: {
-      interval: 8,
-      segmentWidth: 100,
-      thickness: 25,
-      tickAlignment: 'LeftOrTop',
-    },
-    verticalRuler: {
-      interval: 10,
-      segmentWidth: 150,
-      thickness: 35,
-      tickAlignment: 'RightOrBottom',
-    },
-  };
-
+export class SyncDiagramComponent implements OnInit, OnDestroy {
+  private _destroyed: Subject<void> = new Subject<void>();
+  public contextMenuSettings = contextMenuSettings;
+  public rulerSettings = rulerSettings;
+  public tooltipSettings = tooltipSettings;
   constructor(
     private diagramService: DiagramService,
+    private coreService: CoreService
   ) {
   }
 
   ngOnInit(): void {
-    if (!!this.diagram) {
-      this.diagramService.setDiagram(this.diagram);
-    }
-    this.contextMenuSettings = {
-      show: true,
-      items: [
-        {
-          text: 'Save',
-          id: 'save',
-          target: '.e-elementcontent',
-        },
-        {
-          text: 'Copy',
-          id: 'copy',
-          target: '.e-elementcontent',
-        },
-        {
-          text: 'Paste',
-          id: 'paste',
-          target: '.e-elementcontent',
-        },
-        {
-          text: 'Cut',
-          id: 'cut',
-          target: '.e-elementcontent',
-        },
-        {
-          text: 'Edit text',
-          id: 'edit',
-          target: '.e-elementcontent',
-        },
-        {
-          text: 'Select all',
-          id: 'select',
-          target: '.e-elementcontent',
-        },
-      ],
-      showCustomMenuOnly: true,
-    };
+    this.coreService.getDomain()
+      .pipe(
+        switchMap((domain) => this.diagramService.getModel()
+          .pipe(
+            switchMap((diagramModel) => this.coreService.getCurrentModel()
+              .pipe(
+                map((currentModel) => {
+                  return diagramModel[domain]?.find(model => model.LABEL === currentModel)
+                })
+              )
+            )
+          )
+        ),
+        takeUntil(this._destroyed),
+      )
+      .subscribe((diagramModel) => {
+        this.renderComponent(diagramModel?.['DATA']);
+      })
+  }
+
+  renderComponent(componentRef: any) {
+
+  }
+
+  destroyComponent(componentRef: any) {
+
+  }
+
+  ngOnDestroy() {
+    this._destroyed.next();
+    this._destroyed.complete();
   }
 }

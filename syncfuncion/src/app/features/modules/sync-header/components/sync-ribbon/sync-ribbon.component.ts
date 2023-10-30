@@ -4,7 +4,7 @@ import {DisplayMode, RibbonAllModule, RibbonItemSize,} from '@syncfusion/ej2-ang
 import {ListViewAllModule} from '@syncfusion/ej2-angular-lists';
 import {EDomain} from 'src/app/shared/enums/core.enum';
 import {CoreService} from 'src/app/shared/services/core.service';
-import {filter, map, mapTo, Observable, Subject, switchMap, takeUntil} from 'rxjs';
+import {filter, map, Observable, Subject, switchMap, takeUntil} from 'rxjs';
 import {IRibbon} from 'src/app/shared/interfaces/ribbon.interface';
 import {RibbonService} from './services/ribbon.service';
 import {DiagramService, TDiagramComponent, TDiagramAction} from 'src/app/shared/services/diagram.service';
@@ -56,6 +56,7 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
             }
           })
         )),
+        filter(({action, diagram}) => !!action && !!diagram),
         takeUntil(this._destroyed),
       )
       .subscribe(({action, diagram}) => {

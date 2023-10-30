@@ -1,3 +1,4 @@
+import { EDiagramModel } from "src/app/shared/enums/diagram.enum";
 import {
   ITreeViewDataSourceType
 } from "../../../../shared/base-components/views/sync-tree-view/sync-tree-view.component";
@@ -16,6 +17,7 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
     name: 'Main Project Model',
     iconName: 'flow-diagram',
     hasChild: false,
+    enums: EDiagramModel.COMM_MAIN_PROJECT_MODEL
   },
   {
     id: 3,
@@ -23,6 +25,7 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
     name: 'Problem Statement',
     iconName: 'diagram-icon',
     hasChild: false,
+    enums: EDiagramModel.COMM_PROBLEM_STATEMENT
   },
   {
     id: 5,

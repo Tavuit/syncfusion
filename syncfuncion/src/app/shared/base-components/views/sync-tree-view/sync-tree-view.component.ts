@@ -2,6 +2,7 @@ import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges } from
 import { CommonModule } from '@angular/common';
 import { TreeViewAllModule } from '@syncfusion/ej2-angular-navigations';
 import { SyncIconHrefComponent } from 'src/app/shared/base-components/views/sync-icon-href/sync-icon-href.component';
+import {EDiagramModel} from "../../../enums/diagram.enum";
 
 export interface ITreeViewDataSourceType {
   id: number;
@@ -10,6 +11,7 @@ export interface ITreeViewDataSourceType {
   iconName: string;
   hasChild: boolean;
   expanded?: boolean;
+  enums?: EDiagramModel;
 }
 
 @Component({
