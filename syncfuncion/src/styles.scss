@@ -42,3 +42,7 @@ body {
   font-weight: Bold;
   line-height: 90%;
 }
+
+.point-circle {
+  transform: scale(0.2, 0.2) translate(10px, 10px);
+}
