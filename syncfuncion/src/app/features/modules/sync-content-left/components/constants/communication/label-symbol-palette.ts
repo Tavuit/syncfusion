@@ -188,7 +188,6 @@ export function getLabelShapes() {
           alignment: "Before"
         },
       ],
-
       tooltip: {
         content: 'Entity Give Rise to Entity',
         position: 'RightCenter'
