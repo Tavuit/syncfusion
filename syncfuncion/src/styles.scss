@@ -46,3 +46,17 @@ body {
 .point-circle {
   transform: scale(0.2, 0.2) translate(10px, 10px);
 }
+
+::-webkit-scrollbar {
+  width: 8px; /* Set the width of the scrollbar */
+}
+
+/* Scrollbar Thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Set the background color of the thumb */
+}
+
+/* Optional: Hover effect for the Thumb */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #888;
+}

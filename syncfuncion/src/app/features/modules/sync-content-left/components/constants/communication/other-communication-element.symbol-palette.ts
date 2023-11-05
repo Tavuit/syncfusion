@@ -583,7 +583,150 @@ export function getOtherCommunicationElementShapes() {
         content: 'Communication Change Application Graphical Form',
         position: 'TopRight'
       }
-    }
+    },
+    {
+      id: 'graphLine',
+      addInfo: { title: 'Graph Line', tooltip: 'Graph Line' },
+      type: 'Straight',
+      sourcePoint: {
+        x: 30,
+        y: 40,
+      },
+      targetPoint: {
+        x: 50,
+        y: 40,
+      },
+      sourceDecorator: {
+        shape: "None",
+      },
+      targetDecorator: {
+        shape: 'None',
+        style: null
+      },
+      tooltip: {
+        content: 'Use to Draw Graph',
+        position: 'RightCenter'
+      },
+      style: null,
+      constraints: ConnectorConstraints.Tooltip | ConnectorConstraints.Default | ConnectorConstraints.AllowDrop,
+    },
+    {
+      id: "graphPoint",
+      addInfo: [
+        {
+          title: "Graph Point",
+          toolTip: "Use to Draw Graph",
+        },
+      ],
+      shape: {
+        type: "Native",
+        content: `
+        <g  class="point-circle" transform="translate(2, 2)">\n                        <rect height="10" width="10" fill="transparent" stroke-width="0" /> \n                        <circle vector-effect="non-scaling-stroke" cx="5" cy="5" r="5" fill="black" stroke="black" stroke-width="1"/>\n                        <foreignObject class="symbol-text-container" x="1.25" width="7.5" height="10" visibility="hidden">\n                        <div style="height: 10px" class="flex-container">\n                            <div width="7.5" class="symbol-text-element">\n                                \n                            </div>\n                        </div>\n                    </foreignObject>\n                    </g>`,
+      },
+      ports: null,
+      height: 10,
+      width: 10,
+      annotations: null,
+      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop | NodeConstraints.ResizeNorth,
+      tooltip: {
+        content: 'Use to Draw Graph',
+        position: 'TopRight'
+      }
+    },
+    {
+      id: 'graphLineAndPoint',
+      addInfo: { title: 'Graph Line and Point', tooltip: 'Graph Line and Point' },
+      type: 'Straight',
+      sourcePoint: {
+        x: 30,
+        y: 40,
+      },
+      targetPoint: {
+        x: 50,
+        y: 40,
+      },
+      sourceDecorator: {
+        shape: "None",
+      },
+      targetDecorator: {
+        shape: 'Circle',
+        style: null
+      },
+      tooltip: {
+        content: 'Use to Draw Graph',
+        position: 'RightCenter'
+      },
+      style: null,
+      constraints: ConnectorConstraints.Tooltip | ConnectorConstraints.Default | ConnectorConstraints.AllowDrop,
+    },
+    {
+      id: "xAxis",
+      addInfo: [
+        {
+          title: "X-Axis",
+          toolTip: "X-Axis",
+        },
+      ],
+      shape: {
+        type: "Native",
+        content: `
+        <g  transform="translate(2, 2)">\n                    <g>\n                        <rect width="10" height="5" fill="transparent" stroke-width="0"/>\n                        <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" stroke-dasharray="" d="M 0 2.5 L 10 2.5"/>\n                    </g>                    \n                </g>`,
+      },
+      ports: null,
+      height: 30,
+      width: 600,
+      annotations: [
+        {
+          content: "X-Axis",
+          offset: {
+            x: 0.5,
+            y: 1,
+          },
+          margin: {
+            top: 15,
+          },
+        },
+      ],
+      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop | NodeConstraints.ResizeNorth,
+      tooltip: {
+        content: 'Use to Graph',
+        position: 'TopRight'
+      }
+    },
+    {
+      id: "yAxis",
+      addInfo: [
+        {
+          title: "Y-Axis",
+          toolTip: "Y-Axis",
+        },
+      ],
+      shape: {
+        type: "Native",
+        content: `
+        <g  transform="translate(2, 2)">\n                    <g>\n                        <rect width="5" height="10" fill="transparent" stroke-width="0"/>\n                        <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" stroke-dasharray="" d="M 2.5 0 L 2.5 10"/> \n                    </g>                    \n                </g>`,
+      },
+      ports: null,
+      height: 600,
+      width: 30,
+      annotations: [
+        {
+          content: "Y-Axis",
+          offset: {
+            x: 0,
+            y: 0.5,
+          },
+          margin: {
+            right: 15,
+          },
+        },
+      ],
+      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop | NodeConstraints.ResizeNorth,
+      tooltip: {
+        content: 'Use to Graph',
+        position: 'TopRight'
+      }
+    },
   ];
   return otherCommunicationElement;
 }
