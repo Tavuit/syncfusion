@@ -1,3 +1,5 @@
+import { personPort1, personPort2, rectPorts } from "src/app/features/modules/sync-content-left/components/constants/communication/common";
+
 export const OPERATOR = ["\u00d7", "\u002D", "\u2013", "\u2012", "\u2014", "\u00b7", "\u00f7", "\u00b1",
   "\u00bd", "\u00bc", "\u00be", "\u2200", "\u2202", "\u2203", "\u2204",
   "\u2205", "\u2208", "\u2209", "\u220B", "\u220C", "\u220F", "\u2210",
@@ -29,3 +31,244 @@ export const ARROW = ["\u2190", "\u2191", "\u2192", "\u2193", "\u2194", "\u2195"
   "\u21CF", "\u21D0", "\u21D1", "\u21D2", "\u21D3", "\u21D4", "\u21D5",
   "\u21D6", "\u21D7", "\u21D8", "\u21D8", "\u21D9", "\u21DA", "\u21DB",
   "\u21DC"]
+
+export function getShapeByType(type, id: string, addInfo: Object, annotation) {
+  switch (type) {
+    case 'Person':
+      let label = [
+        {
+          content: annotation[0],
+          offset: { x: 0.5, y: 1 },
+          margin: {
+            top: 15,
+          },
+          style: {
+            textWrapping: 'NoWrap',
+          },
+        },
+      ];
+      if (annotation.length === 2) {
+        label.push({
+          content: annotation[1],
+          offset: { x: 0.5, y: 1 },
+          margin: {
+            top: 30,
+          },
+          style: {
+            textWrapping: 'NoWrap',
+          },
+        });
+      }
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: 'Native',
+          content: `
+          <g transform="translate(2,2)">
+            <rect vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" x="0" y="0" height="77" width="47"/>
+            <path vector-effect="non-scaling-stroke" d="M9.4, 19.25 A14.1 14.4375 0 0 1 37.6, 19.25A14.1 14.4375 0 0 1 9.4, 19.25 z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M23.5, 32.34 L23.5, 50.05 z" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M23.5, 50.05 L39.95, 73.15 z" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M23.5, 50.05 L7.05, 73.15 z" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M4.7, 46.2 L42.3, 46.2 z" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M18.8, 26.95 A5 2.5 0 0 1 28.2, 26.95 A5 2.5 0 0 1 18.8, 26.95 z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path viewBox="0 0 60 55" d="M15.04, 14.63 A1 1 0 0 1 19.74, 14.63 A1 1 0 0 1 15.04, 14.63 z" fill="#00000" stroke="#000000" stroke-width="1px" />
+            <path viewBox="0 0 60 55" d="M27.26, 14.63 A1 1 0 0 1 31.96, 14.63 A1 1 0 0 1 27.26, 14.63 z" fill="#00000" stroke="#000000" stroke-width="1px" />
+          </g>`,
+        },
+        height: 80,
+        width: 50,
+        annotations: label,
+        style: {
+          fontSize: 10,
+        },
+        ports: personPort1,
+      };
+    case 'PersonGroup':
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: 'Native',
+          content:
+            '<g  transform="translate(2, 2)">' +
+            '<rect vector-effect="non-scaling-stroke" height="40" width="120" stroke="black" fill="transparent" stroke-width="1"/>' +
+            '<circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1" />' +
+            '<circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black" />' +
+            '<circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black" />' +
+            '<ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/>' +
+            '<path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"/>' +
+            '<circle vector-effect="non-scaling-stroke" cx="41" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1" />' +
+            '<circle vector-effect="non-scaling-stroke" cx="39.0" cy="6" r="1" fill="black" />' +
+            '<circle vector-effect="non-scaling-stroke" cx="43.0" cy="6" r="1.0" fill="black" />' +
+            '<ellipse vector-effect="non-scaling-stroke" cx="41.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/>' +
+            '<path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 41 13.5 L 41 19.5 L 34 29.5 M 41 19.5 L 48 29.5 M 33 18 L 49 18"/>' +
+            '<circle vector-effect="non-scaling-stroke" fill="black" cx="62" cy="17.5" r="1.5"/>' +
+            '<circle vector-effect="non-scaling-stroke" fill="black" cx="72" cy="17.5" r="1.5"/>' +
+            '<circle vector-effect="non-scaling-stroke" fill="black" cx="82" cy="17.5" r="1.5"/>' +
+            '<foreignObject class="symbol-text-container" x="3" y="30" width="20" height="10" visibility="show">' +
+            '<div class="flex-container">' +
+            '<div class="symbol-text-element">' +
+            '<div style="font-size:5px;font-weight:100"><i>Person1</i></div>' +
+            '</div>' +
+            '</div>' +
+            '</foreignObject>' +
+            '<foreignObject class="symbol-text-container" x="33" y="30" width="20" height="10" visibility="show">' +
+            '<div class="flex-container">' +
+            '<div class="symbol-text-element">' +
+            '<div style="font-size:5px;font-weight:100"><i>Person2</i></div>' +
+            '</div>' +
+            '</div>' +
+            '</foreignObject>' +
+            '</g>',
+        },
+        annotations: [
+          {
+            content: annotation,
+            verticalAlignment: 'Bottom',
+            offset: { x: 0.5, y: 1 },
+            margin: {
+              top: 20,
+            },
+          },
+        ],
+        height: 140,
+        width: 400,
+        style: {
+          fontSize: 10,
+        },
+        ports: rectPorts,
+      };
+    case 'PersonNoFrame':
+      let label2 = [
+        {
+          content: annotation[0],
+          offset: { x: 0.5, y: 1 },
+          margin: {
+            top: 15,
+          },
+          style: {
+            textWrapping: 'NoWrap',
+          },
+        },
+      ];
+      if (annotation.length === 2) {
+        label2.push({
+          content: annotation[1],
+          offset: { x: 0.5, y: 1 },
+          margin: {
+            top: 30,
+          },
+          style: {
+            textWrapping: 'NoWrap',
+          },
+        });
+      }
+
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: 'Native',
+          content: `
+          <g transform="translate(2,2)">
+            <rect vector-effect="non-scaling-stroke" fill="transparent" stroke="transparent" stroke-width="1" x="0" y="0" height="87" width="47"/>
+            <path vector-effect="non-scaling-stroke" d="M7.05, 21.75A15.98 16.4333333333333 0 0 1 39.95, 21.75A15.98 16.4333333333333 0 0 1 7.05, 21.75z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M23.5, 37.41L23.5, 56.55z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M23.5, 56.55L39.95, 82.65z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M23.5, 56.55L7.05, 82.65z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M4.7, 52.2L42.3, 52.2z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path vector-effect="non-scaling-stroke" d="M17.86, 30.45A6 3 0 0 1 29.14, 30.45A6 3 0 0 1 17.86, 30.45z" fill="transparent" stroke="#000000" stroke-width="1px" />
+            <path d="M14.1, 16.53A2 2 0 0 1 18.8, 16.53A2 2 0 0 1 14.1, 16.53z" fill="#000000" stroke="#000000" stroke-width="1px" />
+            <path d="M28.2, 16.53A2 2 0 0 1 32.9, 16.53A2 2 0 0 1 28.2, 16.53z" fill="#000000" stroke="#000000" stroke-width="1px" />
+          </g>`,
+        },
+        height: 90,
+        width: 50,
+        annotations: label2,
+        style: {
+          fontSize: 10,
+        },
+        ports: personPort2,
+      };
+    case 'NaturalObserver':
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: 'Native',
+          content: `<g transform="translate(2,2)">
+                              <rect vector-effect="non-scaling-stroke" fill="transparent" stroke="transparent" stroke-width="1" x="0" y="0" height="100" width="100"/>
+                              <path d="M25, 50A25 25 0 0 1 75, 50A25 25 0 0 1 25, 50z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M50, 0L50, 20z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M79.4, 9.5L67.6, 25.7z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M97.5, 34.5L78.5, 40.7z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M97.5, 65.5L78.5, 59.3z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M79.4, 90.5L67.6, 74.3z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M50, 100L50, 80z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M20.6, 90.5L32.4, 74.3z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M2.5, 65.5L21.5, 59.3z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M2.5, 34.5L21.5, 40.7z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                              <path d="M20.6, 9.5L32.4, 25.7z" fill="transparent" stroke="#000000" stroke-width="1px" />
+                          </g>`,
+        },
+        height: 100,
+        width: 100,
+        style: {
+          fontSize: 10,
+        }
+      };
+    default:
+      let height = annotation?.height !== undefined ? annotation.height : 80;
+      let width = annotation?.width !== undefined ? annotation.width : 150;
+      let text =
+        annotation?.content !== undefined
+          ? annotation?.content[0]?.content
+          : annotation;
+      let textLen;
+      if (String(text).length === 1) {
+        textLen = width * 0.15;
+      } else if (String(text).length > 1 && String(text).length < 5) {
+        textLen = width * 0.3;
+      } else if (String(text).length <= 20 && String(text).length >= 5) {
+        textLen = width * 0.65;
+      } else {
+        textLen = width * 0.85;
+      }
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: 'Native',
+          content: `<g transform="translate(2,2)">
+                    <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="transparent" />
+                    <foreignObject class="symbol-text-container" x="${
+                      (0.25 * width) / 2
+                    }" width="${
+            width * 0.75
+          }" height="${height}" visibility="hidden">
+                        <div style="height: ${height}px" class="flex-container">
+                            <div width="${
+                              width * 0.75
+                            }" class="symbol-text-element">
+                                ${text}
+                            </div>
+                        </div>
+                    </foreignObject>`,
+        },
+        annotations:
+          annotation?.content !== undefined
+            ? annotation?.content
+            : [{ content: annotation }],
+        width: width,
+        height: height,
+        ports: annotation?.ports !== undefined ? annotation?.ports : rectPorts,
+        style: {
+          ...annotation?.style,
+          fill: 'white',
+          fontSize: 10,
+        },
+      };
+  }
+}

@@ -19,3 +19,198 @@ export const rectPorts: PointPortModel[] = [{
     x: 0.5, y: 1,
   }, visibility: PortVisibility.Visible, shape: "X", width: 4, height: 4,
 }];
+
+export const personPort1 = [
+  {
+    id: "LeftCenter",
+    offset: {
+      x: 0,
+      y: 0.5,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "LeftTop",
+    offset: {
+      x: 0,
+      y: 0.25,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "LeftBottom",
+    offset: {
+      x: 0,
+      y: 0.75,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "Bottom",
+    offset: {
+      x: 0.5,
+      y: 1,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "RightCenter",
+    offset: {
+      x: 1,
+      y: 0.5,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "RightTop",
+    offset: {
+      x: 1,
+      y: 0.25,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "RightBottom",
+    offset: {
+      x: 1,
+      y: 0.75,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "Top",
+    offset: {
+      x: 0.5,
+      y: 0,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+];
+export const personPort2 = [
+  {
+    id: "LeftCenter",
+    offset: {
+      x: 0,
+      y: 0.5,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "LeftTop",
+    offset: {
+      x: 0,
+      y: 0,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "LeftBottom",
+    offset: {
+      x: 0,
+      y: 1,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "Bottom",
+    offset: {
+      x: 0.5,
+      y: 1,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "RightCenter",
+    offset: {
+      x: 1,
+      y: 0.5,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "RightTop",
+    offset: {
+      x: 1,
+      y: 0,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "RightBottom",
+    offset: {
+      x: 1,
+      y: 1,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+
+  {
+    id: "Top",
+    offset: {
+      x: 0.5,
+      y: 0,
+    },
+    visibility: PortVisibility.Visible,
+    shape: "X",
+    width: 4,
+    height: 4,
+  },
+];
