@@ -219,6 +219,87 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
           fontSize: 10,
         }
       };
+    case 'Overlap':
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: "Native", content: `
+          <g  transform="translate(2, 2)">
+            <rect x="0" y="0" height="50" width="100" fill="transparent" stroke-width="0"/>
+            <rect width="90" height="40" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" />
+            <rect x="10" y="10" height="40" width="90"  fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1"/>
+            <foreignObject class="symbol-text-container" x="${(0.25 * 100) / 2}" width="${100 * 0.75}" height="${50}" visibility="hidden">
+              <div style="height: ${50}px" class="flex-container">
+                <div width="${100 * 0.75}" class="symbol-text-element">
+                  ${annotation}
+                </div>
+              </div>
+            </foreignObject>
+          </g>`,
+        },
+        annotations: [{
+          offset: {x: 0.55, y: 0.5}, content: annotation,
+        },],
+        style: {
+          fill: "none", fontSize: 10,
+        },
+        ports: rectPorts,
+        height: 100,
+        width: 210,
+      };
+    case 'cover':
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: "Native", content: `<g transform="translate(2,2)">
+                      <rect vector-effect="non-scaling-stroke" height="10" width="7.5" stroke-width="1" stroke="black" fill="green" opacity="0.5"/>
+                      </g>`,
+        },
+        annotations: [{
+          content: annotation,
+        },],
+        height: 80,
+        width: 35.56,
+      };
+    case 'mobility':
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: 'Native',
+          content: `<g transform="translate(2,2)">
+                      <rect vector-effect="non-scaling-stroke" height="10" width="10" stroke="none" fill="none"/>
+                      <path d="M 0 4, S 2.5 1.5, 5 4 M 5 4, S 7.5 6.5, 10 4 M 0 6, S 2.5 3.5, 5 6 M 5 6, S 7.5 8.5, 10 6" vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="none"/>
+                      </g>`,
+        },
+        height: 50,
+        width: 50,
+      };
+    case 'Continuity':
+      let strokeWidth = annotation.strokeWidth !== undefined ? annotation.strokeWidth : 1;
+      let strokeDashArray = annotation.strokeDashArray !== undefined ? annotation.strokeDashArray : "";
+      let ports = annotation.ports !== undefined ? annotation.ports : rectPorts;
+      return {
+        id,
+        addInfo: addInfo,
+        shape: {
+          type: "Native", content: `
+          <g transform="translate(2, 2)">
+            <rect width="10" height="5" fill="transparent" vector-effect="non-scaling-stroke" stroke="black" stroke-width="${strokeWidth}" stroke-dasharray = "${strokeDashArray}" />
+            <circle vector-effect="non-scaling-stroke" cx="3.5" cy="2.5" r="0.4"/>
+            <circle vector-effect="non-scaling-stroke" cx="5.0" cy="2.5" r="0.4"/>
+            <circle vector-effect="non-scaling-stroke" cx="6.5" cy="2.5" r="0.4"/>
+          </g>`,
+        },
+        style: {
+          fill: "none", fontSize: 10,
+        },
+        ports: ports,
+        width: 210,
+        height: 100,
+      };
     default:
       let height = annotation?.height !== undefined ? annotation.height : 80;
       let width = annotation?.width !== undefined ? annotation.width : 150;
