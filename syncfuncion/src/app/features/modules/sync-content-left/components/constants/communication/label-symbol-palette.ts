@@ -1,6 +1,6 @@
 import {ConnectorConstraints, ConnectorModel, NodeConstraints, NodeModel} from "@syncfusion/ej2-angular-diagrams";
 
-export function getLabelShapes() {
+export function getLabelShapes(): any {
   let labelsShape = [
     {
       id: 'informationlabel',
