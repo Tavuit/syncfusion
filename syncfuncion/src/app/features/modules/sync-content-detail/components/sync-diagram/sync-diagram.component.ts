@@ -6,6 +6,7 @@ import {
 import {CommonModule} from '@angular/common';
 import {
   DiagramAllModule,
+  IDragEnterEventArgs,
   SymbolPaletteModule
 } from '@syncfusion/ej2-angular-diagrams';
 import {DiagramService} from "../../../../../shared/services/diagram.service";
@@ -58,6 +59,10 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
 
   destroyComponent(componentRef: any) {
 
+  }
+
+  handleDragEnter(event: IDragEnterEventArgs) {
+   console.log('event', event, event?.dragItem, event?.dragItem?.id, event?.dragItem?.addInfo);
   }
 
   ngOnDestroy() {

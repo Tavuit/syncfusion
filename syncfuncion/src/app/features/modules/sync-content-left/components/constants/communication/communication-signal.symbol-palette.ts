@@ -138,4 +138,92 @@ export function getCommunicationSignalShapes() {
     },
   ];
   return communicationSignal;
+};
+
+export function getTheoryCommunicationSignalShapes() {
+  let theoryCommunicationSignal = [
+    {
+      ...getShapeByType('Circle', 'greenSignal', { title: 'Green Signal', tooltip: 'Green Signal' }, {
+        fill: "LimeGreen",
+        radius: 10,
+        isPoint: true,
+      }),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Denote Positive Flow',
+        position: 'TopRight',
+      }
+    },
+    {
+      ...getShapeByType('Circle', 'redSignal', { title: 'Red Signal', tooltip: 'Red Signal' }, {
+        fill: "Red",
+        radius: 10,
+        isPoint: true,
+      }),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Denote Negative Flow',
+        position: 'TopRight',
+      }
+    },
+    {
+      ...getShapeByType('Arrow', 'greenSignalPath', { title: 'Green Signal Path', tooltip: 'Green Signal Path' }, {
+        style: {
+          fill: "LimeGreen",
+          strokeColor: "LimeGreen",
+        },
+        shape: {
+          target: "Arrow",
+        },
+      }),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Denote Positive Flow Direction',
+        position: 'TopRight',
+      }
+    },
+    {
+      ...getShapeByType('Arrow', 'redSignalPath', { title: 'Red Signal Path', tooltip: 'Red Signal Path' }, {
+        style: {
+          fill: "Red",
+          strokeColor: "Red",
+        },
+        shape: {
+          target: "Arrow",
+        },
+      }),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Denote Negative Flow Direction',
+        position: 'TopRight',
+      }
+    },
+    {
+      ...getShapeByType('linkednode', 'linkednodesignal', { title: 'Linked Node', tooltip: 'Linked Node' }, null),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Linked Node',
+        position: 'TopRight',
+      }
+    },
+  ];
+  return theoryCommunicationSignal;
 }

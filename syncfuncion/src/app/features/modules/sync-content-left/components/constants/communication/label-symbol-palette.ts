@@ -1,5 +1,6 @@
-import {ConnectorConstraints, ConnectorModel, NodeConstraints, NodeModel} from "@syncfusion/ej2-angular-diagrams";
-
+import {ConnectorConstraints, ConnectorModel, NodeConstraints, NodeModel, PortVisibility} from "@syncfusion/ej2-angular-diagrams";
+import { rectPorts } from 'src/app/features/modules/sync-content-left/components/constants/communication/common';
+import { getShapeByType } from 'src/app/utils/constants';
 export function getLabelShapes(): any {
   let labelsShape = [
     {
@@ -813,4 +814,684 @@ export function getLabelShapes(): any {
     },
   ]
   return labelsShape;
+}
+
+export function getTheoryLabelShapes() {
+  let theoryLabelShapes = [
+    {
+      ...getShapeByType(
+        'Arrow',
+        'label',
+        { title: 'Label', tooltip: 'Label' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "After",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'label1',
+        { title: 'Label', tooltip: 'Label' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "After",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'label2',
+        { title: 'Label', tooltip: 'Label' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "Before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'label3',
+        { title: 'Label', tooltip: 'Label' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "Before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'label4',
+        { title: 'Label', tooltip: 'Label' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "Before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'label5',
+        { title: 'Label', tooltip: 'Label' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "After",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'expandTo',
+        { title: 'Expand To', tooltip: 'Expand To' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "Before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'expandTo1',
+        { title: 'Expand To', tooltip: 'Expand To' },
+        {
+          type: "Bezier",
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "label",
+              alignment: "After",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Information Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'allocate',
+        { title: 'Allocate', tooltip: 'Allocate' },
+        {
+          shape: {
+            source: "Arrow",
+          },
+          content: [],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Allocate Theorem in Theory',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'allocate1',
+        { title: 'Allocate', tooltip: 'Allocate' },
+        {
+          shape: {
+            source: "Arrow",
+          },
+          content: [],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Allocate Theorem in Theory',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'LeftLabel',
+        'label123',
+        { title: 'Label', tooltip: 'Label' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Symbol Identification Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'RightLabel',
+        'label',
+        { title: 'Label', tooltip: 'Label' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Symbol Identification Label',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'directionLeft',
+        { title: 'DirectionLeft', tooltip: 'DirectionLeft' },
+        {
+          shape: {
+            source: "Arrow",
+          },
+          content: [],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Identify Left Direction',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'directionRight',
+        { title: 'Direction Right', tooltip: 'Direction Right' },
+        {
+          shape: {
+            source: "Arrow",
+          },
+          content: [],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Identify Right Direction',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'redcross',
+        'crossoutlabel',
+        { title: 'Cross Out', tooltip: 'Cross Out' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'To Cross Out an Entity',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Curly',
+        'leftCurlBrace',
+        { title: 'Left Curl Brace', tooltip: 'Left Curl Brace' },
+        {
+          content: [
+            {
+              content: "Text",
+              offset: {
+                x: 0,
+                y: 0.5,
+              },
+              margin: {
+                right: 15,
+              },
+            },
+          ],
+          orientation: "left",
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Use to Group Theorem',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'CurlyClose',
+        'rightCurlBraces',
+        { title: 'Right Curl Braces', tooltip: 'Right Curl Braces' },
+        {
+          content: [
+            {
+              content: "Text",
+              offset: {
+                x: 1,
+                y: 0.5,
+              },
+              margin: {
+                left: 15,
+              },
+            },
+          ],
+          orientation: "right",
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Use to Group Theorem',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Text',
+        '#',
+        { title: '#', tooltip: '#' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Use for Identification',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Circle',
+        'node',
+        { title: 'Node', tooltip: 'Node' },
+        {
+          content: [
+            {
+              content: "1",
+            },
+          ],
+          radius: 15,
+          fill: "White",
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Use for Identification',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Table',
+        'nodeTable',
+        { title: 'Node Table', tooltip: 'Node Table' },
+        {
+          content: ["Node Number", "Information", ""],
+          columnNo: 2,
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Represents a Table of Node',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'VerticalLine',
+        'separationLine',
+        { title: 'Separation Line', tooltip: 'Separation Line' },
+        {
+          length: 400,
+          style: {
+            strokeDashArray: "10 5",
+          },
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Use to Show Separation',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'PushUpRight',
+        'pushUp',
+        { title: 'Push Up', tooltip: 'Push Up' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Push Up',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'PushUpLeft',
+        'pushUp1',
+        { title: 'Push Up', tooltip: 'Push Up' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Selected to Apply',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'up',
+        { title: 'Up', tooltip: 'Up' },
+        {
+          shape: {
+            source: "Arrow",
+          },
+          content: [
+            {
+              content: "up",
+              alignment: "before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Position Up',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'down',
+        { title: 'Down', tooltip: 'Down' },
+        {
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "down",
+              alignment: "before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Position Down',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'up1',
+        { title: 'Up', tooltip: 'Up' },
+        {
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "up",
+              alignment: "before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Position up',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Arrow',
+        'down1',
+        { title: 'Down', tooltip: 'Down' },
+        {
+          shape: {
+            target: "Arrow",
+          },
+          content: [
+            {
+              content: "down",
+              alignment: "before",
+            },
+          ],
+          style: {},
+        }
+      ),
+      constraints:
+        ConnectorConstraints.Default |
+        ConnectorConstraints.Tooltip |
+        ConnectorConstraints.AllowDrop,
+      tooltip: {
+        content: 'Position down',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'VerticalContinuity',
+        'continuityLabel',
+        { title: 'Continuity', tooltip: 'Continuity' },
+        {
+          strokeWidth: "0",
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Denote a Continuity',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'linkednode',
+        'linkednodeLabel',
+        { title: 'Linked Node', tooltip: 'Linked Node' },
+        null
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
+      tooltip: {
+        content: 'Linked Node',
+        position: 'TopRight',
+      },
+    },
+  ];
+  return theoryLabelShapes;
 }

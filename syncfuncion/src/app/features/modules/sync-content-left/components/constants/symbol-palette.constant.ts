@@ -1,15 +1,16 @@
-import {getQuickEntitiesShapes} from "./communication/quick.symbol-palette";
-import {getPersonShapes} from "./communication/persion.symbol-palette";
+import {getQuickEntitiesShapes, getTheoryQuickEntitiesShapes} from "./communication/quick.symbol-palette";
+import {getPersonShapes, getTheoryPersonShapes} from "./communication/persion.symbol-palette";
 import {getCommunicationShapes} from "./communication/communication.symbol-palette";
 import {getApplicationShapes} from "./communication/application.symbol-palette";
 import {getCommunicationLinksShapes} from "./communication/communication-link.symbol-palette";
 import {getAnalysisShapes} from "./communication/analysis.symbol-palette";
-import {getCommunicationSignalShapes} from "./communication/communication-signal.symbol-palette";
+import {getCommunicationSignalShapes, getTheoryCommunicationSignalShapes} from "./communication/communication-signal.symbol-palette";
 import {getAreaAndLocationShapes} from "./communication/area-location.symbol-palette";
 import {getOtherCommunicationElementShapes} from "./communication/other-communication-element.symbol-palette";
-import {getLabelShapes} from "./communication/label-symbol-palette";
+import {getLabelShapes, getTheoryLabelShapes} from "./communication/label-symbol-palette";
 import {getEquationsShape} from "./communication/equation-symbol-palette";
 import {PaletteModel} from "@syncfusion/ej2-angular-diagrams";
+import { getOperatorShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/operator-palette";
 
 export const palettesCommunication: PaletteModel[] = [
   {
@@ -95,14 +96,14 @@ export const palettesTheory: PaletteModel[] = [
   {
     id: 'quickEntities',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryQuickEntitiesShapes(),
     title: 'Quick Entities',
     iconCss: 'e-ddb-icons e-flow',
   },
   {
     id: 'system',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryPersonShapes(),
     title: 'System',
     iconCss: 'e-ddb-icons e-flow',
   },
@@ -130,7 +131,7 @@ export const palettesTheory: PaletteModel[] = [
   {
     id: 'signal',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryCommunicationSignalShapes(),
     title: 'Signal',
     iconCss: 'e-ddb-icons e-flow',
   },
@@ -158,14 +159,14 @@ export const palettesTheory: PaletteModel[] = [
   {
     id: 'label',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryLabelShapes(),
     title: 'Label',
     iconCss: 'e-ddb-icons e-flow',
   },
   {
     id: 'operator',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getOperatorShapes(),
     title: 'Operator',
     iconCss: 'e-ddb-icons e-flow',
   },

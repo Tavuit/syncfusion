@@ -407,3 +407,374 @@ export function getPersonShapes() {
   ];
   return personShapes;
 }
+
+export function getTheoryPersonShapes(): any {
+  const theoryPerson = [
+    {
+      ...getShapeByType(
+        'Person',
+        'physicalSystem',
+        { title: 'Physical System', tooltip: 'Physical System' },
+        ['System']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      }
+    },
+    {
+      ...getShapeByType(
+        'PersonNoFrame',
+        'physicalSystem1',
+        { title: 'Physical System', tooltip: 'Physical System' },
+        ['System']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'physicalSystem2',
+        { title: 'Physical System', tooltip: 'Physical System' },
+        ['System']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'PersonGroup',
+        'groupPhysicalSystem',
+        { title: 'Group Physical System', tooltip: 'Group Physical System' },
+        'Change Shape'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify Group of Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Overlap',
+        'groupPhysicalSystem1',
+        { title: 'Group Physical System', tooltip: 'Group Physical System' },
+        'Systems'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify Group of Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'DottedGroup',
+        'groupPhysicalSyste2',
+        { title: 'Group Physical System', tooltip: 'Group Physical System' },
+        'Change Shape'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify Group of Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'constantCharacteristics',
+        {
+          title: 'Constant Characteristics',
+          tooltip: 'Constant Characteristics',
+        },
+        'Constant Characteristics'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Physical System Constant Characteristics  ',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'mobility',
+        'mobilitySystem',
+        { title: 'Mobility', tooltip: 'Mobility' },
+        'Identify Our Mobility'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify Group of Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'groupSystem',
+        { title: 'Group', tooltip: 'Group' },
+        {
+          content: [
+            {
+              content: 'Group',
+            },
+          ],
+          ports: [
+            {
+              id: 'left-1',
+              offset: { x: 0, y: 0.25 },
+              visibility: PortVisibility.Visible,
+              shape: 'X',
+              width: 4,
+              height: 4,
+            },
+            {
+              id: 'left-2',
+              offset: { x: 0, y: 0.75 },
+              visibility: PortVisibility.Visible,
+              shape: 'X',
+              width: 4,
+              height: 4,
+            },
+            {
+              id: 'right',
+              offset: { x: 1, y: 0.5 },
+              visibility: PortVisibility.Visible,
+              shape: 'X',
+              width: 4,
+              height: 4,
+            },
+          ],
+          height: 75,
+          width: 50,
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Use to Group or Add Entities',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Continuity',
+        'continuity',
+        { title: 'Continuity', tooltip: 'Continuity' },
+        {
+          strokeWidth: 0,
+          strokeDashArray: "",
+          fill: "transparent",
+          ports: [],
+        }
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Show Continuity of Entity',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'linkednode',
+        'linkedNodeSystem',
+        { title: 'Linked Node', tooltip: 'Linked Node' },
+        ''
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Linked Node',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'sn2',
+        { title: 'S[n]', tooltip: 'S[n]' },
+        'Sn'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Represents The Physical System',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Text',
+        'sn3',
+        { title: 'S[n]', tooltip: 'S[n]' },
+        'Sn'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Represents The Physical System',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Person',
+        'sn',
+        { title: 'S[n]', tooltip: 'S[n]' },
+        ['Sn']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'PersonNoFrame',
+        'sn1',
+        { title: 'S[n]', tooltip: 'S[n]' },
+        ['Sn']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'Person',
+        'xn',
+        { title: 'x[n]', tooltip: 'x[n]' },
+        ['Xn']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'PersonNoFrame',
+        'xn1',
+        { title: 'x[n]', tooltip: 'x[n]' },
+        ['Xn']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'StrokeRect',
+        's',
+        { title: 'S', tooltip: 'S' },
+        'S'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'DottedOverlap',
+        'S',
+        { title: 'S', tooltip: 'S' },
+        'S'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+  ];
+  return theoryPerson;
+}

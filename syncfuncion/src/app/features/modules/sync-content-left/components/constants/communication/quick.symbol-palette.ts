@@ -1,13 +1,18 @@
-import {NodeConstraints, NodeModel, PortVisibility} from "@syncfusion/ej2-angular-diagrams";
-import { rectPorts } from "src/app/features/modules/sync-content-left/components/constants/communication/common";
+import {
+  NodeConstraints,
+  NodeModel,
+  PortVisibility,
+} from '@syncfusion/ej2-angular-diagrams';
+import { rectPorts } from 'src/app/features/modules/sync-content-left/components/constants/communication/common';
+import { getShapeByType } from 'src/app/utils/constants';
 
 export function getQuickEntitiesShapes(): NodeModel[] {
   let quickEntities: NodeModel[] = [
     {
-      id: "quickperson",
-      addInfo: {title: "Person", tooltip: "Person"},
+      id: 'quickperson',
+      addInfo: { title: 'Person', tooltip: 'Person' },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g  transform="translate(2, 2)"><rect vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" x="0" y="0" height="27" width="12"/><circle vector-effect="non-scaling-stroke" cx="6" cy="6" r="5" fill="transparent" stroke="black" stroke-width="1" /><circle vector-effect="non-scaling-stroke" cx="4.0" cy="4.5" r="1" fill="black" /><circle vector-effect="non-scaling-stroke" cx="8.0" cy="4.5" r="1.0" fill="black" /><ellipse vector-effect="non-scaling-stroke" cx="6.0" cy="9.0" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"/><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 6 11 L 6 16 L 1 26 M 6 16 L 11 26 M 1 13.5 L 11 13.5"/></g>`,
       },
@@ -15,97 +20,97 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 80,
       ports: [
         {
-          id: "LeftCenter",
+          id: 'LeftCenter',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "LeftTop",
+          id: 'LeftTop',
           offset: {
             x: 0,
             y: 0.25,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "LeftBottom",
+          id: 'LeftBottom',
           offset: {
             x: 0,
             y: 0.75,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "Bottom",
+          id: 'Bottom',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightCenter",
+          id: 'RightCenter',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightTop",
+          id: 'RightTop',
           offset: {
             x: 1,
             y: 0.25,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightBottom",
+          id: 'RightBottom',
           offset: {
             x: 1,
             y: 0.75,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "Top",
+          id: 'Top',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Person Name",
+          content: 'Person Name',
           offset: {
             x: 0.5,
             y: 1,
@@ -114,11 +119,11 @@ export function getQuickEntitiesShapes(): NodeModel[] {
             top: 15,
           },
           style: {
-            textWrapping: "NoWrap",
+            textWrapping: 'NoWrap',
           },
         },
         {
-          content: "No Title",
+          content: 'No Title',
           offset: {
             x: 0.5,
             y: 1,
@@ -127,24 +132,27 @@ export function getQuickEntitiesShapes(): NodeModel[] {
             top: 30,
           },
           style: {
-            textWrapping: "NoWrap",
+            textWrapping: 'NoWrap',
           },
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'A Person Without Title',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fontSize: 10
-      }
+        fontSize: 10,
+      },
     },
     {
-      id: "quickperson1",
-      addInfo: {title: "Person", tooltip: "Person"},
+      id: 'quickperson1',
+      addInfo: { title: 'Person', tooltip: 'Person' },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">
         <rect vector-effect="non-scaling-stroke" fill="transparent" stroke="transparent" stroke-width="1" x="0" y="0" height="87" width="47"/>
@@ -162,97 +170,97 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 90,
       ports: [
         {
-          id: "LeftCenter",
+          id: 'LeftCenter',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "LeftTop",
+          id: 'LeftTop',
           offset: {
             x: 0,
             y: 0.25,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "LeftBottom",
+          id: 'LeftBottom',
           offset: {
             x: 0,
             y: 0.75,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "Bottom",
+          id: 'Bottom',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightCenter",
+          id: 'RightCenter',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightTop",
+          id: 'RightTop',
           offset: {
             x: 1,
             y: 0.25,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightBottom",
+          id: 'RightBottom',
           offset: {
             x: 1,
             y: 0.75,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "Top",
+          id: 'Top',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Person Name",
+          content: 'Person Name',
           offset: {
             x: 0.5,
             y: 1,
@@ -261,11 +269,11 @@ export function getQuickEntitiesShapes(): NodeModel[] {
             top: 15,
           },
           style: {
-            textWrapping: "NoWrap",
+            textWrapping: 'NoWrap',
           },
         },
         {
-          content: "No Title",
+          content: 'No Title',
           offset: {
             x: 0.5,
             y: 1,
@@ -274,24 +282,30 @@ export function getQuickEntitiesShapes(): NodeModel[] {
             top: 30,
           },
           style: {
-            textWrapping: "NoWrap",
+            textWrapping: 'NoWrap',
           },
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'A Person Without Title',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fontSize: 10
-      }
+        fontSize: 10,
+      },
     },
     {
-      id: "quickcommunicationEntity",
-      addInfo: {title: "Communication Entity", tooltip: "Communication Entity"},
+      id: 'quickcommunicationEntity',
+      addInfo: {
+        title: 'Communication Entity',
+        tooltip: 'Communication Entity',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">\n                    <rect vector-effect="non-scaling-stroke" height="100" width="210" stroke="black" stroke-width="1" fill="white"/>\n                    <foreignObject class="symbol-text-container" x="26.25" width="157.5" height="100" visibility="hidden">\n                        <div style="height: 100px" class="flex-container">\n                            <div width="157.5" class="symbol-text-element">\n                                Communication\n                            </div>\n                        </div>\n                    </foreignObject></g>`,
       },
@@ -299,70 +313,73 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 100,
       ports: [
         {
-          id: "LeftMiddle",
+          id: 'LeftMiddle',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "TopCenter",
+          id: 'TopCenter',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightMidlle",
+          id: 'RightMidlle',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "BottomCenter",
+          id: 'BottomCenter',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Communication",
+          content: 'Communication',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Represents a Communication',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickCommtext",
-      addInfo: {title: "Communication", tooltip: "Communication"},
+      id: 'quickCommtext',
+      addInfo: { title: 'Communication', tooltip: 'Communication' },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g  transform="translate(2, 2)">
           <rect height="30" width="100" fill="transparent" stroke-width="0"/>
@@ -379,29 +396,38 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 30,
       annotations: [
         {
-          content: "Communication",
+          content: 'Communication',
           style: {
-            bold: true, fontSize: 15, italic: true,
+            bold: true,
+            fontSize: 15,
+            italic: true,
           },
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Represents a Communication',
-        position: 'TopRight'
-      }
+        position: 'TopRight',
+      },
     },
     {
-      id: "quickApplication",
-      addInfo: {title: "Application", tooltip: "Application"},
+      id: 'quickApplication',
+      addInfo: { title: 'Application', tooltip: 'Application' },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">
                     <rect vector-effect="non-scaling-stroke" height="${80}" width="${150}" stroke="black" stroke-width="1" fill="transparent" />
-                    <foreignObject class="symbol-text-container" x="${(0.25 * 150) / 2}" width="${150 * 0.75}" height="${80}" visibility="hidden">
+                    <foreignObject class="symbol-text-container" x="${
+                      (0.25 * 150) / 2
+                    }" width="${150 * 0.75}" height="${80}" visibility="hidden">
                         <div style="height: ${80}px" class="flex-container">
-                            <div width="${150 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              150 * 0.75
+                            }" class="symbol-text-element">
                               Application
                             </div>
                         </div>
@@ -411,76 +437,86 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 80,
       ports: [
         {
-          id: "LeftMiddle",
+          id: 'LeftMiddle',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "TopCenter",
+          id: 'TopCenter',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightMidlle",
+          id: 'RightMidlle',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "BottomCenter",
+          id: 'BottomCenter',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Application",
+          content: 'Application',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Represent an Actual Application',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickcommunicationFunction",
-      addInfo: {title: "Communication Function", tooltip: "Communication Function"},
+      id: 'quickcommunicationFunction',
+      addInfo: {
+        title: 'Communication Function',
+        tooltip: 'Communication Function',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">
                     <rect vector-effect="non-scaling-stroke" height="${80}" width="${150}" stroke="black" stroke-width="1" fill="transparent" />
-                    <foreignObject class="symbol-text-container" x="${(0.25 * 150) / 2}" width="${150 * 0.75}" height="${80}" visibility="hidden">
+                    <foreignObject class="symbol-text-container" x="${
+                      (0.25 * 150) / 2
+                    }" width="${150 * 0.75}" height="${80}" visibility="hidden">
                         <div style="height: ${80}px" class="flex-container">
-                            <div width="${150 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              150 * 0.75
+                            }" class="symbol-text-element">
                               Communication Function
                             </div>
                         </div>
@@ -490,76 +526,86 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 80,
       ports: [
         {
-          id: "LeftMiddle",
+          id: 'LeftMiddle',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "TopCenter",
+          id: 'TopCenter',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightMidlle",
+          id: 'RightMidlle',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "BottomCenter",
+          id: 'BottomCenter',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Communication Function",
+          content: 'Communication Function',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Function of Out Communication',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickCommunicationResult",
-      addInfo: {title: "Communication Result", tooltip: "Communication Result"},
+      id: 'quickCommunicationResult',
+      addInfo: {
+        title: 'Communication Result',
+        tooltip: 'Communication Result',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">
                     <rect vector-effect="non-scaling-stroke" height="${80}" width="${150}" stroke="black" stroke-width="1" fill="transparent" />
-                    <foreignObject class="symbol-text-container" x="${(0.25 * 150) / 2}" width="${150 * 0.75}" height="${80}" visibility="hidden">
+                    <foreignObject class="symbol-text-container" x="${
+                      (0.25 * 150) / 2
+                    }" width="${150 * 0.75}" height="${80}" visibility="hidden">
                         <div style="height: ${80}px" class="flex-container">
-                            <div width="${150 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              150 * 0.75
+                            }" class="symbol-text-element">
                               Communication Result
                             </div>
                         </div>
@@ -569,76 +615,86 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 80,
       ports: [
         {
-          id: "LeftMiddle",
+          id: 'LeftMiddle',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "TopCenter",
+          id: 'TopCenter',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightMidlle",
+          id: 'RightMidlle',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "BottomCenter",
+          id: 'BottomCenter',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Communication Result",
+          content: 'Communication Result',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Result of an Application',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickcommunicationFunction1",
-      addInfo: {title: "Communication Function", tooltip: "Communication Function"},
+      id: 'quickcommunicationFunction1',
+      addInfo: {
+        title: 'Communication Function',
+        tooltip: 'Communication Function',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">
                     <rect vector-effect="non-scaling-stroke" height="${80}" width="${150}" stroke="black" stroke-width="1" fill="transparent" />
-                    <foreignObject class="symbol-text-container" x="${(0.25 * 150) / 2}" width="${150 * 0.75}" height="${80}" visibility="hidden">
+                    <foreignObject class="symbol-text-container" x="${
+                      (0.25 * 150) / 2
+                    }" width="${150 * 0.75}" height="${80}" visibility="hidden">
                         <div style="height: ${80}px" class="flex-container">
-                            <div width="${150 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              150 * 0.75
+                            }" class="symbol-text-element">
                               Communication Function
                             </div>
                         </div>
@@ -648,77 +704,91 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 80,
       ports: [
         {
-          id: "LeftMiddle",
+          id: 'LeftMiddle',
           offset: {
             x: 0,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "TopCenter",
+          id: 'TopCenter',
           offset: {
             x: 0.5,
             y: 0,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "RightMidlle",
+          id: 'RightMidlle',
           offset: {
             x: 1,
             y: 0.5,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "BottomCenter",
+          id: 'BottomCenter',
           offset: {
             x: 0.5,
             y: 1,
           },
           visibility: 1,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Communication Function",
+          content: 'Communication Function',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Represent Communication Function',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickCommAppMixture",
-      addInfo: {title: "Communication App Mixture", tooltip: "Communication App Mixture"},
+      id: 'quickCommAppMixture',
+      addInfo: {
+        title: 'Communication App Mixture',
+        tooltip: 'Communication App Mixture',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g  class="point-circle" transform="translate(2, 2)">
-                        <rect height="${35 * 2}" width="${35 * 2}" fill="transparent" stroke-width="0" />
+                        <rect height="${35 * 2}" width="${
+          35 * 2
+        }" fill="transparent" stroke-width="0" />
                         <circle vector-effect="non-scaling-stroke" cx="${35}" cy="${35}" r="${35}" fill="${'white'}" stroke="black" stroke-width="1"/>
-                        <foreignObject class="symbol-text-container" x="${(0.25 * 35 * 2) / 2}" width="${35 * 2 * 0.75}" height="${35 * 2}" visibility="hidden">
+                        <foreignObject class="symbol-text-container" x="${
+                          (0.25 * 35 * 2) / 2
+                        }" width="${35 * 2 * 0.75}" height="${
+          35 * 2
+        }" visibility="hidden">
                         <div style="height: ${35 * 2}px" class="flex-container">
-                            <div width="${35 * 2 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              35 * 2 * 0.75
+                            }" class="symbol-text-element">
                               Comm & App Mixture
                             </div>
                         </div>
@@ -730,31 +800,45 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       ports: rectPorts,
       annotations: [
         {
-          content: "Comm & App Mixture",
+          content: 'Comm & App Mixture',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Communication Application Mixture',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickcommAppMixture1",
-      addInfo: {title: "Communication App Mixture", tooltip: "Communication App Mixture"},
+      id: 'quickcommAppMixture1',
+      addInfo: {
+        title: 'Communication App Mixture',
+        tooltip: 'Communication App Mixture',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g  class="point-circle" transform="translate(2, 2)">
-                        <rect height="${35 * 2}" width="${35 * 2}" fill="transparent" stroke-width="0" />
+                        <rect height="${35 * 2}" width="${
+          35 * 2
+        }" fill="transparent" stroke-width="0" />
                         <circle vector-effect="non-scaling-stroke" cx="${35}" cy="${35}" r="${35}" fill="${'white'}" stroke="black" stroke-width="1"/>
-                        <foreignObject class="symbol-text-container" x="${(0.25 * 35 * 2) / 2}" width="${35 * 2 * 0.75}" height="${35 * 2}" visibility="hidden">
+                        <foreignObject class="symbol-text-container" x="${
+                          (0.25 * 35 * 2) / 2
+                        }" width="${35 * 2 * 0.75}" height="${
+          35 * 2
+        }" visibility="hidden">
                         <div style="height: ${35 * 2}px" class="flex-container">
-                            <div width="${35 * 2 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              35 * 2 * 0.75
+                            }" class="symbol-text-element">
                               x
                             </div>
                         </div>
@@ -766,30 +850,40 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       ports: rectPorts,
       annotations: [
         {
-          content: "x",
+          content: 'x',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Communication Application Mixture',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
     {
-      id: "quickCommAppMixture2",
-      addInfo: {title: "Communication App Mixture", tooltip: "Communication App Mixture"},
+      id: 'quickCommAppMixture2',
+      addInfo: {
+        title: 'Communication App Mixture',
+        tooltip: 'Communication App Mixture',
+      },
       shape: {
-        type: "Native",
+        type: 'Native',
         content: `
         <g transform="translate(2,2)">
                     <rect vector-effect="non-scaling-stroke" height="${75}" width="${50}" stroke="black" stroke-width="1" fill="transparent" />
-                    <foreignObject class="symbol-text-container" x="${(0.25 * 50) / 2}" width="${50 * 0.75}" height="${75}" visibility="hidden">
+                    <foreignObject class="symbol-text-container" x="${
+                      (0.25 * 50) / 2
+                    }" width="${50 * 0.75}" height="${75}" visibility="hidden">
                         <div style="height: ${75}px" class="flex-container">
-                            <div width="${50 * 0.75}" class="symbol-text-element">
+                            <div width="${
+                              50 * 0.75
+                            }" class="symbol-text-element">
                               Comm App Mixture
                             </div>
                         </div>
@@ -800,45 +894,230 @@ export function getQuickEntitiesShapes(): NodeModel[] {
       height: 75,
       ports: [
         {
-          id: "left-1",
-          offset: {x: 0, y: 0.25},
+          id: 'left-1',
+          offset: { x: 0, y: 0.25 },
           visibility: PortVisibility.Visible,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "left-2",
-          offset: {x: 0, y: 0.75},
+          id: 'left-2',
+          offset: { x: 0, y: 0.75 },
           visibility: PortVisibility.Visible,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
         {
-          id: "right",
-          offset: {x: 1, y: 0.5},
+          id: 'right',
+          offset: { x: 1, y: 0.5 },
           visibility: PortVisibility.Visible,
-          shape: "X",
+          shape: 'X',
           width: 4,
           height: 4,
         },
       ],
       annotations: [
         {
-          content: "Comm & App Mixture",
+          content: 'Comm & App Mixture',
         },
       ],
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Multi Inputs Comm & App',
-        position: 'TopRight'
+        position: 'TopRight',
       },
       style: {
-        fill: "white",
-        fontSize: 10
-      }
+        fill: 'white',
+        fontSize: 10,
+      },
     },
-  ]
+  ];
   return quickEntities;
+}
+
+export function getTheoryQuickEntitiesShapes() {
+  let theoryQuickEntities = [
+    {
+      ...getShapeByType(
+        'Person',
+        'quickPhysicalSystem',
+        { title: 'Physical System', tooltip: 'Physical System' },
+        ['System']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        'PersonNoFrame',
+        'quickPhysicalSystem1',
+        { title: 'Physical System', tooltip: 'Physical System' },
+        ['System']
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickTheory',
+        { title: 'Theory', tooltip: 'Theory' },
+        'Theory'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Person',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickTheorem',
+        { title: 'Theorem', tooltip: 'Theorem' },
+        'Theorem'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Theorem',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickApplyTheory',
+        { title: 'Apply Theory', tooltip: 'Apply Theory' },
+        'Apply'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Apply Application Theory',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickApplyTheory',
+        { title: 'Apply Theory', tooltip: 'Apply Theory' },
+        'Apply'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Apply Application Theory',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickInstrument',
+        { title: 'Instrument', tooltip: 'Instrument' },
+        'Instrument'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Instrument',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickMethod',
+        { title: 'Method', tooltip: 'Method' },
+        'Method'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify a Method',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickInputElement',
+        { title: 'Input Element', tooltip: 'Input Element' },
+        [
+          {
+            content: "Input Element",
+            offset: {x: 0.5, y: 1},
+            margin: {top: 20},
+          },
+        ]
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify an Input Element',
+        position: 'TopRight',
+      },
+    },
+    {
+      ...getShapeByType(
+        '',
+        'quickAddedFunction',
+        { title: 'Added Function', tooltip: 'Added Function' },
+        'Added Function'
+      ),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop |
+        NodeConstraints.Rotate,
+      tooltip: {
+        content: 'Identify An Added Function',
+        position: 'TopRight',
+      },
+    }
+  ];
+  return theoryQuickEntities;
 }
