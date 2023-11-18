@@ -164,7 +164,25 @@ export class RibbonService {
     sizeToWindowPointButton: {},
     greekSmallDropdown: {},
     arrowDropdown: {},
-    selectedEntityButton: {}
+    selectedEntityButton: {},
+    theory1Dropdown: {},
+    theory1DropdownData: [],
+    theory2Dropdown: {},
+    theory2DropdownData: [],
+    fundamentalDropdown: {},
+    fundamentalDropdownData: [],
+    theoryFunctionDropdown: {},
+    theoryFunctionDropdownData: [],
+    theoremDropdown: {},
+    theoremDropdownData: [],
+    timeDropdown: {},
+    timeDropdownData: [],
+    derivativeDropdown: {},
+    derivativeDropdownData: [],
+    instrumentDropdown: {},
+    instrumentDropdownData: [],
+    stabilityDropdown: {},
+    stabilityDropdownData: []
   };
 
   constructor(

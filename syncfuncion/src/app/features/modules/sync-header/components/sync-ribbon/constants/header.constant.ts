@@ -1970,5 +1970,70 @@ export const ERibbon: IRibbon = {
     iconCss: 'icon icon-program',
     content: 'Size To Window',
     cssClass: 'min-w-100',
-  }
+  },
+
+  // Theory insert speak logic
+  theory1Dropdown: {
+    iconCss: 'icon icon-theory1',
+    content: 'Theory',
+    target: '#theory1-dropdown',
+    createPopupOnClick: true
+  },
+  theory1DropdownData: [],
+  theory2Dropdown: {
+    iconCss: 'icon icon-theory2',
+    content: 'Theory',
+    target: '#theory2-dropdown',
+    createPopupOnClick: true
+  },
+  theory2DropdownData: [],
+  fundamentalDropdown: {
+    iconCss: 'icon icon-fundamental1',
+    content: 'Fundamental',
+    target: '#fundamental1-dropdown',
+    createPopupOnClick: true
+  },
+  fundamentalDropdownData: [],
+  theoryFunctionDropdown: {
+    iconCss: 'icon icon-function2',
+    content: 'Function',
+    target: '#function2-dropdown',
+    createPopupOnClick: true
+  },
+  theoryFunctionDropdownData: [],
+  timeDropdown: {
+    iconCss: 'icon icon-time',
+    content: 'Time',
+    target: '#time-dropdown',
+    createPopupOnClick: true
+  },
+  timeDropdownData: [],
+  derivativeDropdown: {
+    iconCss: 'icon icon-derivative',
+    content: 'Derivative',
+    target: '#derivative-dropdown',
+    createPopupOnClick: true
+  },
+  derivativeDropdownData: [],
+  instrumentDropdown: {
+    iconCss: 'icon icon-instrusment',
+    content: 'Instrusment',
+    target: '#instrusment-dropdown',
+    createPopupOnClick: true
+  },
+  instrumentDropdownData: [],
+  stabilityDropdown: {
+    iconCss: 'icon icon-stability',
+    content: 'Stability',
+    target: '#stability-dropdown',
+    createPopupOnClick: true
+  },
+  stabilityDropdownData: [],
+  theoremDropdown: {
+    iconCss: 'icon icon-theorem',
+    content: 'Theorem',
+    target: '#theorem-dropdown',
+    createPopupOnClick: true
+  },
+  theoremDropdownData: []
 }
