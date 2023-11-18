@@ -11,6 +11,12 @@ import {getLabelShapes, getTheoryLabelShapes} from "./communication/label-symbol
 import {getEquationsShape} from "./communication/equation-symbol-palette";
 import {PaletteModel} from "@syncfusion/ej2-angular-diagrams";
 import { getOperatorShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/operator-palette";
+import { getStabilityShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/stability.symbol-palette";
+import { getTheoryFunctionShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/theory-function.symbol-palette";
+import { getTheoryInstrumentShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/theory-instrument.symbol-palette";
+import { getTheoryInterfaceShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/theory-interface.symbol-palette";
+import { getTheoryFundamentalShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/theory-fundalmental.symbol-palette";
+import { getTheoryShapes } from "src/app/features/modules/sync-content-left/components/constants/communication/theory.symbol-palette";
 
 export const palettesCommunication: PaletteModel[] = [
   {
@@ -110,21 +116,21 @@ export const palettesTheory: PaletteModel[] = [
   {
     id: 'theory',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryShapes(),
     title: 'Theory',
     iconCss: 'e-ddb-icons e-flow',
   },
   {
-    id: 'fundalmental',
+    id: 'fundamental',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
-    title: 'Fundalmental',
+    symbols: getTheoryFundamentalShapes(),
+    title: 'Fundamental',
     iconCss: 'e-ddb-icons e-flow',
   },
   {
     id: 'interface',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryInterfaceShapes(),
     title: 'Interface',
     iconCss: 'e-ddb-icons e-flow',
   },
@@ -138,21 +144,21 @@ export const palettesTheory: PaletteModel[] = [
   {
     id: 'instrument',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryInstrumentShapes(),
     title: 'Instrument',
     iconCss: 'e-ddb-icons e-flow',
   },
   {
     id: 'function',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getTheoryFunctionShapes(),
     title: 'Function',
     iconCss: 'e-ddb-icons e-flow',
   },
   {
     id: 'stability',
     expanded: false,
-    symbols: getQuickEntitiesShapes(),
+    symbols: getStabilityShapes(),
     title: 'Stability',
     iconCss: 'e-ddb-icons e-flow',
   },

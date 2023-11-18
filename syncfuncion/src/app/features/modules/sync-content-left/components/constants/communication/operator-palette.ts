@@ -46,13 +46,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryComMix', { title: 'Com Mix', tooltip: 'Com Mix' }, {
@@ -92,13 +87,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('Circle', 'operatorTheoryComAppMix', { title: 'Com App Mix', tooltip: 'Com App Mix' }, {
@@ -113,13 +103,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('Circle', 'operatorTheorySimilar', { title: 'Similar', tooltip: 'Similar' }, {
@@ -136,13 +121,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('Circle', 'operatorTheorySimilar1', { title: 'Similar', tooltip: 'Similar' }, {
@@ -162,13 +142,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryGreater', { title: 'Greater', tooltip: 'Greater' }, {
@@ -186,13 +161,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryLess', { title: 'Less', tooltip: 'Less' }, {
@@ -210,13 +180,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryLessOrEqual', { title: 'Less Or Equal', tooltip: 'Less Or Equal' }, {
@@ -234,13 +199,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryGreaterOrEqual', { title: 'Greater Or Equal', tooltip: 'Greater Or Equal' }, {
@@ -258,13 +218,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryNotEqual', { title: 'Not Equal', tooltip: 'Not Equal' }, {
@@ -282,13 +237,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryNotEqual', { title: 'Not Equal', tooltip: 'Not Equal' }, {
@@ -306,13 +256,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryAdd', { title: 'Add', tooltip: 'Add' }, {
@@ -330,13 +275,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryDivide', { title: 'Divide', tooltip: 'Divide' }, {
@@ -354,13 +294,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryMultiply', { title: 'Multiply', tooltip: 'Multiply' }, {
@@ -378,13 +313,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheorySubtract', { title: 'Subtract', tooltip: 'Subtract' }, {
@@ -402,13 +332,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryEqual', { title: 'Equal', tooltip: 'Equal' }, {
@@ -426,13 +351,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheorySum', { title: 'Sum', tooltip: 'Sum' }, {
@@ -450,13 +370,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('Circle', 'operatorTheoryRelationship', { title: 'Relationship', tooltip: 'Relationship' }, {
@@ -473,13 +388,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryProportional', { title: 'Proportional', tooltip: 'Proportional' }, {
@@ -497,13 +407,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('RawAnnotationContent', 'operatorTheoryInstrumentDerivative', { title: 'Instrument Derivative', tooltip: 'Instrument Derivative' }, {
@@ -528,13 +433,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('', 'operatorTheoryMethodDerivative', { title: 'Method Derivative', tooltip: 'Method Derivative' }, {
@@ -557,13 +457,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
     {
       ...getShapeByType('linkednode', 'operatorTheoryLinkedNode', { title: 'Linked Node', tooltip: 'Linked Node' }, {
@@ -581,13 +476,8 @@ export function getOperatorShapes() {
       }),
       constraints:
         NodeConstraints.Default |
-        NodeConstraints.Tooltip |
         NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: '',
-        position: 'TopRight',
-      }
+        NodeConstraints.Rotate
     },
   ];
 
