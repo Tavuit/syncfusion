@@ -553,7 +553,15 @@
 #accent-dropdown,
 #arrow-code-dropdown,
 #operator-dropdown,
-#container-dropdown {
+#container-dropdown,
+#theory1-dropdown,
+#theory2-dropdown,
+#fundamental1-dropdown,
+#function2-dropdown,
+#time-dropdown,
+#instrusment-dropdown,
+#stability-dropdown,
+#theorem-dropdown {
   padding: 12px;
   display: grid;
   grid-template-columns: auto auto auto auto auto;

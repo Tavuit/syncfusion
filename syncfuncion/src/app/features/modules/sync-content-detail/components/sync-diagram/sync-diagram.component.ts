@@ -1,12 +1,15 @@
 import {
   Component,
   OnDestroy,
-  OnInit
+  OnInit,
+  ViewChild
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   DiagramAllModule,
+  DiagramComponent,
   IDragEnterEventArgs,
+  Node,
   SymbolPaletteModule
 } from '@syncfusion/ej2-angular-diagrams';
 import {DiagramService} from "../../../../../shared/services/diagram.service";
@@ -22,10 +25,12 @@ import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constan
   styleUrls: ['./sync-diagram.component.scss']
 })
 export class SyncDiagramComponent implements OnInit, OnDestroy {
+  @ViewChild("diagram") diagram?: DiagramComponent;
   private _destroyed: Subject<void> = new Subject<void>();
   public contextMenuSettings = contextMenuSettings;
   public rulerSettings = rulerSettings;
   public tooltipSettings = tooltipSettings;
+  public selectedNode: Node;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService
@@ -61,8 +66,24 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
 
   }
 
-  handleDragEnter(event: IDragEnterEventArgs) {
-   console.log('event', event, event?.dragItem, event?.dragItem?.id, event?.dragItem?.addInfo);
+  public dropped(args: any): void {
+    // Handle the drop event and update the text of the dropped node.
+    // if (args.element && args.element instanceof Node) {
+    //   const droppedNode = args.element as Node;
+    //   droppedNode.annotations[0].content = 'Updated Text';
+    //   this.diagram.addNode(droppedNode);
+    //   this.diagram.dataBind();
+    // }
+  }
+
+  public selectChange(e: any) {
+    console.log('select change', e);
+    if (e?.newValue?.length) {
+      this.selectedNode = e?.newValue?.[0] as Node;
+      console.log('this.selectedNode', this.selectedNode);
+    } else {
+      this.selectedNode = null;
+    }
   }
 
   ngOnDestroy() {

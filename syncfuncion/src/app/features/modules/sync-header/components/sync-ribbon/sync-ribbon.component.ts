@@ -27,6 +27,7 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
 
   public Simplified: DisplayMode = DisplayMode.Simplified;
   public Overflow: DisplayMode = DisplayMode.Overflow;
+  public hiddenSpeakLogicCommunication = false;
 
   constructor(
     private coreService: CoreService,
@@ -38,6 +39,62 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.handleRegister();
+
+    this.coreService.getDomain().subscribe((res) => {
+      if (res === EDomain.COMMUNICATION) {
+        this.hiddenSpeakLogicCommunication = true;
+        this.ribbon.theory1Dropdown = {
+          iconCss: 'icon icon-Function_Icon1',
+          content: 'Function',
+          target: '#function-dropdown',
+          createPopupOnClick: true
+        };
+        this.ribbon.theory2Dropdown = {
+          iconCss: 'icon icon-Word_Icon1',
+          content: 'Word',
+          target: '#word-dropdown',
+          createPopupOnClick: true
+        };
+        this.ribbon.fundamentalDropdown = {
+          iconCss: 'icon icon-Application_Icon1',
+          content: 'Application',
+          target: '#application-dropdown',
+          createPopupOnClick: true
+        };
+        this.ribbon.theoryFunctionDropdown = {
+          iconCss: 'icon icon-Relationship_Icon1',
+          content: 'Relationship',
+          target: '#relationship-dropdown',
+          createPopupOnClick: true
+        };
+      } else {
+        this.hiddenSpeakLogicCommunication = false;
+        this.ribbon.theory1Dropdown = {
+          iconCss: 'icon icon-theory1',
+          content: 'Theory',
+          target: '#theory1-dropdown',
+          createPopupOnClick: true
+        };
+        this.ribbon.theory2Dropdown = {
+          iconCss: 'icon icon-theory2',
+          content: 'Theory',
+          target: '#theory2-dropdown',
+          createPopupOnClick: true
+        };
+        this.ribbon.fundamentalDropdown = {
+          iconCss: 'icon icon-fundamental1',
+          content: 'Fundamental',
+          target: '#fundamental1-dropdown',
+          createPopupOnClick: true
+        };
+        this.ribbon.theoryFunctionDropdown = {
+          iconCss: 'icon icon-function2',
+          content: 'Function',
+          target: '#function2-dropdown',
+          createPopupOnClick: true
+        };
+      }
+    })
   }
 
   get domain$(): Observable<EDomain> {

@@ -403,155 +403,99 @@
             </e-ribbon-collection>
           </e-ribbon-collections>
         </e-ribbon-group>
-        <e-ribbon-group [header]="domain$ | async">
-          <ng-container *ngIf="(domain$ | async) === EDomain.COMMUNICATION">
-            <e-ribbon-collections >
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.funcDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.wordDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.applicationDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.relationshipDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-            </e-ribbon-collections>
-          </ng-container>
-          <ng-container *ngIf="(domain$ | async) === EDomain.THEORY">
-            <e-ribbon-collections>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.theory1Dropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.theory2Dropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.fundamentalDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.theoryFunctionDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.theoryFunctionDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.timeDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.derivativeDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.instrumentDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.stabilityDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-              <e-ribbon-collection>
-                <e-ribbon-items>
-                  <e-ribbon-item
-                    type="DropDown"
-                    [allowedSizes]="largeSize"
-                    [dropDownSettings]="ribbon.theoremDropdown"
-                  >
-                  </e-ribbon-item>
-                </e-ribbon-items>
-              </e-ribbon-collection>
-            </e-ribbon-collections>
-          </ng-container>
+        <e-ribbon-group header="Speak Logic">
+          <e-ribbon-collections>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.theory1Dropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.theory2Dropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.fundamentalDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  type="DropDown"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.theoryFunctionDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  [type]="hiddenSpeakLogicCommunication ? 'None' : 'DropDown'"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.timeDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  [type]="hiddenSpeakLogicCommunication ? 'None' : 'DropDown'"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.derivativeDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  [type]="hiddenSpeakLogicCommunication ? 'None' : 'DropDown'"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.instrumentDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  [type]="hiddenSpeakLogicCommunication ? 'None' : 'DropDown'"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.stabilityDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+            <e-ribbon-collection>
+              <e-ribbon-items>
+                <e-ribbon-item
+                  [type]="hiddenSpeakLogicCommunication ? 'None' : 'DropDown'"
+                  [allowedSizes]="largeSize"
+                  [dropDownSettings]="ribbon.theoremDropdown"
+                >
+                </e-ribbon-item>
+              </e-ribbon-items>
+            </e-ribbon-collection>
+          </e-ribbon-collections>
         </e-ribbon-group>
       </e-ribbon-groups>
     </e-ribbon-tab>
@@ -1493,8 +1437,8 @@
 </div>
 
 <div id="theory1-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.accentDropdownData" class="function-dropdown-item">
+  <ng-container *ngIf="selectedTabIndex === 1">
+    <div *ngFor="let item of ribbon.theory1DropdownData" class="function-dropdown-item">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1549,17 +1493,6 @@
     <div
       *ngFor="let item of ribbon.theory1DropdownData"
       class="derivative-dropdown-item"
-    >
-      <img [src]="item.img" alt="img"/>
-    </div>
-  </ng-container>
-</div>
-
-<div id="instrusment-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
-    <div
-      *ngFor="let item of ribbon.theory1DropdownData"
-      class="instrusment-dropdown-item"
     >
       <img [src]="item.img" alt="img"/>
     </div>

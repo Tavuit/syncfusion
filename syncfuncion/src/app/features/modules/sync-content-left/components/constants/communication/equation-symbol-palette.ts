@@ -17,13 +17,11 @@ export function getEquationsShape(): NodeModel[] {
       width: width,
       height: height,
       ports: rectPorts,
-      annotations: [{
-        template: `
-            <div class="input-wrapper">
-                <math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border"></math-field>
-            </div>
-          `
-      }],
+      annotations: [
+        {
+          content: '',
+        },
+      ],
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop
     },
     {
@@ -38,13 +36,11 @@ export function getEquationsShape(): NodeModel[] {
       },
       width: width,
       height: height,
-      annotations: [{
-        template: `
-            <div class="input-wrapper">
-                <math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border"></math-field>
-            </div>
-          `
-      }],
+      annotations: [
+        {
+          content: '',
+        },
+      ],
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop
     }
   ];
