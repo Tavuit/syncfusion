@@ -128,6 +128,11 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   created(value: Event) {
   }
 
+  public handleInsert(value) {
+    console.log('value', value);
+    this.ribbonService.setInsertAnnotationContent(value?.id);
+  }
+
   ngOnDestroy() {
     this._destroyed.next();
     this._destroyed.complete();

@@ -535,43 +535,43 @@ export const ERibbon: IRibbon = {
   },
   relationshipDropdownData: [
     {
-      id: 'rela1',
+      id: 'Theory_1',
       img: '/assets/images/Relationship_1.png'
     },
     {
-      id: 'rela2',
+      id: 'Theory_2',
       img: '/assets/images/Relationship_2.png'
     },
     {
-      id: 'rela3',
+      id: 'Theory_3',
       img: '/assets/images/Relationship_3.png'
     },
     {
-      id: 'rela4',
+      id: 'Theory_4',
       img: '/assets/images/Relationship_4.png'
     },
     {
-      id: 'rela5',
+      id: 'Theory_5',
       img: '/assets/images/Relationship_5.png'
     },
     {
-      id: 'rela6',
+      id: 'Theory_6',
       img: '/assets/images/Relationship_6.png'
     },
     {
-      id: 'rela7',
+      id: 'Theory_7',
       img: '/assets/images/Relationship_7.png'
     },
     {
-      id: 'rela8',
+      id: 'Theory_8',
       img: '/assets/images/Relationship_8.png'
     },
     {
-      id: 'rela9',
+      id: 'Theory_9',
       img: '/assets/images/Relationship_9.png'
     },
     {
-      id: 'rela10',
+      id: 'Theory_10',
       img: '/assets/images/Relationship_10.png'
     }
   ],
@@ -1981,44 +1981,48 @@ export const ERibbon: IRibbon = {
   },
   theory1DropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Theory_1',
+      img: '/assets/images/speaklogic/Theory/Theory_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Theory_2',
+      img: '/assets/images/speaklogic/Theory/Theory_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Theory_3',
+      img: '/assets/images/speaklogic/Theory/Theory_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Theory_4',
+      img: '/assets/images/speaklogic/Theory/Theory_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Theory_5',
+      img: '/assets/images/speaklogic/Theory/Theory_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Theory_6',
+      img: '/assets/images/speaklogic/Theory/Theory_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Theory_7',
+      img: '/assets/images/speaklogic/Theory/Theory_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Theory_8',
+      img: '/assets/images/speaklogic/Theory/Theory_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Theory_9',
+      img: '/assets/images/speaklogic/Theory/Theory_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Theory_10',
+      img: '/assets/images/speaklogic/Theory/Theory_10.png'
+    },
+    {
+      id: 'Theory_11',
+      img: '/assets/images/speaklogic/Theory/Theory_11.png'
     }
   ],
   theory2Dropdown: {
@@ -2029,44 +2033,68 @@ export const ERibbon: IRibbon = {
   },
   theory2DropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Theory_Dropdown_1',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Theory_Dropdown_2',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Theory_Dropdown_3',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Theory_Dropdown_4',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Theory_Dropdown_5',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Theory_Dropdown_6',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Theory_Dropdown_7',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Theory_Dropdown_8',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Theory_Dropdown_9',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Theory_Dropdown_10',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_10.png'
+    },
+    {
+      id: 'Theory_Dropdown_11',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_11.png'
+    },
+    {
+      id: 'Theory_Dropdown_12',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_12.png'
+    },
+    {
+      id: 'Theory_Dropdown_13',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_13.png'
+    },
+    {
+      id: 'Theory_Dropdown_14',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_14.png'
+    },
+    {
+      id: 'Theory_Dropdown_15',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_15.png'
+    },
+    {
+      id: 'Theory_Dropdown_16',
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_16.png'
     }
   ],
   fundamentalDropdown: {
@@ -2077,44 +2105,112 @@ export const ERibbon: IRibbon = {
   },
   fundamentalDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Fundamental_1',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Fundamental_2',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Fundamental_3',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Fundamental_4',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Fundamental_5',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Fundamental_6',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Fundamental_7',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Fundamental_8',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Fundamental_9',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Fundamental_10',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_10.png'
+    },
+    {
+      id: 'Fundamental_11',
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_11.png'
+    }
+  ],
+  fundamental2Dropdown: {
+    iconCss: 'icon icon-fundamental2',
+    content: 'Fundamental',
+    target: '#fundamental2-dropdown',
+    createPopupOnClick: true
+  },
+  fundamental2DropdownData: [
+    {
+      id: 'Fundamental_Dropdown_1',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_1.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_2',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_2.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_3',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_3.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_4',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_4.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_5',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_5.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_6',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_6.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_7',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_7.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_8',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_8.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_9',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_9.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_10',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_10.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_11',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_11.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_12',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_12.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_13',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_13.png'
+    },
+    {
+      id: 'Fundamental_Dropdown_14',
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_14.png'
     }
   ],
   theoryFunctionDropdown: {
@@ -2125,44 +2221,44 @@ export const ERibbon: IRibbon = {
   },
   theoryFunctionDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Dropdown_Function_1',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Dropdown_Function_2',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Dropdown_Function_3',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Dropdown_Function_4',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Dropdown_Function_5',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Dropdown_Function_6',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Dropdown_Function_7',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Dropdown_Function_8',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Dropdown_Function_9',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Dropdown_Function_10',
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_10.png'
     }
   ],
   timeDropdown: {
@@ -2173,44 +2269,52 @@ export const ERibbon: IRibbon = {
   },
   timeDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Dropdown_Time_1',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Dropdown_Time_2',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Dropdown_Time_3',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Dropdown_Time_4',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Dropdown_Time_5',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Dropdown_Time_6',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Dropdown_Time_7',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Dropdown_Time_8',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Dropdown_Time_9',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Dropdown_Time_10',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_10.png'
+    },
+    {
+      id: 'Dropdown_Time_11',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_11.png'
+    },
+    {
+      id: 'Dropdown_Time_12',
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_12.png'
     }
   ],
   derivativeDropdown: {
@@ -2221,44 +2325,24 @@ export const ERibbon: IRibbon = {
   },
   derivativeDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Derivative_1',
+      img: '/assets/images/speaklogic/Derivatives/Derivative_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Derivative_2',
+      img: '/assets/images/speaklogic/Derivatives/Derivative_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Derivative_3',
+      img: '/assets/images/speaklogic/Derivatives/Derivative_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Derivative_4',
+      img: '/assets/images/speaklogic/Derivatives/Derivative_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
-    },
-    {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
-    },
-    {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
-    },
-    {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
-    },
-    {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
-    },
-    {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Derivative_5',
+      img: '/assets/images/speaklogic/Derivatives/Derivative_5.png'
     }
   ],
   instrumentDropdown: {
@@ -2269,44 +2353,36 @@ export const ERibbon: IRibbon = {
   },
   instrumentDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Instrument_1',
+      img: '/assets/images/speaklogic/Instruments/Instrument_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Instrument_2',
+      img: '/assets/images/speaklogic/Instruments/Instrument_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Instrument_3',
+      img: '/assets/images/speaklogic/Instruments/Instrument_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Instrument_4',
+      img: '/assets/images/speaklogic/Instruments/Instrument_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Instrument_5',
+      img: '/assets/images/speaklogic/Instruments/Instrument_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Instrument_6',
+      img: '/assets/images/speaklogic/Instruments/Instrument_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Instrument_7',
+      img: '/assets/images/speaklogic/Instruments/Instrument_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
-    },
-    {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
-    },
-    {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Instrument_8',
+      img: '/assets/images/speaklogic/Instruments/Instrument_8.png'
     }
   ],
   stabilityDropdown: {
@@ -2317,44 +2393,128 @@ export const ERibbon: IRibbon = {
   },
   stabilityDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Stability_1',
+      img: '/assets/images/speaklogic/Stability/Stability_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Stability_2',
+      img: '/assets/images/speaklogic/Stability/Stability_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Stability_3',
+      img: '/assets/images/speaklogic/Stability/Stability_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Stability_4',
+      img: '/assets/images/speaklogic/Stability/Stability_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Stability_5',
+      img: '/assets/images/speaklogic/Stability/Stability_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Stability_6',
+      img: '/assets/images/speaklogic/Stability/Stability_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Stability_7',
+      img: '/assets/images/speaklogic/Stability/Stability_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Stability_8',
+      img: '/assets/images/speaklogic/Stability/Stability_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Stability_9',
+      img: '/assets/images/speaklogic/Stability/Stability_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Stability_10',
+      img: '/assets/images/speaklogic/Stability/Stability_10.png'
+    },
+    {
+      id: 'Stability_11',
+      img: '/assets/images/speaklogic/Stability/Stability_11.png'
+    },
+    {
+      id: 'Stability_12',
+      img: '/assets/images/speaklogic/Stability/Stability_12.png'
+    },
+    {
+      id: 'Stability_13',
+      img: '/assets/images/speaklogic/Stability/Stability_13.png'
+    },
+    {
+      id: 'Stability_14',
+      img: '/assets/images/speaklogic/Stability/Stability_14.png'
+    },
+    {
+      id: 'Stability_15',
+      img: '/assets/images/speaklogic/Stability/Stability_15.png'
+    },
+    {
+      id: 'Stability_16',
+      img: '/assets/images/speaklogic/Stability/Stability_16.png'
+    },
+    {
+      id: 'Stability_17',
+      img: '/assets/images/speaklogic/Stability/Stability_17.png'
+    },
+    {
+      id: 'Stability_18',
+      img: '/assets/images/speaklogic/Stability/Stability_18.png'
+    },
+    {
+      id: 'Stability_19',
+      img: '/assets/images/speaklogic/Stability/Stability_19.png'
+    },
+    {
+      id: 'Stability_21',
+      img: '/assets/images/speaklogic/Stability/Stability_21.png'
+    },
+    {
+      id: 'Stability_22',
+      img: '/assets/images/speaklogic/Stability/Stability_22.png'
+    },
+    {
+      id: 'Stability_23',
+      img: '/assets/images/speaklogic/Stability/Stability_23.png'
+    },
+    {
+      id: 'Stability_24',
+      img: '/assets/images/speaklogic/Stability/Stability_24.png'
+    },
+    {
+      id: 'Stability_25',
+      img: '/assets/images/speaklogic/Stability/Stability_25.png'
+    },
+    {
+      id: 'Stability_26',
+      img: '/assets/images/speaklogic/Stability/Stability_26.png'
+    },
+    {
+      id: 'Stability_26',
+      img: '/assets/images/speaklogic/Stability/Stability_26.png'
+    },
+    {
+      id: 'Stability_27',
+      img: '/assets/images/speaklogic/Stability/Stability_27.png'
+    },
+    {
+      id: 'Stability_28',
+      img: '/assets/images/speaklogic/Stability/Stability_28.png'
+    },
+    {
+      id: 'Stability_29',
+      img: '/assets/images/speaklogic/Stability/Stability_29.png'
+    },
+    {
+      id: 'Stability_30',
+      img: '/assets/images/speaklogic/Stability/Stability_30.png'
+    },
+    {
+      id: 'Stability_31',
+      img: '/assets/images/speaklogic/Stability/Stability_31.png'
     }
   ],
   theoremDropdown: {
@@ -2365,44 +2525,88 @@ export const ERibbon: IRibbon = {
   },
   theoremDropdownData: [
     {
-      id: 'rela1',
-      img: '/assets/images/Relationship_1.png'
+      id: 'Theorem_Dropdown_1',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_1.png'
     },
     {
-      id: 'rela2',
-      img: '/assets/images/Relationship_2.png'
+      id: 'Theorem_Dropdown_2',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_2.png'
     },
     {
-      id: 'rela3',
-      img: '/assets/images/Relationship_3.png'
+      id: 'Theorem_Dropdown_3',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_3.png'
     },
     {
-      id: 'rela4',
-      img: '/assets/images/Relationship_4.png'
+      id: 'Theorem_Dropdown_4',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_4.png'
     },
     {
-      id: 'rela5',
-      img: '/assets/images/Relationship_5.png'
+      id: 'Theorem_Dropdown_5',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_5.png'
     },
     {
-      id: 'rela6',
-      img: '/assets/images/Relationship_6.png'
+      id: 'Theorem_Dropdown_6',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_6.png'
     },
     {
-      id: 'rela7',
-      img: '/assets/images/Relationship_7.png'
+      id: 'Theorem_Dropdown_7',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_7.png'
     },
     {
-      id: 'rela8',
-      img: '/assets/images/Relationship_8.png'
+      id: 'Theorem_Dropdown_8',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_8.png'
     },
     {
-      id: 'rela9',
-      img: '/assets/images/Relationship_9.png'
+      id: 'Theorem_Dropdown_9',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_9.png'
     },
     {
-      id: 'rela10',
-      img: '/assets/images/Relationship_10.png'
+      id: 'Theorem_Dropdown_10',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_10.png'
+    },
+    {
+      id: 'Theorem_Dropdown_11',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_11.png'
+    },
+    {
+      id: 'Theorem_Dropdown_12',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_12.png'
+    },
+    {
+      id: 'Theorem_Dropdown_13',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_13.png'
+    },
+    {
+      id: 'Theorem_Dropdown_14',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_14.png'
+    },
+    {
+      id: 'Theorem_Dropdown_15',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_15.png'
+    },
+    {
+      id: 'Theorem_Dropdown_16',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_16.png'
+    },
+    {
+      id: 'Theorem_Dropdown_17',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_17.png'
+    },
+    {
+      id: 'Theorem_Dropdown_18',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_18.png'
+    },
+    {
+      id: 'Theorem_Dropdown_19',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_19.png'
+    },
+    {
+      id: 'Theorem_Dropdown_20',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_20.png'
+    },
+    {
+      id: 'Theorem_Dropdown_21',
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_21.png'
     }
   ]
 }

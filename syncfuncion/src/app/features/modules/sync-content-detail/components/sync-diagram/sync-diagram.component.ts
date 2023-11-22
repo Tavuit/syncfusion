@@ -1,3 +1,4 @@
+import { RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import {
   Component,
   OnDestroy,
@@ -16,7 +17,7 @@ import {DiagramService} from "../../../../../shared/services/diagram.service";
 import {CoreService} from 'src/app/shared/services/core.service';
 import {Subject, map, switchMap, takeUntil} from "rxjs";
 import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
-
+import { EQUATIONS_DATA } from 'src/app/utils/constants';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -33,11 +34,21 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   public selectedNode: Node;
   constructor(
     private diagramService: DiagramService,
-    private coreService: CoreService
+    private coreService: CoreService,
+    private ribbonService: RibbonService
   ) {
   }
 
   ngOnInit(): void {
+    this.ribbonService.getInsertAnnotationContentBS().pipe(
+      takeUntil(this._destroyed)
+    )
+    .subscribe((equationId) => {
+      if (equationId) {
+        this.handleInsertEquation(equationId);
+      }
+    })
+
     this.coreService.getDomain()
       .pipe(
         switchMap((domain) => this.diagramService.getModel()
@@ -77,14 +88,33 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   }
 
   public selectChange(e: any) {
-    console.log('select change', e);
     if (e?.newValue?.length) {
       this.selectedNode = e?.newValue?.[0] as Node;
-      console.log('this.selectedNode', this.selectedNode);
     } else {
       this.selectedNode = null;
     }
   }
+
+  private handleInsertEquation(id = null, ) {
+    const SALT = "_html_element";
+    let selectedItemDivID;
+    if (id && this.selectedNode) {
+      const operator = EQUATIONS_DATA[id];
+      // console.log("🚀 ~ file: sync-diagram.component.ts:101 ~ SyncDiagramComponent ~ handleInsertEquation ~ this.selectedNode:", this.selectedNode)
+      selectedItemDivID = this.selectedNode?.id;
+      selectedItemDivID = selectedItemDivID + SALT;
+      const $wrapper = document.getElementById(selectedItemDivID)
+      console.log("🚀 ~ :", selectedItemDivID, '$wrapper', $wrapper);
+      let mqInput: any = $wrapper.querySelector("#mathquill-mathquill-input-border");
+      mqInput.executeCommand(['insert', operator]);
+      console.log("🚀 ~ file: sync-diagram.component.ts:109 ~ SyncDiagramComponent ~ handleInsertEquation ~ mqInput:", mqInput)
+      // console.log('operator', operator);
+      // const updatedNode = this.selectedNode;
+      // updatedNode.annotations[0].content = operator;
+      // this.diagram.dataBind();
+    }
+  }
+
 
   ngOnDestroy() {
     this._destroyed.next();

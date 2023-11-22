@@ -91,6 +91,8 @@ export interface IRibbon {
   theory2DropdownData: { id?: string, text?: string, img?: string }[];
   fundamentalDropdown: IRibbonItem;
   fundamentalDropdownData: { id?: string, text?: string, img?: string }[];
+  fundamental2Dropdown: IRibbonItem;
+  fundamental2DropdownData: { id?: string, text?: string, img?: string }[];
   theoryFunctionDropdown: IRibbonItem;
   theoryFunctionDropdownData: { id?: string, text?: string, img?: string }[];
   timeDropdown: IRibbonItem;

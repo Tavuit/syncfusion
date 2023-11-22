@@ -5,6 +5,7 @@ import {EDomain} from "src/app/shared/enums/core.enum";
 import {ERibbon} from "../constants/header.constant";
 import {DiagramService} from "../../../../../../shared/services/diagram.service";
 import {EDiagramAction, EDiagramModel} from "../../../../../../shared/enums/diagram.enum";
+import { Subject } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -171,6 +172,8 @@ export class RibbonService {
     theory2DropdownData: [],
     fundamentalDropdown: {},
     fundamentalDropdownData: [],
+    fundamental2Dropdown: {},
+    fundamental2DropdownData: [],
     theoryFunctionDropdown: {},
     theoryFunctionDropdownData: [],
     theoremDropdown: {},
@@ -185,6 +188,8 @@ export class RibbonService {
     stabilityDropdownData: []
   };
 
+  private _insertAnnotationContent$ = new Subject<string>();
+
   constructor(
     private coreService: CoreService,
     private diagramSerivce: DiagramService
@@ -194,6 +199,14 @@ export class RibbonService {
 
   get ribbon(): IRibbon {
     return this._ribbon
+  }
+
+  public getInsertAnnotationContentBS() {
+    return this._insertAnnotationContent$.asObservable()
+  }
+
+  public setInsertAnnotationContent(value: string) {
+    this._insertAnnotationContent$.next(value);
   }
 
   private injectFunctionToRibbon(ribbon: IRibbon): void {

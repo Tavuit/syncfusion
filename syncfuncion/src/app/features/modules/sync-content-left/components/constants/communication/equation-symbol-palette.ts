@@ -5,7 +5,7 @@ import { height, rectPorts, width } from "./common";
 export function getEquationsShape(): NodeModel[] {
   let equationsShape: NodeModel[] = [
     {
-      id: "Equation with border",
+      id: "equationWithBorder",
       addInfo: {title: "Equation with border", tooltip: "Equation with border"},
       shape: {
         type: "Native",
@@ -17,15 +17,17 @@ export function getEquationsShape(): NodeModel[] {
       width: width,
       height: height,
       ports: rectPorts,
-      annotations: [
-        {
-          content: '',
-        },
-      ],
+      annotations: [{
+        template: `
+            <div class="input-wrapper">
+                <math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border"></math-field>
+            </div>
+          `
+      }],
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop
     },
     {
-      id: "Equation with no border",
+      id: "equationWithNoBorder",
       addInfo: {title: "Equation with no border", tooltip: "Equation with no border"},
       shape: {
         type: "Native",
@@ -36,11 +38,13 @@ export function getEquationsShape(): NodeModel[] {
       },
       width: width,
       height: height,
-      annotations: [
-        {
-          content: '',
-        },
-      ],
+      annotations: [{
+        template: `
+            <div class="input-wrapper">
+                <math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border"></math-field>
+            </div>
+          `
+      }],
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop
     }
   ];
