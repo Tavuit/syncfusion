@@ -503,27 +503,27 @@ export const ERibbon: IRibbon = {
   },
   applicationDropdownData: [
     {
-      id: 'appl1',
+      id: 'Application_1',
       img: '/assets/images/Application_1.png'
     },
     {
-      id: 'appl2',
+      id: 'Application_2',
       img: '/assets/images/Application_2.png'
     },
     {
-      id: 'appl3',
+      id: 'Application_3',
       img: '/assets/images/Application_3.png'
     },
     {
-      id: 'appl4',
+      id: 'Application_4',
       img: '/assets/images/Application_4.png'
     },
     {
-      id: 'appl5',
+      id: 'Application_5',
       img: '/assets/images/Application_5.png'
     },
     {
-      id: 'appl6',
+      id: 'Application_6',
       img: '/assets/images/Application_6.png'
     }
   ],
@@ -535,43 +535,43 @@ export const ERibbon: IRibbon = {
   },
   relationshipDropdownData: [
     {
-      id: 'Theory_1',
+      id: 'Relationship_1',
       img: '/assets/images/Relationship_1.png'
     },
     {
-      id: 'Theory_2',
+      id: 'Relationship_2',
       img: '/assets/images/Relationship_2.png'
     },
     {
-      id: 'Theory_3',
+      id: 'Relationship_3',
       img: '/assets/images/Relationship_3.png'
     },
     {
-      id: 'Theory_4',
+      id: 'Relationship_4',
       img: '/assets/images/Relationship_4.png'
     },
     {
-      id: 'Theory_5',
+      id: 'Relationship_5',
       img: '/assets/images/Relationship_5.png'
     },
     {
-      id: 'Theory_6',
+      id: 'Relationship_6',
       img: '/assets/images/Relationship_6.png'
     },
     {
-      id: 'Theory_7',
+      id: 'Relationship_7',
       img: '/assets/images/Relationship_7.png'
     },
     {
-      id: 'Theory_8',
+      id: 'Relationship_8',
       img: '/assets/images/Relationship_8.png'
     },
     {
-      id: 'Theory_9',
+      id: 'Relationship_9',
       img: '/assets/images/Relationship_9.png'
     },
     {
-      id: 'Theory_10',
+      id: 'Relationship_10',
       img: '/assets/images/Relationship_10.png'
     }
   ],
@@ -586,147 +586,147 @@ export const ERibbon: IRibbon = {
   },
   bracketDropdownData: [
     {
-      id: 'accent_1',
+      id: 'AngleBar',
       img: '/assets/images/brackets/AngleBar.png'
     },
     {
-      id: 'accent_2',
+      id: 'BarAngle',
       img: '/assets/images/brackets/BarAngle.png'
     },
     {
-      id: 'accent_3',
+      id: 'BottomCurlyBracket',
       img: '/assets/images/brackets/BottomCurlyBracket.png'
     },
     {
-      id: 'accent_4',
+      id: 'BottomSquareBracket',
       img: '/assets/images/brackets/BottomSquareBracket.png'
     },
     {
-      id: 'bracket_5',
+      id: 'Ceiling',
       img: '/assets/images/brackets/Ceiling.png'
     },
     {
-      id: 'bracket_6',
+      id: 'CurlyBracket',
       img: '/assets/images/brackets/CurlyBracket.png'
     },
     {
-      id: 'bracket_7',
+      id: 'DoubleArrowBarBracket',
       img: '/assets/images/brackets/DoubleArrowBarBracket.png'
     },
     {
-      id: 'bracket_8',
+      id: 'DoubleBar',
       img: '/assets/images/brackets/DoubleBar.png'
     },
     {
-      id: 'bracket_9',
+      id: 'Floor',
       img: '/assets/images/brackets/Floor.png'
     },
     {
-      id: 'bracket_10',
+      id: 'LeftAngle',
       img: '/assets/images/brackets/LeftAngle.png'
     },
     {
-      id: 'bracket_11',
+      id: 'LeftBar',
       img: '/assets/images/brackets/LeftBar.png'
     },
     {
-      id: 'bracket_12',
+      id: 'LeftCurlyBracket',
       img: '/assets/images/brackets/LeftCurlyBracket.png'
     },
     {
-      id: 'bracket_13',
+      id: 'LeftDoubleBar',
       img: '/assets/images/brackets/LeftDoubleBar.png'
     },
     {
-      id: 'bracket_14',
+      id: 'LeftLeftSquareBracket',
       img: '/assets/images/brackets/LeftLeftSquareBracket.png'
     },
     {
-      id: 'bracket_15',
+      id: 'LeftParenthesis',
       img: '/assets/images/brackets/LeftParenthesis.png'
     },
     {
-      id: 'bracket_16',
+      id: 'LeftSquareBar',
       img: '/assets/images/brackets/LeftSquareBar.png'
     },
     {
-      id: 'bracket_17',
+      id: 'LeftSquareBracket',
       img: '/assets/images/brackets/LeftSquareBracket.png'
     },
     {
-      id: 'bracket_18',
+      id: 'Parentheses',
       img: '/assets/images/brackets/Parentheses.png'
     },
     {
-      id: 'bracket_19',
+      id: 'ParenthesisSquare',
       img: '/assets/images/brackets/ParenthesisSquare.png'
     },
     {
-      id: 'frac_20',
+      id: 'PointingAngles',
       img: '/assets/images/brackets/PointingAngles.png'
     },
     {
-      id: 'bracket_21',
+      id: 'RightAngle',
       img: '/assets/images/brackets/RightAngle.png'
     },
     {
-      id: 'bracket_22',
+      id: 'RightBar',
       img: '/assets/images/brackets/RightBar.png'
     },
     {
-      id: 'bracket_23',
+      id: 'RightCurlyBracket',
       img: '/assets/images/brackets/RightCurlyBracket.png'
     },
     {
-      id: 'bracket_24',
+      id: 'RightDoubleBar',
       img: '/assets/images/brackets/RightDoubleBar.png'
     },
     {
-      id: 'bracket_25',
+      id: 'RightLeftSquareBracket',
       img: '/assets/images/brackets/RightLeftSquareBracket.png'
     },
     {
-      id: 'bracket_26',
+      id: 'RightParenthesis',
       img: '/assets/images/brackets/RightParenthesis.png'
     },
     {
-      id: 'bracket_27',
+      id: 'RightRightSquareBracket',
       img: '/assets/images/brackets/RightRightSquareBracket.png'
     },
     {
-      id: 'bracket_28',
+      id: 'RightSquareBar',
       img: '/assets/images/brackets/RightSquareBar.png'
     },
     {
-      id: 'bracket_29',
+      id: 'RightSquareBracket',
       img: '/assets/images/brackets/RightSquareBracket.png'
     },
     {
-      id: 'bracket_30',
+      id: 'SingleBar',
       img: '/assets/images/brackets/SingleBar.png'
     },
     {
-      id: 'bracket_31',
+      id: 'SquareBar',
       img: '/assets/images/brackets/SquareBar.png'
     },
     {
-      id: 'bracket_32',
+      id: 'SquareBracket',
       img: '/assets/images/brackets/SquareBracket.png'
     },
     {
-      id: 'bracket_33',
+      id: 'SquareParenthesesBracket',
       img: '/assets/images/brackets/SquareParenthesesBracket.png'
     },
     {
-      id: 'bracket_34',
+      id: 'SquareParenthesis',
       img: '/assets/images/brackets/SquareParenthesis.png'
     },
     {
-      id: 'bracket_35',
+      id: 'TopCurlyBracket',
       img: '/assets/images/brackets/TopCurlyBracket.png'
     },
     {
-      id: 'bracket_36',
+      id: 'TopSquareBracket',
       img: '/assets/images/brackets/TopSquareBracket.png'
     }
   ],
@@ -739,91 +739,91 @@ export const ERibbon: IRibbon = {
   },
   decoratorDropdownData: [
     {
-      id: 'decorator_1',
+      id: 'bottomBar',
       img: '/assets/images/equation/bottomBar.png'
     },
     {
-      id: 'decorator_2',
+      id: 'bottomDoubleArrow',
       img: '/assets/images/equation/bottomDoubleArrow.png'
     },
     {
-      id: 'decorator_3',
+      id: 'bottomDoubleBar',
       img: '/assets/images/equation/bottomDoubleBar.png'
     },
     {
-      id: 'decorator_4',
+      id: 'bottomLeftArrow',
       img: '/assets/images/equation/bottomLeftArrow.png'
     },
     {
-      id: 'decorator_5',
+      id: 'bottomLeftHalfArrow',
       img: '/assets/images/equation/bottomLeftHalfArrow.png'
     },
     {
-      id: 'decorator_6',
+      id: 'bottomRightArrow',
       img: '/assets/images/equation/bottomRightArrow.png'
     },
     {
-      id: 'decorator_7',
+      id: 'bottomRightHalfArrow',
       img: '/assets/images/equation/bottomRightHalfArrow.png'
     },
     {
-      id: 'decorator_8',
+      id: 'cross',
       img: '/assets/images/equation/cross.png'
     },
     {
-      id: 'decorator_9',
+      id: 'hat',
       img: '/assets/images/equation/hat.png'
     },
     {
-      id: 'decorator_10',
+      id: 'leftCross',
       img: '/assets/images/equation/leftCross.png'
     },
     {
-      id: 'decorator_11',
+      id: 'parenthesis',
       img: '/assets/images/equation/parenthesis.png'
     },
     {
-      id: 'decorator_12',
+      id: 'rightCross',
       img: '/assets/images/equation/rightCross.png'
     },
     {
-      id: 'decorator_13',
+      id: 'strikeThrough',
       img: '/assets/images/equation/strikeThrough.png'
     },
     {
-      id: 'decorator_14',
+      id: 'tilde',
       img: '/assets/images/equation/tilde.png'
     },
     {
-      id: 'decorator_15',
+      id: 'topBar',
       img: '/assets/images/equation/topBar.png'
     },
     {
-      id: 'decorator_16',
+      id: 'topDoubleArrow',
       img: '/assets/images/equation/topDoubleArrow.png'
     },
     {
-      id: 'decorator_17',
+      id: 'topDoubleBar',
       img: '/assets/images/equation/topDoubleBar.png'
     },
     {
-      id: 'decorator_18',
+      id: 'topLeftArrow',
       img: '/assets/images/equation/topLeftArrow.png'
     },
     {
-      id: 'decorator_19',
+      id: 'topLeftHalfArrow',
       img: '/assets/images/equation/topLeftHalfArrow.png'
     },
     {
-      id: 'decorator_20',
+      id: 'topRightArrow',
       img: '/assets/images/equation/topRightArrow.png'
     },
     {
-      id: 'decorator_21',
+      id: 'topRightHalfArrow',
       img: '/assets/images/equation/topRightHalfArrow.png'
     },
     {
-      id: 'decorator_22',
+      id: 'tortoise',
       img: '/assets/images/equation/tortoise.png'
     }
   ],
@@ -836,103 +836,103 @@ export const ERibbon: IRibbon = {
   },
   sumDropdownData: [
     {
-      id: 'sum_1',
+      id: 'coProduct',
       img: '/assets/images/sumsProducts/coProduct.png'
     },
     {
-      id: 'sum_2',
+      id: 'coProductBottom',
       img: '/assets/images/sumsProducts/coProductBottom.png'
     },
     {
-      id: 'sum_3',
+      id: 'coProductBottomTop',
       img: '/assets/images/sumsProducts/coProductBottomTop.png'
     },
     {
-      id: 'sum_4',
+      id: 'coProductSub',
       img: '/assets/images/sumsProducts/coProductSub.png'
     },
     {
-      id: 'sum_5',
+      id: 'coProductSubSuper',
       img: '/assets/images/sumsProducts/coProductSubSuper.png'
     },
     {
-      id: 'sum_6',
+      id: 'intersection',
       img: '/assets/images/sumsProducts/intersection.png'
     },
     {
-      id: 'sum_7',
+      id: 'intersectionBottom',
       img: '/assets/images/sumsProducts/intersectionBottom.png'
     },
     {
-      id: 'sum_8',
+      id: 'intersectionBottomTop',
       img: '/assets/images/sumsProducts/intersectionBottomTop.png'
     },
     {
-      id: 'sum_9',
+      id: 'intersectionSub',
       img: '/assets/images/sumsProducts/intersectionSub.png'
     },
     {
-      id: 'sum_10',
+      id: 'intersectionSubSuper',
       img: '/assets/images/sumsProducts/intersectionSubSuper.png'
     },
     {
-      id: 'sum_11',
+      id: 'product',
       img: '/assets/images/sumsProducts/product.png'
     },
     {
-      id: 'sum_12',
+      id: 'productBottom',
       img: '/assets/images/sumsProducts/productBottom.png'
     },
     {
-      id: 'sum_13',
+      id: 'ProductBottomTop',
       img: '/assets/images/sumsProducts/ProductBottomTop.png'
     },
     {
-      id: 'sum_14',
+      id: 'productSub',
       img: '/assets/images/sumsProducts/productSub.png'
     },
     {
-      id: 'sum_15',
+      id: 'productSubSuper',
       img: '/assets/images/sumsProducts/productSubSuper.png'
     },
     {
-      id: 'sum_16',
+      id: 'sum',
       img: '/assets/images/sumsProducts/sum.png'
     },
     {
-      id: 'sum_17',
+      id: 'sumBottom',
       img: '/assets/images/sumsProducts/sumBottom.png'
     },
     {
-      id: 'sum_18',
+      id: 'sumBottomTop',
       img: '/assets/images/sumsProducts/sumBottomTop.png'
     },
     {
-      id: 'sum_19',
+      id: 'sumSub',
       img: '/assets/images/sumsProducts/sumSub.png'
     },
     {
-      id: 'sum_20',
+      id: 'sumSubSuper',
       img: '/assets/images/sumsProducts/sumSubSuper.png'
     },
     {
-      id: 'sum_21',
+      id: 'union',
       img: '/assets/images/sumsProducts/union.png'
     },
     {
-      id: 'sum_22',
+      id: 'unionBottom',
       img: '/assets/images/sumsProducts/unionBottom.png'
     },
     {
-      id: 'sum_23',
+      id: 'unionBottomTop',
       img: '/assets/images/sumsProducts/unionBottomTop.png'
     },
     {
-      id: 'sum_24',
+      id: 'unionSub',
       img: '/assets/images/sumsProducts/unionSub.png'
     },
     {
-      id: 'sum_25',
+      id: 'unionSubSuper',
       img: '/assets/images/sumsProducts/unionSubSuper.png'
     }
   ],
@@ -945,123 +945,123 @@ export const ERibbon: IRibbon = {
   },
   integralDropdownData: [
     {
-      id: 'integral_1',
+      id: 'SingleBottom',
       img: '/assets/images/integrals/Single/Bottom.png'
     },
     {
-      id: 'integral_2',
+      id: 'SingleBottomTop',
       img: '/assets/images/integrals/Single/BottomTop.png'
     },
     {
-      id: 'integral_3',
+      id: 'SingleSimple',
       img: '/assets/images/integrals/Single/Simple.png'
     },
     {
-      id: 'integral_4',
+      id: 'SingleSub',
       img: '/assets/images/integrals/Single/Sub.png'
     },
     {
-      id: 'integral_5',
+      id: 'SingleSubSuper',
       img: '/assets/images/integrals/Single/SubSuper.png'
     },
     {
-      id: 'integral_6',
+      id: 'DoubleBottom',
       img: '/assets/images/integrals/Double/Bottom.png'
     },
     {
-      id: 'integral_7',
+      id: 'DoubleBottomTop',
       img: '/assets/images/integrals/Double/BottomTop.png'
     },
     {
-      id: 'integral_8',
+      id: 'DoubleSimple',
       img: '/assets/images/integrals/Double/Simple.png'
     },
     {
-      id: 'integral_9',
+      id: 'DoubleSub',
       img: '/assets/images/integrals/Double/Sub.png'
     },
     {
-      id: 'integral_10',
+      id: 'DoubleSubSuper',
       img: '/assets/images/integrals/Double/SubSuper.png'
     },
     {
-      id: 'integral_11',
+      id: 'TripleBottom',
       img: '/assets/images/integrals/Triple/Bottom.png'
     },
     {
-      id: 'integral_12',
+      id: 'TripleBottomTop',
       img: '/assets/images/integrals/Triple/BottomTop.png'
     },
     {
-      id: 'integral_13',
+      id: 'TripleSimple',
       img: '/assets/images/integrals/Triple/Simple.png'
     },
     {
-      id: 'integral_14',
+      id: 'TripleSub',
       img: '/assets/images/integrals/Triple/Sub.png'
     },
     {
-      id: 'integral_15',
+      id: 'TripleSubSuper',
       img: '/assets/images/integrals/Triple/SubSuper.png'
     },
     {
-      id: 'integral_16',
+      id: 'ClockBottom',
       img: '/assets/images/integrals/Clock/Bottom.png'
     },
     {
-      id: 'integral_17',
+      id: 'ClockBottomTop',
       img: '/assets/images/integrals/Clock/BottomTop.png'
     },
     {
-      id: 'integral_18',
+      id: 'ClockSimple',
       img: '/assets/images/integrals/Clock/Simple.png'
     },
     {
-      id: 'integral_19',
+      id: 'ClockSub',
       img: '/assets/images/integrals/Clock/Sub.png'
     },
     {
-      id: 'integral_20',
+      id: 'ClockSubSuper',
       img: '/assets/images/integrals/Clock/SubSuper.png'
     },
     {
-      id: 'integral_21',
+      id: 'SurfaceBottom',
       img: '/assets/images/integrals/Surface/Bottom.png'
     },
     {
-      id: 'integral_22',
+      id: 'SurfaceBottomTop',
       img: '/assets/images/integrals/Surface/BottomTop.png'
     },
     {
-      id: 'integral_23',
+      id: 'SurfaceSimple',
       img: '/assets/images/integrals/Surface/Simple.png'
     },
     {
-      id: 'integral_24',
+      id: 'SurfaceSub',
       img: '/assets/images/integrals/Surface/Sub.png'
     },
     {
-      id: 'integral_25',
+      id: 'SurfaceSubSuper',
       img: '/assets/images/integrals/Surface/SubSuper.png'
     },
     {
-      id: 'integral_26',
+      id: 'VolumeBottom',
       img: '/assets/images/integrals/volume/Bottom.png'
     },
     {
-      id: 'integral_27',
+      id: 'VolumeBottomTop',
       img: '/assets/images/integrals/volume/BottomTop.png'
     },
     {
-      id: 'integral_28',
+      id: 'VolumeSimple',
       img: '/assets/images/integrals/volume/Simple.png'
     },
     {
-      id: 'integral_29',
+      id: 'VolumeSub',
       img: '/assets/images/integrals/volume/Sub.png'
     },
     {
-      id: 'integral_30',
+      id: 'VolumeSubSuper',
       img: '/assets/images/integrals/volume/SubSuper.png'
     }
   ],
@@ -1074,27 +1074,27 @@ export const ERibbon: IRibbon = {
   },
   scriptDropdownData: [
     {
-      id: 'script_1',
+      id: 'Sub',
       img: '/assets/images/Sub.png'
     },
     {
-      id: 'script2',
+      id: 'SubLeft',
       img: '/assets/images/SubLeft.png'
     },
     {
-      id: 'script_3',
+      id: 'SubSuper',
       img: '/assets/images/SubSuper.png'
     },
     {
-      id: 'script_4',
+      id: 'SubSuperLeft',
       img: '/assets/images/SubSuperLeft.png'
     },
     {
-      id: 'script_5',
+      id: 'Super',
       img: '/assets/images/Super.png'
     },
     {
-      id: 'script_6',
+      id: 'SuperLeft',
       img: '/assets/images/SuperLeft.png'
     }
   ],
@@ -1107,67 +1107,67 @@ export const ERibbon: IRibbon = {
   },
   fracDropdownData: [
     {
-      id: 'frac_1',
+      id: 'Div',
       img: '/assets/images/Div.png'
     },
     {
-      id: 'frac_2',
+      id: 'DivDoubleBar',
       img: '/assets/images/DivDoubleBar.png'
     },
     {
-      id: 'frac_3',
+      id: 'DivHoriz',
       img: '/assets/images/DivHoriz.png'
     },
     {
-      id: 'frac_4',
+      id: 'DivMath',
       img: '/assets/images/DivMath.png'
     },
     {
-      id: 'frac_5',
+      id: 'DivMathInverted',
       img: '/assets/images/DivMathInverted.png'
     },
     {
-      id: 'frac_6',
+      id: 'DivMathInvertedWithBottom',
       img: '/assets/images/DivMathInvertedWithBottom.png'
     },
     {
-      id: 'frac_7',
+      id: 'DivMathWithTop',
       img: '/assets/images/DivMathWithTop.png'
     },
     {
-      id: 'frac_8',
+      id: 'DivSlant',
       img: '/assets/images/DivSlant.png'
     },
     {
-      id: 'frac_9',
+      id: 'DivTriangleExpanding',
       img: '/assets/images/DivTriangleExpanding.png'
     },
     {
-      id: 'frac_10',
+      id: 'DivTriangleFixed',
       img: '/assets/images/DivTriangleFixed.png'
     },
     {
-      id: 'frac_11',
+      id: 'DivTripleBar',
       img: '/assets/images/DivTripleBar.png'
     },
     {
-      id: 'frac_12',
+      id: 'nRoot',
       img: '/assets/images/nRoot.png'
     },
     {
-      id: 'frac_13',
+      id: 'SmallDiv',
       img: '/assets/images/SmallDiv.png'
     },
     {
-      id: 'frac_14',
+      id: 'SmallDivHoriz',
       img: '/assets/images/SmallDivHoriz.png'
     },
     {
-      id: 'frac_15',
+      id: 'SmallDivSlant',
       img: '/assets/images/SmallDivSlant.png'
     },
     {
-      id: 'frac_16',
+      id: 'SqRoot',
       img: '/assets/images/SqRoot.png'
     }
   ],
@@ -1179,107 +1179,107 @@ export const ERibbon: IRibbon = {
   },
   arrowDropdownData: [
     {
-      id: 'arrow_1',
+      id: 'ArrowDoubleBottom',
       img: '/assets/images/arrow/DoubleBottom.png'
     },
     {
-      id: 'arrow_2',
+      id: 'ArrowDoubleBottomTop',
       img: '/assets/images/arrow/DoubleBottomTop.png'
     },
     {
-      id: 'arrow_3',
+      id: 'ArrowDoubleTop',
       img: '/assets/images/arrow/DoubleTop.png'
     },
     {
-      id: 'arrow_4',
+      id: 'LeftBottom',
       img: '/assets/images/arrow/LeftBottom.png'
     },
     {
-      id: 'arrow_5',
+      id: 'LeftBottomTop',
       img: '/assets/images/arrow/LeftBottomTop.png'
     },
     {
-      id: 'arrow_6',
+      id: 'LeftTop',
       img: '/assets/images/arrow/LeftTop.png'
     },
     {
-      id: 'arrow_7',
+      id: 'RightBottom',
       img: '/assets/images/arrow/RightBottom.png'
     },
     {
-      id: 'arrow_8',
+      id: 'RightBottomTop',
       img: '/assets/images/arrow/RightBottomTop.png'
     },
     {
-      id: 'arrow_9',
+      id: 'RightLeftBottom',
       img: '/assets/images/arrow/RightLeftBottom.png'
     },
     {
-      id: 'arrow_10',
+      id: 'RightLeftBottomTop',
       img: '/assets/images/arrow/RightLeftBottomTop.png'
     },
     {
-      id: 'arrow_11',
+      id: 'RightLeftHarpBottom',
       img: '/assets/images/arrow/RightLeftHarpBottom.png'
     },
     {
-      id: 'arrow_12',
+      id: 'RightLeftHarpBottomTop',
       img: '/assets/images/arrow/RightLeftHarpBottomTop.png'
     },
     {
-      id: 'arrow_13',
+      id: 'RightLeftHarpTop',
       img: '/assets/images/arrow/RightLeftHarpTop.png'
     },
     {
-      id: 'arrow_14',
+      id: 'RightLeftTop',
       img: '/assets/images/arrow/RightLeftTop.png'
     },
     {
-      id: 'arrow_15',
+      id: 'RightSmallLeftBottom',
       img: '/assets/images/arrow/RightSmallLeftBottom.png'
     },
     {
-      id: 'arrow_16',
+      id: 'RightSmallLeftBottomTop',
       img: '/assets/images/arrow/RightSmallLeftBottomTop.png'
     },
     {
-      id: 'arrow_17',
+      id: 'RightSmallLeftHarpBottom',
       img: '/assets/images/arrow/RightSmallLeftHarpBottom.png'
     },
     {
-      id: 'arrow_18',
+      id: 'RightSmallLeftHarpBottomTop',
       img: '/assets/images/arrow/RightSmallLeftHarpBottomTop.png'
     },
     {
-      id: 'arrow_19',
+      id: 'RightSmallLeftHarpTop',
       img: '/assets/images/arrow/RightSmallLeftHarpTop.png'
     },
     {
-      id: 'frac_20',
+      id: 'RightSmallLeftTop',
       img: '/assets/images/arrow/RightSmallLeftTop.png'
     },
     {
-      id: 'arrow_21',
+      id: 'RightTop',
       img: '/assets/images/arrow/RightTop.png'
     },
     {
-      id: 'arrow_22',
+      id: 'SmallRightLeftBottom',
       img: '/assets/images/arrow/SmallRightLeftBottom.png'
     },
     {
-      id: 'arrow_23',
+      id: 'SmallRightLeftHarpBottom',
       img: '/assets/images/arrow/SmallRightLeftHarpBottom.png'
     },
     {
-      id: 'arrow_24',
+      id: 'SmallRightLeftHarpBottomTop',
       img: '/assets/images/arrow/SmallRightLeftHarpBottomTop.png'
     },
     {
-      id: 'arrow_25',
+      id: 'SmallRightLeftHarpTop',
       img: '/assets/images/arrow/SmallRightLeftHarpTop.png'
     },
     {
-      id: 'arrow_26',
+      id: 'SmallRightLeftTop',
       img: '/assets/images/arrow/SmallRightLeftTop.png'
     }
   ],
@@ -1292,39 +1292,39 @@ export const ERibbon: IRibbon = {
   },
   barDropdownData: [
     {
-      id: 'bar_1',
+      id: 'BigBottom',
       img: '/assets/images/BigBottom.png'
     },
     {
-      id: 'bar_2',
+      id: 'BigBottomTop',
       img: '/assets/images/BigBottomTop.png'
     },
     {
-      id: 'bar_3',
+      id: 'BigSub',
       img: 'assets/images/BigSub.png'
     },
     {
-      id: 'bar_4',
+      id: 'BigSubSuper',
       img: '/assets/images/BigSubSuper.png'
     },
     {
-      id: 'bar_5',
+      id: 'BigSuper',
       img: '/assets/images/BigSuper.png'
     },
     {
-      id: 'bar_6',
+      id: 'BigTop',
       img: '/assets/images/BigTop.png'
     },
     {
-      id: 'bar_7',
+      id: 'CompositeBottom',
       img: '/assets/images/CompositeBottom.png'
     },
     {
-      id: 'bar_8',
+      id: 'CompositeBottomTop',
       img: '/assets/images/CompositeBottomTop.png'
     },
     {
-      id: 'bar_9',
+      id: 'CompositeTop',
       img: '/assets/images/CompositeTop.png'
     }
   ],
@@ -1337,191 +1337,191 @@ export const ERibbon: IRibbon = {
   },
   accentDropdownData: [
     {
-      id: 'accent_1',
+      id: 'CharacterAcuteAccent',
       img: '/assets/images/character/AcuteAccent.png'
     },
     {
-      id: 'accent_2',
+      id: 'CharacterBottomBar',
       img: '/assets/images/character/BottomBar.png'
     },
     {
-      id: 'accent_3',
+      id: 'CharacterBottomBreve',
       img: '/assets/images/character/BottomBreve.png'
     },
     {
-      id: 'accent_4',
+      id: 'CharacterBottomDDot',
       img: '/assets/images/character/BottomDDot.png'
     },
     {
-      id: 'accent_5',
+      id: 'CharacterBottomDot',
       img: '/assets/images/character/BottomDot.png'
     },
     {
-      id: 'accent_6',
+      id: 'CharacterBottomDoubleArrow',
       img: '/assets/images/character/BottomDoubleArrow.png'
     },
     {
-      id: 'accent_7',
+      id: 'CharacterBottomFourDot',
       img: '/assets/images/character/BottomFourDot.png'
     },
     {
-      id: 'accent_8',
+      id: 'CharacterBottomInvertedBreve',
       img: '/assets/images/character/BottomInvertedBreve.png'
     },
     {
-      id: 'accent_9',
+      id: 'CharacterBottomLeftArrow',
       img: '/assets/images/character/BottomLeftArrow.png'
     },
     {
-      id: 'accent_10',
+      id: 'CharacterBottomLeftHarpoon',
       img: '/assets/images/character/BottomLeftHarpoon.png'
     },
     {
-      id: 'accent_11',
+      id: 'CharacterBottomRightArrow',
       img: '/assets/images/character/BottomRightArrow.png'
     },
     {
-      id: 'accent_12',
+      id: 'CharacterBottomRightHarpoon',
       img: '/assets/images/character/BottomRightHarpoon.png'
     },
     {
-      id: 'accent_13',
+      id: 'CharacterBottomTilde',
       img: '/assets/images/character/BottomTDot.png'
     },
     {
-      id: 'accent_14',
+      id: 'CharacterBottomTilde',
       img: '/assets/images/character/BottomTilde.png'
     },
     {
-      id: 'accent_15',
+      id: 'CharacterCross',
       img: '/assets/images/character/Cross.png'
     },
     {
-      id: 'accent_16',
+      id: 'CharacterDoublePrime',
       img: '/assets/images/character/DoublePrime.png'
     },
     {
-      id: 'accent_17',
+      id: 'CharacterDoubleStrikeThrough',
       img: '/assets/images/character/DoubleStrikeThrough.png'
     },
     {
-      id: 'accent_18',
+      id: 'CharacterGraveAccent',
       img: '/assets/images/character/GraveAccent.png'
     },
     {
-      id: 'accent_19',
+      id: 'CharacterLeftCross',
       img: '/assets/images/character/LeftCross.png'
     },
     {
-      id: 'accent_20',
+      id: 'CharacterLeftUprightCross',
       img: '/assets/images/character/LeftUprightCross.png'
     },
     {
-      id: 'accent_21',
+      id: 'CharacterNone',
       img: '/assets/images/character/None.png'
     },
     {
-      id: 'accent_22',
+      id: 'CharacterPrime',
       img: '/assets/images/character/Prime.png'
     },
     {
-      id: 'accent_23',
+      id: 'CharacterReverseDoublePrime',
       img: '/assets/images/character/ReverseDoublePrime.png'
     },
     {
-      id: 'accent_24',
+      id: 'CharacterReversePrime',
       img: '/assets/images/character/ReversePrime.png'
     },
     {
-      id: 'accent_25',
+      id: 'CharacterRightCross',
       img: '/assets/images/character/RightCross.png'
     },
     {
-      id: 'accent_26',
+      id: 'CharacterRightUprightCross',
       img: '/assets/images/character/RightUprightCross.png'
     },
     {
-      id: 'accent_27',
+      id: 'CharacterStrikeThrough',
       img: '/assets/images/character/StrikeThrough.png'
     },
     {
-      id: 'accent_28',
+      id: 'CharacterTopBar',
       img: '/assets/images/character/TopBar.png'
     },
     {
-      id: 'accent_29',
+      id: 'CharacterTopBreve',
       img: '/assets/images/character/TopBreve.png'
     },
     {
-      id: 'accent_30',
+      id: 'CharacterTopCaron',
       img: '/assets/images/character/TopCaron.png'
     },
     {
-      id: 'accent_31',
+      id: 'CharacterTopCircumflex',
       img: '/assets/images/character/TopCircumflex.png'
     },
     {
-      id: 'accent_32',
+      id: 'CharacterTopDDot',
       img: '/assets/images/character/TopDDot.png'
     },
     {
-      id: 'accent_33',
+      id: 'CharacterTopDot',
       img: '/assets/images/character/TopDot.png'
     },
     {
-      id: 'accent_34',
+      id: 'CharacterTopDoubleArrow',
       img: '/assets/images/character/TopDoubleArrow.png'
     },
     {
-      id: 'accent_35',
+      id: 'CharacterTopFourDot',
       img: '/assets/images/character/TopFourDot.png'
     },
     {
-      id: 'accent_36',
+      id: 'CharacterTopInvertedBreve',
       img: '/assets/images/character/TopInvertedBreve.png'
     },
     {
-      id: 'accent_37',
+      id: 'CharacterTopLeftArrow',
       img: '/assets/images/character/TopLeftArrow.png'
     },
     {
-      id: 'accent_38',
+      id: 'CharacterTopLeftHarpoon',
       img: '/assets/images/character/TopLeftHarpoon.png'
     },
     {
-      id: 'accent_39',
+      id: 'CharacterTopRightArrow',
       img: '/assets/images/character/TopRightArrow.png'
     },
     {
-      id: 'accent_40',
+      id: 'CharacterTopRightHarpoon',
       img: '/assets/images/character/TopRightHarpoon.png'
     },
     {
-      id: 'accent_41',
+      id: 'CharacterTopRightRing',
       img: '/assets/images/character/TopRightRing.png'
     },
     {
-      id: 'accent_42',
+      id: 'CharacterTopRing',
       img: '/assets/images/character/TopRing.png'
     },
     {
-      id: 'accent_43',
+      id: 'CharacterTopTDot',
       img: '/assets/images/character/TopTDot.png'
     },
     {
-      id: 'accent_44',
+      id: 'CharacterTopTilde',
       img: '/assets/images/character/TopTilde.png'
     },
     {
-      id: 'accent_45',
+      id: 'CharacterTriplePrime',
       img: '/assets/images/character/TriplePrime.png'
     },
     {
-      id: 'accent_46',
+      id: 'CharacterVDoubleStrikeThrough',
       img: '/assets/images/character/VDoubleStrikeThrough.png'
     },
     {
-      id: 'accent_47',
+      id: 'CharacterVStrikeThrough',
       img: '/assets/images/character/VStrikeThrough.png'
     }
   ],
@@ -1534,39 +1534,39 @@ export const ERibbon: IRibbon = {
   },
   matrixDropdownData: [
     {
-      id: 'matrix_1',
+      id: '2cellColumn',
       img: '/assets/images/2cellColumn.png'
     },
     {
-      id: 'matrix_2',
+      id: '2cellRow',
       img: '/assets/images/2cellRow.png'
     },
     {
-      id: 'matrix_3',
+      id: '2Square',
       img: 'assets/images/2Square.png'
     },
     {
-      id: 'matrix_4',
+      id: '3cellColumn',
       img: '/assets/images/3cellColumn.png'
     },
     {
-      id: 'matrix_5',
+      id: '3cellRow',
       img: '/assets/images/3cellRow.png'
     },
     {
-      id: 'matrix_6',
+      id: '3Square',
       img: '/assets/images/3Square.png'
     },
     {
-      id: 'matrix_7',
+      id: 'column',
       img: '/assets/images/column.png'
     },
     {
-      id: 'matrix_8',
+      id: 'custom',
       img: '/assets/images/custom.png'
     },
     {
-      id: 'matrix_9',
+      id: 'row',
       img: '/assets/images/row.png'
     }
   ],
@@ -1579,23 +1579,23 @@ export const ERibbon: IRibbon = {
   },
   boxesDropdownData: [
     {
-      id: 'boxes_1',
+      id: 'BoxAll',
       img: '/assets/images/all.png'
     },
     {
-      id: 'boxes_2',
+      id: 'BoxLeftBottom',
       img: '/assets/images/leftBottom.png'
     },
     {
-      id: 'boxes_3',
+      id: 'BoxLeftTop',
       img: 'assets/images/leftTop.png'
     },
     {
-      id: 'boxes_4',
+      id: 'BoxRightBottom',
       img: '/assets/images/rightBottom.png'
     },
     {
-      id: 'boxes_5',
+      id: 'BoxRightTop',
       img: '/assets/images/rightTop.png'
     }
   ],

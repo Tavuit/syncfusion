@@ -1268,10 +1268,11 @@
 </div>
 
 <div id="function-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.COMMUNICATION">
     <div
       *ngFor="let item of ribbon.functionDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1279,18 +1280,19 @@
 </div>
 
 <div id="word-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
-    <div *ngFor="let item of ribbon.wordDropdownData" class="function-dropdown-item">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.COMMUNICATION">
+    <div *ngFor="let item of ribbon.wordDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
 </div>
 
 <div id="application-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.COMMUNICATION">
     <div
       *ngFor="let item of ribbon.applicationDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1298,10 +1300,11 @@
 </div>
 
 <div id="relationship-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.COMMUNICATION">
     <div
       *ngFor="let item of ribbon.relationshipDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1310,7 +1313,7 @@
 
 <div id="boxes-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.boxesDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.boxesDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1321,6 +1324,7 @@
     <div
       *ngFor="let item of ribbon.greekCapitalDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       {{ item.text }}
     </div>
@@ -1332,6 +1336,7 @@
     <div
       *ngFor="let item of ribbon.greekSmallDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       {{ item.text }}
     </div>
@@ -1342,6 +1347,7 @@
     <div
       *ngFor="let item of ribbon.arrowCodeDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       {{ item.text }}
     </div>
@@ -1352,6 +1358,7 @@
     <div
       *ngFor="let item of ribbon.operatorDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       {{ item.text }}
     </div>
@@ -1359,7 +1366,7 @@
 </div>
 <div id="script-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.scriptDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.scriptDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1367,7 +1374,7 @@
 
 <div id="matrix-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.matrixDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.matrixDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1375,7 +1382,7 @@
 
 <div id="bar-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.barDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.barDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1383,7 +1390,7 @@
 
 <div id="frac-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.fracDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.fracDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1391,7 +1398,7 @@
 
 <div id="arrow-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.arrowDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.arrowDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1402,6 +1409,7 @@
     <div
       *ngFor="let item of ribbon.decoratorDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1410,7 +1418,7 @@
 
 <div id="sum-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.sumDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.sumDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
@@ -1421,6 +1429,7 @@
     <div
       *ngFor="let item of ribbon.bracketDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1432,6 +1441,7 @@
     <div
       *ngFor="let item of ribbon.integralDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1440,25 +1450,26 @@
 
 <div id="accent-dropdown">
   <ng-container *ngIf="selectedTabIndex === 2">
-    <div *ngFor="let item of ribbon.accentDropdownData" class="function-dropdown-item">
+    <div *ngFor="let item of ribbon.accentDropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
 </div>
 
 <div id="theory1-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
-    <div *ngFor="let item of ribbon.theory1DropdownData" class="function-dropdown-item">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
+    <div *ngFor="let item of ribbon.theory1DropdownData" class="function-dropdown-item" (click)="handleInsert(item)">
       <img [src]="item.img" alt="img"/>
     </div>
   </ng-container>
 </div>
 
 <div id="theory2-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.theory2DropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1466,10 +1477,11 @@
 </div>
 
 <div id="fundamental1-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.fundamentalDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1477,10 +1489,11 @@
 </div>
 
 <div id="fundamental2-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.fundamental2DropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1488,10 +1501,11 @@
 </div>
 
 <div id="function2-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.theoryFunctionDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1499,10 +1513,11 @@
 </div>
 
 <div id="time-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1  && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.timeDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1510,10 +1525,11 @@
 </div>
 
 <div id="derivative-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1  && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.derivativeDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1521,10 +1537,11 @@
 </div>
 
 <div id="instrusment-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1  && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.instrumentDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1532,10 +1549,11 @@
 </div>
 
 <div id="stability-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.stabilityDropdownData"
       class="function-dropdown-item"
+      (click)="handleInsert(item)"
     >
       <img [src]="item.img" alt="img"/>
     </div>
@@ -1543,7 +1561,7 @@
 </div>
 
 <div id="theorem-dropdown">
-  <ng-container *ngIf="selectedTabIndex === 1">
+  <ng-container *ngIf="selectedTabIndex === 1 && (domain$ | async) === EDomain.THEORY">
     <div
       *ngFor="let item of ribbon.theoremDropdownData"
       class="function-dropdown-item"
