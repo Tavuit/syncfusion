@@ -228,27 +228,27 @@ export const ERibbon: IRibbon = {
   },
   containerDropdownData: [
     {
-      id: '1',
+      id: 'containerPlain',
       text: 'Plain',
       img: '/assets/images/plainsubmenucontainerinsert.png'
     },
     {
-      id: '2',
+      id: 'containerClassic',
       text: 'Classic',
       img: '/assets/images/classicsubmenucontainerinsert.png'
     },
     {
-      id: '3',
+      id: 'containerCorners',
       text: 'Corners',
       img: '/assets/images/cornerssubmenucontainerinsert.png'
     },
     {
-      id: '4',
+      id: 'containerAlternating',
       text: 'Alternating',
       img: '/assets/images/alternatingsubmenucontainerinsert.png'
     },
     {
-      id: '5',
+      id: 'containerBanner',
       text: 'Banner',
       img: '/assets/images/bannersubmenucontainerinsert.png'
     }
@@ -264,31 +264,31 @@ export const ERibbon: IRibbon = {
       group: 'Vertical',
       items: [
         {
-          id: 'list1',
+          id: 'listVerticalPlan',
           text: 'Plain',
           img: '/assets/images/plainsubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
-          id: 'list2',
+          id: 'listVerticalClassic',
           text: 'Classic',
           img: '/assets/images/classicsubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
-          id: 'list3',
+          id: 'listVerticalCorners',
           text: 'Corners',
           img: '/assets/images/cornerssubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
-          id: 'list4',
+          id: 'listVerticalAlternating',
           text: 'Alternating',
           img: '/assets/images/alternatingsubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
-          id: 'list5',
+          id: 'listVerticalBanner',
           text: 'Banner',
           img: '/assets/images/bannersubmenucontainerinsert.png',
           group: 'Vertical'
@@ -299,31 +299,31 @@ export const ERibbon: IRibbon = {
       group: 'Horizontal',
       items: [
         {
-          id: 'list6',
+          id: 'listHorizontalPlan',
           text: 'Plain',
           img: '/assets/images/plainsubmenucontainerinsert.png',
           group: 'Horizontal'
         },
         {
-          id: 'list7',
+          id: 'listHorizontalClassic',
           text: 'Classic',
           img: '/assets/images/classicsubmenucontainerinsert.png',
           group: 'VertHorizontalical'
         },
         {
-          id: 'list8',
+          id: 'listHorizontalCorners',
           text: 'Corners',
           img: '/assets/images/cornerssubmenucontainerinsert.png',
           group: 'Horizontal'
         },
         {
-          id: 'list0',
+          id: 'listHorizontalAlternating',
           text: 'Alternating',
           img: '/assets/images/alternatingsubmenucontainerinsert.png',
           group: 'Horizontal'
         },
         {
-          id: 'list10',
+          id: 'listHorizontalBanner',
           text: 'Banner',
           img: '/assets/images/bannersubmenucontainerinsert.png',
           group: 'Horizontal'
@@ -379,59 +379,59 @@ export const ERibbon: IRibbon = {
   },
   functionDropdownData: [
     {
-      id: 'func1',
+      id: 'function_1',
       img: '/assets/images/function_1.png'
     },
     {
-      id: 'func2',
+      id: 'function_2',
       img: '/assets/images/function_2.png'
     },
     {
-      id: 'func3',
+      id: 'function_3',
       img: '/assets/images/function_3.png'
     },
     {
-      id: 'func4',
+      id: 'function_4',
       img: '/assets/images/function_4.png'
     },
     {
-      id: 'func5',
+      id: 'function_5',
       img: '/assets/images/function_5.png'
     },
     {
-      id: 'func6',
+      id: 'function_6',
       img: '/assets/images/function_6.png'
     },
     {
-      id: 'func7',
+      id: 'function_7',
       img: '/assets/images/function_7.png'
     },
     {
-      id: 'func8',
+      id: 'function_8',
       img: '/assets/images/function_8.png'
     },
     {
-      id: 'func9',
+      id: 'function_9',
       img: '/assets/images/function_9.png'
     },
     {
-      id: 'func10',
+      id: 'function_10',
       img: '/assets/images/function_10.png'
     },
     {
-      id: 'func11',
+      id: 'function_11',
       img: '/assets/images/function_11.png'
     },
     {
-      id: 'func12',
+      id: 'function_12',
       img: '/assets/images/function_12.png'
     },
     {
-      id: 'func13',
+      id: 'function_13',
       img: '/assets/images/function_13.png'
     },
     {
-      id: 'func14',
+      id: 'function_14',
       img: '/assets/images/function_14.png'
     }
   ],
@@ -443,55 +443,55 @@ export const ERibbon: IRibbon = {
   },
   wordDropdownData: [
     {
-      id: 'word1',
+      id: 'word_1',
       img: '/assets/images/word_1.png'
     },
     {
-      id: 'word2',
+      id: 'word_2',
       img: '/assets/images/word_2.png'
     },
     {
-      id: 'word3',
+      id: 'word_3',
       img: '/assets/images/word_3.png'
     },
     {
-      id: 'word4',
+      id: 'word_4',
       img: '/assets/images/word_4.png'
     },
     {
-      id: 'word5',
+      id: 'word_5',
       img: '/assets/images/word_5.png'
     },
     {
-      id: 'word6',
+      id: 'word_6',
       img: '/assets/images/word_6.png'
     },
     {
-      id: 'word7',
+      id: 'word_7',
       img: '/assets/images/word_7.png'
     },
     {
-      id: 'word8',
+      id: 'word_8',
       img: '/assets/images/word_8.png'
     },
     {
-      id: 'word9',
+      id: 'word_9',
       img: '/assets/images/word_9.png'
     },
     {
-      id: 'word',
+      id: 'word_10',
       img: '/assets/images/word_10.png'
     },
     {
-      id: 'word11',
+      id: 'word_11',
       img: '/assets/images/word_11.png'
     },
     {
-      id: 'word12',
+      id: 'word_12',
       img: '/assets/images/word_12.png'
     },
     {
-      id: 'word13',
+      id: 'word_13',
       img: '/assets/images/word_13.png'
     }
   ],
@@ -1607,7 +1607,7 @@ export const ERibbon: IRibbon = {
     createPopupOnClick: true
   },
   operatorDropdownData: OPERATOR.map((value, index) => ({
-    id: `operator_${index}`,
+    id: value.toString(),
     text: value
   })),
   greekCapitalDropdown: {
@@ -1618,8 +1618,9 @@ export const ERibbon: IRibbon = {
     createPopupOnClick: true
   },
   greekCapitalDropdownData: GREEKCAPTITAL.map((value, index) => ({
-    id: `cap_${index}`,
-    text: value
+    id: value.toString(),
+    text: value,
+    type: 'large'
   })),
   greekSmallDropdown: {
     iconCss: 'icon-medium icon-greeksmall',
@@ -1629,8 +1630,9 @@ export const ERibbon: IRibbon = {
     createPopupOnClick: true
   },
   greekSmallDropdownData: GREEKSMALL.map((value, index) => ({
-    id: `small_${index}`,
-    text: value
+    id: value.toString(),
+    text: value,
+    type: 'large'
   })),
   arrowDropdown: {
     iconCss: 'icon-medium icon-arrows',
@@ -1640,8 +1642,9 @@ export const ERibbon: IRibbon = {
     createPopupOnClick: true
   },
   arrowCodeDropdownData: ARROW.map((value, idx) => ({
-    id: `arrowCode_${idx}`,
-    text: value
+    id: value.toString(),
+    text: value,
+    type: 'large'
   })),
   selectedEntityButton: {
     iconCss: 'icon icon-selectedentityedit',

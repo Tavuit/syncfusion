@@ -6,7 +6,7 @@ import {EDomain} from 'src/app/shared/enums/core.enum';
 import {CoreService} from 'src/app/shared/services/core.service';
 import {filter, map, Observable, Subject, switchMap, takeUntil} from 'rxjs';
 import {IRibbon} from 'src/app/shared/interfaces/ribbon.interface';
-import {RibbonService} from './services/ribbon.service';
+import {IAnnotationContent, RibbonService} from './services/ribbon.service';
 import {DiagramService, TDiagramComponent, TDiagramAction} from 'src/app/shared/services/diagram.service';
 import {DiagramActionService} from 'src/app/shared/services/diagram-action.service';
 
@@ -129,8 +129,7 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   }
 
   public handleInsert(value) {
-    console.log('value', value);
-    this.ribbonService.setInsertAnnotationContent(value?.id);
+    this.ribbonService.setInsertAnnotationContent(value);
   }
 
   ngOnDestroy() {

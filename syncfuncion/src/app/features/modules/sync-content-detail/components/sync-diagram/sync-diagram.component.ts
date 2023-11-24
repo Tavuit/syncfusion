@@ -1,4 +1,4 @@
-import { RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
+import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import {
   Component,
   OnDestroy,
@@ -18,6 +18,7 @@ import {CoreService} from 'src/app/shared/services/core.service';
 import {Subject, map, switchMap, takeUntil} from "rxjs";
 import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
 import { EQUATIONS_DATA } from 'src/app/utils/constants';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -35,7 +36,8 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,
-    private ribbonService: RibbonService
+    private ribbonService: RibbonService,
+    private toastrService: ToastrService
   ) {
   }
 
@@ -43,9 +45,9 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     this.ribbonService.getInsertAnnotationContentBS().pipe(
       takeUntil(this._destroyed)
     )
-    .subscribe((equationId) => {
-      if (equationId) {
-        this.handleInsertEquation(equationId);
+    .subscribe((equation) => {
+      if (equation) {
+        this.handleInsertEquation(equation);
       }
     })
 
@@ -95,20 +97,25 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     }
   }
 
-  private handleInsertEquation(id = null, ) {
+  private handleInsertEquation(equation: IAnnotationContent = null) {
     const SALT = "_html_element";
     let selectedItemDivID;
-    if (id && this.selectedNode) {
-      const operator = EQUATIONS_DATA[id];
-      // console.log("🚀 ~ file: sync-diagram.component.ts:101 ~ SyncDiagramComponent ~ handleInsertEquation ~ this.selectedNode:", this.selectedNode)
+    if (!this.selectedNode) {
+      this.toastrService.error('No node is currently selected');
+      return;
+    }
+    if (equation?.id && this.selectedNode) {
+      let operator;
+      if (equation.type) {
+        operator = equation?.text;
+      } else {
+        operator = EQUATIONS_DATA[equation?.id];
+      }
       selectedItemDivID = this.selectedNode?.id;
       selectedItemDivID = selectedItemDivID + SALT;
       const $wrapper = document.getElementById(selectedItemDivID)
-      console.log("🚀 ~ :", selectedItemDivID, '$wrapper', $wrapper);
       let mqInput: any = $wrapper.querySelector("#mathquill-mathquill-input-border");
       mqInput.executeCommand(['insert', operator]);
-      console.log("🚀 ~ file: sync-diagram.component.ts:109 ~ SyncDiagramComponent ~ handleInsertEquation ~ mqInput:", mqInput)
-      // console.log('operator', operator);
       // const updatedNode = this.selectedNode;
       // updatedNode.annotations[0].content = operator;
       // this.diagram.dataBind();

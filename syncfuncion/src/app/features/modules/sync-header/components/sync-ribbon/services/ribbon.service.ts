@@ -7,6 +7,13 @@ import {DiagramService} from "../../../../../../shared/services/diagram.service"
 import {EDiagramAction, EDiagramModel} from "../../../../../../shared/enums/diagram.enum";
 import { Subject } from "rxjs";
 
+export interface IAnnotationContent {
+  id: string;
+  type?: string;
+  img?: string;
+  text?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -188,7 +195,7 @@ export class RibbonService {
     stabilityDropdownData: []
   };
 
-  private _insertAnnotationContent$ = new Subject<string>();
+  private _insertAnnotationContent$ = new Subject<IAnnotationContent>();
 
   constructor(
     private coreService: CoreService,
@@ -205,7 +212,7 @@ export class RibbonService {
     return this._insertAnnotationContent$.asObservable()
   }
 
-  public setInsertAnnotationContent(value: string) {
+  public setInsertAnnotationContent(value: IAnnotationContent) {
     this._insertAnnotationContent$.next(value);
   }
 
