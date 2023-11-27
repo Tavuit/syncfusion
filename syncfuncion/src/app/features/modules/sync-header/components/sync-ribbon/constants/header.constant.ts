@@ -1608,7 +1608,8 @@ export const ERibbon: IRibbon = {
   },
   operatorDropdownData: OPERATOR.map((value, index) => ({
     id: value.toString(),
-    text: value
+    text: value,
+    type: 'normal'
   })),
   greekCapitalDropdown: {
     iconCss: 'icon-medium icon-greekcapital',
