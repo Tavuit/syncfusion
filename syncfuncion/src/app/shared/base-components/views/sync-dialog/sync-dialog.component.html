@@ -1,7 +1,7 @@
 <ejs-dialog
   id="dialog"
   #ejDialog
-  width="250px"
+  [width]="DIALOG_SIZE[dialogSize]"
   [target]="targetElement"
   [buttons]="buttons"
   isModal="true"
@@ -34,7 +34,7 @@
   </div>
 </ng-template>
 <ng-template #defaultFooterTpl>
-  <div>
+  <div *ngIf="isShowFooter">
     <button ejs-button cssClass="e-success">Success</button>
     <button ejs-button cssClass="e-danger">Danger</button>
   </div>

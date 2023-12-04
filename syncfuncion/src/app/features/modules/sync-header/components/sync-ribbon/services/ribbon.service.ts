@@ -196,6 +196,7 @@ export class RibbonService {
   };
 
   private _insertAnnotationContent$ = new Subject<IAnnotationContent>();
+  private _triggerDialog$ = new Subject<boolean>();
 
   constructor(
     private coreService: CoreService,
@@ -221,6 +222,7 @@ export class RibbonService {
     ribbon.theoryButton.clicked = () => this.setDomain(EDomain.THEORY);
     ribbon.copyButton.clicked = () => this.diagramHandler(EDiagramAction.COPY);
     ribbon.pasteSettings.clicked = () => this.diagramHandler(EDiagramAction.PARSE);
+    ribbon.captureImgButton.clicked = () => { this.setTriggerDialog(true) }
     this._ribbon = ribbon
   }
 
@@ -230,5 +232,13 @@ export class RibbonService {
 
   private diagramHandler(action: EDiagramAction): void {
     this.diagramSerivce.regiterAction(action);
+  }
+
+  public getTriggerDialog() {
+    return this._triggerDialog$.asObservable();
+  }
+
+  private setTriggerDialog(value) {
+    this._triggerDialog$.next(value);
   }
 }

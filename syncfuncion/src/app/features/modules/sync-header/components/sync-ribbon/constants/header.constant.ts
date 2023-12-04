@@ -2613,4 +2613,49 @@ export const ERibbon: IRibbon = {
       img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_21.png'
     }
   ]
+};
+
+export async function recordScreen(audio = true, video = true) {
+  const constaints = {};
+  if (!!audio) {
+    constaints['audio'] = audio;
+  }
+  if (!!video) {
+    constaints['video'] = {mediaSource: "screen"}
+  }
+  if ('mediaDevices' in navigator && 'getUserMedia' in navigator.mediaDevices) {
+    return await navigator.mediaDevices.getDisplayMedia(constaints);
+  }
+  return null
+}
+
+export async function createCapture(stream) {
+  const videoTrack = stream.getVideoTracks()[0];
+  const imageCapture = new (window as any).ImageCapture(videoTrack);
+  const imageBitmap = await imageCapture.grabFrame();
+  const canvas = document.createElement('canvas');
+  canvas.width = imageBitmap.width;
+  canvas.height = imageBitmap.height;
+  canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
+  const dataURL = canvas.toDataURL('image/png');
+  stream.getTracks().forEach(item=>item.stop());
+  saveFileCapture(dataURL)
+}
+
+export function saveFileCapture(base64Image) {
+  var blobImage = dataURItoBlob(base64Image);
+  // saveAs(blobImage, "screen-capture.png");
+}
+
+export function dataURItoBlob(dataURI) {
+  var byteString = atob(dataURI.split(',')[1]);
+  var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+  var ab = new ArrayBuffer(byteString.length);
+  var ia = new Uint8Array(ab);
+  for (var i = 0; i < byteString.length; i++) {
+    ia[i] = byteString.charCodeAt(i);
+  }
+  var blob = new Blob([ab], {type: mimeString});
+  return blob;
+
 }

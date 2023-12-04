@@ -9,11 +9,13 @@ import {IRibbon} from 'src/app/shared/interfaces/ribbon.interface';
 import {IAnnotationContent, RibbonService} from './services/ribbon.service';
 import {DiagramService, TDiagramComponent, TDiagramAction} from 'src/app/shared/services/diagram.service';
 import {DiagramActionService} from 'src/app/shared/services/diagram-action.service';
+import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
+import { createCapture, recordScreen } from 'src/app/features/modules/sync-header/components/sync-ribbon/constants/header.constant';
 
 @Component({
   selector: 'sync-ribbon',
   standalone: true,
-  imports: [CommonModule, RibbonAllModule, ListViewAllModule],
+  imports: [CommonModule, RibbonAllModule, ListViewAllModule, SyncDialogComponent],
   templateUrl: './sync-ribbon.component.html',
   styleUrls: ['./sync-ribbon.component.scss'],
 })
@@ -28,6 +30,33 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   public Simplified: DisplayMode = DisplayMode.Simplified;
   public Overflow: DisplayMode = DisplayMode.Overflow;
   public hiddenSpeakLogicCommunication = false;
+  public isShowModal = false;
+  public fakeData = [
+    {
+      text: 'Image',
+      img: '/assets/images/captureimageproject.png'
+    },
+    {
+      text: 'Video',
+      img: '/assets/images/reconrdvideoproject1.png'
+    },
+    {
+      text: 'Audio',
+      img: '/assets/images/recordaudioproject1.png'
+    },
+    {
+      text: 'Edit Image',
+      img: '/assets/images/editimageproject.png'
+    },
+    {
+      text: 'Edit Video',
+      img: '/assets/images/editvideoproject.png'
+    },
+    {
+      text: 'Settings',
+      img: '/assets/images/settingproject1.png'
+    }];
+  public EDialogSize = EDialogSize;
 
   constructor(
     private coreService: CoreService,
@@ -94,6 +123,10 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
           createPopupOnClick: true
         };
       }
+    });
+
+    this.ribbonService.getTriggerDialog().subscribe((res) => {
+      this.isShowModal = !!res;
     })
   }
 
@@ -130,6 +163,18 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
 
   public handleInsert(value) {
     this.ribbonService.setInsertAnnotationContent(value);
+  }
+
+  public async handleClickAction(action) {
+    if (action.text === 'Image') {
+      console.log('action', action)
+      let stream = await recordScreen(true, false);
+      if (stream) {
+        await createCapture(stream)
+      } else {
+        alert("Browser not supported! Please use a different browser.");
+      }
+    }
   }
 
   ngOnDestroy() {

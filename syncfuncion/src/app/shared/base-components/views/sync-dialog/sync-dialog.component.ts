@@ -4,6 +4,12 @@ import { DialogComponent, DialogModule } from '@syncfusion/ej2-angular-popups';
 import { EmitType } from '@syncfusion/ej2/base';
 import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
 
+export enum EDialogSize {
+  SMALL = 'SMALL',
+  MEDIUM = 'MEDIUM',
+  LARGE = 'LARGE'
+}
+
 @Component({
   selector: 'sync-dialog',
   standalone: true,
@@ -19,9 +25,16 @@ export class SyncDialogComponent implements OnInit {
   @Output() visibleChange: EventEmitter<boolean> = new EventEmitter<boolean>();
   @Input() headerTpl?: TemplateRef<void>;
   @Input() footerTpl?: TemplateRef<void>;
+  @Input() isShowFooter = true;
+  @Input() dialogSize: EDialogSize = EDialogSize.SMALL;
 
 
   public targetElement?: HTMLElement;
+  public DIALOG_SIZE = {
+    [EDialogSize.SMALL]: '300px',
+    [EDialogSize.MEDIUM]: '600px',
+    [EDialogSize.LARGE]: '900px'
+  }
   ngOnInit() {
     this.initilaizeTarget();
   }
