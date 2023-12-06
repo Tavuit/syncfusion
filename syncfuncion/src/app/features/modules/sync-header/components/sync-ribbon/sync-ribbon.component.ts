@@ -166,14 +166,18 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   }
 
   public async handleClickAction(action) {
-    if (action.text === 'Image') {
-      console.log('action', action)
-      let stream = await recordScreen(true, false);
-      if (stream) {
-        await createCapture(stream)
-      } else {
-        alert("Browser not supported! Please use a different browser.");
-      }
+    switch (action.text) {
+      case 'Image':
+        this.ribbonService.captureImage();
+        break;
+      case 'Video':
+        this.ribbonService.recordVideo();
+        break;
+      case 'Audio':
+        this.ribbonService.recordVoice();
+        break;
+      default:
+        break;
     }
   }
 

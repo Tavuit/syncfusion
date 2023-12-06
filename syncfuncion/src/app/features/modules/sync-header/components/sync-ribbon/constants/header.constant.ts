@@ -1,5 +1,6 @@
 import { IRibbon } from "src/app/shared/interfaces/ribbon.interface";
 import {ARROW, GREEKCAPTITAL, GREEKSMALL, OPERATOR} from "src/app/utils/constants";
+import FileSaver from "file-saver";
 
 const fontSize: string[] = ['1pt', '2pt', '3pt', '4pt', '5pt'];
 const fontStyle: string[] = [
@@ -2644,7 +2645,7 @@ export async function createCapture(stream) {
 
 export function saveFileCapture(base64Image) {
   var blobImage = dataURItoBlob(base64Image);
-  // saveAs(blobImage, "screen-capture.png");
+  FileSaver.saveAs(blobImage, "screen-capture.png");
 }
 
 export function dataURItoBlob(dataURI) {
@@ -2657,5 +2658,29 @@ export function dataURItoBlob(dataURI) {
   }
   var blob = new Blob([ab], {type: mimeString});
   return blob;
+}
 
+export function createRecorder(stream) {
+  let mimeType = 'video/webm';
+  let recordedChunks = [];
+  const mediaRecorder = new MediaRecorder(stream);
+  mediaRecorder.ondataavailable = function (e) {
+    if (e.data.size > 0) {
+      recordedChunks.push(e.data);
+    }
+  };
+  mediaRecorder.onstop = function () {
+    saveFileVideo(recordedChunks);
+    recordedChunks = [];
+    stream.getTracks().forEach(item=>item.stop());
+  };
+  mediaRecorder.start(200);
+  return mediaRecorder
+}
+
+export function saveFileVideo(recordedChunks) {
+  const blob = new Blob(recordedChunks, {
+    type: 'video/webm'
+  });
+  FileSaver.saveAs(blob, 'screen-record.webm')
 }

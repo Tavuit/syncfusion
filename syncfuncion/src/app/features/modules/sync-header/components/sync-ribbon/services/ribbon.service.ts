@@ -2,10 +2,11 @@ import {Injectable} from "@angular/core";
 import {CoreService} from "src/app/shared/services/core.service";
 import {IRibbon} from "../../../../../../shared/interfaces/ribbon.interface";
 import {EDomain} from "src/app/shared/enums/core.enum";
-import {ERibbon} from "../constants/header.constant";
+import {createCapture, createRecorder, ERibbon, recordScreen} from "../constants/header.constant";
 import {DiagramService} from "../../../../../../shared/services/diagram.service";
 import {EDiagramAction, EDiagramModel} from "../../../../../../shared/enums/diagram.enum";
 import { Subject } from "rxjs";
+import FileSaver from "file-saver";
 
 export interface IAnnotationContent {
   id: string;
@@ -240,5 +241,48 @@ export class RibbonService {
 
   private setTriggerDialog(value) {
     this._triggerDialog$.next(value);
+  }
+
+  public async captureImage() {
+    let stream = await recordScreen(true, false);
+    if (stream) {
+      await createCapture(stream)
+    } else {
+      alert("Browser not supported! Please use a different browser.");
+    }
+  }
+
+  public async recordVideo() {
+    let stream = await recordScreen(true, false);
+    if (stream) {
+      createRecorder(stream)
+    } else {
+      alert("Browser not supported! Please use a different browser.");
+    }
+  }
+
+  public async recordVoice() {
+    let mediaRecorder;
+    try {
+      let stream = await navigator.mediaDevices.getUserMedia({audio: true, video: false});
+      if (stream) {
+        mediaRecorder = new MediaRecorder(stream);
+        mediaRecorder.start();
+        let chunks = [];
+        mediaRecorder.ondataavailable = (e) => {
+          chunks.push(e.data);
+        }
+        mediaRecorder.onerror = (e) => {
+          alert(e.error);
+        }
+        mediaRecorder.onstop = (e) => {
+          let blod = new Blob(chunks);
+          FileSaver.saveAs(blod, 'audio-record.mp3');
+          stream.getTracks().forEach(item=>item.stop());
+        }
+      }
+    } catch (err) {
+      console.error(err)
+    }
   }
 }
