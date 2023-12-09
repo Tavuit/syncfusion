@@ -1572,11 +1572,22 @@
   </ng-container>
 </div>
 
-<sync-dialog [visible]="isShowModal" (visibleChange)="isShowModal = !isShowModal" [isShowFooter]="false" [dialogSize]="EDialogSize.MEDIUM">
+<sync-dialog [visible]="isShowProjectFileActionModal" (visibleChange)="isShowProjectFileActionModal = !isShowProjectFileActionModal" [isShowFooter]="false" [dialogSize]="EDialogSize.MEDIUM">
   <div class="editing-wrapper">
     <div class="editing-item" *ngFor="let item of fakeData" (click)="handleClickAction(item)">
       <img [src]="item.img" alt="img">
       <span>{{item.text}}</span>
     </div>
+    <input
+      #fileRef
+      type="file"
+      id="fileUploadToEditor"
+      name="fileUploadToEditor"
+      accept="image/png, image/gif, image/jpeg"
+      style="display: none"
+      (change)="chooseFile($event)"
+    />
   </div>
 </sync-dialog>
+
+<image-editor-modal [visible]="isShowImageEditorModal" [imageFileData]="uploadedFile" (closeModal)="handleImageEditorModal($event)" ></image-editor-modal>

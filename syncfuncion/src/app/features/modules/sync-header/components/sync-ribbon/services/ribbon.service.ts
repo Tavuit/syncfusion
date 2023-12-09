@@ -223,7 +223,12 @@ export class RibbonService {
     ribbon.theoryButton.clicked = () => this.setDomain(EDomain.THEORY);
     ribbon.copyButton.clicked = () => this.diagramHandler(EDiagramAction.COPY);
     ribbon.pasteSettings.clicked = () => this.diagramHandler(EDiagramAction.PARSE);
-    ribbon.captureImgButton.clicked = () => { this.setTriggerDialog(true) }
+    ribbon.captureImgButton.clicked = () => { this.setTriggerDialog(true) };
+    ribbon.editImgButton.clicked = () => { this.setTriggerDialog(true) };
+    ribbon.recordVideoButton.clicked = () => { this.setTriggerDialog(true) };
+    ribbon.recordAudioButton.clicked = () => { this.setTriggerDialog(true) };
+    ribbon.settingsButton.clicked = () => { this.setTriggerDialog(true) };
+
     this._ribbon = ribbon
   }
 

@@ -1,4 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {DisplayMode, RibbonAllModule, RibbonItemSize,} from '@syncfusion/ej2-angular-ribbon';
 import {ListViewAllModule} from '@syncfusion/ej2-angular-lists';
@@ -11,15 +11,17 @@ import {DiagramService, TDiagramComponent, TDiagramAction} from 'src/app/shared/
 import {DiagramActionService} from 'src/app/shared/services/diagram-action.service';
 import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
 import { createCapture, recordScreen } from 'src/app/features/modules/sync-header/components/sync-ribbon/constants/header.constant';
+import { IImageFileDataType, ImageEditorModalComponent } from 'src/app/shared/base-components/components/image-editor-modal/image-editor-modal.component';
 
 @Component({
   selector: 'sync-ribbon',
   standalone: true,
-  imports: [CommonModule, RibbonAllModule, ListViewAllModule, SyncDialogComponent],
+  imports: [CommonModule, RibbonAllModule, ListViewAllModule, SyncDialogComponent, ImageEditorModalComponent],
   templateUrl: './sync-ribbon.component.html',
   styleUrls: ['./sync-ribbon.component.scss'],
 })
 export class SyncRibbonComponent implements OnInit, OnDestroy {
+  @ViewChild('fileRef') fileRef: ElementRef;
   private _destroyed: Subject<void> = new Subject<void>();
   public selectedTabIndex = 0;
   public ribbon: IRibbon = this.ribbonService.ribbon;
@@ -30,7 +32,9 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   public Simplified: DisplayMode = DisplayMode.Simplified;
   public Overflow: DisplayMode = DisplayMode.Overflow;
   public hiddenSpeakLogicCommunication = false;
-  public isShowModal = false;
+  public isShowProjectFileActionModal = false;
+  public isShowImageEditorModal = false;
+  public uploadedFile: IImageFileDataType;
   public fakeData = [
     {
       text: 'Image',
@@ -126,7 +130,7 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
     });
 
     this.ribbonService.getTriggerDialog().subscribe((res) => {
-      this.isShowModal = !!res;
+      this.isShowProjectFileActionModal = !!res;
     })
   }
 
@@ -176,9 +180,37 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
       case 'Audio':
         this.ribbonService.recordVoice();
         break;
+      case 'Edit Image':
+        if (this.fileRef) {
+          this.fileRef.nativeElement.click();
+        }
+        break;
       default:
         break;
     }
+  }
+
+  public chooseFile(event) {
+    const selectedFile = event.target.files[0];
+    let fileName = selectedFile.name
+    const idxDot = fileName.lastIndexOf(".") + 1;
+    const extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+    if (extFile == "jpg" || extFile == "jpeg" || extFile == "png") {
+      fileName = fileName.split('.').slice(0, -1).join('.')
+      this.uploadedFile = {
+        fileName,
+        url: selectedFile
+      };
+      this.isShowImageEditorModal = true;
+      this.isShowProjectFileActionModal = false;
+    } else {
+      alert("Only jpg/jpeg and png files are allowed!");
+    }
+  }
+
+  public handleImageEditorModal(value) {
+    this.isShowProjectFileActionModal = true;
+    this.isShowImageEditorModal = false;
   }
 
   ngOnDestroy() {

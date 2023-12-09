@@ -7,7 +7,8 @@ import { ButtonModule } from '@syncfusion/ej2-angular-buttons';
 export enum EDialogSize {
   SMALL = 'SMALL',
   MEDIUM = 'MEDIUM',
-  LARGE = 'LARGE'
+  LARGE = 'LARGE',
+  FULL = 'FULL'
 }
 
 @Component({
@@ -33,7 +34,8 @@ export class SyncDialogComponent implements OnInit {
   public DIALOG_SIZE = {
     [EDialogSize.SMALL]: '300px',
     [EDialogSize.MEDIUM]: '600px',
-    [EDialogSize.LARGE]: '900px'
+    [EDialogSize.LARGE]: '900px',
+    [EDialogSize.FULL]: '90%'
   }
   ngOnInit() {
     this.initilaizeTarget();
