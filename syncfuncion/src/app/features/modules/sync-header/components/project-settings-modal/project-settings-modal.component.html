@@ -1,0 +1,38 @@
+<sync-dialog
+  [visible]="visible"
+  (visibleChange)="handleVisibleChange($event)"
+  [isShowFooter]="false"
+  [dialogSize]="EDialogSize.MEDIUM"
+>
+  <div class="settings-wrapper">
+    <div class="video-recording">
+      <div class="title">Video Recording</div>
+      <div class="hardwareSettings">
+        <input type="checkbox" id="hardwareSettings" name="hardwareSettings">
+        <span>Enable Hardware Encoding</span>
+      </div>
+      <div class="audioOutSettings">
+        <input type="checkbox" id="audio-out" name="audioOut">
+        <span class="label-with-select">Audio out</span>
+        <select name="list-audio-out" id="audio-out-selection"></select>
+      </div>
+      <div class="audioInSettings">
+        <input type="checkbox" id="audio-in" name="audioIn">
+        <span class="label-with-select">Audio in</span>
+        <select name="list-audio-in" id="audio-in-selection"></select>
+      </div>
+    </div>
+    <div class="audio-recording">
+      <div class="title">Audio Recording</div>
+      <div id="record-from-playback">
+        <input type="radio" id="audio-recording-playback" name="audio_recording" onclick="handleOnChangeAudioOut(this);" value="true">
+        <span>Record from playback</span>
+      </div>
+      <div class="record-from-mic">
+        <input type="radio" id="audio-recording-mic" name="audio_recording" onclick="handleOnChangeAudioOut(this);" value="false">
+        <span class="label-with-select">Record from mic</span>
+        <select name="list-mic-setting" id="mic-setting-selection"></select>
+      </div>
+    </div>
+  </div>
+</sync-dialog>

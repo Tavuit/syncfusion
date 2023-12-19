@@ -12,11 +12,12 @@ import {DiagramActionService} from 'src/app/shared/services/diagram-action.servi
 import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
 import { createCapture, recordScreen } from 'src/app/features/modules/sync-header/components/sync-ribbon/constants/header.constant';
 import { IImageFileDataType, ImageEditorModalComponent } from 'src/app/shared/base-components/components/image-editor-modal/image-editor-modal.component';
+import { ProjectSettingsModalComponent } from 'src/app/features/modules/sync-header/components/project-settings-modal/project-settings-modal.component';
 
 @Component({
   selector: 'sync-ribbon',
   standalone: true,
-  imports: [CommonModule, RibbonAllModule, ListViewAllModule, SyncDialogComponent, ImageEditorModalComponent],
+  imports: [CommonModule, RibbonAllModule, ListViewAllModule, SyncDialogComponent, ImageEditorModalComponent, ProjectSettingsModalComponent],
   templateUrl: './sync-ribbon.component.html',
   styleUrls: ['./sync-ribbon.component.scss'],
 })
@@ -34,6 +35,7 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   public hiddenSpeakLogicCommunication = false;
   public isShowProjectFileActionModal = false;
   public isShowImageEditorModal = false;
+  public isShowSettingsModal = false;
   public uploadedFile: IImageFileDataType;
   public fakeData = [
     {
@@ -185,6 +187,10 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
           this.fileRef.nativeElement.click();
         }
         break;
+      case 'Settings':
+        this.isShowSettingsModal = true;
+        this.isShowProjectFileActionModal = false;
+        break;
       default:
         break;
     }
@@ -211,6 +217,11 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   public handleImageEditorModal(value) {
     this.isShowProjectFileActionModal = true;
     this.isShowImageEditorModal = false;
+  }
+
+  public handleSettingsModal(value) {
+    this.isShowSettingsModal = false;
+    this.isShowProjectFileActionModal = true;
   }
 
   ngOnDestroy() {
