@@ -35,7 +35,9 @@
       <div class="record-from-mic">
         <input (ngModelChange)="onChangeRadioRecord($event)" [(ngModel)]="recordValue" type="radio" id="audio-recording-mic" name="audio_recording" value="false">
         <span class="label-with-select">Record from mic</span>
-        <select #micSettingSelection name="list-mic-setting" id="mic-setting-selection" [(ngModel)]="micSelectionValue" (change)="onMicSelectChange($event)"></select>
+        <select #micSettingSelection name="list-mic-setting" id="mic-setting-selection" [(ngModel)]="micSelectionValue" (change)="onMicSelectChange($event)">
+          <option *ngFor="let item of micInSelectionOptions" [value]="item.value">{{item.text}}</option>
+        </select>
       </div>
     </div>
   </div>
