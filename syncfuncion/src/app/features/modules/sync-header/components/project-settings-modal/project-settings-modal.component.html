@@ -8,30 +8,34 @@
     <div class="video-recording">
       <div class="title">Video Recording</div>
       <div class="hardwareSettings">
-        <input type="checkbox" id="hardwareSettings" name="hardwareSettings">
+        <input (ngModelChange)="onCheckBoxHardware($event)" [(ngModel)]="hardWareEncode" type="checkbox" id="hardwareSettings" name="hardwareSettings">
         <span>Enable Hardware Encoding</span>
       </div>
       <div class="audioOutSettings">
-        <input type="checkbox" id="audio-out" name="audioOut">
+        <input (ngModelChange)="onCheckBoxAudioOut($event)" [(ngModel)]="audioOut" type="checkbox" id="audio-out" name="audioOut">
         <span class="label-with-select">Audio out</span>
-        <select name="list-audio-out" id="audio-out-selection"></select>
+        <select #audioOutSelection name="list-audio-out" id="audio-out-selection" [(ngModel)]="audioOutSelectionValue" (change)="onAudioOutSelectChange($event)">
+          <option *ngFor="let item of audioOutSelectionOptions" [value]="item.value">{{item.text}}</option>
+        </select>
       </div>
       <div class="audioInSettings">
-        <input type="checkbox" id="audio-in" name="audioIn">
+        <input (ngModelChange)="onCheckBoxAudioIn($event)" [(ngModel)]="audioIn" type="checkbox" id="audio-in" name="audioIn">
         <span class="label-with-select">Audio in</span>
-        <select name="list-audio-in" id="audio-in-selection"></select>
+        <select #audioInSelection name="list-audio-in" id="audio-in-selection" [(ngModel)]="audioInSelectionValue" (change)="onAudioInSelectChange($event)">
+          <option *ngFor="let item of audioInSelectionOptions" [value]="item.value">{{item.text}}</option>
+        </select>
       </div>
     </div>
     <div class="audio-recording">
       <div class="title">Audio Recording</div>
       <div id="record-from-playback">
-        <input type="radio" id="audio-recording-playback" name="audio_recording" onclick="handleOnChangeAudioOut(this);" value="true">
+        <input (ngModelChange)="onChangeRadioRecord($event)" [(ngModel)]="recordValue" type="radio" id="audio-recording-playback" name="audio_recording" value="true">
         <span>Record from playback</span>
       </div>
       <div class="record-from-mic">
-        <input type="radio" id="audio-recording-mic" name="audio_recording" onclick="handleOnChangeAudioOut(this);" value="false">
+        <input (ngModelChange)="onChangeRadioRecord($event)" [(ngModel)]="recordValue" type="radio" id="audio-recording-mic" name="audio_recording" value="false">
         <span class="label-with-select">Record from mic</span>
-        <select name="list-mic-setting" id="mic-setting-selection"></select>
+        <select #micSettingSelection name="list-mic-setting" id="mic-setting-selection" [(ngModel)]="micSelectionValue" (change)="onMicSelectChange($event)"></select>
       </div>
     </div>
   </div>
