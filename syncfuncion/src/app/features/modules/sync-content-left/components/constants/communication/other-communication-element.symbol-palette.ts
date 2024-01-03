@@ -1,5 +1,6 @@
 import {ConnectorConstraints, NodeConstraints, NodeModel, PortVisibility} from "@syncfusion/ej2-angular-diagrams";
 import { rectPorts } from "src/app/features/modules/sync-content-left/components/constants/communication/common";
+import { getShapeByType } from "src/app/utils/constants";
 
 export function getOtherCommunicationElementShapes() {
   let otherCommunicationElement = [
@@ -274,54 +275,17 @@ export function getOtherCommunicationElementShapes() {
       }
     },
     {
-      id: "nodeTableComm",
-      addInfo: {title: "Node Table", tooltip: "Node Table"},
-      shape: {
-        type: "Native",
-        content: `
-        <g  transform="translate(2, 2)">\n                            <rect height="100" width="200" fill="transparent" stroke-width="0"/>\n                            undefined<g transform="translate(0)">\n            <rect vector-effect="non-scaling-stroke" fill="white" stroke-width="1" stroke="black" height="100" width="100"/>\n            <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 0 50 L 100 50"/>\n            <text class="symbol-text-container" visibility="hidden" lengthAdjust="spacingAndGlyphs" font-size="10px" font-weight="bold"><tspan x="20" y="30">Title</tspan></text>\n            <text class="symbol-text-container" visibility="hidden" lengthAdjust="spacingAndGlyphs" font-size="10px" font-weight="bold"><tspan x="20" y="80">Value</tspan></text> \n            </g><g transform="translate(100)">\n            <rect vector-effect="non-scaling-stroke" fill="white" stroke-width="1" stroke="black" height="100" width="100"/>\n            <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" d="M 0 50 L 100 50"/>\n            <text class="symbol-text-container" visibility="hidden" lengthAdjust="spacingAndGlyphs" font-size="10px" font-weight="bold"><tspan x="20" y="30">Title</tspan></text>\n            <text class="symbol-text-container" visibility="hidden" lengthAdjust="spacingAndGlyphs" font-size="10px" font-weight="bold"><tspan x="20" y="80">Value</tspan></text> \n            </g>\n                        </g>`,
-      },
-      width: 200,
-      height: 100,
-      annotations: [
-        {
-          content: "Node Number",
-          width: 100,
-          offset: {
-            x: 0.25,
-            y: 0.25,
-          },
-        },
-        {
-          content: "Information",
-          width: 100,
-          offset: {
-            x: 0.25,
-            y: 0.75,
-          },
-        },
-        {
-          content: "1",
-          width: 100,
-          offset: {
-            x: 0.75,
-            y: 0.25,
-          },
-        },
-        {
-          content: "",
-          width: 100,
-          offset: {
-            x: 0.75,
-            y: 0.75,
-          },
-        },
-      ],
-      ports: null,
-      constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop | NodeConstraints.ResizeNorth,
+      ...getShapeByType('Table', 'nodeTableComm', { title: 'Node Table', tooltip: 'Node Table' }, {
+        content: ["Node Number", "Information", "1", ""],
+        columnNo: 2,
+      }),
+      constraints:
+        NodeConstraints.Default |
+        NodeConstraints.Tooltip |
+        NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Represents a Table of Node',
-        position: 'TopRight'
+        position: 'TopRight',
       }
     },
     {

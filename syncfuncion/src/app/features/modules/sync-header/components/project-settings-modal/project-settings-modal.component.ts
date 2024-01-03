@@ -2,6 +2,7 @@ import { Component, Input, Output, EventEmitter, ViewChild, ElementRef } from '@
 import { CommonModule } from '@angular/common';
 import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
 import { FormsModule } from '@angular/forms';
+import { STORAGE_KEY } from 'src/app/utils/constants';
 
 @Component({
   selector: 'project-settings-modal',
@@ -16,7 +17,6 @@ export class ProjectSettingsModalComponent {
   @ViewChild('audioOutSelection') audioOutSelectionRef: ElementRef;
   @Input() visible = false;
   @Output() closeModal = new EventEmitter();
-  private readonly STORAGE_KEY = '@SETTINGS';
   public audioOutSelectionOptions = [];
   public audioInSelectionOptions = [];
   public micInSelectionOptions = [];
@@ -95,7 +95,7 @@ export class ProjectSettingsModalComponent {
   private saveSettings() {
     const jsonSettings = {
       hardWareEncode: this.hardWareEncode, audioDevice: this.audioDevice, videoDevice: this.videoDevice};
-    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(jsonSettings));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(jsonSettings));
   }
 
   private disableAudioSetting() {
@@ -171,7 +171,7 @@ export class ProjectSettingsModalComponent {
   }
 
   private loadSettings() {
-    const settings = localStorage.getItem(this.STORAGE_KEY);
+    const settings = localStorage.getItem(STORAGE_KEY);
     if (settings) {
       let jsonSettings = JSON.parse(settings);
       this.hardwareEncording = !!jsonSettings['hardwareEncording'] ? jsonSettings['hardwareEncording'] : this.hardwareEncording;

@@ -9,3 +9,20 @@
   [rulerSettings]="rulerSettings"
   [tooltip]="tooltipSettings">
 </ejs-diagram>
+
+<sync-dialog
+  [title]="titlePopup"
+  [visible]="showPopup"
+  (visibleChange)="handleVisibleChange($event)"
+  [isShowFooter]="false"
+  [footerTpl]="footerTemplate"
+>
+  <ng-container #customComponent> </ng-container>
+</sync-dialog>
+
+<ng-template #footerTemplate>
+  <div class="footer-template">
+    <button (click)="handleClickApply()" >Apply</button>
+    <button (click)="handleCancel()">Cancel</button>
+  </div>
+</ng-template>
