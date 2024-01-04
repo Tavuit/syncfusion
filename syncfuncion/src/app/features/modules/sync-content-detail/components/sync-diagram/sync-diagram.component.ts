@@ -25,10 +25,12 @@ import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components
 import { ContinuitySizeComponent } from 'src/app/features/modules/sync-content-detail/components/continuity-size/continuity-size.component';
 import { DragDropFormService } from 'src/app/features/modules/sync-content-detail/services/drag-drop-form.service';
 import { NodeTableComponent } from 'src/app/features/modules/sync-content-detail/components/node-table/node-table.component';
+import { GroupPropertyComponent } from 'src/app/features/modules/sync-content-detail/components/group-property/group-property.component';
+import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content-detail/components/multiple-entities/multiple-entities.component';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
-  imports: [CommonModule, DiagramAllModule, SymbolPaletteModule, SyncDialogComponent, ContinuitySizeComponent, NodeTableComponent],
+  imports: [CommonModule, DiagramAllModule, SymbolPaletteModule, SyncDialogComponent],
   templateUrl: './sync-diagram.component.html',
   styleUrls: ['./sync-diagram.component.scss']
 })
@@ -94,23 +96,22 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   }
 
   public dropped(args: IDropEventArgs): void {
-    this.showPopup = true;
     this.idElementActive = (args.element as Node).id;
     this.droppedNode = args.element as Node;
-    if (this.idElementActive.startsWith("continuityPerson")) {
+    if (this.idElementActive.startsWith("continuityPerson") || this.idElementActive.startsWith("continuity")) {
       this.titlePopup = 'Continuity Size';
       this.handleInsertComponent(ContinuitySizeComponent);
     } else if (this.idElementActive.startsWith('nodeTableComm')) {
       this.titlePopup = 'Insert Node Table';
       this.handleInsertComponent(NodeTableComponent);
+    } else if (this.idElementActive.startsWith('communicationMixtureCommunication') || this.idElementActive.startsWith("groupCommunication") || this.idElementActive.startsWith("group")) {
+      this.titlePopup = 'Group Property';
+      this.handleInsertComponent(GroupPropertyComponent)
+    } else if (this.idElementActive.startsWith('principleLineOthers') || this.idElementActive.startsWith('stabilityLine1') || this.idElementActive.startsWith('entityInclusionLineHorizontal')
+      || this.idElementActive.startsWith('entityInclusionLineVertical')) {
+      this.titlePopup = 'Entity Has Multiple Entities';
+      this.handleInsertComponent(MultipleEntitiesComponent);
     }
-    // Handle the drop event and update the text of the dropped node.
-    // if (args.element && args.element instanceof Node) {
-    //   const droppedNode = args.element as Node;
-    //   droppedNode.annotations[0].content = 'Updated Text';
-    //   this.diagram.addNode(droppedNode);
-    //   this.diagram.dataBind();
-    // }
   }
 
   public selectChange(e: any) {
@@ -154,6 +155,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   }
 
   private handleInsertComponent(component): void {
+    this.showPopup = true;
     this.destroyCustomComponent();
     this.customComponentInstance = this.customComponent.createComponent(component);
   }
