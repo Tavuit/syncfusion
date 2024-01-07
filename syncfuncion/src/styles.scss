@@ -79,3 +79,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #888;
 }
+
+.hr_nay {
+  border-top: 1px solid #000;
+  height: 90px;
+  -moz-transform: rotate(-61deg);
+  -o-transform: rotate(-61deg);
+  -webkit-transform: rotate(-61deg);
+  -ms-transform: rotate(-61deg);
+  width: 80px;
+  transform: rotate(-61deg);
+}

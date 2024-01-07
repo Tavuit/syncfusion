@@ -1,0 +1,24 @@
+<form class="form-wrapper" [formGroup]="customComponentForm">
+  <div class="continuity-size-wrapper">
+    <div class="title">Options</div>
+    <select class="input-form" formControlName="peopleOptions">
+      <option *ngFor="let data of selectOptionsData" [ngValue]="data">{{data}}</option>
+    </select>
+  </div>
+  <div class="continuity-size-wrapper">
+    <div class="title">Format</div>
+    <select class="input-form" formControlName="format">
+      <option *ngFor="let data of selectFormatData" [ngValue]="data">{{data}}</option>
+    </select>
+  </div>
+  <div class="continuity-size-wrapper">
+    <div class="title">Start Number</div>
+    <input type="number" formControlName="startNumber" />
+  </div>
+  <div class="continuity-size-wrapper">
+    <div class="title">Group Name</div>
+    <input type="text" formControlName="groupName" />
+
+  </div>
+  <ejs-checkbox formControlName="hasFrame" cssClass="e-small" label="Has Frame" labelPosition="After"></ejs-checkbox>
+</form>

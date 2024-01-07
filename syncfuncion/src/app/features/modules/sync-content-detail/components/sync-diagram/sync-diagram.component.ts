@@ -28,6 +28,7 @@ import { DragDropFormService } from 'src/app/features/modules/sync-content-detai
 import { NodeTableComponent } from 'src/app/features/modules/sync-content-detail/components/node-table/node-table.component';
 import { GroupPropertyComponent } from 'src/app/features/modules/sync-content-detail/components/group-property/group-property.component';
 import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content-detail/components/multiple-entities/multiple-entities.component';
+import { GroupPeopleComponent } from 'src/app/features/modules/sync-content-detail/components/group-people/group-people.component';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -106,7 +107,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     } else if (this.idElementActive.startsWith('nodeTableComm')) {
       this.titlePopup = 'Insert Node Table';
       this.handleInsertComponent(NodeTableComponent);
-    } else if (this.idElementActive.startsWith('communicationMixtureCommunication') || this.idElementActive.startsWith("groupCommunication") || this.idElementActive.startsWith("group")) {
+    } else if (this.idElementActive.startsWith('communicationMixtureCommunication') || this.idElementActive.startsWith("groupCommunication")) {
       this.titlePopup = 'Group Property';
       this.handleInsertComponent(GroupPropertyComponent)
     } else if (this.idElementActive.startsWith('principleLineOthers') || this.idElementActive.startsWith('stabilityLine1') || this.idElementActive.startsWith('entityInclusionLineHorizontal')
@@ -116,6 +117,9 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     } else if (this.dragDropFormService.onCheckOpenModalLabelText(this.idElementActive)) {
       this.titlePopup = 'Label Property';
       this.handleInsertComponent(LabelPropertyComponent);
+    } else if (this.idElementActive.startsWith('groupOfPeople')) {
+      this.titlePopup = 'Group Of People';
+      this.handleInsertComponent(GroupPeopleComponent);
     }
   }
 

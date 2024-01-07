@@ -29,15 +29,38 @@ export class LabelPropertyComponent {
         this.handleLabelTextOption(res);
       }
     })
-    // this.dragDropFormService.labelPropertyOptionBS.subscribe((res) => {
-    //   this.selectLabel1Data = res.selectLabel1;
-    //   this.selectLabel2Data = res.selectLabel2;
-    // })
+    this.negateTextControl.valueChanges.subscribe(res => {
+      if (res) {
+        this.notNegateTextControl.setValue(false, { emitEvent: false });
+      }
+    });
+
+    this.notNegateTextControl.valueChanges.subscribe(res => {
+      if (res) {
+        this.negateTextControl.setValue(false , { emitEvent: false});
+      }
+    })
 
   }
 
   get customComponentForm() {
     return this.dragDropFormService.getCustomComponentForm;
+  }
+
+  get negateTextControl() {
+    return this.customComponentForm.get('negateText');
+  }
+
+  get notNegateTextControl() {
+    return this.customComponentForm.get('notNegateText');
+  }
+
+  get selectLabel1Control() {
+    return this.customComponentForm.get('selectLabel1');
+  }
+
+  get selectLabel2Control() {
+    return this.customComponentForm.get('selectLabel2');
   }
 
   public handleLabelTextOption(actionPopUpId: string) {
@@ -81,5 +104,7 @@ export class LabelPropertyComponent {
         this.selectLabel1Data.push(i);
         this.selectLabel2Data.push("Not " + i);
     }
+    this.selectLabel1Control.setValue(this.selectLabel1Data[0], { emitEvent: false });
+    this.selectLabel2Control.setValue(this.selectLabel2Data[0], { emitEvent: false });
   }
 }

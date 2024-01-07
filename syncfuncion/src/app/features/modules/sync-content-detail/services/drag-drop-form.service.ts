@@ -11,7 +11,9 @@ import { ILabelPropertyOptions } from 'src/app/features/modules/sync-content-det
 })
 export class DragDropFormService {
   private customComponentForm: FormGroup;
-  private _labePropertyOption = new BehaviorSubject<ILabelPropertyOptions>(null);
+  private _labePropertyOption = new BehaviorSubject<ILabelPropertyOptions>(
+    null
+  );
   public labelPropertyOptionBS = this._labePropertyOption.asObservable();
   private _actionPopUpId = new BehaviorSubject<string>(null);
   public actionPopUpIdBS = this._actionPopUpId.asObservable();
@@ -86,8 +88,7 @@ export class DragDropFormService {
       diagram.nodes = [item];
     } else if (
       actionPopUpId.startsWith('communicationMixtureCommunication') ||
-      actionPopUpId.startsWith('groupCommunication') ||
-      actionPopUpId.startsWith('group')
+      actionPopUpId.startsWith('groupCommunication')
     ) {
       const numberInput = this.customComponentForm?.get('numberInput')?.value;
       let fxPorts = [];
@@ -175,6 +176,13 @@ export class DragDropFormService {
       this.changeData2(numberEntity, diagram);
     } else if (this.onCheckOpenModalLabelText(actionPopUpId)) {
       this.onClickLabelProperty(diagram);
+    } else if (actionPopUpId.startsWith('groupOfPeople')) {
+      const optionData = this.customComponentForm.get('peopleOptions').value;
+      const formatData = this.customComponentForm.get('format').value;
+      const startNumberData = this.customComponentForm.get('startNumber').value;
+      const groupNameData = this.customComponentForm.get('groupName').value;
+      const hasFrameData = this.customComponentForm.get('hasFrame').value;
+      this.changeDataF(optionData, formatData, startNumberData, groupNameData, hasFrameData, diagram);
     }
 
     diagram.dataBind();
@@ -296,14 +304,156 @@ export class DragDropFormService {
     }
   }
 
+  private changeDataF(
+    optionData,
+    formatData,
+    startNumber,
+    groupName,
+    hasFrame,
+    diagram
+  ) {
+    let truyNode = diagram.getObject(
+      diagram.nodes[diagram.nodes.length - 1].id
+    );
+    truyNode.annotations[0].content = groupName;
+    diagram.dataBind();
+
+    if (optionData == 'Option 1') {
+      let segx5 = '1';
+
+      if (hasFrame === false) {
+        segx5 = '0';
+      }
+
+      if (hasFrame === true) {
+        segx5 = '1';
+      }
+
+      let segsum =
+        '<g transform="translate(2, 2)"><rect vector-effect="non-scaling-stroke" height="40" width="120" stroke="black" fill="transparent" stroke-width="' +
+        segx5 +
+        '"></rect><circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"></path><circle vector-effect="non-scaling-stroke" cx="41" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="39.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="43.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="41.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 41 13.5 L 41 19.5 L 34 29.5 M 41 19.5 L 48 29.5 M 33 18 L 49 18"></path><circle vector-effect="non-scaling-stroke" cx="101" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="99.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="103.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="101.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 101 13.5 L 101 19.5 L 94 29.5 M 101 19.5 L 108 29.5 M 93 18 L 109 18"></path><circle vector-effect="non-scaling-stroke" fill="black" cx="62" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="72" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="82" cy="17.5" r="1.5"></circle><foreignObject class="symbol-text-container" x="2" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' ' +
+        startNumber +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="32" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' ' +
+        (parseFloat(startNumber) + 1).toString() +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="92" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' N' +
+        '</i></div></div></div></foreignObject></g>';
+
+      truyNode.shape.content = segsum;
+      truyNode.height = 100;
+      truyNode.width = 295;
+      diagram.dataBind();
+    }
+
+    if (optionData == 'Option 2') {
+      let segx5 = '1';
+
+      if (hasFrame === false) {
+        segx5 = '0';
+      }
+
+      if (hasFrame === true) {
+        segx5 = '1';
+      }
+      let segsum =
+        '<g transform="translate(2, 2)"><rect vector-effect="non-scaling-stroke" height="40" width="90" stroke="black" fill="transparent" stroke-width="' +
+        segx5 +
+        '"></rect><circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"></path><circle vector-effect="non-scaling-stroke" cx="71" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="69.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="73.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="71.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 71 13.5 L 71 19.5 L 64 29.5 M 71 19.5 L 78 29.5 M 63 18 L 79 18"></path><circle vector-effect="non-scaling-stroke" fill="black" cx="32" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="42" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="52" cy="17.5" r="1.5"></circle><foreignObject class="symbol-text-container" x="2" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' ' +
+        startNumber +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="62" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' N' +
+        '</i></div></div></div></foreignObject></g>';
+
+      truyNode.shape.content = segsum;
+      truyNode.height = 100;
+      truyNode.width = 225;
+      diagram.dataBind();
+    }
+
+    if (optionData == 'Option 3') {
+      let segx5 = '1';
+
+      if (hasFrame === false) {
+        segx5 = '0';
+      }
+
+      if (hasFrame === true) {
+        segx5 = '1';
+      }
+
+      let segsum =
+        '<g transform="translate(2, 2)"><rect vector-effect="non-scaling-stroke" height="40" width="90" stroke="black" fill="transparent" stroke-width="' +
+        segx5 +
+        '"></rect><circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"></path><circle vector-effect="non-scaling-stroke" cx="41" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="39.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="43.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="41.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 41 13.5 L 41 19.5 L 34 29.5 M 41 19.5 L 48 29.5 M 33 18 L 49 18"></path><circle vector-effect="non-scaling-stroke" fill="black" cx="62" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="72" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="82" cy="17.5" r="1.5"></circle><foreignObject class="symbol-text-container" x="2" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' ' +
+        startNumber +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="32" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' ' +
+        (parseFloat(startNumber) + 1).toString() +
+        '</i></div></div></div></foreignObject></g>';
+
+      truyNode.shape.content = segsum;
+      truyNode.height = 100;
+      truyNode.width = 225;
+      diagram.dataBind();
+    }
+
+    if (optionData == 'Option 4') {
+      let segx5 = '1';
+
+      if (hasFrame === false) {
+        segx5 = '0';
+      }
+
+      if (hasFrame === true) {
+        segx5 = '1';
+      }
+
+      let segsum =
+        '<g transform="translate(2, 2)"><rect vector-effect="non-scaling-stroke" height="40" width="180" stroke="black" fill="transparent" stroke-width="' +
+        segx5 +
+        '"></rect><circle vector-effect="non-scaling-stroke" cx="11" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="9.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="13.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="11.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 11 13.5 L 11 19.5 L 4 29.5 M 11 19.5 L 18 29.5 M 3 18 L 19 18"></path><circle vector-effect="non-scaling-stroke" cx="71" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="69.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="73.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="71.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 71 13.5 L 71 19.5 L 64 29.5 M 71 19.5 L 78 29.5 M 63 18 L 79 18"></path><circle vector-effect="non-scaling-stroke" cx="101" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="99.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="103.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="101.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 101 13.5 L 101 19.5 L 94 29.5 M 101 19.5 L 108 29.5 M 93 18 L 109 18"></path><circle vector-effect="non-scaling-stroke" cx="161" cy="7.5" r="6" fill="transparent" stroke="black" stroke-width="1"></circle><circle vector-effect="non-scaling-stroke" cx="159.0" cy="6" r="1" fill="black"></circle><circle vector-effect="non-scaling-stroke" cx="163.0" cy="6" r="1.0" fill="black"></circle><ellipse vector-effect="non-scaling-stroke" cx="161.0" cy="11.5" rx="2.0" ry="0.75" fill="transparent" stroke="black" stroke-width="1"></ellipse><path vector-effect="non-scaling-stroke" fill="transparent" stroke="black" stroke-width="1" d="M 161 13.5 L 161 19.5 L 154 29.5 M 161 19.5 L 168 29.5 M 153 18 L 169 18"></path><circle vector-effect="non-scaling-stroke" fill="black" cx="32" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="42" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="52" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="122" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="132" cy="17.5" r="1.5"></circle><circle vector-effect="non-scaling-stroke" fill="black" cx="142" cy="17.5" r="1.5"></circle><foreignObject class="symbol-text-container" x="2" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' ' +
+        startNumber +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="59" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' N' +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="90" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        'N+1' +
+        '</i></div></div></div></foreignObject><foreignObject class="symbol-text-container" x="152" y="30" width="25" height="10" visibility="show"><div class="flex-container"><div class="symbol-text-element"><div style="font-size:5px;font-weight:100"><i>' +
+        formatData +
+        ' M' +
+        '</i></div></div></div></foreignObject></g>';
+
+      truyNode.shape.content = segsum;
+      truyNode.height = 100;
+      truyNode.width = 450;
+      diagram.dataBind();
+    }
+  }
+
   private onClickLabelProperty(diagram) {
     let item = diagram.selectedItems.properties.connectors[0];
-    const notNegateTextValue = this.customComponentForm.get('notNegateText').value;
+    const notNegateTextValue =
+      this.customComponentForm.get('notNegateText').value;
     const negateText = this.customComponentForm.get('negateText').value;
-    const selectLabel1Value = this.customComponentForm.get('selectLabel1').value;
-    const selectLabel2Value = this.customComponentForm.get('selectLabel2').value;
-    console.log('notNegateTextValue', notNegateTextValue, 'negateText', negateText);
-    console.log('selectLabel1Value', selectLabel1Value, 'selectLabel2Value', selectLabel2Value);
+    const selectLabel1Value =
+      this.customComponentForm.get('selectLabel1').value;
+    const selectLabel2Value =
+      this.customComponentForm.get('selectLabel2').value;
     if (notNegateTextValue) {
       item.annotations = [
         {
@@ -313,24 +463,24 @@ export class DragDropFormService {
           height: 40,
         },
         {
-          title:
-            `Not ${item.title}`,
+          title: `Not ${item.title}`,
           content: selectLabel2Value,
           margin: {
             bottom: 10,
-          }
-        },];
+          },
+        },
+      ];
     }
     if (negateText) {
       item.annotations = [
         {
-          title:
-            `${item.title}`,
+          title: `${item.title}`,
           content: selectLabel1Value,
           margin: {
             bottom: 10,
-          }
-        },];
+          },
+        },
+      ];
     }
   }
 

@@ -1,0 +1,22 @@
+.form-wrapper {
+  padding: 8px;
+  background: #0d6efd59;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+
+  .title {
+    min-width: 80px;
+  }
+
+  .continuity-size-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .input-form {
+      width: 200px;
+    }
+  }
+}
