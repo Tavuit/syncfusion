@@ -1,3 +1,4 @@
+import { LabelPropertyComponent } from './../label-property/label-property.component';
 import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import {
   Component,
@@ -97,6 +98,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
 
   public dropped(args: IDropEventArgs): void {
     this.idElementActive = (args.element as Node).id;
+    this.dragDropFormService.setActivePopUpId(this.idElementActive);
     this.droppedNode = args.element as Node;
     if (this.idElementActive.startsWith("continuityPerson") || this.idElementActive.startsWith("continuity")) {
       this.titlePopup = 'Continuity Size';
@@ -111,6 +113,9 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
       || this.idElementActive.startsWith('entityInclusionLineVertical')) {
       this.titlePopup = 'Entity Has Multiple Entities';
       this.handleInsertComponent(MultipleEntitiesComponent);
+    } else if (this.dragDropFormService.onCheckOpenModalLabelText(this.idElementActive)) {
+      this.titlePopup = 'Label Property';
+      this.handleInsertComponent(LabelPropertyComponent);
     }
   }
 
@@ -164,7 +169,6 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     if (!!this.customComponent) {
       this.customComponent.clear();
       this.customComponentInstance = null;
-      // this.cdr.detectChanges();
     }
   }
 

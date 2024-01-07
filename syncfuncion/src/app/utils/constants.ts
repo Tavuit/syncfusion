@@ -5476,3 +5476,48 @@ function drawPortCircle(node) {
 }
 
 export const STORAGE_KEY = '@SETTINGS';
+
+export const LIST_ITEM = {
+  pointTo: [
+    "Point To",
+    "Define From",
+    "Define By",
+    "Map to",
+    "Mean",
+    "Identify",
+  ],
+  giveRiseTo: [
+    "Give Rise",
+    "Derive From",
+    "Develop From",
+    "Derive By",
+    "Because",
+    "Cause",
+    "Cause By",
+  ],
+  relatedTo: [
+    "Relate to",
+    "Link",
+    "Connect",
+    "Part of",
+    "Because",
+    "Have",
+    "Contain",
+  ],
+  by: ["By", "By this", "By that"],
+  depend: ["Depend", "Related"],
+  agree: ["Agree", "Match", "Related"],
+  match: ["Match", "Relate", "Agree", "Go with", "Map"],
+  have: ["Have", "Include", "Contain", "Part of", "Exits with", "Given with"],
+  Interact: ["Interact", "Use"],
+  Use: ["Use"],
+  compare: ["Compare"],
+  attach: ["Attach"],
+  identify: ["Identify"],
+  define: ["Define"],
+  visuallyIdentify: ["Visually Identify"],
+};
+
+export function randomId() {
+  return (Math.random() + 1).toString(36).substring(7);
+}
