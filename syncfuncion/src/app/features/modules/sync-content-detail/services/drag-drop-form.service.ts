@@ -3,7 +3,13 @@ import { Injectable } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 import { Node, PortVisibility } from '@syncfusion/ej2-angular-diagrams';
 import { getOtherCommunicationElementShapes } from 'src/app/features/modules/sync-content-left/components/constants/communication/other-communication-element.symbol-palette';
-import { drawShape, LIST_ITEM, randomId } from 'src/app/utils/constants';
+import {
+  areaData,
+  drawShape,
+  dropGrouped,
+  LIST_ITEM,
+  randomId,
+} from 'src/app/utils/constants';
 import { ILabelPropertyOptions } from 'src/app/features/modules/sync-content-detail/types/diagram.types';
 
 @Injectable({
@@ -182,11 +188,83 @@ export class DragDropFormService {
       const startNumberData = this.customComponentForm.get('startNumber').value;
       const groupNameData = this.customComponentForm.get('groupName').value;
       const hasFrameData = this.customComponentForm.get('hasFrame').value;
-      this.changeDataF(optionData, formatData, startNumberData, groupNameData, hasFrameData, diagram);
+      this.changeDataF(
+        optionData,
+        formatData,
+        startNumberData,
+        groupNameData,
+        hasFrameData,
+        diagram
+      );
+    } else if (actionPopUpId.startsWith('mainArea')) {
+      const typesValue = this.customComponentForm.get('types').value;
+      const numbersValue = this.customComponentForm.get('numbers').value;
+      const locations = this.customComponentForm.get('locations').value;
+      let mainArea = areaData.find((a) => a.id === 'mainArea') as any;
+      let selected = diagram.selectedItems.properties.nodes[0];
+      selected.height = selected.height / 1.5;
+      diagram.dataBind();
+      mainArea.annotation.height = undefined;
+      mainArea.annotation.width = undefined;
+      let findItem = drawShape({ ...mainArea });
+      findItem.height = findItem.height * 2;
+      const findArea = {
+        ...areaData.find((a) => a.id === "locationOfOperation"),
+        type: null
+      }
+      if (typesValue === 'dialogMainAreahouse') {
+        diagram.dataBind();
+        for (let index = 1; index <= +numbersValue; index++) {
+          let house = drawShape(
+            areaData.find(
+              (a) => a.id === 'siteOfOperation' && a.type === 'House'
+            ) as any
+          );
+          house.id += randomId() + index;
+          house.width = house.width / 2;
+          house.height = house.height / 2;
+          house.annotations[0].content = 'House';
+          let houseAdd = diagram.add(house);
+          dropGrouped(houseAdd, selected, true, diagram);
+        }
+      } else if (typesValue === 'dialogMainAreamap') {
+        locations.forEach((v) => {
+          let house = drawShape(findArea);
+          house.id += randomId();
+          house.annotations[0].content = v;
+          let houseAdd = diagram.add(house);
+          dropGrouped(houseAdd, selected, true, diagram);
+        });
+      } else if (typesValue === 'dialogMainArearegular') {
+        for (let index = 1; index <= +numbersValue; index++) {
+          let house = drawShape(findArea);
+          house.id += randomId() + index;
+          let houseAdd = diagram.add(house);
+          dropGrouped(houseAdd, selected, true, diagram);
+        }
+      } else if (typesValue === 'dialogMainArearegularwithmap') {
+        locations.forEach((v) => {
+          let house = drawShape(findArea);
+          house.id += randomId();
+          house.annotations[0].content = v;
+          let houseAdd = diagram.add(house);
+          dropGrouped(houseAdd, selected, true, diagram);
+        });
+      }
+    } else if (actionPopUpId.startsWith('changeofApplication1')) {
+      let truyNode = diagram.getObject(diagram.nodes[diagram.nodes.length - 1].id);
+      let segsum = "<g transform=\"translate(2, 2)\"><rect width=\"10\" height=\"10\" fill=\"transparent\" stroke=\"black\" stroke-width=\"0\"></rect><path vector-effect=\"non-scaling-stroke\" stroke=\"black\" stroke-width=\"1.5\" fill=\"transparent\" d=\"M 0.5 10 L 0.5 0 M 0 9.5 L 10 9.5\"></path></g>";
+      truyNode.annotations[0].content = this.customComponentForm.get('xAxis').value;
+      truyNode.annotations[1].content = this.customComponentForm.get('yAxis').value;
+      truyNode.shape.content = segsum;
+      truyNode.height = 600;
+      truyNode.width = 600;
     }
 
     diagram.dataBind();
-    diagram.refresh();
+    setTimeout(() => {
+      diagram.refresh();
+    }, 1);
   }
 
   getItembyIdCommOthers(id) {

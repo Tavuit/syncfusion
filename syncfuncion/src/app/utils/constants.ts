@@ -2902,15 +2902,6 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
 }
 
 export function drawShape({ id, title, annotation, toolTip, type, menuId }) {
-  console.log(
-    '🚀 ~ file: drawFunctions.js:87 ~ drawShape ~ id, title, annotation, toolTip, type, menuId:',
-    id,
-    title,
-    annotation,
-    toolTip,
-    type,
-    menuId
-  );
   let node;
   if (type === 'Ellipse') {
     node = {
@@ -5458,6 +5449,611 @@ export function drawShape({ id, title, annotation, toolTip, type, menuId }) {
   return node;
 };
 
+export function dropGrouped(node, parentNode, ignoreCond, diagram) {
+
+  let source = node.id ? node : node?.properties?.nodes[0];
+
+  var bienx = false;
+  var bieny = false;
+  var bienz = false;
+  var bientong = false;
+  var bienkt = 0;
+  if (diagram.nodes.length > 1) {
+    var group = diagram.getObject(parentNode.parentId);
+    try {
+      let firstChild = diagram.getObject(group.children[0]);
+      bienx = firstChild.id.startsWith("dictionary");
+      bieny = firstChild.id.startsWith("collection");
+      bienz = firstChild.id.startsWith("workingarea");
+    } catch (ex) {
+      bienx = false;
+      bieny = false;
+      bienz = false;
+    }
+  }
+
+  if (node.id.startsWith("wordCommunication") && (parentNode.id.startsWith("dictionary") || bienx)) {
+    bientong = true;
+  }
+  if (node.id.startsWith("entityCommunication") && (parentNode.id.startsWith("collection") || bieny)) {
+    bientong = true;
+  }
+  if (node.id.startsWith("location") && (parentNode.id.startsWith("workingarea") || bienz)) {
+    bientong = true;
+    bienkt = 5;
+  }
+
+  if (!bientong) {
+    setTimeout(() => {
+      // Checking the nodes length greater than one or not
+      if (diagram.nodes.length > 1) {
+        if (!node.children && node.id !== parentNode.id && !node.parentId) {
+          //Getting the group node by getObject method by passing parent ID
+          if (
+            (parentNode.parentId &&
+              communicationDroppedElementChecker(node, parentNode)) ||
+            (parentNode.parentId && ignoreCond)
+          ) {
+            var group = diagram.getObject(parentNode.parentId);
+            //let firstChild = diagram.getObject(group.children[0]);
+            let firstChild = parentNode;
+            let alerted = checkDropAlert(group, node, firstChild);
+            if (alerted) {
+              return alert(alerted);
+            }
+            //Added the child into the group by using addChildToGroup
+            diagram.addChildToGroup(group, node);
+
+            let newNode = diagram.getObject(
+              diagram.nodes[diagram.nodes.length - 1].id
+            );
+            let childNode = diagram.getObject(
+              group.children[group.children.length - 2]
+            );
+            //Passing the first node to getObject method to set width and offset for the group node
+            newNode.offsetX = childNode.offsetX + 100;
+            newNode.offsetY = childNode.offsetY;
+            diagram.dataBind();
+            firstChild.offsetX = group.offsetX;
+            firstChild.offsetY = group.offsetY;
+            firstChild.annotations[0].offset = {x: 0.5, y: -0.1};
+            group.width = group.width + source.width - 30;
+            firstChild.width = group.width;
+            diagram.dataBind();
+            for (let i = 1; i < group.children.length; i++) {
+              const childEl = diagram.getObject(group.children[i]);
+              let annoContent = childEl.annotations[0].content;
+              let previousChild = diagram.getObject(group.children[i - 1]);
+              let previousAnnoContent = previousChild.annotations[0].content;
+              childEl.offsetY = group.offsetY;
+              if (i - 1 > 0) {
+                childEl.offsetX =
+                  previousChild.offsetX +
+                  previousChild.width / 2 +
+                  childEl.width / 2 +
+                  25;
+              } else {
+                childEl.offsetX =
+                  group.offsetX - group.width / 2 + childEl.width / 2 + 35;
+              }
+              if (
+                previousAnnoContent.startsWith(annoContent) &&
+                previousAnnoContent.length - annoContent.length < 3
+              ) {
+                childEl.annotations[0].content =
+                  source.annotations[0].content + " " + i;
+                source.annotations[0].content =
+                  source.annotations[0].content + "" + (i + 1);
+              }
+            }
+            diagram.dataBind();
+            //diagram.refresh();
+          } else {
+            if (
+              communicationDroppedElementChecker(source, parentNode) ||
+              ignoreCond
+            ) {
+              diagram.select([parentNode, source]);
+              diagram.group();
+              let group = diagram.getObject(parentNode.parentId);
+              let alerted = checkDropAlert(group, source, parentNode);
+              if (alerted) {
+                diagram.unGroup();
+                return alert(alerted);
+              }
+              let newNode = diagram.getObject(source.id);
+              parentNode.height = parentNode.height - 30;
+              parentNode.width = parentNode.width - 100;
+              parentNode.offsetX = parentNode.offsetX;
+              parentNode.offsetY = parentNode.offsetY;
+              parentNode.annotations[0].offset = {x: 0.5, y: -0.1};
+              diagram.dataBind();
+              newNode.offsetX = parentNode.offsetX;
+              newNode.offsetY = parentNode.offsetY;
+              diagram.dataBind();
+              //diagram.refresh();
+              if (parentNode.children && parentNode.children.length > 1) {
+                //diagram.remove(diagram.nodes[diagram.nodes.length - 3]);
+                parentNode.style.strokeColor = "black";
+                parentNode.style.strokeWidth = 1;
+              }
+            }
+          }
+        }
+      }
+    }, 0);
+
+  }
+
+
+  if (bientong) {
+    setTimeout(() => {
+      // Checking the nodes length greater than one or not
+      if (diagram.nodes.length > 1) {
+        if (!node.children && node.id !== parentNode.id && !node.parentId) {
+          //Getting the group node by getObject method by passing parent ID
+          if (
+            (parentNode.parentId &&
+              communicationDroppedElementChecker(node, parentNode)) ||
+            (parentNode.parentId && ignoreCond)
+          ) {
+            var group = diagram.getObject(parentNode.parentId);
+            //let firstChild = diagram.getObject(group.children[0]);
+            let firstChild = parentNode;
+            let alerted = checkDropAlert(group, node, firstChild);
+            if (alerted) {
+              return alert(alerted);
+            }
+            //Added the child into the group by using addChildToGroup
+            diagram.addChildToGroup(group, node);
+
+            //let newNode = diagram.getObject(diagram.nodes[diagram.nodes.length - 1].id);
+            //let childNode = diagram.getObject(group.children[group.children.length - 2]);
+
+            //Passing the first node to getObject method to set width and offset for the group node
+
+            //newNode.offsetX = group.offsetX + Math.cos(Math.PI-Math.PI*2/(group.children.length-1)*(group.children.length-2))*((group.children.length-1)*50+(group.children.length-2)*20)/(2*Math.PI);
+            //newNode.offsetY = group.offsetY + Math.sin(Math.PI-Math.PI*2/(group.children.length-1)*(group.children.length-2))*((group.children.length-1)*50+(group.children.length-2)*20)/(2*Math.PI);
+            //diagram.dataBind();
+            firstChild.offsetX = group.offsetX;
+            firstChild.offsetY = group.offsetY;
+            firstChild.annotations[0].offset = {x: 0.5, y: -0.1};
+            if (group.children.length > 6) {
+              group.width = 2 * (((group.children.length - 1) * 50 + (group.children.length - 2) * 20) / (2 * Math.PI) + 40 + bienkt);
+              group.height = group.width;
+            }
+            if (group.children.length == 6 || group.children.length == 5) {
+              group.width = 2 * (60 + 40 + bienkt);
+              group.height = group.width;
+            }
+            if (group.children.length == 4 || group.children.length == 3) {
+              group.width = 2 * (60 + 15 + bienkt);
+              group.height = group.width;
+            }
+            //firstChild.width=group.width;
+            //firstChild.height=firstChild.width;
+            diagram.dataBind();
+
+            if (group.children.length > 6) {
+              for (let i = 1; i < group.children.length; i++) {
+                const childEl = diagram.getObject(group.children[i]);
+                let annoContent = childEl.annotations[0].content;
+                let previousChild = diagram.getObject(group.children[i - 1]);
+                let previousAnnoContent = previousChild.annotations[0].content;
+
+                if (i > 1) {
+                  childEl.offsetX = group.offsetX + Math.cos(Math.PI - Math.PI * 2 / (group.children.length - 2) * (i - 2)) * (((group.children.length - 2) * 50 + (group.children.length - 3) * 20) / (2 * Math.PI) + bienkt);
+                  childEl.offsetY = group.offsetY + Math.sin(Math.PI - Math.PI * 2 / (group.children.length - 2) * (i - 2)) * (((group.children.length - 2) * 50 + (group.children.length - 3) * 20) / (2 * Math.PI) + bienkt);
+                  childEl.width = 50 + bienkt;
+                  childEl.height = 50 + bienkt;
+                }
+                if (i == 1) {
+                  childEl.offsetX = group.offsetX;
+                  childEl.offsetY = group.offsetY;
+                  childEl.width = 50 + bienkt;
+                  childEl.height = 50 + bienkt;
+                }
+
+                if (
+                  previousAnnoContent.startsWith(annoContent) &&
+                  previousAnnoContent.length - annoContent.length < 3
+                ) {
+                  childEl.annotations[0].content =
+                    source.annotations[0].content + " " + i;
+                  source.annotations[0].content =
+                    source.annotations[0].content + "" + (i + 1);
+                }
+              }
+              diagram.dataBind();
+            }
+
+            if (group.children.length == 5 || group.children.length == 6) {
+              for (let i = 1; i < group.children.length; i++) {
+                const childEl = diagram.getObject(group.children[i]);
+                let annoContent = childEl.annotations[0].content;
+                let previousChild = diagram.getObject(group.children[i - 1]);
+                let previousAnnoContent = previousChild.annotations[0].content;
+                if (i > 1) {
+                  childEl.offsetX = group.offsetX + Math.cos(Math.PI - Math.PI * 2 / (group.children.length - 2) * (i - 2)) * (60 + bienkt);
+                  childEl.offsetY = group.offsetY + Math.sin(Math.PI - Math.PI * 2 / (group.children.length - 2) * (i - 2)) * (60 + bienkt);
+                  childEl.width = 50 + bienkt;
+                  childEl.height = 50 + bienkt;
+                }
+                if (i == 1) {
+                  childEl.offsetX = group.offsetX;
+                  childEl.offsetY = group.offsetY;
+                  childEl.width = 50 + bienkt;
+                  childEl.height = 50 + bienkt;
+                }
+
+                if (
+                  previousAnnoContent.startsWith(annoContent) &&
+                  previousAnnoContent.length - annoContent.length < 3
+                ) {
+                  childEl.annotations[0].content =
+                    source.annotations[0].content + " " + i;
+                  source.annotations[0].content =
+                    source.annotations[0].content + "" + (i + 1);
+                }
+              }
+              diagram.dataBind();
+            }
+
+            if (group.children.length == 3 || group.children.length == 4) {
+              for (let i = 1; i < group.children.length; i++) {
+                const childEl = diagram.getObject(group.children[i]);
+                let annoContent = childEl.annotations[0].content;
+                let previousChild = diagram.getObject(group.children[i - 1]);
+                let previousAnnoContent = previousChild.annotations[0].content;
+
+                childEl.offsetX = group.offsetX + Math.cos(Math.PI - Math.PI * 2 / (group.children.length - 1) * (i - 1)) * (35 + bienkt);
+                childEl.offsetY = group.offsetY + Math.sin(Math.PI - Math.PI * 2 / (group.children.length - 1) * (i - 1)) * (35 + bienkt);
+                childEl.width = 50 + bienkt;
+                childEl.height = 50 + bienkt;
+
+                if (
+                  previousAnnoContent.startsWith(annoContent) &&
+                  previousAnnoContent.length - annoContent.length < 3
+                ) {
+                  childEl.annotations[0].content =
+                    source.annotations[0].content + " " + i;
+                  source.annotations[0].content =
+                    source.annotations[0].content + "" + (i + 1);
+                }
+              }
+              diagram.dataBind();
+            }
+
+
+          } else {
+            if (
+              communicationDroppedElementChecker(source, parentNode) ||
+              ignoreCond
+            ) {
+              diagram.select([parentNode, source]);
+              diagram.group();
+              let group = diagram.getObject(parentNode.parentId);
+              let alerted = checkDropAlert(group, source, parentNode);
+              if (alerted) {
+                diagram.unGroup();
+                return alert(alerted);
+              }
+              let newNode = diagram.getObject(source.id);
+              parentNode.width = 150;
+              parentNode.height = parentNode.width;
+              parentNode.offsetX = parentNode.offsetX;
+              parentNode.offsetY = parentNode.offsetY;
+              parentNode.annotations[0].offset = {x: 0.5, y: -0.1};
+              diagram.dataBind();
+              newNode.offsetX = parentNode.offsetX;
+              newNode.offsetY = parentNode.offsetY;
+              diagram.dataBind();
+              if (parentNode.children && parentNode.children.length > 1) {
+                //diagram.remove(diagram.nodes[diagram.nodes.length - 3]);
+                parentNode.style.strokeColor = "black";
+                parentNode.style.strokeWidth = 1;
+              }
+            }
+          }
+        }
+      }
+    }, 0);
+  }
+  return group;
+}
+
+export function communicationDroppedElementChecker(id, parentId) {
+  let allowDropped = [];
+  let childAllow = [];
+
+
+  if (parentId.id.startsWith("personAspect")) {
+    allowDropped = ["personAspect"];
+    childAllow = ["personAspect"];
+    if (!id.id.startsWith("personAspect")) alert("The Person Aspect Entity identified the aspect of a person.  Multiple aspects of a person can be combined to one.  The aspect of a person does not accept other entity.");
+  }
+
+
+  if (parentId.id.startsWith("application") || parentId.id.startsWith("a")) {
+    allowDropped = ["application", "a"];
+    childAllow = ["application"];
+  }
+
+
+  if (parentId.id.startsWith("communicationFunction") || parentId.id.startsWith("functionx") || parentId.id.startsWith("function0")) {
+    allowDropped = ["communicationFunction", "functionx", "function0"];
+    childAllow = ["communicationFunction", "functionx"];
+  }
+
+
+  if (
+    parentId.id.startsWith("communicationEntity")
+    || parentId.id.startsWith("communicationElement")
+    || parentId.id.startsWith("information")
+    || parentId.id.startsWith("question")
+    || parentId.id.startsWith("answer")
+  ) {
+    allowDropped = ["communicationEntity", "communicationElement", "information", "question", "answer"];
+    childAllow = [
+      "communicationEntity",
+      "x",
+      "word",
+      "sentence",
+      "paragraph",
+      "communicationElement",
+      "question",
+      "answer",
+      "picture",
+      "video",
+      "audio",
+      "text",
+      "principle",
+      "information",
+    ];
+    if (
+      (!id.id.startsWith("communicationEntity"))
+      && (!id.id.startsWith("x"))
+      && (!id.id.startsWith("word"))
+      && (!id.id.startsWith("sentence"))
+      && (!id.id.startsWith("paragraph"))
+      && (!id.id.startsWith("communicationElement"))
+      && (!id.id.startsWith("question"))
+      && (!id.id.startsWith("answer"))
+      && (!id.id.startsWith("picture"))
+      && (!id.id.startsWith("audio"))
+      && (!id.id.startsWith("text"))
+      && (!id.id.startsWith("principle"))
+      && (!id.id.startsWith("information"))
+    )
+      alert("A communication or communication entity is viewed as an entity that contains communication elements such as word, paragraph, sentence, image, video etc.  Only such entities included in communication.");
+  }
+
+  if (parentId.id.startsWith("word")) {
+    allowDropped = ["word"];
+    childAllow = ["word"];
+    if (!id.id.startsWith("word")) alert("A composite word is composed of multiple words.  The word entity only accepts other words to form composite word.");
+  }
+
+  if (parentId.id.startsWith("sentence")) {
+    allowDropped = ["sentence"];
+    childAllow = ["word", "sentence", "communicationElement", "principle"];
+    if (
+      (!id.id.startsWith("word"))
+      && (!id.id.startsWith("sentence"))
+      && (!id.id.startsWith("communicationElement"))
+      && (!id.id.startsWith("principle"))
+    )
+      alert("The sentence entity accepts words, sentences and other communications elements like phrases, expressions, and so forth to form other sentence.");
+  }
+  if (
+    parentId.id.startsWith("paragraph")
+  ) {
+    allowDropped = ["paragraph"];
+    childAllow = [
+      "word",
+      "sentence",
+      "communicationElement",
+      "principle",
+      "paragraph",
+    ];
+    if (
+      (!id.id.startsWith("word"))
+      && (!id.id.startsWith("sentence"))
+      && (!id.id.startsWith("communicationElement"))
+      && (!id.id.startsWith("principle"))
+      && (!id.id.startsWith("paragraph"))
+    )
+      alert("The paragraph entity accepts words, sentences, paragraphs and other communications elements like phrases, expressions, and so forth to form other paragraph.");
+  }
+  if (parentId.id.startsWith("communicationFunction")) {
+    allowDropped = ["communicationFunction", "function"];
+    childAllow = ["function", "communicationFunction"];
+    if (!id.id.startsWith("communicationFunction"))
+      alert("A function can be viewed as a function that is made of other functions; the function entity only accepts function.");
+  }
+  if (parentId.id.startsWith("aspect")) {
+    allowDropped = ["aspect"];
+    childAllow = ["aspect"];
+    if (!id.id.startsWith("aspect"))
+      alert("Aspect entity can only takes aspect to form a group of aspects.");
+  }
+  if (parentId.id.startsWith("dictionary")) {
+    allowDropped = ["dictionary"];
+    childAllow = ["word"];
+  }
+  if (parentId.id.startsWith("collection")) {
+    allowDropped = ["collection"];
+    childAllow = ["entity"];
+  }
+  if (parentId.id.startsWith("communicationResult")) {
+    allowDropped = ["communicationResult"];
+    childAllow = ["communicationResult"];
+  }
+  if (parentId.id.startsWith("action")) {
+    allowDropped = ["action"];
+    childAllow = ["action"];
+  }
+  if (parentId.id.startsWith("reason")) {
+    allowDropped = ["reason"];
+    childAllow = ["reason"];
+  }
+  if (parentId.id.startsWith("principle2")) {
+    allowDropped = ["principle2"];
+    childAllow = ["principle"];
+    if (id.addInfo[0].menuId === "principle") {
+      alert("A subset of principle can only accept principle");
+    }
+  }
+  if (parentId.id.startsWith("principle1")) {
+    allowDropped = ["principle1"];
+    childAllow = ["principle", "principle2"];
+    if (
+      id.addInfo[0].menuId !== "principle" &&
+      id.addInfo[0].menuId !== "subSetofPrinciple"
+    ) {
+      alert(
+        "the main set of principle can only accept principle and subset of principle"
+      );
+    }
+  }
+  if (parentId.id.startsWith("reference")) {
+    allowDropped = ["reference"];
+    childAllow = [
+      "communicationEntity",
+      "communicationElement",
+      "word",
+      "sentence",
+      "paragraph",
+      "question",
+      "answer",
+      "picture",
+      "video",
+      "audio",
+      "text",
+      "principle",
+      "information",
+    ];
+  }
+  if (
+    parentId.id.startsWith("locationOfOperation") ||
+    parentId.id.startsWith("siteOfOperation")
+  ) {
+    allowDropped = ["locationOfOperation", "siteOfOperation"];
+    childAllow = ["locationOfOperation", "siteOfOperation"];
+  }
+  if (parentId.id.startsWith("mainArea")) {
+    allowDropped = ["mainArea"];
+    childAllow = ["locationOfOperation", "siteOfOperation"];
+  }
+  if (parentId.id.startsWith("workingareaAL")) {
+    allowDropped = ["workingareaAL"];
+    childAllow = ["locationAL", "locationOfOperation", "siteOfOperation"];
+  }
+  if (parentId.id.startsWith("constantCharacteristics")) {
+    allowDropped = ["constantCharacteristics"];
+    childAllow = ["constantCharacteristics"];
+  }
+  if (parentId.id.startsWith("theory")) {
+    allowDropped = ["theory", "theorem"];
+    childAllow = ["theory", "theorem"];
+  }
+  if (parentId.id.startsWith("utilizationTheory")) {
+    allowDropped = ["utilizationTheory"];
+    childAllow = ["theory", "theorem"];
+  }
+  if (parentId.id.startsWith("characteristics")) {
+    allowDropped = ["characteristics"];
+    childAllow = ["characteristics"];
+  }
+  if (parentId.id.startsWith("naturalElement")) {
+    allowDropped = ["naturalElement"];
+    childAllow = ["naturalElement"];
+  }
+  if (parentId.id.startsWith("inputElement")) {
+    allowDropped = ["inputElement"];
+    childAllow = ["inputElement"];
+  }
+  if (parentId.id.startsWith("functionSystem")) {
+    allowDropped = ["functionSystem"];
+    childAllow = ["functionSystem"];
+  }
+  if (parentId.id.startsWith("functionalSystem")) {
+    allowDropped = ["functionalSystem"];
+    childAllow = ["functionalSystem"];
+  }
+  if (parentId.id.startsWith("fundamentalUtilizationTheory")) {
+    allowDropped = ["fundamentalUtilizationTheory"];
+    childAllow = ["fundamentalUtilizationTheory"];
+  }
+
+  return (
+    childAllow.some((a) => id.id.startsWith(a)) &&
+    allowDropped.some((a) => parentId.id.startsWith(a))
+  );
+}
+
+export function checkDropAlert(group, source, n) {
+  let checkedSource = source.addInfo[0].menuId;
+  let checkedNode = n.addInfo[0].menuId;
+
+  if (checkedSource === "principle" && checkedNode === "principle") {
+    return "While a principle may have multiple parts, for now consider it as one entity.";
+  }
+  if (checkedNode === "principle" && checkedSource === "subSetofPrinciple") {
+    return "Consider a principle as a single entity where a subset as multiple entities; a subset of principles includes multiple principles not the other way around";
+  }
+  if (checkedSource === "mainSetofPrinciple" && checkedNode === "principle") {
+    return "The main set of principles includes multiple subsets of principles where each subset includes principle.  A single principle does not include the main set of principles.";
+  }
+  if (
+    checkedSource === "subSetofPrinciple" &&
+    checkedNode === "subSetofPrinciple"
+  ) {
+    return "A subset of principles includes multiple unique principle.  A subset of principles does not include other subsets of principles.";
+  }
+  if (
+    checkedSource === "mainSetofPrinciple" &&
+    checkedNode === "subSetofPrinciple"
+  ) {
+    return "The main set of principles includes all the subsets of principles.  A subset of principles does not include the main set of principles.";
+  }
+  if (
+    checkedSource === "mainSetofPrinciple" &&
+    checkedNode === "mainSetofPrinciple"
+  ) {
+    return "The main set of principles is unique and does not include another main set.  There is only one main set of principles.";
+  }
+
+  if (
+    checkedSource === "subSetofPrinciple" && group.children.filter((a) => a.startsWith("principle2")).length >= 10
+  ) {
+    return "The number of subset identified in the main set is 10 subsets";
+  }
+  if (
+    checkedNode === "constantCharacteristics" &&
+    group.children.filter((a) => a.startsWith("constantCharacteristics"))
+      .length >= 5
+  ) {
+    return "The number of constant characteristic identified is up to 5";
+  }
+  if (
+    checkedNode === "theoryCharacteristic" &&
+    group.children.filter((a) => a.startsWith("characteristics"))
+      .length >= 16
+  ) {
+    return "The number of theory characteristic is fixed";
+  }
+
+  if (
+    checkedNode === "fundamentalTheory" &&
+    group.children.filter((a) => a.startsWith("fundamentalUtilizationTheory"))
+      .length >= 10
+  ) {
+    return "fundamental of our utilization theory include the fundamental of all other theories and they cannot be duplicated";
+  }
+  return '';
+}
+
 function drawPortCircle(node) {
   const replaceStyle = {
     shape: "Circle", style: {
@@ -5476,6 +6072,7 @@ function drawPortCircle(node) {
 }
 
 export const STORAGE_KEY = '@SETTINGS';
+export const LOCATION_COUNTRY_KEY = 'location_country';
 
 export const LIST_ITEM = {
   pointTo: [
@@ -5517,6 +6114,92 @@ export const LIST_ITEM = {
   define: ["Define"],
   visuallyIdentify: ["Visually Identify"],
 };
+
+export const areaData = [
+  {
+    id: "locationOfOperation",
+    title: "Location of Operation",
+    annotation: "Location",
+    menuId: "location",
+    toolTip: "Identify Operation Location",
+  },
+  {
+    id: "siteOfOperationRect",
+    title: "Site of Operation",
+    annotation: "Site",
+    menuId: "location",
+    toolTip: "Identify Operation Site",
+  },
+  {
+    id: "mainArea",
+    title: "Main Area",
+    annotation: {
+      content: [
+        {
+          content: "Main Area",
+          offset: {x: 0.5, y: 0},
+          margin: {bottom: 20},
+        },
+      ],
+      ports: [],
+      style: {
+        strokeWidth: 4,
+      },
+      height: 200,
+      width: 200,
+    },
+    menuId: "location",
+    toolTip: "Identify The Main Area",
+  },
+  {
+    id: "siteOfOperation",
+    title: "Site of Operation",
+    annotation: "Site",
+    toolTip: "Identify a Site",
+    menuId: "location",
+    type: "House",
+  },
+  {
+    id: "workingareaAL",
+    title: "Working Area",
+    annotation: {
+      fill: "none",
+      radius: 75,
+      content: [
+        {
+          content: "Working Area",
+        },
+      ],
+    },
+    menuId: "location",
+    toolTip: "Identify a Working Area",
+    type: "Circle",
+  },
+  {
+    id: "locationAL",
+    title: "Location",
+    annotation: {
+      fill: "none",
+      radius: 30,
+      content: [
+        {
+          content: "Locaiton",
+        },
+      ],
+    },
+    menuId: "location",
+    toolTip: "Identify a Location",
+    type: "Circle",
+  },
+  {
+    id: "mobilityAL",
+    title: "Mobility",
+    toolTip: "Movement of a Person",
+    menuId: "empty",
+    type: "mobility",
+    annotation: null
+  },
+];
 
 export function randomId() {
   return (Math.random() + 1).toString(36).substring(7);

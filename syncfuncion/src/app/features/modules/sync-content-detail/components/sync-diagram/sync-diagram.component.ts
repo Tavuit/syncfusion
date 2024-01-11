@@ -29,6 +29,8 @@ import { NodeTableComponent } from 'src/app/features/modules/sync-content-detail
 import { GroupPropertyComponent } from 'src/app/features/modules/sync-content-detail/components/group-property/group-property.component';
 import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content-detail/components/multiple-entities/multiple-entities.component';
 import { GroupPeopleComponent } from 'src/app/features/modules/sync-content-detail/components/group-people/group-people.component';
+import { MainAreaComponent } from 'src/app/features/modules/sync-content-detail/components/main-area/main-area.component';
+import { CommunicationFunctionGraphComponent } from 'src/app/features/modules/sync-content-detail/components/communication-function-graph/communication-function-graph.component';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -120,6 +122,12 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     } else if (this.idElementActive.startsWith('groupOfPeople')) {
       this.titlePopup = 'Group Of People';
       this.handleInsertComponent(GroupPeopleComponent);
+    } else if (this.idElementActive.startsWith('mainArea')) {
+      this.titlePopup = 'Main Area';
+      this.handleInsertComponent(MainAreaComponent);
+    } else if (this.idElementActive.startsWith('changeofApplication1')) {
+      this.titlePopup = 'Change of Communication Function Graph';
+      this.handleInsertComponent(CommunicationFunctionGraphComponent);
     }
   }
 
