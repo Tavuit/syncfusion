@@ -1,1 +1,21 @@
-<p>communication-function-graph works!</p>
+<div id="dialogNodeTableComm" class="dialog-group-of-people">
+  <div class="d-flex m-b-8">
+    <div><i>Change of Application Realted to Communication</i></div>
+  </div>
+  <div class="dialog-group-of-people-content m-t-8" [formGroup]="customComponentForm">
+    <div class="d-flex">
+      <div class="line-height-20"></div>
+      <div class="flex-1">
+        About Y-Axis<br />Name Of Y-Axis
+        <select formControlName="s1" id="s1">
+          <option *ngFor="let data of yAxis" [ngValue]="data">{{data}}</option>
+        </select
+        ><br />
+        About X-Axis<br />Name Of X-Axis
+        <select formControlName="s2" id="s2">
+          <option *ngFor="let data of xAxis" [ngValue]="data">{{data}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

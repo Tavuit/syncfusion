@@ -5549,6 +5549,7 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
             diagram.dataBind();
             //diagram.refresh();
           } else {
+            console.log('run else');
             if (
               communicationDroppedElementChecker(source, parentNode) ||
               ignoreCond
@@ -5606,15 +5607,6 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
             }
             //Added the child into the group by using addChildToGroup
             diagram.addChildToGroup(group, node);
-
-            //let newNode = diagram.getObject(diagram.nodes[diagram.nodes.length - 1].id);
-            //let childNode = diagram.getObject(group.children[group.children.length - 2]);
-
-            //Passing the first node to getObject method to set width and offset for the group node
-
-            //newNode.offsetX = group.offsetX + Math.cos(Math.PI-Math.PI*2/(group.children.length-1)*(group.children.length-2))*((group.children.length-1)*50+(group.children.length-2)*20)/(2*Math.PI);
-            //newNode.offsetY = group.offsetY + Math.sin(Math.PI-Math.PI*2/(group.children.length-1)*(group.children.length-2))*((group.children.length-1)*50+(group.children.length-2)*20)/(2*Math.PI);
-            //diagram.dataBind();
             firstChild.offsetX = group.offsetX;
             firstChild.offsetY = group.offsetY;
             firstChild.annotations[0].offset = {x: 0.5, y: -0.1};
@@ -5630,8 +5622,7 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
               group.width = 2 * (60 + 15 + bienkt);
               group.height = group.width;
             }
-            //firstChild.width=group.width;
-            //firstChild.height=firstChild.width;
+
             diagram.dataBind();
 
             if (group.children.length > 6) {
@@ -6198,6 +6189,395 @@ export const areaData = [
     menuId: "empty",
     type: "mobility",
     annotation: null
+  },
+];
+
+export const otherData: any[] = [
+  {
+    id: "separationLineComm",
+    title: "Separation Line",
+    annotation: {
+      length: 400,
+      style: {
+        strokeDashArray: "10 5",
+      },
+    },
+    menuId: "edit",
+    toolTip: "Use to Show Separation",
+    type: "VerticalLine",
+  },
+  {
+    id: "time",
+    title: "Time",
+    annotation: {
+      shape: {
+        target: "Arrow",
+        source: "Arrow",
+      },
+      content: [
+        {
+          content: "Time",
+          alignment: "Before",
+        },
+      ],
+    },
+    menuId: "edit",
+    toolTip: "Identify a Time",
+    type: "Arrow",
+  },
+  {
+    id: "progress",
+    title: "Progress",
+    annotation: {
+      content: [{content: "% Completed"}],
+      height: 20,
+      width: 400,
+    },
+    menuId: "edit",
+    nodes: [],
+    toolTip: "Use to Show Progress",
+  },
+  {
+    id: "timeLine",
+    title: "Time Line",
+    annotation: {
+      content: [
+        {
+          content: "Time",
+          offset: {x: 1, y: 0.5},
+          margin: {left: 20},
+        },
+      ],
+      length: 600,
+      style: {strokeDashArray: ""},
+    },
+    menuId: "edit",
+    toolTip: "Use For Graph or Chart",
+    type: "HorizontalLine",
+  },
+  {
+    id: "dateLine",
+    title: "Date Line",
+    annotation: {
+      content: [
+        {
+          content: "Date",
+          offset: {x: 0, y: 1},
+          margin: {top: 20, left: 10},
+        },
+      ],
+      length: 600,
+      style: {strokeDashArray: ""},
+    },
+    menuId: "edit",
+    toolTip: "Insert a Date Line",
+    type: "VerticalLine",
+  },
+  {
+    id: "principleLineOthers",
+    title: "PrincipleLine",
+    annotation: {
+      length: 600,
+      ports: [
+        {
+          id: "Center",
+          offset: {
+            x: 0.5,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "Left",
+          offset: {
+            x: 0,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "Right",
+          offset: {
+            x: 1,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+      ],
+      style: {},
+    },
+    menuId: "edit",
+    toolTip: "Principle of Operation Line",
+    type: "HorizontalLine",
+  },
+  {
+    id: "note",
+    title: "Note",
+    annotation: "My Note",
+    toolTip: "Represent a Note",
+    menuId: "edit",
+    type: "Note",
+  },
+  {
+    id: "nodeOthers",
+    title: "Node",
+    annotation: {
+      content: [
+        {
+          content: "1",
+        },
+      ],
+      radius: 15,
+      fill: "White",
+    },
+    menuId: "edit",
+    toolTip: "Represent a Node",
+    type: "Circle",
+  },
+  {
+    id: "callOut",
+    title: "Callout",
+    annotation: "My Text",
+    menuId: "edit",
+    toolTip: "Represent a Callout",
+    type: "Callout",
+  },
+  {
+    id: "nodeTableComm",
+    title: "Node Table",
+    annotation: {
+      content: ["Node Number", "Information", "1", ""],
+      columnNo: 2,
+    },
+    menuId: "edit",
+    toolTip: "Represents a Table of Node",
+    type: "Table",
+  },
+  {
+    id: "statement",
+    title: "Statement",
+    annotation: "Statement",
+    toolTip: "Identify a Statement",
+    menuId: "edit",
+    type: "Text",
+  },
+  {
+    id: "numberIdentification",
+    title: "Number Identification",
+    annotation: "#1",
+    toolTip: "Use to Identify Entity",
+    menuId: "edit",
+    type: "Text",
+  },
+  {
+    id: "entityInclusionLineHorizontal",
+    title: "Entity Inclusion Line Horizontal",
+    annotation: {
+      length: 600,
+      ports: [
+        {
+          id: "Center",
+          offset: {
+            x: 0.5,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "Left",
+          offset: {
+            x: 0,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "Right",
+          offset: {
+            x: 1,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+      ],
+      style: {},
+    },
+    toolTip: "Entity has Entities",
+    menuId: "edit",
+    type: "HorizontalLine",
+  },
+  {
+    id: "entityInclusionLineVertical",
+    title: "Entity Inclusion Line Vertical",
+    annotation: {
+      length: 600,
+      ports: [
+        {
+          id: "Center",
+          offset: {
+            x: 0.5,
+            y: 0.5,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "Top",
+          offset: {
+            x: 0.5,
+            y: 0,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "Right",
+          offset: {
+            x: 0.5,
+            y: 1,
+          },
+          visibility: 1,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+      ],
+      style: {},
+    },
+    menuId: "edit",
+    toolTip: "Entity has Entities",
+    type: "VerticalLine",
+  },
+  {
+    id: "changeofApplication",
+    title: "Change of Application",
+    annotation: {
+      content: [
+        "Communication",
+        "",
+        "Application Value",
+        "",
+        "Communication Function",
+        "",
+      ],
+      columnNo: 3,
+    },
+    menuId: "edit",
+    toolTip: "Communication change Application Tablulated Form",
+    type: "Table",
+  },
+  {
+    id: "changeofApplication1",
+    title: "Change of Application",
+    annotation: [
+      {
+        content: "Communication",
+        offset: {x: 0.5, y: 1},
+        margin: {top: 10},
+      },
+      {
+        content: "Application",
+        offset: {x: 0, y: 0.5},
+        margin: {right: 10},
+      },
+    ],
+    menuId: "edit",
+    toolTip: "Communication Change Application Graphical Form",
+    type: "Graph",
+  },
+  {
+    id: "graphLine",
+    title: "Graph Line",
+    annotation: {
+      type: "Straight",
+      shape: {},
+    },
+    menuId: "edit",
+    toolTip: "Use to Draw Graph",
+    type: "Arrow",
+  },
+  {
+    id: "graphPoint",
+    title: "Graph Point",
+    annotation: {
+      fill: "black",
+      radius: 5,
+      isPoint: true,
+    },
+    menuId: "edit",
+    toolTip: "Use to Draw Graph",
+    type: "Circle",
+  },
+  {
+    id: "graphLineAndPoint",
+    title: "Graph Line and Point",
+    annotation: {
+      fill: "black",
+      shape: {
+        target: "Circle",
+      },
+    },
+    menuId: "edit",
+    toolTip: "Use to Draw Graph",
+    type: "Arrow",
+  },
+  {
+    id: "xAxis",
+    title: "X-Axis",
+    annotation: {
+      length: 600,
+      content: [
+        {
+          content: "X-Axis",
+          offset: {x: 0.5, y: 1},
+          margin: {top: 15},
+        },
+      ],
+      style: {},
+    },
+    menuId: "edit",
+    toolTip: "Use to Graph",
+    type: "HorizontalLine",
+  },
+  {
+    id: "yAxis",
+    title: "Y-Axis",
+    annotation: {
+      length: 600,
+      content: [
+        {
+          content: "X-Axis",
+          offset: {x: 0, y: 0.5},
+          margin: {right: 15},
+        },
+      ],
+      style: {},
+    },
+    menuId: "edit",
+    toolTip: "Use to Graph",
+    type: "VerticalLine",
   },
 ];
 

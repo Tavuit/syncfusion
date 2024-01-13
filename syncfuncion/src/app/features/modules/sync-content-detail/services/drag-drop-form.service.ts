@@ -8,6 +8,7 @@ import {
   drawShape,
   dropGrouped,
   LIST_ITEM,
+  otherData,
   randomId,
 } from 'src/app/utils/constants';
 import { ILabelPropertyOptions } from 'src/app/features/modules/sync-content-detail/types/diagram.types';
@@ -46,6 +47,8 @@ export class DragDropFormService {
   }
 
   handleTransformSelectedNode(actionPopUpId, currentNode, diagram) {
+    const groupList = ['group4', 'group1', 'groupCommunication', 'groupSystem', 'groupTheoryVertical', 'groupFunctionTheory', 'groupFundamental'];
+    const numberInput = this.customComponentForm?.get('numberInput')?.value;
     if (
       actionPopUpId.startsWith('continuityPerson') ||
       actionPopUpId.startsWith('continuity')
@@ -96,7 +99,6 @@ export class DragDropFormService {
       actionPopUpId.startsWith('communicationMixtureCommunication') ||
       actionPopUpId.startsWith('groupCommunication')
     ) {
-      const numberInput = this.customComponentForm?.get('numberInput')?.value;
       let fxPorts = [];
       for (let i = 0; i < numberInput; i++) {
         let mock = {
@@ -209,9 +211,9 @@ export class DragDropFormService {
       let findItem = drawShape({ ...mainArea });
       findItem.height = findItem.height * 2;
       const findArea = {
-        ...areaData.find((a) => a.id === "locationOfOperation"),
-        type: null
-      }
+        ...areaData.find((a) => a.id === 'locationOfOperation'),
+        type: null,
+      };
       if (typesValue === 'dialogMainAreahouse') {
         diagram.dataBind();
         for (let index = 1; index <= +numbersValue; index++) {
@@ -252,13 +254,88 @@ export class DragDropFormService {
         });
       }
     } else if (actionPopUpId.startsWith('changeofApplication1')) {
-      let truyNode = diagram.getObject(diagram.nodes[diagram.nodes.length - 1].id);
-      let segsum = "<g transform=\"translate(2, 2)\"><rect width=\"10\" height=\"10\" fill=\"transparent\" stroke=\"black\" stroke-width=\"0\"></rect><path vector-effect=\"non-scaling-stroke\" stroke=\"black\" stroke-width=\"1.5\" fill=\"transparent\" d=\"M 0.5 10 L 0.5 0 M 0 9.5 L 10 9.5\"></path></g>";
-      truyNode.annotations[0].content = this.customComponentForm.get('xAxis').value;
-      truyNode.annotations[1].content = this.customComponentForm.get('yAxis').value;
+      let truyNode = diagram.getObject(
+        diagram.nodes[diagram.nodes.length - 1].id
+      );
+      let segsum =
+        '<g transform="translate(2, 2)"><rect width="10" height="10" fill="transparent" stroke="black" stroke-width="0"></rect><path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1.5" fill="transparent" d="M 0.5 10 L 0.5 0 M 0 9.5 L 10 9.5"></path></g>';
+      truyNode.annotations[0].content =
+        this.customComponentForm.get('s2').value;
+      truyNode.annotations[1].content =
+        this.customComponentForm.get('s1').value;
       truyNode.shape.content = segsum;
       truyNode.height = 600;
       truyNode.width = 600;
+    } else if (
+      !actionPopUpId.startsWith('changeofApplication1') &&
+      actionPopUpId.startsWith('changeofApplication')
+    ) {
+      const nodes = this.getNodesDiagramNodes([...diagram.nodes]);
+      let itemSub = { ...this.getItembyIdCommOthers('nodeTableComm') };
+
+      let mangchua = [];
+      let sdem = 0;
+
+      if (this.customComponentForm.get('communicationS1').value) {
+        mangchua[sdem] = 'Communication';
+        sdem++;
+      }
+      if (this.customComponentForm.get('applicationS2').value == true) {
+        mangchua[sdem] = 'Application Value';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS3').value == true) {
+        mangchua[sdem] = 'Communication Function';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS4').value == true) {
+        mangchua[sdem] = 'Communication Name';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS5').value) {
+        mangchua[sdem] = 'Communication Subject';
+        sdem++;
+      }
+      if (this.customComponentForm.get('applicationS6').value) {
+        mangchua[sdem] = 'Application Name';
+        sdem++;
+      }
+      if (this.customComponentForm.get('applicationS7').value) {
+        mangchua[sdem] = 'Application';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS8').value) {
+        mangchua[sdem] = 'Communication Date Time';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS9').value) {
+        mangchua[sdem] = 'Communication Date';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS10').value) {
+        mangchua[sdem] = 'Communication Time';
+        sdem++;
+      }
+      if (this.customComponentForm.get('communicationS11').value) {
+        mangchua[sdem] = 'Communication Result';
+        sdem++;
+      }
+
+      itemSub.annotation.columnNo = sdem;
+      itemSub.annotation.content = [];
+      for (let ix = 0; ix < sdem; ix++) {
+        itemSub.annotation.content = itemSub.annotation.content.concat([
+          mangchua[ix],
+          '',
+        ]);
+      }
+
+      let item = drawShape(itemSub);
+      item.offsetX = nodes[0].offsetX;
+      item.offsetY = nodes[0].offsetY;
+      diagram.nodes = [item];
+    } else if (groupList.some(prefix => actionPopUpId.startsWith(prefix))) {
+      this.ChangeData1(numberInput, 0 ,diagram);
     }
 
     diagram.dataBind();
@@ -267,10 +344,115 @@ export class DragDropFormService {
     }, 1);
   }
 
-  getItembyIdCommOthers(id) {
-    const find = getOtherCommunicationElementShapes().find((x) => x.id === id);
-    return find;
-  }
+  private ChangeData1(x1, cs, diagram) {
+
+
+    //let diagramData= JSON.parse(document.getElementById('diagram').ej2_instances[0].saveDiagram());
+
+
+    //diagramData.nodes[diagramData.nodes.length-1].annotations[0].content=x4;
+
+
+      x1 = parseInt(x1);
+
+      let fxPorts = [];
+
+
+      for (let i = 0; i < x1; i++) {
+        let stam = {
+          id: 'Lefttg',
+          offset: {
+            x: 0, y: 0.5
+          },
+          visibility: 1,
+          shape: 'Circle',
+          width: 2,
+          height: 2
+        };
+        stam.id = 'Left' + (i + 1).toString();
+        stam.offset.x = 0;
+        stam.offset.y = (i + 1) / (x1 + 1);
+        fxPorts[i] = stam;
+      }
+
+      fxPorts[x1] = {
+        id: 'RightMidlle',
+        offset: {
+          x: 1, y: 0.5
+        },
+        visibility: 1,
+        shape: 'Circle',
+        width: 2,
+        height: 2
+      };
+
+      fxPorts[x1 + 1] = {
+        id: 'BottomMidlle',
+        offset: {
+          x: 0.5, y: 0
+        },
+        visibility: 1,
+        shape: 'Circle',
+        width: 2,
+        height: 2
+      };
+
+      fxPorts[x1 + 2] = {
+        id: 'TopMidlle',
+        offset: {
+          x: 0.5, y: 1
+        },
+        visibility: 1,
+        shape: 'Circle',
+        width: 2,
+        height: 2
+      };
+
+
+      let segx5 = 75;
+      if (x1 > 3) {
+        segx5 = (x1 + 1) * 20;
+      }
+
+
+    //ham nay de lay ma, luon luon su dung ham nay
+    //dia1=JSON.stringify(diagramData);
+
+
+      let segsum = "<g transform=\"translate(2, 2)\"><rect vector-effect=\"non-scaling-stroke\" height=\"" + segx5.toString() + "\" width=\"50\" stroke=\"black\" stroke-width=\"1\" fill=\"transparent\"></rect><foreignObject class=\"symbol-text-container\" x=\"6.25\" width=\"37.5\" height=\"" + segx5.toString() + "\" visibility=\"hidden\"><div style=\"height:100px\" class=\"flex-container\"><div width=\"37.5\" class=\"symbol-text-element\">Group</div></div></foreignObject></g>";
+
+
+    //diagramData.nodes[diagramData.nodes.length-1].shape.content=segsum;
+    //diagramData.nodes[diagramData.nodes.length-1].height=segx5;
+    //diagramData.nodes[diagramData.nodes.length-1].width=50;
+    //diagramData.nodes[diagramData.nodes.length-1].ports=fxPorts;
+
+
+      let truyNode = diagram.getObject(diagram.nodes[diagram.nodes.length - 1].id);
+      truyNode.shape.content = segsum;
+      truyNode.height = segx5;
+      truyNode.width = 50;
+      diagram.dataBind();
+
+      diagram.removePorts(truyNode, truyNode.ports);
+
+
+      diagram.dataBind();
+
+      if (cs == 0) {
+        for (let i = 0; i < (x1 + 1); i++) {
+          diagram.addPorts(truyNode, [fxPorts[i]]);
+        }
+      }
+
+      if (cs == 1) {
+        for (let i = 0; i < (x1 + 3); i++) {
+          diagram.addPorts(truyNode, [fxPorts[i]]);
+        }
+      }
+
+      diagram.dataBind();
+    }
 
   private changeData3(numberEntity, diagram) {
     let fxPorts = [];
@@ -567,5 +749,29 @@ export class DragDropFormService {
       if (idElementActive.startsWith(i)) return true;
     }
     return false;
+  }
+
+  private getNodesDiagramNodes(data) {
+    return data.map((x) => {
+      return {
+        id: x.properties.id,
+        offsetX: x.properties.offsetX,
+        offsetY: x.properties.offsetY,
+        addInfo: x.properties.addInfo,
+        shape: x.properties.shape,
+        height: x.properties.height,
+        width: x.properties.width,
+        annotations: x.properties.annotations,
+        style: x.properties.style,
+        children: x.properties.id.includes("groupofpeople")
+          ? x.properties.id.split("-").filter((x) => x !== "groupofpeople")
+          : undefined,
+      };
+    });
+  }
+
+  private getItembyIdCommOthers(id) {
+    const find = otherData.find((x) => x.id === id);
+    return find;
   }
 }

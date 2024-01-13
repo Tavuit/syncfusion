@@ -20,7 +20,7 @@ import {DiagramService} from "../../../../../shared/services/diagram.service";
 import {CoreService} from 'src/app/shared/services/core.service';
 import {Subject, map, switchMap, takeUntil} from "rxjs";
 import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
-import { EQUATIONS_DATA } from 'src/app/utils/constants';
+import { dropGrouped, EQUATIONS_DATA } from 'src/app/utils/constants';
 import { ToastrService } from 'ngx-toastr';
 import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
 import { ContinuitySizeComponent } from 'src/app/features/modules/sync-content-detail/components/continuity-size/continuity-size.component';
@@ -31,6 +31,7 @@ import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content
 import { GroupPeopleComponent } from 'src/app/features/modules/sync-content-detail/components/group-people/group-people.component';
 import { MainAreaComponent } from 'src/app/features/modules/sync-content-detail/components/main-area/main-area.component';
 import { CommunicationFunctionGraphComponent } from 'src/app/features/modules/sync-content-detail/components/communication-function-graph/communication-function-graph.component';
+import { ApplicationFunctionTableComponent } from 'src/app/features/modules/sync-content-detail/components/application-function-table/application-function-table.component';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -103,6 +104,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     this.idElementActive = (args.element as Node).id;
     this.dragDropFormService.setActivePopUpId(this.idElementActive);
     this.droppedNode = args.element as Node;
+    const groupList = ['group4', 'group1', 'groupCommunication', 'groupSystem', 'groupTheoryVertical', 'groupFunctionTheory', 'groupFundamental'];
     if (this.idElementActive.startsWith("continuityPerson") || this.idElementActive.startsWith("continuity")) {
       this.titlePopup = 'Continuity Size';
       this.handleInsertComponent(ContinuitySizeComponent);
@@ -128,7 +130,14 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     } else if (this.idElementActive.startsWith('changeofApplication1')) {
       this.titlePopup = 'Change of Communication Function Graph';
       this.handleInsertComponent(CommunicationFunctionGraphComponent);
+    } else if (!this.idElementActive.startsWith("changeofApplication1") && this.idElementActive.startsWith("changeofApplication")) {
+      this.titlePopup = 'Change of Application Function Table';
+      this.handleInsertComponent(ApplicationFunctionTableComponent);
+    } else if (groupList.some(prefix => this.idElementActive.startsWith(prefix))) {
+      this.titlePopup = 'Group Property';
+      this.handleInsertComponent(GroupPropertyComponent);
     }
+    dropGrouped(args.element, args.target, false, this.diagram);
   }
 
   public selectChange(e: any) {

@@ -11,11 +11,25 @@ import { DragDropFormService } from 'src/app/features/modules/sync-content-detai
   styleUrls: ['./communication-function-graph.component.scss']
 })
 export class CommunicationFunctionGraphComponent {
+  public yAxis = [
+    'Communication Function',
+    'Communication Executed Function',
+    'Communication Result',
+    'Application Executed Function',
+    'Application Result'
+  ];
+  public xAxis = [
+    'Communication',
+    'Communication Name',
+    'Communication Order',
+    'Communication Date And Time',
+    'Application Result'
+  ]
   constructor(private dragDropFormService: DragDropFormService) {
     this.dragDropFormService.setCustomComponentForm(
       new FormGroup({
-        yAxis: new FormControl(null),
-        xAxis: new FormControl(null),
+        s1: new FormControl(this.yAxis[0]),
+        s2: new FormControl(this.xAxis[0]),
       })
     );
   }
