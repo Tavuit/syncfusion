@@ -32,7 +32,7 @@ export class SyncDialogComponent implements OnInit {
 
   public targetElement?: HTMLElement;
   public DIALOG_SIZE = {
-    [EDialogSize.SMALL]: '300px',
+    [EDialogSize.SMALL]: '400px',
     [EDialogSize.MEDIUM]: '600px',
     [EDialogSize.LARGE]: '900px',
     [EDialogSize.FULL]: '90%'

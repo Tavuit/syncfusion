@@ -1,0 +1,49 @@
+<form class="form-wrapper" [formGroup]="customComponentForm">
+  <div class="continuity-one-wrapper">
+    <div class="title">Types</div>
+    <div class="radio-wrapper">
+      <ejs-radiobutton
+        formControlName="types"
+        label="House"
+        name="custom"
+        cssClass="e-info"
+        value="dialogMainAreahouse"
+      ></ejs-radiobutton>
+      <ejs-radiobutton
+        formControlName="types"
+        label="Map"
+        name="custom"
+        cssClass="e-info"
+        value="dialogMainAreamap"
+      ></ejs-radiobutton>
+      <ejs-radiobutton
+        formControlName="types"
+        label="Rectangle"
+        name="custom"
+        cssClass="e-info"
+        value="dialogMainArearegular"
+      ></ejs-radiobutton>
+      <ejs-radiobutton
+        formControlName="types"
+        label="Rectangle With Map"
+        name="custom"
+        cssClass="e-info"
+        value="dialogMainArearegularwithmap"
+      ></ejs-radiobutton>
+    </div>
+  </div>
+  <div class="continuity-size-wrapper">
+    <div class="title">{{showTextField ? "Numbers" : "Locations"}}</div>
+    <div *ngIf="showTextField; else selectContry">
+      <input type="number" formControlName="numbers" />
+    </div>
+    <ng-template #selectContry>
+      <ejs-multiselect
+        id="multiselectelement"
+        [dataSource]="country"
+        [placeholder]="placeholder"
+        formControlName="locations"
+      ></ejs-multiselect>
+    </ng-template>
+  </div>
+</form>

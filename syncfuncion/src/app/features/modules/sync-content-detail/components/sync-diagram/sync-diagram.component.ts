@@ -1,15 +1,18 @@
+import { LabelPropertyComponent } from './../label-property/label-property.component';
 import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import {
   Component,
   OnDestroy,
   OnInit,
-  ViewChild
+  ViewChild,
+  ViewContainerRef
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   DiagramAllModule,
   DiagramComponent,
   IDragEnterEventArgs,
+  IDropEventArgs,
   Node,
   SymbolPaletteModule
 } from '@syncfusion/ej2-angular-diagrams';
@@ -17,27 +20,45 @@ import {DiagramService} from "../../../../../shared/services/diagram.service";
 import {CoreService} from 'src/app/shared/services/core.service';
 import {Subject, map, switchMap, takeUntil} from "rxjs";
 import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
-import { EQUATIONS_DATA } from 'src/app/utils/constants';
+import { dropGrouped, EQUATIONS_DATA } from 'src/app/utils/constants';
 import { ToastrService } from 'ngx-toastr';
+import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
+import { ContinuitySizeComponent } from 'src/app/features/modules/sync-content-detail/components/continuity-size/continuity-size.component';
+import { DragDropFormService } from 'src/app/features/modules/sync-content-detail/services/drag-drop-form.service';
+import { NodeTableComponent } from 'src/app/features/modules/sync-content-detail/components/node-table/node-table.component';
+import { GroupPropertyComponent } from 'src/app/features/modules/sync-content-detail/components/group-property/group-property.component';
+import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content-detail/components/multiple-entities/multiple-entities.component';
+import { GroupPeopleComponent } from 'src/app/features/modules/sync-content-detail/components/group-people/group-people.component';
+import { MainAreaComponent } from 'src/app/features/modules/sync-content-detail/components/main-area/main-area.component';
+import { CommunicationFunctionGraphComponent } from 'src/app/features/modules/sync-content-detail/components/communication-function-graph/communication-function-graph.component';
+import { ApplicationFunctionTableComponent } from 'src/app/features/modules/sync-content-detail/components/application-function-table/application-function-table.component';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
-  imports: [CommonModule, DiagramAllModule, SymbolPaletteModule],
+  imports: [CommonModule, DiagramAllModule, SymbolPaletteModule, SyncDialogComponent],
   templateUrl: './sync-diagram.component.html',
   styleUrls: ['./sync-diagram.component.scss']
 })
 export class SyncDiagramComponent implements OnInit, OnDestroy {
   @ViewChild("diagram") diagram?: DiagramComponent;
+  @ViewChild('customComponent', { read: ViewContainerRef }) customComponent: ViewContainerRef;
   private _destroyed: Subject<void> = new Subject<void>();
+  private customComponentInstance;
   public contextMenuSettings = contextMenuSettings;
   public rulerSettings = rulerSettings;
   public tooltipSettings = tooltipSettings;
   public selectedNode: Node;
+  public droppedNode: Node;
+  public showPopup = false;
+  public titlePopup = '';
+  public readonly EDialogSize = EDialogSize;
+  public idElementActive: string;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,
     private ribbonService: RibbonService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private dragDropFormService: DragDropFormService
   ) {
   }
 
@@ -79,14 +100,44 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
 
   }
 
-  public dropped(args: any): void {
-    // Handle the drop event and update the text of the dropped node.
-    // if (args.element && args.element instanceof Node) {
-    //   const droppedNode = args.element as Node;
-    //   droppedNode.annotations[0].content = 'Updated Text';
-    //   this.diagram.addNode(droppedNode);
-    //   this.diagram.dataBind();
-    // }
+  public dropped(args: IDropEventArgs): void {
+    this.idElementActive = (args.element as Node).id;
+    this.dragDropFormService.setActivePopUpId(this.idElementActive);
+    this.droppedNode = args.element as Node;
+    const groupList = ['group4', 'group1', 'groupCommunication', 'groupSystem', 'groupTheoryVertical', 'groupFunctionTheory', 'groupFundamental'];
+    if (this.idElementActive.startsWith("continuityPerson") || this.idElementActive.startsWith("continuity")) {
+      this.titlePopup = 'Continuity Size';
+      this.handleInsertComponent(ContinuitySizeComponent);
+    } else if (this.idElementActive.startsWith('nodeTableComm')) {
+      this.titlePopup = 'Insert Node Table';
+      this.handleInsertComponent(NodeTableComponent);
+    } else if (this.idElementActive.startsWith('communicationMixtureCommunication') || this.idElementActive.startsWith("groupCommunication")) {
+      this.titlePopup = 'Group Property';
+      this.handleInsertComponent(GroupPropertyComponent)
+    } else if (this.idElementActive.startsWith('principleLineOthers') || this.idElementActive.startsWith('stabilityLine1') || this.idElementActive.startsWith('entityInclusionLineHorizontal')
+      || this.idElementActive.startsWith('entityInclusionLineVertical')) {
+      this.titlePopup = 'Entity Has Multiple Entities';
+      this.handleInsertComponent(MultipleEntitiesComponent);
+    } else if (this.dragDropFormService.onCheckOpenModalLabelText(this.idElementActive)) {
+      this.titlePopup = 'Label Property';
+      this.handleInsertComponent(LabelPropertyComponent);
+    } else if (this.idElementActive.startsWith('groupOfPeople')) {
+      this.titlePopup = 'Group Of People';
+      this.handleInsertComponent(GroupPeopleComponent);
+    } else if (this.idElementActive.startsWith('mainArea')) {
+      this.titlePopup = 'Main Area';
+      this.handleInsertComponent(MainAreaComponent);
+    } else if (this.idElementActive.startsWith('changeofApplication1')) {
+      this.titlePopup = 'Change of Communication Function Graph';
+      this.handleInsertComponent(CommunicationFunctionGraphComponent);
+    } else if (!this.idElementActive.startsWith("changeofApplication1") && this.idElementActive.startsWith("changeofApplication")) {
+      this.titlePopup = 'Change of Application Function Table';
+      this.handleInsertComponent(ApplicationFunctionTableComponent);
+    } else if (groupList.some(prefix => this.idElementActive.startsWith(prefix))) {
+      this.titlePopup = 'Group Property';
+      this.handleInsertComponent(GroupPropertyComponent);
+    }
+    dropGrouped(args.element, args.target, false, this.diagram);
   }
 
   public selectChange(e: any) {
@@ -125,6 +176,31 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     }
   }
 
+  public handleVisibleChange(event) {
+    this.showPopup = false;
+  }
+
+  private handleInsertComponent(component): void {
+    this.showPopup = true;
+    this.destroyCustomComponent();
+    this.customComponentInstance = this.customComponent.createComponent(component);
+  }
+
+  private destroyCustomComponent() {
+    if (!!this.customComponent) {
+      this.customComponent.clear();
+      this.customComponentInstance = null;
+    }
+  }
+
+  public handleClickApply() {
+    this.dragDropFormService.handleTransformSelectedNode(this.idElementActive, this.droppedNode, this.diagram);
+    this.showPopup = false;
+  }
+
+  public handleCancel() {
+    this.showPopup = false;
+  }
 
   ngOnDestroy() {
     this._destroyed.next();

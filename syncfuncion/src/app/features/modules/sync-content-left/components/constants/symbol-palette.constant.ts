@@ -86,7 +86,7 @@ export const palettesCommunication: PaletteModel[] = [
     id: 'label',
     expanded: false,
     symbols: getLabelShapes(),
-    title: 'Label',
+    title: 'Labels',
     iconCss: 'e-ddb-icons e-basic',
   },
   {

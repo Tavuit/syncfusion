@@ -1,0 +1,16 @@
+<form class="form-wrapper" [formGroup]="customComponentForm">
+  <div class="continuity-size-wrapper">
+    <div class="title">Label Text</div>
+    <select class="input-form" formControlName="selectLabel1">
+      <option *ngFor="let data of selectLabel1Data" [ngValue]="data">{{data}}</option>
+    </select>
+  </div>
+  <div class="continuity-size-wrapper">
+    <div class="title">Label Text</div>
+    <select class="input-form" formControlName="selectLabel2">
+      <option *ngFor="let data of selectLabel2Data" [ngValue]="data">{{data}}</option>
+    </select>
+  </div>
+  <ejs-checkbox formControlName="negateText" cssClass="e-small" label="Negate Text" labelPosition="After"></ejs-checkbox>
+  <ejs-checkbox formControlName="notNegateText" cssClass="e-small" label="Not Negate Text" labelPosition="After"></ejs-checkbox>
+</form>
