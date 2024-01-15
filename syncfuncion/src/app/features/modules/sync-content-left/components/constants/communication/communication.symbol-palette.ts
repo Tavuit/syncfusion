@@ -5,7 +5,7 @@ import { getShapeByType } from 'src/app/utils/constants';
 export function getCommunicationShapes() {
   const communicationShapes = [
     {
-      ...getShapeByType('', 'communicationEntity', { title: 'Communication Entity', tooltip: 'Communication Entity' }, 'Communication Entity'),
+      ...getShapeByType('', 'communicationEntity', { title: 'Communication Entity', tooltip: 'Communication Entity', menuId: "communication", }, 'Communication Entity'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -16,7 +16,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Text', 'commText', { title: 'Communication', tooltip: 'Communication' }, 'Communication'),
+      ...getShapeByType('Text', 'commText', { title: 'Communication', tooltip: 'Communication', menuId: "communication", }, 'Communication'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -27,7 +27,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'word', { title: 'Word', tooltip: 'Word' }, 'Word'),
+      ...getShapeByType('', 'word', { title: 'Word', tooltip: 'Word', menuId: "word", }, 'Word'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -38,7 +38,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'sentence', { title: 'Sentence', tooltip: 'Sentence' }, 'Sentence'),
+      ...getShapeByType('', 'sentence', { title: 'Sentence', tooltip: 'Sentence', menuId: "sentence", }, 'Sentence'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -49,7 +49,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'paragraph', { title: 'Paragraph', tooltip: 'Paragraph' }, 'Paragraph'),
+      ...getShapeByType('', 'paragraph', { title: 'Paragraph', tooltip: 'Paragraph', menuId: "paragraph", }, 'Paragraph'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -60,7 +60,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'communicationElement', { title: 'Communication Element', tooltip: 'Communication Element' }, 'Communication Element'),
+      ...getShapeByType('', 'communicationElement', { title: 'Communication Element', tooltip: 'Communication Element', menuId: 'communicationElement' }, 'Communication Element'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -71,7 +71,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'communicationProcess', { title: 'Communication Process', tooltip: 'Communication Process' }, 'Communication Process'),
+      ...getShapeByType('', 'communicationProcess', { title: 'Communication Process', tooltip: 'Communication Process', menuId: 'communicationProcess' }, 'Communication Process'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -82,7 +82,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'information', { title: 'Information', tooltip: 'Information' }, 'Information'),
+      ...getShapeByType('', 'information', { title: 'Information', tooltip: 'Information', menuId: 'information' }, 'Information'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -93,7 +93,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'entity', { title: 'Entity', tooltip: 'Entity' }, 'Entity'),
+      ...getShapeByType('', 'entity', { title: 'Entity', tooltip: 'Entity', menuId: 'entity' }, 'Entity'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -104,7 +104,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'question', { title: 'Question', tooltip: 'Question' }, 'Question'),
+      ...getShapeByType('', 'question', { title: 'Question', tooltip: 'Question', menuId: 'question' }, 'Question'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -115,7 +115,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'answer', { title: 'Answer', tooltip: 'Answer' }, 'Answer'),
+      ...getShapeByType('', 'answer', { title: 'Answer', tooltip: 'Answer', menuId: 'answer' }, 'Answer'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -126,7 +126,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'unkownEntity', { title: 'Unknown Entity', tooltip: 'Unknown Entity' }, 'Unknown Entity'),
+      ...getShapeByType('', 'unkownEntity', { title: 'Unknown Entity', tooltip: 'Unknown Entity', menuId: "entity" }, 'Unknown Entity'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -137,7 +137,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'blankEntity', { title: 'Blank Entity', tooltip: 'Blank Entity' }, '?'),
+      ...getShapeByType('', 'blankEntity', { title: 'Blank Entity', tooltip: 'Blank Entity', menuId: "entity", }, '?'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -148,7 +148,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'function', { title: 'Function', tooltip: 'Function' }, 'Function'),
+      ...getShapeByType('', 'function', { title: 'Function', tooltip: 'Function', menuId: "function", }, 'Function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -159,7 +159,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'aspect', { title: 'Aspect', tooltip: 'Aspect' }, 'Aspect'),
+      ...getShapeByType('', 'aspect', { title: 'Aspect', tooltip: 'Aspect', menuId: 'aspect' }, 'Aspect'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -170,7 +170,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'test', { title: 'Test', tooltip: 'Test' }, 'Test'),
+      ...getShapeByType('', 'test', { title: 'Test', tooltip: 'Test', menuId: 'test' }, 'Test'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -181,7 +181,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'functionStatus', { title: 'Function Status', tooltip: 'Function Status' }, 'Function Status'),
+      ...getShapeByType('', 'functionStatus', { title: 'Function Status', tooltip: 'Function Status', menuId: "functionstatus", }, 'Function Status'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -192,7 +192,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'entityUsage', { title: 'Entity Usage', tooltip: 'Entity Usage' }, 'Entity Usage'),
+      ...getShapeByType('', 'entityUsage', { title: 'Entity Usage', tooltip: 'Entity Usage', menuId: "functionstatus", }, 'Entity Usage'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -203,7 +203,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'picture', { title: 'Picture', tooltip: 'Picture' }, 'Picture'),
+      ...getShapeByType('', 'picture', { title: 'Picture', tooltip: 'Picture', menuId: "picture", }, 'Picture'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -214,7 +214,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'video', { title: 'Video', tooltip: 'Video' }, 'Video'),
+      ...getShapeByType('', 'video', { title: 'Video', tooltip: 'Video', menuId: "video", }, 'Video'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -225,7 +225,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'audio', { title: 'Audio', tooltip: 'Audio' }, 'Audio'),
+      ...getShapeByType('', 'audio', { title: 'Audio', tooltip: 'Audio', menuId: "audio", }, 'Audio'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -236,7 +236,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'dictionary', { title: 'Dictionary', tooltip: 'Dictionary' }, {
+      ...getShapeByType('Circle', 'dictionary', { title: 'Dictionary', tooltip: 'Dictionary', menuId: "dictionary", }, {
         radius: 50,
         fill: "none",
         content: [
@@ -257,7 +257,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'wordCommunication', { title: 'Word', tooltip: 'Word' }, {
+    ...getShapeByType('Circle', 'wordCommunication', { title: 'Word', tooltip: 'Word', menuId: "wordCircle", }, {
         fill: "none",
         radius: 25,
         content: [
@@ -276,7 +276,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'collection', { title: 'Collection', tooltip: 'Collection' }, {
+      ...getShapeByType('Circle', 'collection', { title: 'Collection', tooltip: 'Collection', menuId: "collection", }, {
         radius: 50,
         fill: "none",
         content: [
@@ -297,7 +297,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'entityCommunication', { title: 'Entity', tooltip: 'Entity' }, {
+      ...getShapeByType('Circle', 'entityCommunication', { title: 'Entity', tooltip: 'Entity', menuId: "entitycircle", }, {
         fill: "none",
         radius: 25,
         content: [
@@ -316,7 +316,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'relationship123', { title: 'Relationship', tooltip: 'Relationship' }, {
+    ...getShapeByType('Circle', 'relationship123', { title: 'Relationship', tooltip: 'Relationship', menuId: "empty",}, {
         content: [
           {
             content: "Relates",
@@ -336,7 +336,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'comparison', { title: 'Comparison', tooltip: 'Comparison' }, {
+      ...getShapeByType('Circle', 'comparison', { title: 'Comparison', tooltip: 'Comparison', menuId: "empty", }, {
         content: [
           {
             content: "Compare",
@@ -356,7 +356,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'communicationMixtureCommunication1', { title: 'Communication Mixture', tooltip: 'Communication Mixture' }, {
+      ...getShapeByType('', 'communicationMixtureCommunication1', { title: 'Communication Mixture', tooltip: 'Communication Mixture', menuId: "commMix", }, {
         content: [
           {
             content: "Comm Mix",
@@ -401,7 +401,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'communicationMixtureCommunication2', { title: 'Communication Mixture', tooltip: 'Communication Mixture' }, {
+      ...getShapeByType('', 'communicationMixtureCommunication2', { title: 'Communication Mixture', tooltip: 'Communication Mixture', menuId: "commMix", }, {
         content: [
           {
             content: "Comm Mix",
@@ -446,7 +446,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'groupCommunication', { title: 'Group', tooltip: 'Group' }, {
+      ...getShapeByType('', 'groupCommunication', { title: 'Group', tooltip: 'Group', menuId: "commMix", }, {
         content: [
           {
             content: "Group",
@@ -491,7 +491,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Continuity', 'continuityComm', { title: 'Continuity', tooltip: 'Continuity' }, {
+      ...getShapeByType('Continuity', 'continuityComm', { title: 'Continuity', tooltip: 'Continuity', menuId: "empty", }, {
         strokeWidth: "1",
         strokeDashArray: "10 5",
       }),
@@ -505,7 +505,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'entities', { title: 'Entities', tooltip: 'Entities' }, 'Entities'),
+      ...getShapeByType('Overlap', 'entities', { title: 'Entities', tooltip: 'Entities', menuId: "entity", }, 'Entities'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -516,7 +516,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'communicationElements', { title: 'Communication Elements', tooltip: 'Communication Elements' }, 'Communication Elements'),
+      ...getShapeByType('Overlap', 'communicationElements', { title: 'Communication Elements', tooltip: 'Communication Elements', menuId: "communication", }, 'Communication Elements'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |

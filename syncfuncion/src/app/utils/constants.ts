@@ -5549,7 +5549,6 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
             diagram.dataBind();
             //diagram.refresh();
           } else {
-            console.log('run else');
             if (
               communicationDroppedElementChecker(source, parentNode) ||
               ignoreCond
@@ -5558,13 +5557,14 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
               diagram.group();
               let group = diagram.getObject(parentNode.parentId);
               let alerted = checkDropAlert(group, source, parentNode);
+
               if (alerted) {
                 diagram.unGroup();
                 return alert(alerted);
               }
               let newNode = diagram.getObject(source.id);
-              parentNode.height = parentNode.height - 30;
-              parentNode.width = parentNode.width - 100;
+              // parentNode.height = parentNode.height - 30;
+              // parentNode.width = parentNode.width - 100;
               parentNode.offsetX = parentNode.offsetX;
               parentNode.offsetY = parentNode.offsetY;
               parentNode.annotations[0].offset = {x: 0.5, y: -0.1};
@@ -5602,6 +5602,7 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
             //let firstChild = diagram.getObject(group.children[0]);
             let firstChild = parentNode;
             let alerted = checkDropAlert(group, node, firstChild);
+
             if (alerted) {
               return alert(alerted);
             }
@@ -5724,6 +5725,7 @@ export function dropGrouped(node, parentNode, ignoreCond, diagram) {
               diagram.select([parentNode, source]);
               diagram.group();
               let group = diagram.getObject(parentNode.parentId);
+
               let alerted = checkDropAlert(group, source, parentNode);
               if (alerted) {
                 diagram.unGroup();
@@ -5984,8 +5986,18 @@ export function communicationDroppedElementChecker(id, parentId) {
 }
 
 export function checkDropAlert(group, source, n) {
-  let checkedSource = source.addInfo[0].menuId;
-  let checkedNode = n.addInfo[0].menuId;
+  let checkedSource;
+  if (Array.isArray(source.addInfo)) {
+    checkedSource = source.addInfo[0].menuId;
+  } else {
+    checkedSource = source.addInfo.menuId;
+  }
+  let checkedNode;
+  if (Array.isArray(n.addInfo)) {
+    checkedNode = n.addInfo[0].menuId;
+  } else {
+    checkedNode = n.addInfo.menuId;
+  }
 
   if (checkedSource === "principle" && checkedNode === "principle") {
     return "While a principle may have multiple parts, for now consider it as one entity.";
