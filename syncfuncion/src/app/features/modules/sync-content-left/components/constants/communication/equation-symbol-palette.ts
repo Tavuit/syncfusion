@@ -6,13 +6,11 @@ export function getEquationsShape(): NodeModel[] {
   let equationsShape: NodeModel[] = [
     {
       id: "equationWithBorder",
-      addInfo: {title: "Equation with border", tooltip: "Equation with border"},
+      addInfo: {title: "Equation with border", tooltip: "Equation with border", },
+
       shape: {
-        type: "Native",
-        content: `
-            <g transform="translate(2,2)">
-              <rect vector-effect="non-scaling-stroke" height="${height}" width="${width}" stroke="black" stroke-width="1" fill="transparent" />
-            </g>`,
+        type: "HTML",
+        content: `<div style='border: 1px solid black; height:100%; width: 100%'><math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border" style='height:100%; width: 100%;'></math-field></div>`,
       },
       width: width,
       height: height,

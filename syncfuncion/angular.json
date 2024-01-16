@@ -35,9 +35,17 @@
             ],
             "styles": [
               "src/styles.scss",
-              "node_modules/ngx-toastr/toastr.css"
+              "node_modules/ngx-toastr/toastr.css",
+              "src/assets/math-quill/mathquill.css",
+              "node_modules/mathlive/dist/mathlive-fonts.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "src/assets/math-quill/mathquill-basic.js",
+              "src/assets/math-quill/mathquill.js",
+              "src/assets/math-quill/init.js",
+              "node_modules/mathlive/dist/mathlive.js"
+            ]
           },
           "configurations": {
             "production": {

@@ -164,15 +164,18 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
       }
 
       // TODO: handle insert operator
-
-      // selectedItemDivID = this.selectedNode?.id;
-      // selectedItemDivID = selectedItemDivID + SALT;
-      // const $wrapper = document.getElementById(selectedItemDivID)
-      // let mqInput: any = $wrapper.querySelector("#mathquill-mathquill-input-border");
-      // mqInput.executeCommand(['insert', operator]);
-      // const updatedNode = this.selectedNode;
-      // updatedNode.annotations[0].content += operator;
-      // this.diagram.dataBind();
+      console.log(equation)
+      console.log(this.selectedNode);
+      selectedItemDivID = this.selectedNode?.id;
+      selectedItemDivID = selectedItemDivID + SALT;
+      const $wrapper = document.getElementById(selectedItemDivID)
+      console.log(selectedItemDivID, $wrapper)
+      let mqInput: any = $wrapper.querySelector("math-field");
+      console.log(mqInput.executeCommand)
+      mqInput.executeCommand(['insert', operator]);
+      const updatedNode = this.selectedNode;
+      updatedNode.annotations[0].content += operator;
+      this.diagram.dataBind();
     }
   }
 
