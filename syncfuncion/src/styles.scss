@@ -146,3 +146,10 @@ body {
 .line-height-20 {
   line-height: 20px;
 }
+
+//math-field virtual keyboard
+@media not (pointer: coarse) {
+  math-field::part(virtual-keyboard-toggle) {
+    display: none;
+  }
+}
