@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "syncfuncion": {
+    "syncfusion": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -18,7 +18,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/syncfuncion",
+            "outputPath": "dist/syncfusion",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -82,10 +82,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "syncfuncion:build:production"
+              "browserTarget": "syncfusion:build:production"
             },
             "development": {
-              "browserTarget": "syncfuncion:build:development"
+              "browserTarget": "syncfusion:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -93,7 +93,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "syncfuncion:build"
+            "browserTarget": "syncfusion:build"
           }
         },
         "test": {
@@ -113,6 +113,14 @@
               "src/styles.scss"
             ],
             "scripts": []
+          }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://tavuit.github.io/syncfusion/",
+            "name": "Syncfusion Team",
+            "email": "tavuit.github.io"
           }
         }
       }

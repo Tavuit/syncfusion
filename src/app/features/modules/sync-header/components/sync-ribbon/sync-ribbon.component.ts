@@ -40,27 +40,27 @@ export class SyncRibbonComponent implements OnInit, OnDestroy {
   public fakeData = [
     {
       text: 'Image',
-      img: '/assets/images/captureimageproject.png'
+      img: 'assets/images/captureimageproject.png'
     },
     {
       text: 'Video',
-      img: '/assets/images/reconrdvideoproject1.png'
+      img: 'assets/images/reconrdvideoproject1.png'
     },
     {
       text: 'Audio',
-      img: '/assets/images/recordaudioproject1.png'
+      img: 'assets/images/recordaudioproject1.png'
     },
     {
       text: 'Edit Image',
-      img: '/assets/images/editimageproject.png'
+      img: 'assets/images/editimageproject.png'
     },
     {
       text: 'Edit Video',
-      img: '/assets/images/editvideoproject.png'
+      img: 'assets/images/editvideoproject.png'
     },
     {
       text: 'Settings',
-      img: '/assets/images/settingproject1.png'
+      img: 'assets/images/settingproject1.png'
     }];
   public EDialogSize = EDialogSize;
 
