@@ -47,7 +47,15 @@ export class DragDropFormService {
   }
 
   handleTransformSelectedNode(actionPopUpId, currentNode, diagram) {
-    const groupList = ['group4', 'group1', 'groupCommunication', 'groupSystem', 'groupTheoryVertical', 'groupFunctionTheory', 'groupFundamental'];
+    const groupList = [
+      'group4',
+      'group1',
+      'groupCommunication',
+      'groupSystem',
+      'groupTheoryVertical',
+      'groupFunctionTheory',
+      'groupFundamental',
+    ];
     const numberInput = this.customComponentForm?.get('numberInput')?.value;
     if (
       actionPopUpId.startsWith('continuityPerson') ||
@@ -334,8 +342,8 @@ export class DragDropFormService {
       item.offsetX = nodes[0].offsetX;
       item.offsetY = nodes[0].offsetY;
       diagram.nodes = [item];
-    } else if (groupList.some(prefix => actionPopUpId.startsWith(prefix))) {
-      this.ChangeData1(numberInput, 0 ,diagram);
+    } else if (groupList.some((prefix) => actionPopUpId.startsWith(prefix))) {
+      this.ChangeData1(numberInput, 0, diagram);
     }
 
     diagram.dataBind();
@@ -345,114 +353,110 @@ export class DragDropFormService {
   }
 
   private ChangeData1(x1, cs, diagram) {
+    x1 = parseInt(x1);
 
+    let fxPorts = [];
 
-    //let diagramData= JSON.parse(document.getElementById('diagram').ej2_instances[0].saveDiagram());
-
-
-    //diagramData.nodes[diagramData.nodes.length-1].annotations[0].content=x4;
-
-
-      x1 = parseInt(x1);
-
-      let fxPorts = [];
-
-
-      for (let i = 0; i < x1; i++) {
-        let stam = {
-          id: 'Lefttg',
-          offset: {
-            x: 0, y: 0.5
-          },
-          visibility: 1,
-          shape: 'Circle',
-          width: 2,
-          height: 2
-        };
-        stam.id = 'Left' + (i + 1).toString();
-        stam.offset.x = 0;
-        stam.offset.y = (i + 1) / (x1 + 1);
-        fxPorts[i] = stam;
-      }
-
-      fxPorts[x1] = {
-        id: 'RightMidlle',
+    for (let i = 0; i < x1; i++) {
+      let stam = {
+        id: 'Lefttg',
         offset: {
-          x: 1, y: 0.5
+          x: 0,
+          y: 0.5,
         },
         visibility: 1,
         shape: 'Circle',
         width: 2,
-        height: 2
+        height: 2,
       };
+      stam.id = 'Left' + (i + 1).toString();
+      stam.offset.x = 0;
+      stam.offset.y = (i + 1) / (x1 + 1);
+      fxPorts[i] = stam;
+    }
 
-      fxPorts[x1 + 1] = {
-        id: 'BottomMidlle',
-        offset: {
-          x: 0.5, y: 0
-        },
-        visibility: 1,
-        shape: 'Circle',
-        width: 2,
-        height: 2
-      };
+    fxPorts[x1] = {
+      id: 'RightMidlle',
+      offset: {
+        x: 1,
+        y: 0.5,
+      },
+      visibility: 1,
+      shape: 'Circle',
+      width: 2,
+      height: 2,
+    };
 
-      fxPorts[x1 + 2] = {
-        id: 'TopMidlle',
-        offset: {
-          x: 0.5, y: 1
-        },
-        visibility: 1,
-        shape: 'Circle',
-        width: 2,
-        height: 2
-      };
+    fxPorts[x1 + 1] = {
+      id: 'BottomMidlle',
+      offset: {
+        x: 0.5,
+        y: 0,
+      },
+      visibility: 1,
+      shape: 'Circle',
+      width: 2,
+      height: 2,
+    };
 
+    fxPorts[x1 + 2] = {
+      id: 'TopMidlle',
+      offset: {
+        x: 0.5,
+        y: 1,
+      },
+      visibility: 1,
+      shape: 'Circle',
+      width: 2,
+      height: 2,
+    };
 
-      let segx5 = 75;
-      if (x1 > 3) {
-        segx5 = (x1 + 1) * 20;
-      }
-
+    let segx5 = 75;
+    if (x1 > 3) {
+      segx5 = (x1 + 1) * 20;
+    }
 
     //ham nay de lay ma, luon luon su dung ham nay
     //dia1=JSON.stringify(diagramData);
 
-
-      let segsum = "<g transform=\"translate(2, 2)\"><rect vector-effect=\"non-scaling-stroke\" height=\"" + segx5.toString() + "\" width=\"50\" stroke=\"black\" stroke-width=\"1\" fill=\"transparent\"></rect><foreignObject class=\"symbol-text-container\" x=\"6.25\" width=\"37.5\" height=\"" + segx5.toString() + "\" visibility=\"hidden\"><div style=\"height:100px\" class=\"flex-container\"><div width=\"37.5\" class=\"symbol-text-element\">Group</div></div></foreignObject></g>";
-
+    let segsum =
+      '<g transform="translate(2, 2)"><rect vector-effect="non-scaling-stroke" height="' +
+      segx5.toString() +
+      '" width="50" stroke="black" stroke-width="1" fill="transparent"></rect><foreignObject class="symbol-text-container" x="6.25" width="37.5" height="' +
+      segx5.toString() +
+      '" visibility="hidden"><div style="height:100px" class="flex-container"><div width="37.5" class="symbol-text-element">Group</div></div></foreignObject></g>';
 
     //diagramData.nodes[diagramData.nodes.length-1].shape.content=segsum;
     //diagramData.nodes[diagramData.nodes.length-1].height=segx5;
     //diagramData.nodes[diagramData.nodes.length-1].width=50;
     //diagramData.nodes[diagramData.nodes.length-1].ports=fxPorts;
 
+    let truyNode = diagram.getObject(
+      diagram.nodes[diagram.nodes.length - 1].id
+    );
+    truyNode.shape.content = segsum;
+    truyNode.height = segx5;
+    truyNode.width = 50;
+    diagram.dataBind();
 
-      let truyNode = diagram.getObject(diagram.nodes[diagram.nodes.length - 1].id);
-      truyNode.shape.content = segsum;
-      truyNode.height = segx5;
-      truyNode.width = 50;
-      diagram.dataBind();
+    diagram.removePorts(truyNode, truyNode.ports);
 
-      diagram.removePorts(truyNode, truyNode.ports);
+    diagram.dataBind();
 
-
-      diagram.dataBind();
-
-      if (cs == 0) {
-        for (let i = 0; i < (x1 + 1); i++) {
-          diagram.addPorts(truyNode, [fxPorts[i]]);
-        }
+    if (cs == 0) {
+      for (let i = 0; i < x1 + 1; i++) {
+        diagram.addPorts(truyNode, [fxPorts[i]]);
       }
-
-      if (cs == 1) {
-        for (let i = 0; i < (x1 + 3); i++) {
-          diagram.addPorts(truyNode, [fxPorts[i]]);
-        }
-      }
-
-      diagram.dataBind();
     }
+
+    if (cs == 1) {
+      for (let i = 0; i < x1 + 3; i++) {
+        diagram.addPorts(truyNode, [fxPorts[i]]);
+      }
+    }
+
+    diagram.dataBind();
+  }
 
   private changeData3(numberEntity, diagram) {
     let fxPorts = [];
@@ -763,8 +767,8 @@ export class DragDropFormService {
         width: x.properties.width,
         annotations: x.properties.annotations,
         style: x.properties.style,
-        children: x.properties.id.includes("groupofpeople")
-          ? x.properties.id.split("-").filter((x) => x !== "groupofpeople")
+        children: x.properties.id.includes('groupofpeople')
+          ? x.properties.id.split('-').filter((x) => x !== 'groupofpeople')
           : undefined,
       };
     });
