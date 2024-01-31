@@ -6596,3 +6596,12 @@ export const otherData: any[] = [
 export function randomId() {
   return (Math.random() + 1).toString(36).substring(7);
 }
+
+export function camelize(str) {
+  return str
+    .replace(/(?:^\w|[A-Z]|\b\w)/g, function (word, index) {
+      return index === 0 ? word.toLowerCase() : word.toUpperCase();
+    })
+    .replace(/\s+/g, "")
+    .replace(/[^\w\s]/gi, "");
+}

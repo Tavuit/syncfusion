@@ -1,3 +1,4 @@
+import { DiagramContextMenuService } from './../../../../../shared/services/diagram-context-menu.service';
 import { LabelPropertyComponent } from './../label-property/label-property.component';
 import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import {
@@ -9,7 +10,9 @@ import {
 } from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
+  ContextMenuSettingsModel,
   DiagramAllModule,
+  DiagramBeforeMenuOpenEventArgs,
   DiagramComponent,
   IDragEnterEventArgs,
   IDropEventArgs,
@@ -19,7 +22,7 @@ import {
 import {DiagramService} from "../../../../../shared/services/diagram.service";
 import {CoreService} from 'src/app/shared/services/core.service';
 import {Subject, map, switchMap, takeUntil} from "rxjs";
-import {contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
+import {contextMenuBaseItems, contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
 import { dropGrouped, EQUATIONS_DATA } from 'src/app/utils/constants';
 import { ToastrService } from 'ngx-toastr';
 import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
@@ -44,7 +47,10 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   @ViewChild('customComponent', { read: ViewContainerRef }) customComponent: ViewContainerRef;
   private _destroyed: Subject<void> = new Subject<void>();
   private customComponentInstance;
-  public contextMenuSettings = contextMenuSettings;
+  public contextMenuSettings: ContextMenuSettingsModel = {
+    ...contextMenuSettings,
+    items: this.diagramContextMenuService.mappedArrayContext
+  };
   public rulerSettings = rulerSettings;
   public tooltipSettings = tooltipSettings;
   public selectedNode: Node;
@@ -58,7 +64,8 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     private coreService: CoreService,
     private ribbonService: RibbonService,
     private toastrService: ToastrService,
-    private dragDropFormService: DragDropFormService
+    private dragDropFormService: DragDropFormService,
+    private diagramContextMenuService: DiagramContextMenuService,
   ) {
   }
 
@@ -70,7 +77,9 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
       if (equation) {
         this.handleInsertEquation(equation);
       }
-    })
+    });
+
+  console.log(this.diagramContextMenuService.mappedArrayContext);
 
     this.coreService.getDomain()
       .pipe(
@@ -91,6 +100,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
         this.renderComponent(diagramModel?.['DATA']);
       })
   }
+  
 
   renderComponent(componentRef: any) {
 
@@ -98,6 +108,29 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
 
   destroyComponent(componentRef: any) {
 
+  }
+
+  public handleContextMenuOpen(args: DiagramBeforeMenuOpenEventArgs) {
+    let bpmnShape =
+      (!this.diagram?.selectedItems?.nodes[0]?.addInfo &&
+      this.diagram?.selectedItems?.nodes[0]?.children?.length > 0
+        ? this.diagram.getObject(this.diagram.selectedItems.nodes[0].children[0])
+        : this.diagram.selectedItems.nodes[0]) as Node;
+    if (this.diagram?.selectedItems?.nodes[0] && bpmnShape?.addInfo) {
+      let menuId = (bpmnShape?.addInfo as any).menuId;
+      args.hiddenItems = this.diagramContextMenuService.mappedArrayContext
+        .reduce((arr, item) => {
+          if (menuId && item.parentId !== menuId) {
+            arr.push(item.id);
+          }
+          return arr;
+        }, [])
+        .concat("baseCopy", "basePaste", "baseCut", "baseEdit", "baseSelect");
+    } else {
+      args.hiddenItems = this.diagramContextMenuService.mappedArrayContext.reduce((arr, item) => {
+        return arr.concat(item.id);
+      }, []);
+    }
   }
 
   public dropped(args: IDropEventArgs): void {

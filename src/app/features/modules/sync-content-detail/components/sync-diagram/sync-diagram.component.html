@@ -6,6 +6,7 @@
   (drop)="dropped($event)"
   (selectionChange)="selectChange($event)"
   [contextMenuSettings]="contextMenuSettings"
+  (contextMenuOpen)="handleContextMenuOpen($event)"
   [rulerSettings]="rulerSettings"
   [tooltip]="tooltipSettings">
 </ejs-diagram>

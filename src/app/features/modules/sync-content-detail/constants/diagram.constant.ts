@@ -1,39 +1,38 @@
 import {ContextMenuSettingsModel, DiagramTooltipModel, RulerSettingsModel} from "@syncfusion/ej2-angular-diagrams";
 
+export const contextMenuBaseItems = [
+  {
+    id: "baseCopy",
+    onClick: "",
+    text: "Copy",
+    icon: "flaticon-copy",
+  },
+  {
+    id: "basePaste",
+    onClick: "",
+    text: "Paste",
+    icon: "flaticon-paste",
+  },
+  {
+    id: "baseCut",
+    onClick: "",
+    text: "Cut",
+    icon: "flaticon-scissors",
+  },
+  {
+    id: "baseEdit",
+    onClick: "",
+    text: "Edit Text",
+  },
+  {
+    id: "baseSelect",
+    onClick: "",
+    text: "Select All",
+  },
+];
 export const contextMenuSettings: ContextMenuSettingsModel = {
   show: true,
-  items: [
-    {
-      text: 'Save',
-      id: 'save',
-      target: '.e-elementcontent',
-    },
-    {
-      text: 'Copy',
-      id: 'copy',
-      target: '.e-elementcontent',
-    },
-    {
-      text: 'Paste',
-      id: 'paste',
-      target: '.e-elementcontent',
-    },
-    {
-      text: 'Cut',
-      id: 'cut',
-      target: '.e-elementcontent',
-    },
-    {
-      text: 'Edit text',
-      id: 'edit',
-      target: '.e-elementcontent',
-    },
-    {
-      text: 'Select all',
-      id: 'select',
-      target: '.e-elementcontent',
-    },
-  ],
+  items: [],
   showCustomMenuOnly: true,
 };
 
