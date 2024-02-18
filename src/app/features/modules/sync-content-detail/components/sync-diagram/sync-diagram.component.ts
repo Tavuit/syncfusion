@@ -1,40 +1,42 @@
-import { DiagramContextMenuService } from './../../../../../shared/services/diagram-context-menu.service';
-import { LabelPropertyComponent } from './../label-property/label-property.component';
-import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
+import { CommonModule } from '@angular/common';
 import {
+  AfterViewInit,
   Component,
   OnDestroy,
   OnInit,
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
-import {CommonModule} from '@angular/common';
 import {
   ContextMenuSettingsModel,
   DiagramAllModule,
   DiagramBeforeMenuOpenEventArgs,
   DiagramComponent,
-  IDragEnterEventArgs,
   IDropEventArgs,
+  IPropertyChangeEventArgs,
   Node,
   SymbolPaletteModule
 } from '@syncfusion/ej2-angular-diagrams';
-import {DiagramService} from "../../../../../shared/services/diagram.service";
-import {CoreService} from 'src/app/shared/services/core.service';
-import {Subject, map, switchMap, takeUntil} from "rxjs";
-import {contextMenuBaseItems, contextMenuSettings, rulerSettings, tooltipSettings} from "../../constants/diagram.constant";
-import { dropGrouped, EQUATIONS_DATA } from 'src/app/utils/constants';
 import { ToastrService } from 'ngx-toastr';
-import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
-import { ContinuitySizeComponent } from 'src/app/features/modules/sync-content-detail/components/continuity-size/continuity-size.component';
-import { DragDropFormService } from 'src/app/features/modules/sync-content-detail/services/drag-drop-form.service';
-import { NodeTableComponent } from 'src/app/features/modules/sync-content-detail/components/node-table/node-table.component';
-import { GroupPropertyComponent } from 'src/app/features/modules/sync-content-detail/components/group-property/group-property.component';
-import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content-detail/components/multiple-entities/multiple-entities.component';
-import { GroupPeopleComponent } from 'src/app/features/modules/sync-content-detail/components/group-people/group-people.component';
-import { MainAreaComponent } from 'src/app/features/modules/sync-content-detail/components/main-area/main-area.component';
-import { CommunicationFunctionGraphComponent } from 'src/app/features/modules/sync-content-detail/components/communication-function-graph/communication-function-graph.component';
+import { Observable, Subject, debounceTime, map, switchMap, takeUntil } from "rxjs";
 import { ApplicationFunctionTableComponent } from 'src/app/features/modules/sync-content-detail/components/application-function-table/application-function-table.component';
+import { CommunicationFunctionGraphComponent } from 'src/app/features/modules/sync-content-detail/components/communication-function-graph/communication-function-graph.component';
+import { ContinuitySizeComponent } from 'src/app/features/modules/sync-content-detail/components/continuity-size/continuity-size.component';
+import { GroupPeopleComponent } from 'src/app/features/modules/sync-content-detail/components/group-people/group-people.component';
+import { GroupPropertyComponent } from 'src/app/features/modules/sync-content-detail/components/group-property/group-property.component';
+import { MainAreaComponent } from 'src/app/features/modules/sync-content-detail/components/main-area/main-area.component';
+import { MultipleEntitiesComponent } from 'src/app/features/modules/sync-content-detail/components/multiple-entities/multiple-entities.component';
+import { NodeTableComponent } from 'src/app/features/modules/sync-content-detail/components/node-table/node-table.component';
+import { DragDropFormService } from 'src/app/features/modules/sync-content-detail/services/drag-drop-form.service';
+import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
+import { EDomain } from 'src/app/shared/enums/core.enum';
+import { CoreService } from 'src/app/shared/services/core.service';
+import { EQUATIONS_DATA, dropGrouped } from 'src/app/utils/constants';
+import { DiagramService } from "../../../../../shared/services/diagram.service";
+import { contextMenuSettings, rulerSettings, tooltipSettings } from "../../constants/diagram.constant";
+import { DiagramContextMenuService } from './../../../../../shared/services/diagram-context-menu.service';
+import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
+import { LabelPropertyComponent } from './../label-property/label-property.component';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -42,7 +44,7 @@ import { ApplicationFunctionTableComponent } from 'src/app/features/modules/sync
   templateUrl: './sync-diagram.component.html',
   styleUrls: ['./sync-diagram.component.scss']
 })
-export class SyncDiagramComponent implements OnInit, OnDestroy {
+export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild("diagram") diagram?: DiagramComponent;
   @ViewChild('customComponent', { read: ViewContainerRef }) customComponent: ViewContainerRef;
   private _destroyed: Subject<void> = new Subject<void>();
@@ -59,6 +61,11 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   public titlePopup = '';
   public readonly EDialogSize = EDialogSize;
   public idElementActive: string;
+  public data: Object = {
+
+  }
+  currentDomain: EDomain
+  currentModel: import("e:/code/syncfusion/src/app/shared/enums/diagram.enum").EDiagramModel;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,
@@ -68,42 +75,36 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
     private diagramContextMenuService: DiagramContextMenuService,
   ) {
   }
+  ngAfterViewInit(): void {
+    (this.diagram.propertyChange as Observable<IPropertyChangeEventArgs>).pipe(debounceTime(300)).subscribe(rs => {
+      this.coreService.saveDiagramModel(this.currentModel, JSON.parse(this.diagram.saveDiagram()))
+    })
+  }
 
   ngOnInit(): void {
     this.ribbonService.getInsertAnnotationContentBS().pipe(
       takeUntil(this._destroyed)
     )
-    .subscribe((equation) => {
-      if (equation) {
-        this.handleInsertEquation(equation);
+      .subscribe((equation) => {
+        if (equation) {
+          this.handleInsertEquation(equation);
+        }
+      });
+
+    this.diagramService.getDiagram().pipe(takeUntil(this._destroyed)).subscribe(rs => {
+      if(rs) {
+        this.renderComponent(rs)
       }
-    });
+    })
 
-  console.log(this.diagramContextMenuService.mappedArrayContext);
-
-    this.coreService.getDomain()
-      .pipe(
-        switchMap((domain) => this.diagramService.getModel()
-          .pipe(
-            switchMap((diagramModel) => this.coreService.getCurrentModel()
-              .pipe(
-                map((currentModel) => {
-                  return diagramModel[domain]?.find(model => model.LABEL === currentModel)
-                })
-              )
-            )
-          )
-        ),
-        takeUntil(this._destroyed),
-      )
-      .subscribe((diagramModel) => {
-        this.renderComponent(diagramModel?.['DATA']);
-      })
+    this.coreService.getCurrentModel().pipe(takeUntil(this._destroyed)).subscribe(rs => {
+      this.currentModel = rs;
+    })
   }
-  
+
 
   renderComponent(componentRef: any) {
-
+    this.diagram?.loadDiagram(componentRef);
   }
 
   destroyComponent(componentRef: any) {
@@ -113,7 +114,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
   public handleContextMenuOpen(args: DiagramBeforeMenuOpenEventArgs) {
     let bpmnShape =
       (!this.diagram?.selectedItems?.nodes[0]?.addInfo &&
-      this.diagram?.selectedItems?.nodes[0]?.children?.length > 0
+        this.diagram?.selectedItems?.nodes[0]?.children?.length > 0
         ? this.diagram.getObject(this.diagram.selectedItems.nodes[0].children[0])
         : this.diagram.selectedItems.nodes[0]) as Node;
     if (this.diagram?.selectedItems?.nodes[0] && bpmnShape?.addInfo) {
@@ -171,6 +172,11 @@ export class SyncDiagramComponent implements OnInit, OnDestroy {
       this.handleInsertComponent(GroupPropertyComponent);
     }
     dropGrouped(args.element, args.target, false, this.diagram);
+    console.log(this.diagram.saveDiagram())
+  }
+
+  propertyChange(data) {
+
   }
 
   public selectChange(e: any) {

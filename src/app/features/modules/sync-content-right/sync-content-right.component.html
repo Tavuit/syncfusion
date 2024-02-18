@@ -4,7 +4,7 @@
       Models
     </div>
     <div class="section-content">
-      <sync-tree-view [dataSource]="treeViewData" (clickTreeItem)="handleClickTreeItem($event)"></sync-tree-view>
+      <sync-tree-view [dataSource]="treeViewData" [activeItem]="currentModel" (clickTreeItem)="handleClickTreeItem($event)"></sync-tree-view>
     </div>
   </div>
 

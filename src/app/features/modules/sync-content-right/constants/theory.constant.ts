@@ -73,3 +73,11 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
   {id: 23, pid: 8, name: 'Philosophy Inheritance Chart', iconName: 'flow-chart-1', hasChild: false},
   {id: 24, pid: 8, name: 'Other Stability Model', iconName: 'flow-chart-1', hasChild: false}
 ]
+
+//TODO UPDATE FUNCTION WHEN CTREE VIEW ELEMENTS HAVE CHILD
+export const THEORY_PROJECT_MODEL_MAP = CTreeViewDataTheory.reduce((prev,curr) => {
+  return {
+    ...prev,
+    [curr.enums]: curr
+  }
+},{})

@@ -231,27 +231,27 @@ export const ERibbon: IRibbon = {
     {
       id: 'containerPlain',
       text: 'Plain',
-      img: '~src/assets/images/plainsubmenucontainerinsert.png'
+      img: '/assets/images/plainsubmenucontainerinsert.png'
     },
     {
       id: 'containerClassic',
       text: 'Classic',
-      img: '~src/assets/images/classicsubmenucontainerinsert.png'
+      img: '/assets/images/classicsubmenucontainerinsert.png'
     },
     {
       id: 'containerCorners',
       text: 'Corners',
-      img: '~src/assets/images/cornerssubmenucontainerinsert.png'
+      img: '/assets/images/cornerssubmenucontainerinsert.png'
     },
     {
       id: 'containerAlternating',
       text: 'Alternating',
-      img: '~src/assets/images/alternatingsubmenucontainerinsert.png'
+      img: '/assets/images/alternatingsubmenucontainerinsert.png'
     },
     {
       id: 'containerBanner',
       text: 'Banner',
-      img: '~src/assets/images/bannersubmenucontainerinsert.png'
+      img: '/assets/images/bannersubmenucontainerinsert.png'
     }
   ],
   listSettings: {
@@ -267,31 +267,31 @@ export const ERibbon: IRibbon = {
         {
           id: 'listVerticalPlan',
           text: 'Plain',
-          img: '~src/assets/images/plainsubmenucontainerinsert.png',
+          img: '/assets/images/plainsubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
           id: 'listVerticalClassic',
           text: 'Classic',
-          img: '~src/assets/images/classicsubmenucontainerinsert.png',
+          img: '/assets/images/classicsubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
           id: 'listVerticalCorners',
           text: 'Corners',
-          img: '~src/assets/images/cornerssubmenucontainerinsert.png',
+          img: '/assets/images/cornerssubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
           id: 'listVerticalAlternating',
           text: 'Alternating',
-          img: '~src/assets/images/alternatingsubmenucontainerinsert.png',
+          img: '/assets/images/alternatingsubmenucontainerinsert.png',
           group: 'Vertical'
         },
         {
           id: 'listVerticalBanner',
           text: 'Banner',
-          img: '~src/assets/images/bannersubmenucontainerinsert.png',
+          img: '/assets/images/bannersubmenucontainerinsert.png',
           group: 'Vertical'
         }
       ]
@@ -302,31 +302,31 @@ export const ERibbon: IRibbon = {
         {
           id: 'listHorizontalPlan',
           text: 'Plain',
-          img: '~src/assets/images/plainsubmenucontainerinsert.png',
+          img: '/assets/images/plainsubmenucontainerinsert.png',
           group: 'Horizontal'
         },
         {
           id: 'listHorizontalClassic',
           text: 'Classic',
-          img: '~src/assets/images/classicsubmenucontainerinsert.png',
+          img: '/assets/images/classicsubmenucontainerinsert.png',
           group: 'VertHorizontalical'
         },
         {
           id: 'listHorizontalCorners',
           text: 'Corners',
-          img: '~src/assets/images/cornerssubmenucontainerinsert.png',
+          img: '/assets/images/cornerssubmenucontainerinsert.png',
           group: 'Horizontal'
         },
         {
           id: 'listHorizontalAlternating',
           text: 'Alternating',
-          img: '~src/assets/images/alternatingsubmenucontainerinsert.png',
+          img: '/assets/images/alternatingsubmenucontainerinsert.png',
           group: 'Horizontal'
         },
         {
           id: 'listHorizontalBanner',
           text: 'Banner',
-          img: '~src/assets/images/bannersubmenucontainerinsert.png',
+          img: '/assets/images/bannersubmenucontainerinsert.png',
           group: 'Horizontal'
         }
       ]
@@ -381,59 +381,59 @@ export const ERibbon: IRibbon = {
   functionDropdownData: [
     {
       id: 'function_1',
-      img: '~src/assets/images/function_1.png'
+      img: '/assets/images/function_1.png'
     },
     {
       id: 'function_2',
-      img: '~src/assets/images/function_2.png'
+      img: '/assets/images/function_2.png'
     },
     {
       id: 'function_3',
-      img: '~src/assets/images/function_3.png'
+      img: '/assets/images/function_3.png'
     },
     {
       id: 'function_4',
-      img: '~src/assets/images/function_4.png'
+      img: '/assets/images/function_4.png'
     },
     {
       id: 'function_5',
-      img: '~src/assets/images/function_5.png'
+      img: '/assets/images/function_5.png'
     },
     {
       id: 'function_6',
-      img: '~src/assets/images/function_6.png'
+      img: '/assets/images/function_6.png'
     },
     {
       id: 'function_7',
-      img: '~src/assets/images/function_7.png'
+      img: '/assets/images/function_7.png'
     },
     {
       id: 'function_8',
-      img: '~src/assets/images/function_8.png'
+      img: '/assets/images/function_8.png'
     },
     {
       id: 'function_9',
-      img: '~src/assets/images/function_9.png'
+      img: '/assets/images/function_9.png'
     },
     {
       id: 'function_10',
-      img: '~src/assets/images/function_10.png'
+      img: '/assets/images/function_10.png'
     },
     {
       id: 'function_11',
-      img: '~src/assets/images/function_11.png'
+      img: '/assets/images/function_11.png'
     },
     {
       id: 'function_12',
-      img: '~src/assets/images/function_12.png'
+      img: '/assets/images/function_12.png'
     },
     {
       id: 'function_13',
-      img: '~src/assets/images/function_13.png'
+      img: '/assets/images/function_13.png'
     },
     {
       id: 'function_14',
-      img: '~src/assets/images/function_14.png'
+      img: '/assets/images/function_14.png'
     }
   ],
   wordDropdown: {
@@ -445,55 +445,55 @@ export const ERibbon: IRibbon = {
   wordDropdownData: [
     {
       id: 'word_1',
-      img: '~src/assets/images/word_1.png'
+      img: '/assets/images/word_1.png'
     },
     {
       id: 'word_2',
-      img: '~src/assets/images/word_2.png'
+      img: '/assets/images/word_2.png'
     },
     {
       id: 'word_3',
-      img: '~src/assets/images/word_3.png'
+      img: '/assets/images/word_3.png'
     },
     {
       id: 'word_4',
-      img: '~src/assets/images/word_4.png'
+      img: '/assets/images/word_4.png'
     },
     {
       id: 'word_5',
-      img: '~src/assets/images/word_5.png'
+      img: '/assets/images/word_5.png'
     },
     {
       id: 'word_6',
-      img: '~src/assets/images/word_6.png'
+      img: '/assets/images/word_6.png'
     },
     {
       id: 'word_7',
-      img: '~src/assets/images/word_7.png'
+      img: '/assets/images/word_7.png'
     },
     {
       id: 'word_8',
-      img: '~src/assets/images/word_8.png'
+      img: '/assets/images/word_8.png'
     },
     {
       id: 'word_9',
-      img: '~src/assets/images/word_9.png'
+      img: '/assets/images/word_9.png'
     },
     {
       id: 'word_10',
-      img: '~src/assets/images/word_10.png'
+      img: '/assets/images/word_10.png'
     },
     {
       id: 'word_11',
-      img: '~src/assets/images/word_11.png'
+      img: '/assets/images/word_11.png'
     },
     {
       id: 'word_12',
-      img: '~src/assets/images/word_12.png'
+      img: '/assets/images/word_12.png'
     },
     {
       id: 'word_13',
-      img: '~src/assets/images/word_13.png'
+      img: '/assets/images/word_13.png'
     }
   ],
   applicationDropdown: {
@@ -505,27 +505,27 @@ export const ERibbon: IRibbon = {
   applicationDropdownData: [
     {
       id: 'Application_1',
-      img: '~src/assets/images/Application_1.png'
+      img: '/assets/images/Application_1.png'
     },
     {
       id: 'Application_2',
-      img: '~src/assets/images/Application_2.png'
+      img: '/assets/images/Application_2.png'
     },
     {
       id: 'Application_3',
-      img: '~src/assets/images/Application_3.png'
+      img: '/assets/images/Application_3.png'
     },
     {
       id: 'Application_4',
-      img: '~src/assets/images/Application_4.png'
+      img: '/assets/images/Application_4.png'
     },
     {
       id: 'Application_5',
-      img: '~src/assets/images/Application_5.png'
+      img: '/assets/images/Application_5.png'
     },
     {
       id: 'Application_6',
-      img: '~src/assets/images/Application_6.png'
+      img: '/assets/images/Application_6.png'
     }
   ],
   relationshipDropdown: {
@@ -537,43 +537,43 @@ export const ERibbon: IRibbon = {
   relationshipDropdownData: [
     {
       id: 'Relationship_1',
-      img: '~src/assets/images/Relationship_1.png'
+      img: '/assets/images/Relationship_1.png'
     },
     {
       id: 'Relationship_2',
-      img: '~src/assets/images/Relationship_2.png'
+      img: '/assets/images/Relationship_2.png'
     },
     {
       id: 'Relationship_3',
-      img: '~src/assets/images/Relationship_3.png'
+      img: '/assets/images/Relationship_3.png'
     },
     {
       id: 'Relationship_4',
-      img: '~src/assets/images/Relationship_4.png'
+      img: '/assets/images/Relationship_4.png'
     },
     {
       id: 'Relationship_5',
-      img: '~src/assets/images/Relationship_5.png'
+      img: '/assets/images/Relationship_5.png'
     },
     {
       id: 'Relationship_6',
-      img: '~src/assets/images/Relationship_6.png'
+      img: '/assets/images/Relationship_6.png'
     },
     {
       id: 'Relationship_7',
-      img: '~src/assets/images/Relationship_7.png'
+      img: '/assets/images/Relationship_7.png'
     },
     {
       id: 'Relationship_8',
-      img: '~src/assets/images/Relationship_8.png'
+      img: '/assets/images/Relationship_8.png'
     },
     {
       id: 'Relationship_9',
-      img: '~src/assets/images/Relationship_9.png'
+      img: '/assets/images/Relationship_9.png'
     },
     {
       id: 'Relationship_10',
-      img: '~src/assets/images/Relationship_10.png'
+      img: '/assets/images/Relationship_10.png'
     }
   ],
 
@@ -588,147 +588,147 @@ export const ERibbon: IRibbon = {
   bracketDropdownData: [
     {
       id: 'AngleBar',
-      img: '~src/assets/images/brackets/AngleBar.png'
+      img: '/assets/images/brackets/AngleBar.png'
     },
     {
       id: 'BarAngle',
-      img: '~src/assets/images/brackets/BarAngle.png'
+      img: '/assets/images/brackets/BarAngle.png'
     },
     {
       id: 'BottomCurlyBracket',
-      img: '~src/assets/images/brackets/BottomCurlyBracket.png'
+      img: '/assets/images/brackets/BottomCurlyBracket.png'
     },
     {
       id: 'BottomSquareBracket',
-      img: '~src/assets/images/brackets/BottomSquareBracket.png'
+      img: '/assets/images/brackets/BottomSquareBracket.png'
     },
     {
       id: 'Ceiling',
-      img: '~src/assets/images/brackets/Ceiling.png'
+      img: '/assets/images/brackets/Ceiling.png'
     },
     {
       id: 'CurlyBracket',
-      img: '~src/assets/images/brackets/CurlyBracket.png'
+      img: '/assets/images/brackets/CurlyBracket.png'
     },
     {
       id: 'DoubleArrowBarBracket',
-      img: '~src/assets/images/brackets/DoubleArrowBarBracket.png'
+      img: '/assets/images/brackets/DoubleArrowBarBracket.png'
     },
     {
       id: 'DoubleBar',
-      img: '~src/assets/images/brackets/DoubleBar.png'
+      img: '/assets/images/brackets/DoubleBar.png'
     },
     {
       id: 'Floor',
-      img: '~src/assets/images/brackets/Floor.png'
+      img: '/assets/images/brackets/Floor.png'
     },
     {
       id: 'LeftAngle',
-      img: '~src/assets/images/brackets/LeftAngle.png'
+      img: '/assets/images/brackets/LeftAngle.png'
     },
     {
       id: 'LeftBar',
-      img: '~src/assets/images/brackets/LeftBar.png'
+      img: '/assets/images/brackets/LeftBar.png'
     },
     {
       id: 'LeftCurlyBracket',
-      img: '~src/assets/images/brackets/LeftCurlyBracket.png'
+      img: '/assets/images/brackets/LeftCurlyBracket.png'
     },
     {
       id: 'LeftDoubleBar',
-      img: '~src/assets/images/brackets/LeftDoubleBar.png'
+      img: '/assets/images/brackets/LeftDoubleBar.png'
     },
     {
       id: 'LeftLeftSquareBracket',
-      img: '~src/assets/images/brackets/LeftLeftSquareBracket.png'
+      img: '/assets/images/brackets/LeftLeftSquareBracket.png'
     },
     {
       id: 'LeftParenthesis',
-      img: '~src/assets/images/brackets/LeftParenthesis.png'
+      img: '/assets/images/brackets/LeftParenthesis.png'
     },
     {
       id: 'LeftSquareBar',
-      img: '~src/assets/images/brackets/LeftSquareBar.png'
+      img: '/assets/images/brackets/LeftSquareBar.png'
     },
     {
       id: 'LeftSquareBracket',
-      img: '~src/assets/images/brackets/LeftSquareBracket.png'
+      img: '/assets/images/brackets/LeftSquareBracket.png'
     },
     {
       id: 'Parentheses',
-      img: '~src/assets/images/brackets/Parentheses.png'
+      img: '/assets/images/brackets/Parentheses.png'
     },
     {
       id: 'ParenthesisSquare',
-      img: '~src/assets/images/brackets/ParenthesisSquare.png'
+      img: '/assets/images/brackets/ParenthesisSquare.png'
     },
     {
       id: 'PointingAngles',
-      img: '~src/assets/images/brackets/PointingAngles.png'
+      img: '/assets/images/brackets/PointingAngles.png'
     },
     {
       id: 'RightAngle',
-      img: '~src/assets/images/brackets/RightAngle.png'
+      img: '/assets/images/brackets/RightAngle.png'
     },
     {
       id: 'RightBar',
-      img: '~src/assets/images/brackets/RightBar.png'
+      img: '/assets/images/brackets/RightBar.png'
     },
     {
       id: 'RightCurlyBracket',
-      img: '~src/assets/images/brackets/RightCurlyBracket.png'
+      img: '/assets/images/brackets/RightCurlyBracket.png'
     },
     {
       id: 'RightDoubleBar',
-      img: '~src/assets/images/brackets/RightDoubleBar.png'
+      img: '/assets/images/brackets/RightDoubleBar.png'
     },
     {
       id: 'RightLeftSquareBracket',
-      img: '~src/assets/images/brackets/RightLeftSquareBracket.png'
+      img: '/assets/images/brackets/RightLeftSquareBracket.png'
     },
     {
       id: 'RightParenthesis',
-      img: '~src/assets/images/brackets/RightParenthesis.png'
+      img: '/assets/images/brackets/RightParenthesis.png'
     },
     {
       id: 'RightRightSquareBracket',
-      img: '~src/assets/images/brackets/RightRightSquareBracket.png'
+      img: '/assets/images/brackets/RightRightSquareBracket.png'
     },
     {
       id: 'RightSquareBar',
-      img: '~src/assets/images/brackets/RightSquareBar.png'
+      img: '/assets/images/brackets/RightSquareBar.png'
     },
     {
       id: 'RightSquareBracket',
-      img: '~src/assets/images/brackets/RightSquareBracket.png'
+      img: '/assets/images/brackets/RightSquareBracket.png'
     },
     {
       id: 'SingleBar',
-      img: '~src/assets/images/brackets/SingleBar.png'
+      img: '/assets/images/brackets/SingleBar.png'
     },
     {
       id: 'SquareBar',
-      img: '~src/assets/images/brackets/SquareBar.png'
+      img: '/assets/images/brackets/SquareBar.png'
     },
     {
       id: 'SquareBracket',
-      img: '~src/assets/images/brackets/SquareBracket.png'
+      img: '/assets/images/brackets/SquareBracket.png'
     },
     {
       id: 'SquareParenthesesBracket',
-      img: '~src/assets/images/brackets/SquareParenthesesBracket.png'
+      img: '/assets/images/brackets/SquareParenthesesBracket.png'
     },
     {
       id: 'SquareParenthesis',
-      img: '~src/assets/images/brackets/SquareParenthesis.png'
+      img: '/assets/images/brackets/SquareParenthesis.png'
     },
     {
       id: 'TopCurlyBracket',
-      img: '~src/assets/images/brackets/TopCurlyBracket.png'
+      img: '/assets/images/brackets/TopCurlyBracket.png'
     },
     {
       id: 'TopSquareBracket',
-      img: '~src/assets/images/brackets/TopSquareBracket.png'
+      img: '/assets/images/brackets/TopSquareBracket.png'
     }
   ],
   decoratorDropdown: {
@@ -741,91 +741,91 @@ export const ERibbon: IRibbon = {
   decoratorDropdownData: [
     {
       id: 'bottomBar',
-      img: '~src/assets/images/equation/bottomBar.png'
+      img: '/assets/images/equation/bottomBar.png'
     },
     {
       id: 'bottomDoubleArrow',
-      img: '~src/assets/images/equation/bottomDoubleArrow.png'
+      img: '/assets/images/equation/bottomDoubleArrow.png'
     },
     {
       id: 'bottomDoubleBar',
-      img: '~src/assets/images/equation/bottomDoubleBar.png'
+      img: '/assets/images/equation/bottomDoubleBar.png'
     },
     {
       id: 'bottomLeftArrow',
-      img: '~src/assets/images/equation/bottomLeftArrow.png'
+      img: '/assets/images/equation/bottomLeftArrow.png'
     },
     {
       id: 'bottomLeftHalfArrow',
-      img: '~src/assets/images/equation/bottomLeftHalfArrow.png'
+      img: '/assets/images/equation/bottomLeftHalfArrow.png'
     },
     {
       id: 'bottomRightArrow',
-      img: '~src/assets/images/equation/bottomRightArrow.png'
+      img: '/assets/images/equation/bottomRightArrow.png'
     },
     {
       id: 'bottomRightHalfArrow',
-      img: '~src/assets/images/equation/bottomRightHalfArrow.png'
+      img: '/assets/images/equation/bottomRightHalfArrow.png'
     },
     {
       id: 'cross',
-      img: '~src/assets/images/equation/cross.png'
+      img: '/assets/images/equation/cross.png'
     },
     {
       id: 'hat',
-      img: '~src/assets/images/equation/hat.png'
+      img: '/assets/images/equation/hat.png'
     },
     {
       id: 'leftCross',
-      img: '~src/assets/images/equation/leftCross.png'
+      img: '/assets/images/equation/leftCross.png'
     },
     {
       id: 'parenthesis',
-      img: '~src/assets/images/equation/parenthesis.png'
+      img: '/assets/images/equation/parenthesis.png'
     },
     {
       id: 'rightCross',
-      img: '~src/assets/images/equation/rightCross.png'
+      img: '/assets/images/equation/rightCross.png'
     },
     {
       id: 'strikeThrough',
-      img: '~src/assets/images/equation/strikeThrough.png'
+      img: '/assets/images/equation/strikeThrough.png'
     },
     {
       id: 'tilde',
-      img: '~src/assets/images/equation/tilde.png'
+      img: '/assets/images/equation/tilde.png'
     },
     {
       id: 'topBar',
-      img: '~src/assets/images/equation/topBar.png'
+      img: '/assets/images/equation/topBar.png'
     },
     {
       id: 'topDoubleArrow',
-      img: '~src/assets/images/equation/topDoubleArrow.png'
+      img: '/assets/images/equation/topDoubleArrow.png'
     },
     {
       id: 'topDoubleBar',
-      img: '~src/assets/images/equation/topDoubleBar.png'
+      img: '/assets/images/equation/topDoubleBar.png'
     },
     {
       id: 'topLeftArrow',
-      img: '~src/assets/images/equation/topLeftArrow.png'
+      img: '/assets/images/equation/topLeftArrow.png'
     },
     {
       id: 'topLeftHalfArrow',
-      img: '~src/assets/images/equation/topLeftHalfArrow.png'
+      img: '/assets/images/equation/topLeftHalfArrow.png'
     },
     {
       id: 'topRightArrow',
-      img: '~src/assets/images/equation/topRightArrow.png'
+      img: '/assets/images/equation/topRightArrow.png'
     },
     {
       id: 'topRightHalfArrow',
-      img: '~src/assets/images/equation/topRightHalfArrow.png'
+      img: '/assets/images/equation/topRightHalfArrow.png'
     },
     {
       id: 'tortoise',
-      img: '~src/assets/images/equation/tortoise.png'
+      img: '/assets/images/equation/tortoise.png'
     }
   ],
   sumProductDropdown: {
@@ -838,103 +838,103 @@ export const ERibbon: IRibbon = {
   sumDropdownData: [
     {
       id: 'coProduct',
-      img: '~src/assets/images/sumsProducts/coProduct.png'
+      img: '/assets/images/sumsProducts/coProduct.png'
     },
     {
       id: 'coProductBottom',
-      img: '~src/assets/images/sumsProducts/coProductBottom.png'
+      img: '/assets/images/sumsProducts/coProductBottom.png'
     },
     {
       id: 'coProductBottomTop',
-      img: '~src/assets/images/sumsProducts/coProductBottomTop.png'
+      img: '/assets/images/sumsProducts/coProductBottomTop.png'
     },
     {
       id: 'coProductSub',
-      img: '~src/assets/images/sumsProducts/coProductSub.png'
+      img: '/assets/images/sumsProducts/coProductSub.png'
     },
     {
       id: 'coProductSubSuper',
-      img: '~src/assets/images/sumsProducts/coProductSubSuper.png'
+      img: '/assets/images/sumsProducts/coProductSubSuper.png'
     },
     {
       id: 'intersection',
-      img: '~src/assets/images/sumsProducts/intersection.png'
+      img: '/assets/images/sumsProducts/intersection.png'
     },
     {
       id: 'intersectionBottom',
-      img: '~src/assets/images/sumsProducts/intersectionBottom.png'
+      img: '/assets/images/sumsProducts/intersectionBottom.png'
     },
     {
       id: 'intersectionBottomTop',
-      img: '~src/assets/images/sumsProducts/intersectionBottomTop.png'
+      img: '/assets/images/sumsProducts/intersectionBottomTop.png'
     },
     {
       id: 'intersectionSub',
-      img: '~src/assets/images/sumsProducts/intersectionSub.png'
+      img: '/assets/images/sumsProducts/intersectionSub.png'
     },
     {
       id: 'intersectionSubSuper',
-      img: '~src/assets/images/sumsProducts/intersectionSubSuper.png'
+      img: '/assets/images/sumsProducts/intersectionSubSuper.png'
     },
     {
       id: 'product',
-      img: '~src/assets/images/sumsProducts/product.png'
+      img: '/assets/images/sumsProducts/product.png'
     },
     {
       id: 'productBottom',
-      img: '~src/assets/images/sumsProducts/productBottom.png'
+      img: '/assets/images/sumsProducts/productBottom.png'
     },
     {
       id: 'ProductBottomTop',
-      img: '~src/assets/images/sumsProducts/ProductBottomTop.png'
+      img: '/assets/images/sumsProducts/ProductBottomTop.png'
     },
     {
       id: 'productSub',
-      img: '~src/assets/images/sumsProducts/productSub.png'
+      img: '/assets/images/sumsProducts/productSub.png'
     },
     {
       id: 'productSubSuper',
-      img: '~src/assets/images/sumsProducts/productSubSuper.png'
+      img: '/assets/images/sumsProducts/productSubSuper.png'
     },
     {
       id: 'sum',
-      img: '~src/assets/images/sumsProducts/sum.png'
+      img: '/assets/images/sumsProducts/sum.png'
     },
     {
       id: 'sumBottom',
-      img: '~src/assets/images/sumsProducts/sumBottom.png'
+      img: '/assets/images/sumsProducts/sumBottom.png'
     },
     {
       id: 'sumBottomTop',
-      img: '~src/assets/images/sumsProducts/sumBottomTop.png'
+      img: '/assets/images/sumsProducts/sumBottomTop.png'
     },
     {
       id: 'sumSub',
-      img: '~src/assets/images/sumsProducts/sumSub.png'
+      img: '/assets/images/sumsProducts/sumSub.png'
     },
     {
       id: 'sumSubSuper',
-      img: '~src/assets/images/sumsProducts/sumSubSuper.png'
+      img: '/assets/images/sumsProducts/sumSubSuper.png'
     },
     {
       id: 'union',
-      img: '~src/assets/images/sumsProducts/union.png'
+      img: '/assets/images/sumsProducts/union.png'
     },
     {
       id: 'unionBottom',
-      img: '~src/assets/images/sumsProducts/unionBottom.png'
+      img: '/assets/images/sumsProducts/unionBottom.png'
     },
     {
       id: 'unionBottomTop',
-      img: '~src/assets/images/sumsProducts/unionBottomTop.png'
+      img: '/assets/images/sumsProducts/unionBottomTop.png'
     },
     {
       id: 'unionSub',
-      img: '~src/assets/images/sumsProducts/unionSub.png'
+      img: '/assets/images/sumsProducts/unionSub.png'
     },
     {
       id: 'unionSubSuper',
-      img: '~src/assets/images/sumsProducts/unionSubSuper.png'
+      img: '/assets/images/sumsProducts/unionSubSuper.png'
     }
   ],
   integralDropdown: {
@@ -947,123 +947,123 @@ export const ERibbon: IRibbon = {
   integralDropdownData: [
     {
       id: 'SingleBottom',
-      img: '~src/assets/images/integrals/Single/Bottom.png'
+      img: '/assets/images/integrals/Single/Bottom.png'
     },
     {
       id: 'SingleBottomTop',
-      img: '~src/assets/images/integrals/Single/BottomTop.png'
+      img: '/assets/images/integrals/Single/BottomTop.png'
     },
     {
       id: 'SingleSimple',
-      img: '~src/assets/images/integrals/Single/Simple.png'
+      img: '/assets/images/integrals/Single/Simple.png'
     },
     {
       id: 'SingleSub',
-      img: '~src/assets/images/integrals/Single/Sub.png'
+      img: '/assets/images/integrals/Single/Sub.png'
     },
     {
       id: 'SingleSubSuper',
-      img: '~src/assets/images/integrals/Single/SubSuper.png'
+      img: '/assets/images/integrals/Single/SubSuper.png'
     },
     {
       id: 'DoubleBottom',
-      img: '~src/assets/images/integrals/Double/Bottom.png'
+      img: '/assets/images/integrals/Double/Bottom.png'
     },
     {
       id: 'DoubleBottomTop',
-      img: '~src/assets/images/integrals/Double/BottomTop.png'
+      img: '/assets/images/integrals/Double/BottomTop.png'
     },
     {
       id: 'DoubleSimple',
-      img: '~src/assets/images/integrals/Double/Simple.png'
+      img: '/assets/images/integrals/Double/Simple.png'
     },
     {
       id: 'DoubleSub',
-      img: '~src/assets/images/integrals/Double/Sub.png'
+      img: '/assets/images/integrals/Double/Sub.png'
     },
     {
       id: 'DoubleSubSuper',
-      img: '~src/assets/images/integrals/Double/SubSuper.png'
+      img: '/assets/images/integrals/Double/SubSuper.png'
     },
     {
       id: 'TripleBottom',
-      img: '~src/assets/images/integrals/Triple/Bottom.png'
+      img: '/assets/images/integrals/Triple/Bottom.png'
     },
     {
       id: 'TripleBottomTop',
-      img: '~src/assets/images/integrals/Triple/BottomTop.png'
+      img: '/assets/images/integrals/Triple/BottomTop.png'
     },
     {
       id: 'TripleSimple',
-      img: '~src/assets/images/integrals/Triple/Simple.png'
+      img: '/assets/images/integrals/Triple/Simple.png'
     },
     {
       id: 'TripleSub',
-      img: '~src/assets/images/integrals/Triple/Sub.png'
+      img: '/assets/images/integrals/Triple/Sub.png'
     },
     {
       id: 'TripleSubSuper',
-      img: '~src/assets/images/integrals/Triple/SubSuper.png'
+      img: '/assets/images/integrals/Triple/SubSuper.png'
     },
     {
       id: 'ClockBottom',
-      img: '~src/assets/images/integrals/Clock/Bottom.png'
+      img: '/assets/images/integrals/Clock/Bottom.png'
     },
     {
       id: 'ClockBottomTop',
-      img: '~src/assets/images/integrals/Clock/BottomTop.png'
+      img: '/assets/images/integrals/Clock/BottomTop.png'
     },
     {
       id: 'ClockSimple',
-      img: '~src/assets/images/integrals/Clock/Simple.png'
+      img: '/assets/images/integrals/Clock/Simple.png'
     },
     {
       id: 'ClockSub',
-      img: '~src/assets/images/integrals/Clock/Sub.png'
+      img: '/assets/images/integrals/Clock/Sub.png'
     },
     {
       id: 'ClockSubSuper',
-      img: '~src/assets/images/integrals/Clock/SubSuper.png'
+      img: '/assets/images/integrals/Clock/SubSuper.png'
     },
     {
       id: 'SurfaceBottom',
-      img: '~src/assets/images/integrals/Surface/Bottom.png'
+      img: '/assets/images/integrals/Surface/Bottom.png'
     },
     {
       id: 'SurfaceBottomTop',
-      img: '~src/assets/images/integrals/Surface/BottomTop.png'
+      img: '/assets/images/integrals/Surface/BottomTop.png'
     },
     {
       id: 'SurfaceSimple',
-      img: '~src/assets/images/integrals/Surface/Simple.png'
+      img: '/assets/images/integrals/Surface/Simple.png'
     },
     {
       id: 'SurfaceSub',
-      img: '~src/assets/images/integrals/Surface/Sub.png'
+      img: '/assets/images/integrals/Surface/Sub.png'
     },
     {
       id: 'SurfaceSubSuper',
-      img: '~src/assets/images/integrals/Surface/SubSuper.png'
+      img: '/assets/images/integrals/Surface/SubSuper.png'
     },
     {
       id: 'VolumeBottom',
-      img: '~src/assets/images/integrals/volume/Bottom.png'
+      img: '/assets/images/integrals/volume/Bottom.png'
     },
     {
       id: 'VolumeBottomTop',
-      img: '~src/assets/images/integrals/volume/BottomTop.png'
+      img: '/assets/images/integrals/volume/BottomTop.png'
     },
     {
       id: 'VolumeSimple',
-      img: '~src/assets/images/integrals/volume/Simple.png'
+      img: '/assets/images/integrals/volume/Simple.png'
     },
     {
       id: 'VolumeSub',
-      img: '~src/assets/images/integrals/volume/Sub.png'
+      img: '/assets/images/integrals/volume/Sub.png'
     },
     {
       id: 'VolumeSubSuper',
-      img: '~src/assets/images/integrals/volume/SubSuper.png'
+      img: '/assets/images/integrals/volume/SubSuper.png'
     }
   ],
   scriptDropdown: {
@@ -1076,27 +1076,27 @@ export const ERibbon: IRibbon = {
   scriptDropdownData: [
     {
       id: 'Sub',
-      img: '~src/assets/images/Sub.png'
+      img: '/assets/images/Sub.png'
     },
     {
       id: 'SubLeft',
-      img: '~src/assets/images/SubLeft.png'
+      img: '/assets/images/SubLeft.png'
     },
     {
       id: 'SubSuper',
-      img: '~src/assets/images/SubSuper.png'
+      img: '/assets/images/SubSuper.png'
     },
     {
       id: 'SubSuperLeft',
-      img: '~src/assets/images/SubSuperLeft.png'
+      img: '/assets/images/SubSuperLeft.png'
     },
     {
       id: 'Super',
-      img: '~src/assets/images/Super.png'
+      img: '/assets/images/Super.png'
     },
     {
       id: 'SuperLeft',
-      img: '~src/assets/images/SuperLeft.png'
+      img: '/assets/images/SuperLeft.png'
     }
   ],
   factionRadicalDropdown: {
@@ -1109,67 +1109,67 @@ export const ERibbon: IRibbon = {
   fracDropdownData: [
     {
       id: 'Div',
-      img: '~src/assets/images/Div.png'
+      img: '/assets/images/Div.png'
     },
     {
       id: 'DivDoubleBar',
-      img: '~src/assets/images/DivDoubleBar.png'
+      img: '/assets/images/DivDoubleBar.png'
     },
     {
       id: 'DivHoriz',
-      img: '~src/assets/images/DivHoriz.png'
+      img: '/assets/images/DivHoriz.png'
     },
     {
       id: 'DivMath',
-      img: '~src/assets/images/DivMath.png'
+      img: '/assets/images/DivMath.png'
     },
     {
       id: 'DivMathInverted',
-      img: '~src/assets/images/DivMathInverted.png'
+      img: '/assets/images/DivMathInverted.png'
     },
     {
       id: 'DivMathInvertedWithBottom',
-      img: '~src/assets/images/DivMathInvertedWithBottom.png'
+      img: '/assets/images/DivMathInvertedWithBottom.png'
     },
     {
       id: 'DivMathWithTop',
-      img: '~src/assets/images/DivMathWithTop.png'
+      img: '/assets/images/DivMathWithTop.png'
     },
     {
       id: 'DivSlant',
-      img: '~src/assets/images/DivSlant.png'
+      img: '/assets/images/DivSlant.png'
     },
     {
       id: 'DivTriangleExpanding',
-      img: '~src/assets/images/DivTriangleExpanding.png'
+      img: '/assets/images/DivTriangleExpanding.png'
     },
     {
       id: 'DivTriangleFixed',
-      img: '~src/assets/images/DivTriangleFixed.png'
+      img: '/assets/images/DivTriangleFixed.png'
     },
     {
       id: 'DivTripleBar',
-      img: '~src/assets/images/DivTripleBar.png'
+      img: '/assets/images/DivTripleBar.png'
     },
     {
       id: 'nRoot',
-      img: '~src/assets/images/nRoot.png'
+      img: '/assets/images/nRoot.png'
     },
     {
       id: 'SmallDiv',
-      img: '~src/assets/images/SmallDiv.png'
+      img: '/assets/images/SmallDiv.png'
     },
     {
       id: 'SmallDivHoriz',
-      img: '~src/assets/images/SmallDivHoriz.png'
+      img: '/assets/images/SmallDivHoriz.png'
     },
     {
       id: 'SmallDivSlant',
-      img: '~src/assets/images/SmallDivSlant.png'
+      img: '/assets/images/SmallDivSlant.png'
     },
     {
       id: 'SqRoot',
-      img: '~src/assets/images/SqRoot.png'
+      img: '/assets/images/SqRoot.png'
     }
   ],
   labeledArrowDropdown: {
@@ -1181,107 +1181,107 @@ export const ERibbon: IRibbon = {
   arrowDropdownData: [
     {
       id: 'ArrowDoubleBottom',
-      img: '~src/assets/images/arrow/DoubleBottom.png'
+      img: '/assets/images/arrow/DoubleBottom.png'
     },
     {
       id: 'ArrowDoubleBottomTop',
-      img: '~src/assets/images/arrow/DoubleBottomTop.png'
+      img: '/assets/images/arrow/DoubleBottomTop.png'
     },
     {
       id: 'ArrowDoubleTop',
-      img: '~src/assets/images/arrow/DoubleTop.png'
+      img: '/assets/images/arrow/DoubleTop.png'
     },
     {
       id: 'LeftBottom',
-      img: '~src/assets/images/arrow/LeftBottom.png'
+      img: '/assets/images/arrow/LeftBottom.png'
     },
     {
       id: 'LeftBottomTop',
-      img: '~src/assets/images/arrow/LeftBottomTop.png'
+      img: '/assets/images/arrow/LeftBottomTop.png'
     },
     {
       id: 'LeftTop',
-      img: '~src/assets/images/arrow/LeftTop.png'
+      img: '/assets/images/arrow/LeftTop.png'
     },
     {
       id: 'RightBottom',
-      img: '~src/assets/images/arrow/RightBottom.png'
+      img: '/assets/images/arrow/RightBottom.png'
     },
     {
       id: 'RightBottomTop',
-      img: '~src/assets/images/arrow/RightBottomTop.png'
+      img: '/assets/images/arrow/RightBottomTop.png'
     },
     {
       id: 'RightLeftBottom',
-      img: '~src/assets/images/arrow/RightLeftBottom.png'
+      img: '/assets/images/arrow/RightLeftBottom.png'
     },
     {
       id: 'RightLeftBottomTop',
-      img: '~src/assets/images/arrow/RightLeftBottomTop.png'
+      img: '/assets/images/arrow/RightLeftBottomTop.png'
     },
     {
       id: 'RightLeftHarpBottom',
-      img: '~src/assets/images/arrow/RightLeftHarpBottom.png'
+      img: '/assets/images/arrow/RightLeftHarpBottom.png'
     },
     {
       id: 'RightLeftHarpBottomTop',
-      img: '~src/assets/images/arrow/RightLeftHarpBottomTop.png'
+      img: '/assets/images/arrow/RightLeftHarpBottomTop.png'
     },
     {
       id: 'RightLeftHarpTop',
-      img: '~src/assets/images/arrow/RightLeftHarpTop.png'
+      img: '/assets/images/arrow/RightLeftHarpTop.png'
     },
     {
       id: 'RightLeftTop',
-      img: '~src/assets/images/arrow/RightLeftTop.png'
+      img: '/assets/images/arrow/RightLeftTop.png'
     },
     {
       id: 'RightSmallLeftBottom',
-      img: '~src/assets/images/arrow/RightSmallLeftBottom.png'
+      img: '/assets/images/arrow/RightSmallLeftBottom.png'
     },
     {
       id: 'RightSmallLeftBottomTop',
-      img: '~src/assets/images/arrow/RightSmallLeftBottomTop.png'
+      img: '/assets/images/arrow/RightSmallLeftBottomTop.png'
     },
     {
       id: 'RightSmallLeftHarpBottom',
-      img: '~src/assets/images/arrow/RightSmallLeftHarpBottom.png'
+      img: '/assets/images/arrow/RightSmallLeftHarpBottom.png'
     },
     {
       id: 'RightSmallLeftHarpBottomTop',
-      img: '~src/assets/images/arrow/RightSmallLeftHarpBottomTop.png'
+      img: '/assets/images/arrow/RightSmallLeftHarpBottomTop.png'
     },
     {
       id: 'RightSmallLeftHarpTop',
-      img: '~src/assets/images/arrow/RightSmallLeftHarpTop.png'
+      img: '/assets/images/arrow/RightSmallLeftHarpTop.png'
     },
     {
       id: 'RightSmallLeftTop',
-      img: '~src/assets/images/arrow/RightSmallLeftTop.png'
+      img: '/assets/images/arrow/RightSmallLeftTop.png'
     },
     {
       id: 'RightTop',
-      img: '~src/assets/images/arrow/RightTop.png'
+      img: '/assets/images/arrow/RightTop.png'
     },
     {
       id: 'SmallRightLeftBottom',
-      img: '~src/assets/images/arrow/SmallRightLeftBottom.png'
+      img: '/assets/images/arrow/SmallRightLeftBottom.png'
     },
     {
       id: 'SmallRightLeftHarpBottom',
-      img: '~src/assets/images/arrow/SmallRightLeftHarpBottom.png'
+      img: '/assets/images/arrow/SmallRightLeftHarpBottom.png'
     },
     {
       id: 'SmallRightLeftHarpBottomTop',
-      img: '~src/assets/images/arrow/SmallRightLeftHarpBottomTop.png'
+      img: '/assets/images/arrow/SmallRightLeftHarpBottomTop.png'
     },
     {
       id: 'SmallRightLeftHarpTop',
-      img: '~src/assets/images/arrow/SmallRightLeftHarpTop.png'
+      img: '/assets/images/arrow/SmallRightLeftHarpTop.png'
     },
     {
       id: 'SmallRightLeftTop',
-      img: '~src/assets/images/arrow/SmallRightLeftTop.png'
+      img: '/assets/images/arrow/SmallRightLeftTop.png'
     }
   ],
   underbarOverbarDropdown: {
@@ -1294,39 +1294,39 @@ export const ERibbon: IRibbon = {
   barDropdownData: [
     {
       id: 'BigBottom',
-      img: '~src/assets/images/BigBottom.png'
+      img: '/assets/images/BigBottom.png'
     },
     {
       id: 'BigBottomTop',
-      img: '~src/assets/images/BigBottomTop.png'
+      img: '/assets/images/BigBottomTop.png'
     },
     {
       id: 'BigSub',
-      img: 'assets/images/BigSub.png'
+      img: '/assets/images/BigSub.png'
     },
     {
       id: 'BigSubSuper',
-      img: '~src/assets/images/BigSubSuper.png'
+      img: '/assets/images/BigSubSuper.png'
     },
     {
       id: 'BigSuper',
-      img: '~src/assets/images/BigSuper.png'
+      img: '/assets/images/BigSuper.png'
     },
     {
       id: 'BigTop',
-      img: '~src/assets/images/BigTop.png'
+      img: '/assets/images/BigTop.png'
     },
     {
       id: 'CompositeBottom',
-      img: '~src/assets/images/CompositeBottom.png'
+      img: '/assets/images/CompositeBottom.png'
     },
     {
       id: 'CompositeBottomTop',
-      img: '~src/assets/images/CompositeBottomTop.png'
+      img: '/assets/images/CompositeBottomTop.png'
     },
     {
       id: 'CompositeTop',
-      img: '~src/assets/images/CompositeTop.png'
+      img: '/assets/images/CompositeTop.png'
     }
   ],
   accentPrimeDropdown: {
@@ -1339,191 +1339,191 @@ export const ERibbon: IRibbon = {
   accentDropdownData: [
     {
       id: 'CharacterAcuteAccent',
-      img: '~src/assets/images/character/AcuteAccent.png'
+      img: '/assets/images/character/AcuteAccent.png'
     },
     {
       id: 'CharacterBottomBar',
-      img: '~src/assets/images/character/BottomBar.png'
+      img: '/assets/images/character/BottomBar.png'
     },
     {
       id: 'CharacterBottomBreve',
-      img: '~src/assets/images/character/BottomBreve.png'
+      img: '/assets/images/character/BottomBreve.png'
     },
     {
       id: 'CharacterBottomDDot',
-      img: '~src/assets/images/character/BottomDDot.png'
+      img: '/assets/images/character/BottomDDot.png'
     },
     {
       id: 'CharacterBottomDot',
-      img: '~src/assets/images/character/BottomDot.png'
+      img: '/assets/images/character/BottomDot.png'
     },
     {
       id: 'CharacterBottomDoubleArrow',
-      img: '~src/assets/images/character/BottomDoubleArrow.png'
+      img: '/assets/images/character/BottomDoubleArrow.png'
     },
     {
       id: 'CharacterBottomFourDot',
-      img: '~src/assets/images/character/BottomFourDot.png'
+      img: '/assets/images/character/BottomFourDot.png'
     },
     {
       id: 'CharacterBottomInvertedBreve',
-      img: '~src/assets/images/character/BottomInvertedBreve.png'
+      img: '/assets/images/character/BottomInvertedBreve.png'
     },
     {
       id: 'CharacterBottomLeftArrow',
-      img: '~src/assets/images/character/BottomLeftArrow.png'
+      img: '/assets/images/character/BottomLeftArrow.png'
     },
     {
       id: 'CharacterBottomLeftHarpoon',
-      img: '~src/assets/images/character/BottomLeftHarpoon.png'
+      img: '/assets/images/character/BottomLeftHarpoon.png'
     },
     {
       id: 'CharacterBottomRightArrow',
-      img: '~src/assets/images/character/BottomRightArrow.png'
+      img: '/assets/images/character/BottomRightArrow.png'
     },
     {
       id: 'CharacterBottomRightHarpoon',
-      img: '~src/assets/images/character/BottomRightHarpoon.png'
+      img: '/assets/images/character/BottomRightHarpoon.png'
     },
     {
       id: 'CharacterBottomTilde',
-      img: '~src/assets/images/character/BottomTDot.png'
+      img: '/assets/images/character/BottomTDot.png'
     },
     {
       id: 'CharacterBottomTilde',
-      img: '~src/assets/images/character/BottomTilde.png'
+      img: '/assets/images/character/BottomTilde.png'
     },
     {
       id: 'CharacterCross',
-      img: '~src/assets/images/character/Cross.png'
+      img: '/assets/images/character/Cross.png'
     },
     {
       id: 'CharacterDoublePrime',
-      img: '~src/assets/images/character/DoublePrime.png'
+      img: '/assets/images/character/DoublePrime.png'
     },
     {
       id: 'CharacterDoubleStrikeThrough',
-      img: '~src/assets/images/character/DoubleStrikeThrough.png'
+      img: '/assets/images/character/DoubleStrikeThrough.png'
     },
     {
       id: 'CharacterGraveAccent',
-      img: '~src/assets/images/character/GraveAccent.png'
+      img: '/assets/images/character/GraveAccent.png'
     },
     {
       id: 'CharacterLeftCross',
-      img: '~src/assets/images/character/LeftCross.png'
+      img: '/assets/images/character/LeftCross.png'
     },
     {
       id: 'CharacterLeftUprightCross',
-      img: '~src/assets/images/character/LeftUprightCross.png'
+      img: '/assets/images/character/LeftUprightCross.png'
     },
     {
       id: 'CharacterNone',
-      img: '~src/assets/images/character/None.png'
+      img: '/assets/images/character/None.png'
     },
     {
       id: 'CharacterPrime',
-      img: '~src/assets/images/character/Prime.png'
+      img: '/assets/images/character/Prime.png'
     },
     {
       id: 'CharacterReverseDoublePrime',
-      img: '~src/assets/images/character/ReverseDoublePrime.png'
+      img: '/assets/images/character/ReverseDoublePrime.png'
     },
     {
       id: 'CharacterReversePrime',
-      img: '~src/assets/images/character/ReversePrime.png'
+      img: '/assets/images/character/ReversePrime.png'
     },
     {
       id: 'CharacterRightCross',
-      img: '~src/assets/images/character/RightCross.png'
+      img: '/assets/images/character/RightCross.png'
     },
     {
       id: 'CharacterRightUprightCross',
-      img: '~src/assets/images/character/RightUprightCross.png'
+      img: '/assets/images/character/RightUprightCross.png'
     },
     {
       id: 'CharacterStrikeThrough',
-      img: '~src/assets/images/character/StrikeThrough.png'
+      img: '/assets/images/character/StrikeThrough.png'
     },
     {
       id: 'CharacterTopBar',
-      img: '~src/assets/images/character/TopBar.png'
+      img: '/assets/images/character/TopBar.png'
     },
     {
       id: 'CharacterTopBreve',
-      img: '~src/assets/images/character/TopBreve.png'
+      img: '/assets/images/character/TopBreve.png'
     },
     {
       id: 'CharacterTopCaron',
-      img: '~src/assets/images/character/TopCaron.png'
+      img: '/assets/images/character/TopCaron.png'
     },
     {
       id: 'CharacterTopCircumflex',
-      img: '~src/assets/images/character/TopCircumflex.png'
+      img: '/assets/images/character/TopCircumflex.png'
     },
     {
       id: 'CharacterTopDDot',
-      img: '~src/assets/images/character/TopDDot.png'
+      img: '/assets/images/character/TopDDot.png'
     },
     {
       id: 'CharacterTopDot',
-      img: '~src/assets/images/character/TopDot.png'
+      img: '/assets/images/character/TopDot.png'
     },
     {
       id: 'CharacterTopDoubleArrow',
-      img: '~src/assets/images/character/TopDoubleArrow.png'
+      img: '/assets/images/character/TopDoubleArrow.png'
     },
     {
       id: 'CharacterTopFourDot',
-      img: '~src/assets/images/character/TopFourDot.png'
+      img: '/assets/images/character/TopFourDot.png'
     },
     {
       id: 'CharacterTopInvertedBreve',
-      img: '~src/assets/images/character/TopInvertedBreve.png'
+      img: '/assets/images/character/TopInvertedBreve.png'
     },
     {
       id: 'CharacterTopLeftArrow',
-      img: '~src/assets/images/character/TopLeftArrow.png'
+      img: '/assets/images/character/TopLeftArrow.png'
     },
     {
       id: 'CharacterTopLeftHarpoon',
-      img: '~src/assets/images/character/TopLeftHarpoon.png'
+      img: '/assets/images/character/TopLeftHarpoon.png'
     },
     {
       id: 'CharacterTopRightArrow',
-      img: '~src/assets/images/character/TopRightArrow.png'
+      img: '/assets/images/character/TopRightArrow.png'
     },
     {
       id: 'CharacterTopRightHarpoon',
-      img: '~src/assets/images/character/TopRightHarpoon.png'
+      img: '/assets/images/character/TopRightHarpoon.png'
     },
     {
       id: 'CharacterTopRightRing',
-      img: '~src/assets/images/character/TopRightRing.png'
+      img: '/assets/images/character/TopRightRing.png'
     },
     {
       id: 'CharacterTopRing',
-      img: '~src/assets/images/character/TopRing.png'
+      img: '/assets/images/character/TopRing.png'
     },
     {
       id: 'CharacterTopTDot',
-      img: '~src/assets/images/character/TopTDot.png'
+      img: '/assets/images/character/TopTDot.png'
     },
     {
       id: 'CharacterTopTilde',
-      img: '~src/assets/images/character/TopTilde.png'
+      img: '/assets/images/character/TopTilde.png'
     },
     {
       id: 'CharacterTriplePrime',
-      img: '~src/assets/images/character/TriplePrime.png'
+      img: '/assets/images/character/TriplePrime.png'
     },
     {
       id: 'CharacterVDoubleStrikeThrough',
-      img: '~src/assets/images/character/VDoubleStrikeThrough.png'
+      img: '/assets/images/character/VDoubleStrikeThrough.png'
     },
     {
       id: 'CharacterVStrikeThrough',
-      img: '~src/assets/images/character/VStrikeThrough.png'
+      img: '/assets/images/character/VStrikeThrough.png'
     }
   ],
   matrixDropdown: {
@@ -1536,11 +1536,11 @@ export const ERibbon: IRibbon = {
   matrixDropdownData: [
     {
       id: '2cellColumn',
-      img: '~src/assets/images/2cellColumn.png'
+      img: '/assets/images/2cellColumn.png'
     },
     {
       id: '2cellRow',
-      img: '~src/assets/images/2cellRow.png'
+      img: '/assets/images/2cellRow.png'
     },
     {
       id: '2Square',
@@ -1548,27 +1548,27 @@ export const ERibbon: IRibbon = {
     },
     {
       id: '3cellColumn',
-      img: '~src/assets/images/3cellColumn.png'
+      img: '/assets/images/3cellColumn.png'
     },
     {
       id: '3cellRow',
-      img: '~src/assets/images/3cellRow.png'
+      img: '/assets/images/3cellRow.png'
     },
     {
       id: '3Square',
-      img: '~src/assets/images/3Square.png'
+      img: '/assets/images/3Square.png'
     },
     {
       id: 'column',
-      img: '~src/assets/images/column.png'
+      img: '/assets/images/column.png'
     },
     {
       id: 'custom',
-      img: '~src/assets/images/custom.png'
+      img: '/assets/images/custom.png'
     },
     {
       id: 'row',
-      img: '~src/assets/images/row.png'
+      img: '/assets/images/row.png'
     }
   ],
   boxesDropdown: {
@@ -1581,11 +1581,11 @@ export const ERibbon: IRibbon = {
   boxesDropdownData: [
     {
       id: 'BoxAll',
-      img: '~src/assets/images/all.png'
+      img: '/assets/images/all.png'
     },
     {
       id: 'BoxLeftBottom',
-      img: '~src/assets/images/leftBottom.png'
+      img: '/assets/images/leftBottom.png'
     },
     {
       id: 'BoxLeftTop',
@@ -1593,11 +1593,11 @@ export const ERibbon: IRibbon = {
     },
     {
       id: 'BoxRightBottom',
-      img: '~src/assets/images/rightBottom.png'
+      img: '/assets/images/rightBottom.png'
     },
     {
       id: 'BoxRightTop',
-      img: '~src/assets/images/rightTop.png'
+      img: '/assets/images/rightTop.png'
     }
   ],
   operatorDropdown: {
@@ -1987,47 +1987,47 @@ export const ERibbon: IRibbon = {
   theory1DropdownData: [
     {
       id: 'Theory_1',
-      img: '~src/assets/images/speaklogic/Theory/Theory_1.png'
+      img: '/assets/images/speaklogic/Theory/Theory_1.png'
     },
     {
       id: 'Theory_2',
-      img: '~src/assets/images/speaklogic/Theory/Theory_2.png'
+      img: '/assets/images/speaklogic/Theory/Theory_2.png'
     },
     {
       id: 'Theory_3',
-      img: '~src/assets/images/speaklogic/Theory/Theory_3.png'
+      img: '/assets/images/speaklogic/Theory/Theory_3.png'
     },
     {
       id: 'Theory_4',
-      img: '~src/assets/images/speaklogic/Theory/Theory_4.png'
+      img: '/assets/images/speaklogic/Theory/Theory_4.png'
     },
     {
       id: 'Theory_5',
-      img: '~src/assets/images/speaklogic/Theory/Theory_5.png'
+      img: '/assets/images/speaklogic/Theory/Theory_5.png'
     },
     {
       id: 'Theory_6',
-      img: '~src/assets/images/speaklogic/Theory/Theory_6.png'
+      img: '/assets/images/speaklogic/Theory/Theory_6.png'
     },
     {
       id: 'Theory_7',
-      img: '~src/assets/images/speaklogic/Theory/Theory_7.png'
+      img: '/assets/images/speaklogic/Theory/Theory_7.png'
     },
     {
       id: 'Theory_8',
-      img: '~src/assets/images/speaklogic/Theory/Theory_8.png'
+      img: '/assets/images/speaklogic/Theory/Theory_8.png'
     },
     {
       id: 'Theory_9',
-      img: '~src/assets/images/speaklogic/Theory/Theory_9.png'
+      img: '/assets/images/speaklogic/Theory/Theory_9.png'
     },
     {
       id: 'Theory_10',
-      img: '~src/assets/images/speaklogic/Theory/Theory_10.png'
+      img: '/assets/images/speaklogic/Theory/Theory_10.png'
     },
     {
       id: 'Theory_11',
-      img: '~src/assets/images/speaklogic/Theory/Theory_11.png'
+      img: '/assets/images/speaklogic/Theory/Theory_11.png'
     }
   ],
   theory2Dropdown: {
@@ -2039,67 +2039,67 @@ export const ERibbon: IRibbon = {
   theory2DropdownData: [
     {
       id: 'Theory_Dropdown_1',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_1.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_1.png'
     },
     {
       id: 'Theory_Dropdown_2',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_2.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_2.png'
     },
     {
       id: 'Theory_Dropdown_3',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_3.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_3.png'
     },
     {
       id: 'Theory_Dropdown_4',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_4.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_4.png'
     },
     {
       id: 'Theory_Dropdown_5',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_5.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_5.png'
     },
     {
       id: 'Theory_Dropdown_6',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_6.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_6.png'
     },
     {
       id: 'Theory_Dropdown_7',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_7.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_7.png'
     },
     {
       id: 'Theory_Dropdown_8',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_8.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_8.png'
     },
     {
       id: 'Theory_Dropdown_9',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_9.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_9.png'
     },
     {
       id: 'Theory_Dropdown_10',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_10.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_10.png'
     },
     {
       id: 'Theory_Dropdown_11',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_11.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_11.png'
     },
     {
       id: 'Theory_Dropdown_12',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_12.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_12.png'
     },
     {
       id: 'Theory_Dropdown_13',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_13.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_13.png'
     },
     {
       id: 'Theory_Dropdown_14',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_14.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_14.png'
     },
     {
       id: 'Theory_Dropdown_15',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_15.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_15.png'
     },
     {
       id: 'Theory_Dropdown_16',
-      img: '~src/assets/images/speaklogic/Theory2/Theory_Dropdown_16.png'
+      img: '/assets/images/speaklogic/Theory2/Theory_Dropdown_16.png'
     }
   ],
   fundamentalDropdown: {
@@ -2111,47 +2111,47 @@ export const ERibbon: IRibbon = {
   fundamentalDropdownData: [
     {
       id: 'Fundamental_1',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_1.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_1.png'
     },
     {
       id: 'Fundamental_2',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_2.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_2.png'
     },
     {
       id: 'Fundamental_3',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_3.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_3.png'
     },
     {
       id: 'Fundamental_4',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_4.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_4.png'
     },
     {
       id: 'Fundamental_5',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_5.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_5.png'
     },
     {
       id: 'Fundamental_6',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_6.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_6.png'
     },
     {
       id: 'Fundamental_7',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_7.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_7.png'
     },
     {
       id: 'Fundamental_8',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_8.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_8.png'
     },
     {
       id: 'Fundamental_9',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_9.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_9.png'
     },
     {
       id: 'Fundamental_10',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_10.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_10.png'
     },
     {
       id: 'Fundamental_11',
-      img: '~src/assets/images/speaklogic/Fundamental/Fundamental_11.png'
+      img: '/assets/images/speaklogic/Fundamental/Fundamental_11.png'
     }
   ],
   fundamental2Dropdown: {
@@ -2163,59 +2163,59 @@ export const ERibbon: IRibbon = {
   fundamental2DropdownData: [
     {
       id: 'Fundamental_Dropdown_1',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_1.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_1.png'
     },
     {
       id: 'Fundamental_Dropdown_2',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_2.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_2.png'
     },
     {
       id: 'Fundamental_Dropdown_3',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_3.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_3.png'
     },
     {
       id: 'Fundamental_Dropdown_4',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_4.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_4.png'
     },
     {
       id: 'Fundamental_Dropdown_5',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_5.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_5.png'
     },
     {
       id: 'Fundamental_Dropdown_6',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_6.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_6.png'
     },
     {
       id: 'Fundamental_Dropdown_7',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_7.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_7.png'
     },
     {
       id: 'Fundamental_Dropdown_8',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_8.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_8.png'
     },
     {
       id: 'Fundamental_Dropdown_9',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_9.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_9.png'
     },
     {
       id: 'Fundamental_Dropdown_10',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_10.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_10.png'
     },
     {
       id: 'Fundamental_Dropdown_11',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_11.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_11.png'
     },
     {
       id: 'Fundamental_Dropdown_12',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_12.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_12.png'
     },
     {
       id: 'Fundamental_Dropdown_13',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_13.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_13.png'
     },
     {
       id: 'Fundamental_Dropdown_14',
-      img: '~src/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_14.png'
+      img: '/assets/images/speaklogic/DropdownFundamental/Fundamental_Dropdown_14.png'
     }
   ],
   theoryFunctionDropdown: {
@@ -2227,43 +2227,43 @@ export const ERibbon: IRibbon = {
   theoryFunctionDropdownData: [
     {
       id: 'Dropdown_Function_1',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_1.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_1.png'
     },
     {
       id: 'Dropdown_Function_2',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_2.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_2.png'
     },
     {
       id: 'Dropdown_Function_3',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_3.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_3.png'
     },
     {
       id: 'Dropdown_Function_4',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_4.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_4.png'
     },
     {
       id: 'Dropdown_Function_5',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_5.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_5.png'
     },
     {
       id: 'Dropdown_Function_6',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_6.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_6.png'
     },
     {
       id: 'Dropdown_Function_7',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_7.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_7.png'
     },
     {
       id: 'Dropdown_Function_8',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_8.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_8.png'
     },
     {
       id: 'Dropdown_Function_9',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_9.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_9.png'
     },
     {
       id: 'Dropdown_Function_10',
-      img: '~src/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_10.png'
+      img: '/assets/images/speaklogic/DropdownFunctions/Dropdown_Function_10.png'
     }
   ],
   timeDropdown: {
@@ -2275,51 +2275,51 @@ export const ERibbon: IRibbon = {
   timeDropdownData: [
     {
       id: 'Dropdown_Time_1',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_1.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_1.png'
     },
     {
       id: 'Dropdown_Time_2',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_2.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_2.png'
     },
     {
       id: 'Dropdown_Time_3',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_3.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_3.png'
     },
     {
       id: 'Dropdown_Time_4',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_4.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_4.png'
     },
     {
       id: 'Dropdown_Time_5',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_5.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_5.png'
     },
     {
       id: 'Dropdown_Time_6',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_6.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_6.png'
     },
     {
       id: 'Dropdown_Time_7',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_7.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_7.png'
     },
     {
       id: 'Dropdown_Time_8',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_8.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_8.png'
     },
     {
       id: 'Dropdown_Time_9',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_9.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_9.png'
     },
     {
       id: 'Dropdown_Time_10',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_10.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_10.png'
     },
     {
       id: 'Dropdown_Time_11',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_11.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_11.png'
     },
     {
       id: 'Dropdown_Time_12',
-      img: '~src/assets/images/speaklogic/DropdownTimes/Dropdown_Time_12.png'
+      img: '/assets/images/speaklogic/DropdownTimes/Dropdown_Time_12.png'
     }
   ],
   derivativeDropdown: {
@@ -2331,23 +2331,23 @@ export const ERibbon: IRibbon = {
   derivativeDropdownData: [
     {
       id: 'Derivative_1',
-      img: '~src/assets/images/speaklogic/Derivatives/Derivative_1.png'
+      img: '/assets/images/speaklogic/Derivatives/Derivative_1.png'
     },
     {
       id: 'Derivative_2',
-      img: '~src/assets/images/speaklogic/Derivatives/Derivative_2.png'
+      img: '/assets/images/speaklogic/Derivatives/Derivative_2.png'
     },
     {
       id: 'Derivative_3',
-      img: '~src/assets/images/speaklogic/Derivatives/Derivative_3.png'
+      img: '/assets/images/speaklogic/Derivatives/Derivative_3.png'
     },
     {
       id: 'Derivative_4',
-      img: '~src/assets/images/speaklogic/Derivatives/Derivative_4.png'
+      img: '/assets/images/speaklogic/Derivatives/Derivative_4.png'
     },
     {
       id: 'Derivative_5',
-      img: '~src/assets/images/speaklogic/Derivatives/Derivative_5.png'
+      img: '/assets/images/speaklogic/Derivatives/Derivative_5.png'
     }
   ],
   instrumentDropdown: {
@@ -2359,35 +2359,35 @@ export const ERibbon: IRibbon = {
   instrumentDropdownData: [
     {
       id: 'Instrument_1',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_1.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_1.png'
     },
     {
       id: 'Instrument_2',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_2.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_2.png'
     },
     {
       id: 'Instrument_3',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_3.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_3.png'
     },
     {
       id: 'Instrument_4',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_4.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_4.png'
     },
     {
       id: 'Instrument_5',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_5.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_5.png'
     },
     {
       id: 'Instrument_6',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_6.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_6.png'
     },
     {
       id: 'Instrument_7',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_7.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_7.png'
     },
     {
       id: 'Instrument_8',
-      img: '~src/assets/images/speaklogic/Instruments/Instrument_8.png'
+      img: '/assets/images/speaklogic/Instruments/Instrument_8.png'
     }
   ],
   stabilityDropdown: {
@@ -2399,127 +2399,127 @@ export const ERibbon: IRibbon = {
   stabilityDropdownData: [
     {
       id: 'Stability_1',
-      img: '~src/assets/images/speaklogic/Stability/Stability_1.png'
+      img: '/assets/images/speaklogic/Stability/Stability_1.png'
     },
     {
       id: 'Stability_2',
-      img: '~src/assets/images/speaklogic/Stability/Stability_2.png'
+      img: '/assets/images/speaklogic/Stability/Stability_2.png'
     },
     {
       id: 'Stability_3',
-      img: '~src/assets/images/speaklogic/Stability/Stability_3.png'
+      img: '/assets/images/speaklogic/Stability/Stability_3.png'
     },
     {
       id: 'Stability_4',
-      img: '~src/assets/images/speaklogic/Stability/Stability_4.png'
+      img: '/assets/images/speaklogic/Stability/Stability_4.png'
     },
     {
       id: 'Stability_5',
-      img: '~src/assets/images/speaklogic/Stability/Stability_5.png'
+      img: '/assets/images/speaklogic/Stability/Stability_5.png'
     },
     {
       id: 'Stability_6',
-      img: '~src/assets/images/speaklogic/Stability/Stability_6.png'
+      img: '/assets/images/speaklogic/Stability/Stability_6.png'
     },
     {
       id: 'Stability_7',
-      img: '~src/assets/images/speaklogic/Stability/Stability_7.png'
+      img: '/assets/images/speaklogic/Stability/Stability_7.png'
     },
     {
       id: 'Stability_8',
-      img: '~src/assets/images/speaklogic/Stability/Stability_8.png'
+      img: '/assets/images/speaklogic/Stability/Stability_8.png'
     },
     {
       id: 'Stability_9',
-      img: '~src/assets/images/speaklogic/Stability/Stability_9.png'
+      img: '/assets/images/speaklogic/Stability/Stability_9.png'
     },
     {
       id: 'Stability_10',
-      img: '~src/assets/images/speaklogic/Stability/Stability_10.png'
+      img: '/assets/images/speaklogic/Stability/Stability_10.png'
     },
     {
       id: 'Stability_11',
-      img: '~src/assets/images/speaklogic/Stability/Stability_11.png'
+      img: '/assets/images/speaklogic/Stability/Stability_11.png'
     },
     {
       id: 'Stability_12',
-      img: '~src/assets/images/speaklogic/Stability/Stability_12.png'
+      img: '/assets/images/speaklogic/Stability/Stability_12.png'
     },
     {
       id: 'Stability_13',
-      img: '~src/assets/images/speaklogic/Stability/Stability_13.png'
+      img: '/assets/images/speaklogic/Stability/Stability_13.png'
     },
     {
       id: 'Stability_14',
-      img: '~src/assets/images/speaklogic/Stability/Stability_14.png'
+      img: '/assets/images/speaklogic/Stability/Stability_14.png'
     },
     {
       id: 'Stability_15',
-      img: '~src/assets/images/speaklogic/Stability/Stability_15.png'
+      img: '/assets/images/speaklogic/Stability/Stability_15.png'
     },
     {
       id: 'Stability_16',
-      img: '~src/assets/images/speaklogic/Stability/Stability_16.png'
+      img: '/assets/images/speaklogic/Stability/Stability_16.png'
     },
     {
       id: 'Stability_17',
-      img: '~src/assets/images/speaklogic/Stability/Stability_17.png'
+      img: '/assets/images/speaklogic/Stability/Stability_17.png'
     },
     {
       id: 'Stability_18',
-      img: '~src/assets/images/speaklogic/Stability/Stability_18.png'
+      img: '/assets/images/speaklogic/Stability/Stability_18.png'
     },
     {
       id: 'Stability_19',
-      img: '~src/assets/images/speaklogic/Stability/Stability_19.png'
+      img: '/assets/images/speaklogic/Stability/Stability_19.png'
     },
     {
       id: 'Stability_21',
-      img: '~src/assets/images/speaklogic/Stability/Stability_21.png'
+      img: '/assets/images/speaklogic/Stability/Stability_21.png'
     },
     {
       id: 'Stability_22',
-      img: '~src/assets/images/speaklogic/Stability/Stability_22.png'
+      img: '/assets/images/speaklogic/Stability/Stability_22.png'
     },
     {
       id: 'Stability_23',
-      img: '~src/assets/images/speaklogic/Stability/Stability_23.png'
+      img: '/assets/images/speaklogic/Stability/Stability_23.png'
     },
     {
       id: 'Stability_24',
-      img: '~src/assets/images/speaklogic/Stability/Stability_24.png'
+      img: '/assets/images/speaklogic/Stability/Stability_24.png'
     },
     {
       id: 'Stability_25',
-      img: '~src/assets/images/speaklogic/Stability/Stability_25.png'
+      img: '/assets/images/speaklogic/Stability/Stability_25.png'
     },
     {
       id: 'Stability_26',
-      img: '~src/assets/images/speaklogic/Stability/Stability_26.png'
+      img: '/assets/images/speaklogic/Stability/Stability_26.png'
     },
     {
       id: 'Stability_26',
-      img: '~src/assets/images/speaklogic/Stability/Stability_26.png'
+      img: '/assets/images/speaklogic/Stability/Stability_26.png'
     },
     {
       id: 'Stability_27',
-      img: '~src/assets/images/speaklogic/Stability/Stability_27.png'
+      img: '/assets/images/speaklogic/Stability/Stability_27.png'
     },
     {
       id: 'Stability_28',
-      img: '~src/assets/images/speaklogic/Stability/Stability_28.png'
+      img: '/assets/images/speaklogic/Stability/Stability_28.png'
     },
     {
       id: 'Stability_29',
-      img: '~src/assets/images/speaklogic/Stability/Stability_29.png'
+      img: '/assets/images/speaklogic/Stability/Stability_29.png'
     },
     {
       id: 'Stability_30',
-      img: '~src/assets/images/speaklogic/Stability/Stability_30.png'
+      img: '/assets/images/speaklogic/Stability/Stability_30.png'
     },
     {
       id: 'Stability_31',
-      img: '~src/assets/images/speaklogic/Stability/Stability_31.png'
+      img: '/assets/images/speaklogic/Stability/Stability_31.png'
     }
   ],
   theoremDropdown: {
@@ -2531,87 +2531,87 @@ export const ERibbon: IRibbon = {
   theoremDropdownData: [
     {
       id: 'Theorem_Dropdown_1',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_1.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_1.png'
     },
     {
       id: 'Theorem_Dropdown_2',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_2.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_2.png'
     },
     {
       id: 'Theorem_Dropdown_3',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_3.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_3.png'
     },
     {
       id: 'Theorem_Dropdown_4',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_4.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_4.png'
     },
     {
       id: 'Theorem_Dropdown_5',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_5.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_5.png'
     },
     {
       id: 'Theorem_Dropdown_6',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_6.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_6.png'
     },
     {
       id: 'Theorem_Dropdown_7',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_7.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_7.png'
     },
     {
       id: 'Theorem_Dropdown_8',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_8.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_8.png'
     },
     {
       id: 'Theorem_Dropdown_9',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_9.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_9.png'
     },
     {
       id: 'Theorem_Dropdown_10',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_10.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_10.png'
     },
     {
       id: 'Theorem_Dropdown_11',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_11.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_11.png'
     },
     {
       id: 'Theorem_Dropdown_12',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_12.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_12.png'
     },
     {
       id: 'Theorem_Dropdown_13',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_13.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_13.png'
     },
     {
       id: 'Theorem_Dropdown_14',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_14.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_14.png'
     },
     {
       id: 'Theorem_Dropdown_15',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_15.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_15.png'
     },
     {
       id: 'Theorem_Dropdown_16',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_16.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_16.png'
     },
     {
       id: 'Theorem_Dropdown_17',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_17.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_17.png'
     },
     {
       id: 'Theorem_Dropdown_18',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_18.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_18.png'
     },
     {
       id: 'Theorem_Dropdown_19',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_19.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_19.png'
     },
     {
       id: 'Theorem_Dropdown_20',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_20.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_20.png'
     },
     {
       id: 'Theorem_Dropdown_21',
-      img: '~src/assets/images/speaklogic/Theorems/Theorem_Dropdown_21.png'
+      img: '/assets/images/speaklogic/Theorems/Theorem_Dropdown_21.png'
     }
   ]
 };

@@ -8,6 +8,8 @@
   [contextMenuSettings]="contextMenuSettings"
   (contextMenuOpen)="handleContextMenuOpen($event)"
   [rulerSettings]="rulerSettings"
+  [dataSourceSettings]="data"
+  (propertyChange)="propertyChange($event)"
   [tooltip]="tooltipSettings">
 </ejs-diagram>
 

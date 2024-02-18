@@ -23,6 +23,7 @@ export interface ITreeViewDataSourceType {
 })
 export class SyncTreeViewComponent implements OnChanges {
   @Input() dataSource: ITreeViewDataSourceType[];
+  @Input() activeItem: EDiagramModel;
   @Output() clickTreeItem = new EventEmitter<ITreeViewDataSourceType>()
   public field: Object;
 

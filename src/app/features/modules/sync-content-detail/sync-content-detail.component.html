@@ -1,1 +1,9 @@
-<sync-diagram></sync-diagram>
+<div class="main-diagram">
+    <div class="diagram-tab d-flex">
+        <div class="d-flex" *ngFor="let diagram of currentModelDiagramList">
+            <div> {{PROJECT_MODEL_MAP[diagram.LABEL]?.name}}</div>
+            <div class="close">x</div>
+        </div >
+    </div>
+    <sync-diagram></sync-diagram>
+</div>

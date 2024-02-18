@@ -1,0 +1,11 @@
+.main-diagram {
+    overflow: scroll;
+    height: 100%;
+    .diagram-tab {
+        background-color: var(--gray-200);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+    }
+    border: 1px solid var(--gray-600);
+
+}

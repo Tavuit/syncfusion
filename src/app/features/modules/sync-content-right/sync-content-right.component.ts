@@ -1,14 +1,16 @@
-import {Component, OnDestroy} from '@angular/core';
-import {CommonModule} from '@angular/common';
+import { Component, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import {
   ITreeViewDataSourceType,
   SyncTreeViewComponent
 } from 'src/app/shared/base-components/views/sync-tree-view/sync-tree-view.component';
-import {CTreeViewDataComm} from "./constants/communication.constant";
-import {CTreeViewDataTheory} from "./constants/theory.constant";
-import {CoreService, TDiagramModel} from 'src/app/shared/services/core.service';
-import {map, Subject, takeUntil} from "rxjs";
-import {EDomain} from "../../../shared/enums/core.enum";
+import { CTreeViewDataComm } from "./constants/communication.constant";
+import { CTreeViewDataTheory } from "./constants/theory.constant";
+import { CoreService, TDiagramModel } from 'src/app/shared/services/core.service';
+import { map, Subject, takeUntil } from "rxjs";
+import { EDomain } from "../../../shared/enums/core.enum";
+import { DiagramService } from 'src/app/shared/services/diagram.service';
+import { EDiagramModel } from 'src/app/shared/enums/diagram.enum';
 
 @Component({
   selector: 'sync-content-right',
@@ -23,9 +25,11 @@ export class SyncContentRightComponent implements OnDestroy {
   private _diagramProject: TDiagramModel;
 
   public treeViewData: ITreeViewDataSourceType[] = [];
+  public currentModel: EDiagramModel;
 
   constructor(
     private coreService: CoreService,
+    private diagramService: DiagramService
   ) {
     this.coreService.getDomain()
       .pipe(
@@ -43,16 +47,27 @@ export class SyncContentRightComponent implements OnDestroy {
       .pipe(
         takeUntil(this._destroyed)
       )
-      .subscribe((diagramProject)=> this._diagramProject = diagramProject);
+      .subscribe((diagramProject) => this._diagramProject = diagramProject);
+
+    this.coreService.getCurrentModel()
+      .pipe((takeUntil(this._destroyed)))
+      .subscribe(rs => {
+        this.currentModel = rs;
+      })
   }
 
   public handleClickTreeItem(data: ITreeViewDataSourceType) {
-    const updatedData = this._diagramProject[this._domain];
-    if (!!data?.enums && !updatedData?.includes(data.enums)) {
-      updatedData?.push(data.enums);
+    const diagramType = data?.enums;
+    if (!!diagramType) {
+      const diagramObject = this.coreService.getDiagramModelByType(diagramType);
+      this.coreService.addOrUpdateDiagramByModel(diagramType, diagramObject);
+      this.diagramService.setDiagram(diagramObject || {})
+      this.coreService.setCurrentModel(diagramType)
     }
-    this.coreService.setModel({...this._diagramProject, [this._domain]: updatedData});
-    this.coreService.setCurrentModel(data.enums);
+  }
+
+  public activeItem = (itemName: string) => {
+    return itemName === this.currentModel;
   }
 
   ngOnDestroy() {

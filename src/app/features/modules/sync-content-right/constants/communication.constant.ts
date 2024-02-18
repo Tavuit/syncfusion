@@ -84,3 +84,14 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
   { id: 36, pid: 35, name: 'Area of Operation', iconName: 'house', hasChild: false },
   { id: 37, pid: 35, name: 'Site of Operation', iconName: 'diagram-4', hasChild: false },
 ]
+
+//TODO UPDATE FUNCTION WHEN CTREE VIEW ELEMENTS HAVE CHILD
+
+export const COMM_PROJECT_MODEL_MAP = CTreeViewDataComm.reduce((prev, curr) => {
+  return {
+    ...prev,
+    [curr.enums] : curr
+  }
+}, {})
+
+console.log(COMM_PROJECT_MODEL_MAP)
