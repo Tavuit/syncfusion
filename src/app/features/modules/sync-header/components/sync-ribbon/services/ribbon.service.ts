@@ -233,6 +233,7 @@ export class RibbonService {
   }
 
   private setDomain(domain: EDomain): void {
+    this.coreService.saveCurrentDiagram();
     this.coreService.setDomain(domain);
   }
 

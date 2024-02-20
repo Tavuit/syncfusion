@@ -1,7 +1,5 @@
-import {EDiagramModel} from "src/app/shared/enums/diagram.enum";
-import {
-  ITreeViewDataSourceType
-} from "../../../../shared/base-components/views/sync-tree-view/sync-tree-view.component";
+import { EDiagramModel } from 'src/app/shared/enums/diagram.enum';
+import { ITreeViewDataSourceType } from '../../../../shared/base-components/views/sync-tree-view/sync-tree-view.component';
 
 export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
   {
@@ -17,7 +15,7 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     name: 'Main Theory Application Model',
     iconName: 'flow-chart-1',
     hasChild: false,
-    enums: EDiagramModel.THEORY_MAIN_APPLICATION_MODEL
+    enums: EDiagramModel.THEORY_MAIN_APPLICATION_MODEL,
   },
   {
     id: 3,
@@ -25,7 +23,7 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     name: 'System Apply Theory Circular',
     iconName: 'flow-chart-1',
     hasChild: false,
-    enums: EDiagramModel.SYSTEM_APPLY_THEORY_MODEL
+    enums: EDiagramModel.SYSTEM_APPLY_THEORY_MODEL,
   },
   {
     id: 5,
@@ -33,6 +31,7 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     name: 'Function In Functional System',
     iconName: 'flow-chart-1',
     hasChild: false,
+    enums: EDiagramModel.FUNCTION_IN_FUNCTIONAL_SYSTEM,
   },
   {
     id: 6,
@@ -40,13 +39,14 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     name: 'Other Theory Model',
     iconName: 'flow-chart-1',
     hasChild: false,
+    enums: EDiagramModel.OTHER_THEORY_MODEL,
   },
   {
     id: 7,
     pid: 1,
     name: 'Support Model',
     iconName: 'flow-chart-1',
-    hasChild: true
+    hasChild: true,
   },
   {
     id: 8,
@@ -55,29 +55,144 @@ export const CTreeViewDataTheory: ITreeViewDataSourceType[] = [
     iconName: 'flow-chart-1',
     hasChild: true,
   },
-  {id: 9, pid: 7, name: 'Parts of Function to Function', iconName: 'flow-chart-1', hasChild: false},
-  {id: 10, pid: 7, name: 'Part of Instrument to Instrument', iconName: 'flow-chart-1', hasChild: false},
-  {id: 11, pid: 7, name: 'Natural or Input Element Usage', iconName: 'flow-chart-1', hasChild: false},
-  {id: 12, pid: 7, name: 'List of Identified Theorems', iconName: 'flow-chart-1', hasChild: false},
-  {id: 13, pid: 7, name: 'List of Applied Theorems', iconName: 'flow-chart-1', hasChild: false},
-  {id: 30, pid: 7, name: 'Instrument or Method Produced', iconName: 'flow-chart-1', hasChild: false},
-  {id: 15, pid: 7, name: 'Function Produced from Theory Application', iconName: 'flow-chart-1', hasChild: false},
-  {id: 16, pid: 7, name: 'Other Support Model', iconName: 'flow-chart-1', hasChild: false},
+  {
+    id: 9,
+    pid: 7,
+    name: 'Parts of Function to Function',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.PARTS_OF_FUNCTION_TO_FUNCTION,
+  },
+  {
+    id: 10,
+    pid: 7,
+    name: 'Part of Instrument to Instrument',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.PART_OF_INSTRUMENT_TO_INSTRUMENT,
+  },
+  {
+    id: 11,
+    pid: 7,
+    name: 'Natural or Input Element Usage',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.NATURAL_OR_INPUT_ELEMENT_USAGE,
+  },
+  {
+    id: 12,
+    pid: 7,
+    name: 'List of Identified Theorems',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.LIST_OF_IDENTIFIED_THEOREMS,
+  },
+  {
+    id: 13,
+    pid: 7,
+    name: 'List of Applied Theorems',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.LIST_OF_APPLIED_THEOREMS,
+  },
+  {
+    id: 30,
+    pid: 7,
+    name: 'Instrument or Method Produced',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.INSTRUMENT_OR_METHOD_PRODUCED,
+  },
+  {
+    id: 15,
+    pid: 7,
+    name: 'Function Produced from Theory Application',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.FUNCTION_PRODUCED_FROM_THEORY_APPLICATION,
+  },
+  {
+    id: 16,
+    pid: 7,
+    name: 'Other Support Model',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.OTHER_SUPPORT_MODEL,
+  },
 
-  {id: 17, pid: 8, name: 'System Understanding Theory', iconName: 'flow-chart-1', hasChild: false},
-  {id: 18, pid: 8, name: 'Function on Theory Scale', iconName: 'flow-chart-1', hasChild: false},
-  {id: 19, pid: 8, name: 'Functional Stability', iconName: 'flow-chart-1', hasChild: false},
-  {id: 20, pid: 8, name: 'Graphical Project Status', iconName: 'flow-chart-1', hasChild: false},
-  {id: 21, pid: 8, name: 'Project Direction and Destination', iconName: 'flow-chart-1', hasChild: false},
-  {id: 22, pid: 8, name: 'Problem Development and Identification', iconName: 'flow-chart-1', hasChild: false},
-  {id: 23, pid: 8, name: 'Philosophy Inheritance Chart', iconName: 'flow-chart-1', hasChild: false},
-  {id: 24, pid: 8, name: 'Other Stability Model', iconName: 'flow-chart-1', hasChild: false}
-]
+  {
+    id: 17,
+    pid: 8,
+    name: 'System Understanding Theory',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.SYSTEM_UNDERSTANDING_THEORY,
+  },
+  {
+    id: 18,
+    pid: 8,
+    name: 'Function on Theory Scale',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.FUNCTION_ON_THEORY_SCALE,
+  },
+  {
+    id: 19,
+    pid: 8,
+    name: 'Functional Stability',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.FUNCTIONAL_STABILITY,
+  },
+  {
+    id: 20,
+    pid: 8,
+    name: 'Graphical Project Status',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.GRAPHICAL_PROJECT_STATUS,
+  },
+  {
+    id: 21,
+    pid: 8,
+    name: 'Project Direction and Destination',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.PROJECT_DIRECTION_AND_DESTINATION,
+  },
+  {
+    id: 22,
+    pid: 8,
+    name: 'Problem Development and Identification',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.PROBLEM_DEVELOPMENT_AND_IDENTIFICATION,
+  },
+  {
+    id: 23,
+    pid: 8,
+    name: 'Philosophy Inheritance Chart',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.PHILOSOPHY_INHERITANCE_CHART,
+  },
+  {
+    id: 24,
+    pid: 8,
+    name: 'Other Stability Model',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.OTHER_STABILITY_MODEL,
+  },
+];
 
 //TODO UPDATE FUNCTION WHEN CTREE VIEW ELEMENTS HAVE CHILD
-export const THEORY_PROJECT_MODEL_MAP = CTreeViewDataTheory.reduce((prev,curr) => {
-  return {
-    ...prev,
-    [curr.enums]: curr
-  }
-},{})
+export const THEORY_PROJECT_MODEL_MAP = CTreeViewDataTheory.reduce(
+  (prev, curr) => {
+    return {
+      ...prev,
+      [curr.enums]: curr,
+    };
+  },
+  {}
+);

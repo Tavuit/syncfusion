@@ -1,9 +1,5 @@
 <div class="main-diagram">
-    <div class="diagram-tab d-flex">
-        <div class="d-flex" *ngFor="let diagram of currentModelDiagramList">
-            <div> {{PROJECT_MODEL_MAP[diagram.LABEL]?.name}}</div>
-            <div class="close">x</div>
-        </div >
-    </div>
+    <page-list [listPage]="currentModelDiagramList" (openPage)="openPage($event)" (closePage)="closePage($event)" 
+    [activeItem]="selectedDiagramModel" [compareFunction]="compareFunc"></page-list>
     <sync-diagram></sync-diagram>
 </div>
