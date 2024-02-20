@@ -37,6 +37,7 @@ import { contextMenuSettings, rulerSettings, tooltipSettings } from "../../const
 import { DiagramContextMenuService } from './../../../../../shared/services/diagram-context-menu.service';
 import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import { LabelPropertyComponent } from './../label-property/label-property.component';
+import { EDiagramModel } from 'src/app/shared/enums/diagram.enum';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -64,8 +65,8 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   public data: Object = {
 
   }
-  currentDomain: EDomain
-  currentModel: import("e:/code/syncfusion/src/app/shared/enums/diagram.enum").EDiagramModel;
+  public currentDomain: EDomain
+  public currentModel: EDiagramModel;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,

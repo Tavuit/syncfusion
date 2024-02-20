@@ -5,7 +5,7 @@ import {
 } from 'src/app/features/modules/sync-content-detail/components/sync-diagram/sync-diagram.component';
 import { DiagramService } from 'src/app/shared/services/diagram.service';
 import { distinctUntilChanged, map, Subject, switchMap, takeUntil } from "rxjs";
-import { CoreService } from 'src/app/shared/services/core.service';
+import { CoreService, TDiagramModel } from 'src/app/shared/services/core.service';
 import { isEqual } from 'lodash';
 import { IDiagramModel, IDiagramProject, IProjectDiagramModel } from "../../../shared/interfaces/diagram.interface";
 import { EDomain } from "../../../shared/enums/core.enum";
@@ -25,7 +25,7 @@ export class SyncContentDetailComponent implements OnInit, OnDestroy {
   private _destroyed: Subject<void> = new Subject<void>();
   public currentModelDiagramList = [];
   public readonly PROJECT_MODEL_MAP = PROJECT_MODEL_MAP;
-  public currentDiagramModel;
+  public currentDiagramModel: TDiagramModel;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,
@@ -50,8 +50,6 @@ export class SyncContentDetailComponent implements OnInit, OnDestroy {
     this.coreService.getModel().subscribe(rs => {
       this.currentDiagramModel = rs;
     })
-
-    this.coreService.getCurrentModel()
 
     this.coreService.getListProjectDiagramByDomain().
     pipe(takeUntil(this._destroyed))
