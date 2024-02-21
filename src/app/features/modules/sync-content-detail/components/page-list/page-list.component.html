@@ -1,0 +1,9 @@
+<div class="diagram-tabs d-flex">
+    <div class="d-flex" *ngFor="let item of _items">
+        <div class="d-flex diagram-tab" [ngClass]="{'active': !!item?.active}">
+            <div class="diagram-name" (click)="$event.stopPropagation(); handleOpen(item)">
+                {{PROJECT_MODEL_MAP[item.LABEL]?.name}}</div>
+            <div class="button-close" (click)="$event.stopPropagation(); handleClose(item)"></div>
+        </div>
+    </div>
+</div>

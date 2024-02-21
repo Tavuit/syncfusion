@@ -1,0 +1,27 @@
+.diagram-tabs {
+    background-color: var(--gray-200);
+    gap: 2px;
+    .diagram-tab {
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        border: 1px solid var(--gray-600);
+        padding: 2px 4px;
+        gap: 4px;
+        cursor: pointer;
+        .button-close {
+            &::after {
+                content: "\2716";
+                cursor: pointer;
+            }
+            &:hover {
+                color: var(--red-400);
+            }
+        }
+    }
+    .diagram-tab.active {
+        background-color: var(--white);
+        font-weight: 600;
+
+    }
+    border: 1px solid var(--gray-600);
+}

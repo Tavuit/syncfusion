@@ -1,7 +1,5 @@
-import { EDiagramModel } from "src/app/shared/enums/diagram.enum";
-import {
-  ITreeViewDataSourceType
-} from "../../../../shared/base-components/views/sync-tree-view/sync-tree-view.component";
+import { EDiagramModel } from 'src/app/shared/enums/diagram.enum';
+import { ITreeViewDataSourceType } from '../../../../shared/base-components/views/sync-tree-view/sync-tree-view.component';
 
 export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
   {
@@ -17,7 +15,7 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
     name: 'Main Project Model',
     iconName: 'flow-diagram',
     hasChild: false,
-    enums: EDiagramModel.COMM_MAIN_PROJECT_MODEL
+    enums: EDiagramModel.COMM_MAIN_PROJECT_MODEL,
   },
   {
     id: 3,
@@ -25,7 +23,7 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
     name: 'Problem Statement',
     iconName: 'diagram-icon',
     hasChild: false,
-    enums: EDiagramModel.COMM_PROBLEM_STATEMENT
+    enums: EDiagramModel.COMM_PROBLEM_STATEMENT,
   },
   {
     id: 5,
@@ -33,6 +31,7 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
     name: 'People Work Together',
     iconName: 'flow-chart',
     hasChild: false,
+    enums: EDiagramModel.COMM_PEOPLE_WORK_TOGETHER,
   },
   {
     id: 6,
@@ -40,58 +39,263 @@ export const CTreeViewDataComm: ITreeViewDataSourceType[] = [
     name: 'Operating Principle',
     iconName: 'structure',
     hasChild: false,
+    enums: EDiagramModel.COMM_OPERATING_PRINCIPLE,
   },
-  { id: 7, pid: 1, name: 'What We Do Model', iconName: 'diagram-3', hasChild: false },
+  {
+    id: 7,
+    pid: 1,
+    name: 'What We Do Model',
+    iconName: 'diagram-3',
+    hasChild: false,
+  },
   {
     id: 8,
     pid: 1,
     name: 'Error Give Rise To Problem',
     iconName: 'uml',
     hasChild: false,
+    enums: EDiagramModel.COMM_ERROR_GIVE_RISE_TO_PROBLEM,
   },
-  { id: 9, pid: 1, name: 'Other Model', iconName: 'structure', hasChild: false },
-  { id: 10, pid: 1, name: 'Group People & Group Function', iconName: 'diagram-5', hasChild: true },
-  { id: 11, pid: 10, name: 'Group of People Defined', iconName: 'people', hasChild: false },
-  { id: 12, pid: 10, name: 'Group of People Function', iconName: 'flow-chart-1', hasChild: false },
+  {
+    id: 9,
+    pid: 1,
+    name: 'Other Model',
+    iconName: 'structure',
+    hasChild: false,
+    enums: EDiagramModel.COMM_OTHER_MODEL,
+  },
+  {
+    id: 10,
+    pid: 1,
+    name: 'Group People & Group Function',
+    iconName: 'diagram-5',
+    hasChild: true,
+  },
+  {
+    id: 11,
+    pid: 10,
+    name: 'Group of People Defined',
+    iconName: 'people',
+    hasChild: false,
+    enums: EDiagramModel.COMM_GROUP_OF_PEOPLE_DEFINED,
+  },
+  {
+    id: 12,
+    pid: 10,
+    name: 'Group of People Function',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.COMM_GROUP_OF_PEOPLE_FUNCTION,
+  },
 
-  { id: 13, pid: 1, name: 'Change Of Application', iconName: 'diagram-3', hasChild: true },
-  { id: 30, pid: 13, name: 'Graphical Change', iconName: 'monitoring', hasChild: false },
-  { id: 15, pid: 13, name: 'Tabulated Change', iconName: 'diagram-4', hasChild: false },
+  {
+    id: 13,
+    pid: 1,
+    name: 'Change Of Application',
+    iconName: 'diagram-3',
+    hasChild: true,
+  },
+  {
+    id: 30,
+    pid: 13,
+    name: 'Graphical Change',
+    iconName: 'monitoring',
+    hasChild: false,
+    enums: EDiagramModel.COMM_GRAPHICAL_CHANGE,
+  },
+  {
+    id: 15,
+    pid: 13,
+    name: 'Tabulated Change',
+    iconName: 'diagram-4',
+    hasChild: false,
+    enums: EDiagramModel.COMM_TABULATED_CHANGE,
+  },
 
-  { id: 16, pid: 1, name: 'Timeline & Schedule', iconName: 'timetable', hasChild: true },
-  { id: 17, pid: 16, name: 'Project Timeline', iconName: 'performance', hasChild: false },
-  { id: 18, pid: 16, name: 'Project Schedule', iconName: 'timetable', hasChild: false },
-  { id: 19, pid: 16, name: 'People Schedule', iconName: 'people', hasChild: false },
-  { id: 20, pid: 16, name: 'Graphical Project Status', iconName: 'diagram-3', hasChild: false },
+  {
+    id: 16,
+    pid: 1,
+    name: 'Timeline & Schedule',
+    iconName: 'timetable',
+    hasChild: true,
+  },
+  {
+    id: 17,
+    pid: 16,
+    name: 'Project Timeline',
+    iconName: 'performance',
+    hasChild: false,
+    enums: EDiagramModel.COMM_PROJECT_TIMELINE,
+  },
+  {
+    id: 18,
+    pid: 16,
+    name: 'Project Schedule',
+    iconName: 'timetable',
+    hasChild: false,
+    enums: EDiagramModel.COMM_PROJECT_SCHEDULE,
+  },
+  {
+    id: 19,
+    pid: 16,
+    name: 'People Schedule',
+    iconName: 'people',
+    hasChild: false,
+    enums: EDiagramModel.COMM_PEOPLE_SCHEDULE,
+  },
+  {
+    id: 20,
+    pid: 16,
+    name: 'Graphical Project Status',
+    iconName: 'diagram-3',
+    hasChild: false,
+    enums: EDiagramModel.COMM_GRAPHICAL_PROJECT_STATUS,
+  },
 
-  { id: 21, pid: 1, name: 'Support Models', iconName: 'structure', hasChild: true },
-  { id: 22, pid: 21, name: 'Entity Support Model', iconName: 'diagram-1', hasChild: false },
-  { id: 23, pid: 21, name: 'Error Accumulator', iconName: 'symbol', hasChild: false },
-  { id: 24, pid: 21, name: 'Sum of Compensator', iconName: 'the-sum-of', hasChild: false },
-  { id: 25, pid: 21, name: 'List of Analysis', iconName: 'note-123', hasChild: false },
-  { id: 26, pid: 21, name: 'Total Timeline', iconName: 'monitoring', hasChild: false },
-  { id: 27, pid: 21, name: 'Problem Report', iconName: 'checklist', hasChild: false },
-  { id: 28, pid: 21, name: 'Entity Produced and Function', iconName: 'planning', hasChild: false },
-  { id: 29, pid: 21, name: 'Function Status', iconName: 'report', hasChild: false },
-  { id: 30, pid: 21, name: 'List of Test Result ', iconName: 'flow-chart-1', hasChild: false },
+  {
+    id: 21,
+    pid: 1,
+    name: 'Support Models',
+    iconName: 'structure',
+    hasChild: true,
+  },
+  {
+    id: 22,
+    pid: 21,
+    name: 'Entity Support Model',
+    iconName: 'diagram-1',
+    hasChild: false,
+    enums: EDiagramModel.COMM_ENTITY_SUPPORT_MODEL,
+  },
+  {
+    id: 23,
+    pid: 21,
+    name: 'Error Accumulator',
+    iconName: 'symbol',
+    hasChild: false,
+    enums: EDiagramModel.COMM_ERROR_ACCUMULATOR,
+  },
+  {
+    id: 24,
+    pid: 21,
+    name: 'Sum of Compensator',
+    iconName: 'the-sum-of',
+    hasChild: false,
+    enums: EDiagramModel.COMM_SUM_OF_COMPENSATOR,
+  },
+  {
+    id: 25,
+    pid: 21,
+    name: 'List of Analysis',
+    iconName: 'note-123',
+    hasChild: false,
+    enums: EDiagramModel.COMM_LIST_OF_ANALYSIS,
+  },
+  {
+    id: 26,
+    pid: 21,
+    name: 'Total Timeline',
+    iconName: 'monitoring',
+    hasChild: false,
+    enums: EDiagramModel.COMM_TOTAL_TIMELINE,
+  },
+  {
+    id: 27,
+    pid: 21,
+    name: 'Problem Report',
+    iconName: 'checklist',
+    hasChild: false,
+    enums: EDiagramModel.COMM_PROBLEM_REPORT,
+  },
+  {
+    id: 28,
+    pid: 21,
+    name: 'Entity Produced and Function',
+    iconName: 'planning',
+    hasChild: false,
+    enums: EDiagramModel.COMM_ENTITY_PRODUCED_AND_FUNCTION,
+  },
+  {
+    id: 29,
+    pid: 21,
+    name: 'Function Status',
+    iconName: 'report',
+    hasChild: false,
+    enums: EDiagramModel.COMM_FUNCTION_STATUS,
+  },
+  {
+    id: 30,
+    pid: 21,
+    name: 'List of Test Result ',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.COMM_LIST_OF_TEST_RESULT,
+  },
 
-  { id: 31, pid: 1, name: 'Entity Usage & Function', iconName: 'diagram-1', hasChild: true },
-  { id: 32, pid: 31, name: 'List of Entity Usage ', iconName: 'flow-chart-1', hasChild: false },
-  { id: 33, pid: 31, name: 'Actual Entity Used by People ', iconName: 'flow-chart-1', hasChild: false },
-  { id: 34, pid: 31, name: 'Function of Entity Used', iconName: 'flow-chart-1', hasChild: false },
+  {
+    id: 31,
+    pid: 1,
+    name: 'Entity Usage & Function',
+    iconName: 'diagram-1',
+    hasChild: true,
+  },
+  {
+    id: 32,
+    pid: 31,
+    name: 'List of Entity Usage ',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.COMM_LIST_OF_ENTITY_USAGE,
+  },
+  {
+    id: 33,
+    pid: 31,
+    name: 'Actual Entity Used by People ',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.COMM_ACTUAL_ENTITY_USED_BY_PEOPLE,
+  },
+  {
+    id: 34,
+    pid: 31,
+    name: 'Function of Entity Used',
+    iconName: 'flow-chart-1',
+    hasChild: false,
+    enums: EDiagramModel.COMM_FUNCTION_OF_ENTITY_USED,
+  },
 
-  { id: 35, pid: 1, name: 'Area & Site Of Operation', iconName: 'house', hasChild: true },
-  { id: 36, pid: 35, name: 'Area of Operation', iconName: 'house', hasChild: false },
-  { id: 37, pid: 35, name: 'Site of Operation', iconName: 'diagram-4', hasChild: false },
-]
+  {
+    id: 35,
+    pid: 1,
+    name: 'Area & Site Of Operation',
+    iconName: 'house',
+    hasChild: true,
+  },
+  {
+    id: 36,
+    pid: 35,
+    name: 'Area of Operation',
+    iconName: 'house',
+    hasChild: false,
+    enums: EDiagramModel.COMM_AREA_OF_OPERATION,
+  },
+  {
+    id: 37,
+    pid: 35,
+    name: 'Site of Operation',
+    iconName: 'diagram-4',
+    hasChild: false,
+    enums: EDiagramModel.COMM_SITE_OF_OPERATION,
+  },
+];
 
 //TODO UPDATE FUNCTION WHEN CTREE VIEW ELEMENTS HAVE CHILD
 
 export const COMM_PROJECT_MODEL_MAP = CTreeViewDataComm.reduce((prev, curr) => {
   return {
     ...prev,
-    [curr.enums] : curr
-  }
-}, {})
+    [curr.enums]: curr,
+  };
+}, {});
 
-console.log(COMM_PROJECT_MODEL_MAP)
+console.log(COMM_PROJECT_MODEL_MAP);
