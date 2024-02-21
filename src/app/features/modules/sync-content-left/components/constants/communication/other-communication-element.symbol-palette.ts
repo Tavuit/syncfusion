@@ -6,7 +6,7 @@ export function getOtherCommunicationElementShapes() {
   let otherCommunicationElement = [
     {
       id: "separationLineComm",
-      addInfo: {title: "Separation Line", tooltip: "Separation Line"},
+      addInfo: {menuId: "edit", title: "Separation Line", tooltip: "Separation Line"},
       shape: {
         type: "Native",
         content: `
@@ -27,7 +27,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "time",
-      addInfo: {title: "Time", tooltip: "Time"},
+      addInfo: {menuId: "edit", title: "Time", tooltip: "Time"},
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -61,7 +61,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "progress",
-      addInfo: {title: "Progress", tooltip: "Progress"},
+      addInfo: {menuId: "edit", title: "Progress", tooltip: "Progress"},
       shape: {
         type: "Native",
         content: `
@@ -96,7 +96,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "timeLine",
-      addInfo: {title: "Time Line", tooltip: "Time Line"},
+      addInfo: {menuId: "edit", title: "Time Line", tooltip: "Time Line"},
       shape: {
         type: "Native",
         content: `
@@ -124,7 +124,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "dateLine",
-      addInfo: {title: "Date Line", tooltip: "Date Line"},
+      addInfo: {menuId: "edit", title: "Date Line", tooltip: "Date Line"},
       shape: {
         type: "Native",
         content: `
@@ -152,7 +152,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "principleLineOthers",
-      addInfo: {title: "PrincipleLine", tooltip: "PrincipleLine"},
+      addInfo: {menuId: "edit", title: "PrincipleLine", tooltip: "PrincipleLine"},
       shape: {
         type: "Native",
         content: `
@@ -203,7 +203,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "note",
-      addInfo: {title: "Note", tooltip: "Note"},
+      addInfo: {menuId: "edit", title: "Note", tooltip: "Note"},
       shape: {
         type: "Native",
         content: `
@@ -224,7 +224,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "nodeOthers",
-      addInfo: {title: "Node", tooltip: "Node"},
+      addInfo: {menuId: "edit", title: "Node", tooltip: "Node"},
       shape: {
         type: "Native",
         content: `
@@ -250,7 +250,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "callOut",
-      addInfo: {title: "Callout", tooltip: "Callout"},
+      addInfo: {menuId: "edit", title: "Callout", tooltip: "Callout"},
       shape: {
         type: "Native",
         content: `
@@ -275,7 +275,7 @@ export function getOtherCommunicationElementShapes() {
       }
     },
     {
-      ...getShapeByType('Table', 'nodeTableComm', { title: 'Node Table', tooltip: 'Node Table' }, {
+      ...getShapeByType('Table', 'nodeTableComm', { menuId: "edit", title: 'Node Table', tooltip: 'Node Table' }, {
         content: ["Node Number", "Information", "1", ""],
         columnNo: 2,
       }),
@@ -290,7 +290,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "statement",
-      addInfo: {title: "Statement", tooltip: "Statement"},
+      addInfo: {menuId: "edit", title: "Statement", tooltip: "Statement"},
       shape: {
         type: "Native",
         content: `
@@ -317,7 +317,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "numberIdentification",
-      addInfo: {title: "Number Identification", tooltip: "Number Identification"},
+      addInfo: {menuId: "edit", title: "Number Identification", tooltip: "Number Identification"},
       shape: {
         type: "Native",
         content: `
@@ -344,7 +344,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "entityInclusionLineHorizontal",
-      addInfo: {title: "Entity Inclusion Line Horizontal", tooltip: "Entity Inclusion Line Horizontal"},
+      addInfo: {menuId: "edit", title: "Entity Inclusion Line Horizontal", tooltip: "Entity Inclusion Line Horizontal"},
       shape: {
         type: "Native",
         content: `
@@ -395,7 +395,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "entityInclusionLineVertical",
-      addInfo: {title: "Entity Inclusion Line Vertical", tooltip: "Entity Inclusion Line Vertical"},
+      addInfo: {menuId: "edit", title: "Entity Inclusion Line Vertical", tooltip: "Entity Inclusion Line Vertical"},
       shape: {
         type: "Native",
         content: `
@@ -446,7 +446,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "changeofApplication",
-      addInfo: {title: "Change of Application", tooltip: "Change of Application"},
+      addInfo: {menuId: "edit", title: "Change of Application", tooltip: "Change of Application"},
       shape: {
         type: "Native",
         content: `
@@ -512,7 +512,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: "changeofApplication1",
-      addInfo: {title: "Change of Application", tooltip: "Change of Application"},
+      addInfo: {menuId: "edit", title: "Change of Application", tooltip: "Change of Application"},
       shape: {
         type: "Native",
         content: `
@@ -550,7 +550,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: 'graphLine',
-      addInfo: { title: 'Graph Line', tooltip: 'Graph Line' },
+      addInfo: { menuId: "edit", title: 'Graph Line', tooltip: 'Graph Line' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -578,7 +578,7 @@ export function getOtherCommunicationElementShapes() {
       id: "graphPoint",
       addInfo: [
         {
-          title: "Graph Point",
+          menuId: "edit", title: "Graph Point",
           toolTip: "Use to Draw Graph",
         },
       ],
@@ -599,7 +599,7 @@ export function getOtherCommunicationElementShapes() {
     },
     {
       id: 'graphLineAndPoint',
-      addInfo: { title: 'Graph Line and Point', tooltip: 'Graph Line and Point' },
+      addInfo: { menuId: "edit", title: 'Graph Line and Point', tooltip: 'Graph Line and Point' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -627,7 +627,7 @@ export function getOtherCommunicationElementShapes() {
       id: "xAxis",
       addInfo: [
         {
-          title: "X-Axis",
+          menuId: "edit", title: "X-Axis",
           toolTip: "X-Axis",
         },
       ],
@@ -661,7 +661,7 @@ export function getOtherCommunicationElementShapes() {
       id: "yAxis",
       addInfo: [
         {
-          title: "Y-Axis",
+          menuId: "edit", title: "Y-Axis",
           toolTip: "Y-Axis",
         },
       ],

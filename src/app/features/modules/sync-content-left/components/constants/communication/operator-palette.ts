@@ -9,7 +9,7 @@ import { getShapeByType } from 'src/app/utils/constants';
 export function getOperatorShapes() {
   let operatorShapes = [
     {
-      ...getShapeByType('', 'operatorTheoryGroup', { title: 'Group', tooltip: 'Group' }, {
+      ...getShapeByType('', 'operatorTheoryGroup', { menuId: "commMix", title: 'Group', tooltip: 'Group' }, {
         content: [
           {
             content: "Group",
@@ -50,7 +50,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryComMix', { title: 'Com Mix', tooltip: 'Com Mix' }, {
+      ...getShapeByType('', 'operatorTheoryComMix', { menuId: "commMix", title: 'Com Mix', tooltip: 'Com Mix' }, {
         content: [
           {
             content: "Com Mix",
@@ -91,7 +91,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('Circle', 'operatorTheoryComAppMix', { title: 'Com App Mix', tooltip: 'Com App Mix' }, {
+      ...getShapeByType('Circle', 'operatorTheoryComAppMix', { menuId: "commMix", title: 'Com App Mix', tooltip: 'Com App Mix' }, {
         content: [
           {
             content: "ComAppMix",
@@ -107,7 +107,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('Circle', 'operatorTheorySimilar', { title: 'Similar', tooltip: 'Similar' }, {
+      ...getShapeByType('Circle', 'operatorTheorySimilar', { menuId: "commMix", title: 'Similar', tooltip: 'Similar' }, {
         content: [
           {
             content: "Similar",
@@ -125,7 +125,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('Circle', 'operatorTheorySimilar1', { title: 'Similar', tooltip: 'Similar' }, {
+      ...getShapeByType('Circle', 'operatorTheorySimilar1', { menuId: "commMix", title: 'Similar', tooltip: 'Similar' }, {
         content: [
           {
             content: "∼",
@@ -146,7 +146,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryGreater', { title: 'Greater', tooltip: 'Greater' }, {
+      ...getShapeByType('', 'operatorTheoryGreater', { menuId: "commMix", title: 'Greater', tooltip: 'Greater' }, {
         content: [
           {
             content: ">",
@@ -165,7 +165,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryLess', { title: 'Less', tooltip: 'Less' }, {
+      ...getShapeByType('', 'operatorTheoryLess', { menuId: "commMix", title: 'Less', tooltip: 'Less' }, {
         content: [
           {
             content: "<",
@@ -184,7 +184,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryLessOrEqual', { title: 'Less Or Equal', tooltip: 'Less Or Equal' }, {
+      ...getShapeByType('', 'operatorTheoryLessOrEqual', { menuId: "commMix", title: 'Less Or Equal', tooltip: 'Less Or Equal' }, {
         content: [
           {
             content: "≤",
@@ -203,7 +203,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryGreaterOrEqual', { title: 'Greater Or Equal', tooltip: 'Greater Or Equal' }, {
+      ...getShapeByType('', 'operatorTheoryGreaterOrEqual', { menuId: "commMix", title: 'Greater Or Equal', tooltip: 'Greater Or Equal' }, {
         content: [
           {
             content: "≥",
@@ -222,7 +222,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryNotEqual', { title: 'Not Equal', tooltip: 'Not Equal' }, {
+      ...getShapeByType('', 'operatorTheoryNotEqual', { menuId: "commMix", title: 'Not Equal', tooltip: 'Not Equal' }, {
         content: [
           {
             content: "≠",
@@ -241,7 +241,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryNotEqual', { title: 'Not Equal', tooltip: 'Not Equal' }, {
+      ...getShapeByType('', 'operatorTheoryNotEqual', { menuId: "commMix", title: 'Not Equal', tooltip: 'Not Equal' }, {
         content: [
           {
             content: "≠",
@@ -260,7 +260,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryAdd', { title: 'Add', tooltip: 'Add' }, {
+      ...getShapeByType('', 'operatorTheoryAdd', { menuId: "commMix", title: 'Add', tooltip: 'Add' }, {
         content: [
           {
             content: "+",
@@ -279,7 +279,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryDivide', { title: 'Divide', tooltip: 'Divide' }, {
+      ...getShapeByType('', 'operatorTheoryDivide', { menuId: "commMix", title: 'Divide', tooltip: 'Divide' }, {
         content: [
           {
             content: "⌯",
@@ -298,7 +298,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryMultiply', { title: 'Multiply', tooltip: 'Multiply' }, {
+      ...getShapeByType('', 'operatorTheoryMultiply', { menuId: "commMix", title: 'Multiply', tooltip: 'Multiply' }, {
         content: [
           {
             content: "x",
@@ -317,7 +317,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheorySubtract', { title: 'Subtract', tooltip: 'Subtract' }, {
+      ...getShapeByType('', 'operatorTheorySubtract', { menuId: "commMix", title: 'Subtract', tooltip: 'Subtract' }, {
         content: [
           {
             content: "-",
@@ -336,7 +336,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryEqual', { title: 'Equal', tooltip: 'Equal' }, {
+      ...getShapeByType('', 'operatorTheoryEqual', { menuId: "commMix", title: 'Equal', tooltip: 'Equal' }, {
         content: [
           {
             content: "=",
@@ -355,7 +355,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheorySum', { title: 'Sum', tooltip: 'Sum' }, {
+      ...getShapeByType('', 'operatorTheorySum', { menuId: "commMix", title: 'Sum', tooltip: 'Sum' }, {
         content: [
           {
             content: "+",
@@ -374,7 +374,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('Circle', 'operatorTheoryRelationship', { title: 'Relationship', tooltip: 'Relationship' }, {
+      ...getShapeByType('Circle', 'operatorTheoryRelationship', { menuId: "commMix", title: 'Relationship', tooltip: 'Relationship' }, {
         content: [
           {
             content: "Relationship",
@@ -392,7 +392,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryProportional', { title: 'Proportional', tooltip: 'Proportional' }, {
+      ...getShapeByType('', 'operatorTheoryProportional', { menuId: "commMix", title: 'Proportional', tooltip: 'Proportional' }, {
         content: [
           {
             content: "∝",
@@ -411,7 +411,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('RawAnnotationContent', 'operatorTheoryInstrumentDerivative', { title: 'Instrument Derivative', tooltip: 'Instrument Derivative' }, {
+      ...getShapeByType('RawAnnotationContent', 'operatorTheoryInstrumentDerivative', { menuId: "commMix", title: 'Instrument Derivative', tooltip: 'Instrument Derivative' }, {
         content: [
           {
             type: "Custom",
@@ -437,7 +437,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('', 'operatorTheoryMethodDerivative', { title: 'Method Derivative', tooltip: 'Method Derivative' }, {
+      ...getShapeByType('', 'operatorTheoryMethodDerivative', { menuId: "commMix", title: 'Method Derivative', tooltip: 'Method Derivative' }, {
         content: [
           {
             content: `<div style="border-bottom:solid black 1px; display:inline-block; float:left;">dI</div>
@@ -461,7 +461,7 @@ export function getOperatorShapes() {
         NodeConstraints.Rotate
     },
     {
-      ...getShapeByType('linkednode', 'operatorTheoryLinkedNode', { title: 'Linked Node', tooltip: 'Linked Node' }, {
+      ...getShapeByType('linkednode', 'operatorTheoryLinkedNode', { menuId: "commMix", title: 'Linked Node', tooltip: 'Linked Node' }, {
         content: [
           {
             content: "1",

@@ -4,7 +4,7 @@ import { getShapeByType } from 'src/app/utils/constants';
 export function getPersonShapes() {
   let personShapes = [
     {
-      ...getShapeByType('Person', 'person', { title: 'Person', tooltip: 'Person' }, ["Person Name", "No Title"]),
+      ...getShapeByType('Person', 'person', { menuId: "personShapes", title: 'Person', tooltip: 'Person' }, ["Person Name", "No Title"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -15,7 +15,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('PersonNoFrame', 'personNoframe', { title: 'Person', tooltip: 'Person' }, ["Person Name", "No Title"]),
+      ...getShapeByType('PersonNoFrame', 'personNoframe', { menuId: "personShapes", title: 'Person', tooltip: 'Person' }, ["Person Name", "No Title"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -26,7 +26,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'employee', { title: 'Employee', tooltip: 'Employee' }, ["Person Name", "Employee"]),
+      ...getShapeByType('Person', 'employee', { menuId: "personShapes", title: 'Employee', tooltip: 'Employee' }, ["Person Name", "Employee"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -37,7 +37,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'manager', { title: 'Manager', tooltip: 'Manager' }, ["Person Name", "Manager"]),
+      ...getShapeByType('Person', 'manager', { menuId: "personShapes", title: 'Manager', tooltip: 'Manager' }, ["Person Name", "Manager"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -48,7 +48,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'teamLead', { title: 'Team Lead', tooltip: 'Team Lead' }, ["Person Name", "Team Lead"]),
+      ...getShapeByType('Person', 'teamLead', { menuId: "personShapes", title: 'Team Lead', tooltip: 'Team Lead' }, ["Person Name", "Team Lead"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -59,7 +59,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'customer', { title: 'Customer', tooltip: 'Customer' }, ["Person Name", "Customer"]),
+      ...getShapeByType('Person', 'customer', { menuId: "personShapes", title: 'Customer', tooltip: 'Customer' }, ["Person Name", "Customer"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -70,7 +70,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'client', { title: 'Client', tooltip: 'Client' }, ["Person Name", "Client"]),
+      ...getShapeByType('Person', 'client', { menuId: "personShapes", title: 'Client', tooltip: 'Client' }, ["Person Name", "Client"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -81,7 +81,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'contractor', { title: 'Contractor', tooltip: 'Contractor' }, ["Person Name", "Contractor"]),
+      ...getShapeByType('Person', 'contractor', { menuId: "personShapes", title: 'Contractor', tooltip: 'Contractor' }, ["Person Name", "Contractor"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -92,7 +92,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'salePerson', { title: 'Sale Person', tooltip: 'Sale Person' }, ["Person Name", "Sale Person"]),
+      ...getShapeByType('Person', 'salePerson', { menuId: "personShapes", title: 'Sale Person', tooltip: 'Sale Person' }, ["Person Name", "Sale Person"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -103,7 +103,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'servicePerson', { title: 'Service Person', tooltip: 'Service Person' }, ["Person Name", "Service Person"]),
+      ...getShapeByType('Person', 'servicePerson', { menuId: "personShapes", title: 'Service Person', tooltip: 'Service Person' }, ["Person Name", "Service Person"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -114,7 +114,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'supportPerson', { title: 'Support Person', tooltip: 'Support Person' }, ["Person Name", "Support Person"]),
+      ...getShapeByType('Person', 'supportPerson', { menuId: "personShapes", title: 'Support Person', tooltip: 'Support Person' }, ["Person Name", "Support Person"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -125,7 +125,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'inspector', { title: 'Inspector', tooltip: 'Inspector' }, ["Person Name", "Inspector"]),
+      ...getShapeByType('Person', 'inspector', { menuId: "personShapes", title: 'Inspector', tooltip: 'Inspector' }, ["Person Name", "Inspector"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -136,7 +136,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'agent', { title: 'Test Person', tooltip: 'Test Person' }, ["Person Name", "Agent"]),
+      ...getShapeByType('Person', 'agent', { menuId: "personShapes", title: 'Test Person', tooltip: 'Test Person' }, ["Person Name", "Agent"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -147,7 +147,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'user', { title: 'User', tooltip: 'User' }, ["Person Name", "User"]),
+      ...getShapeByType('Person', 'user', { menuId: "personShapes", title: 'User', tooltip: 'User' }, ["Person Name", "User"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -158,7 +158,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'other', { title: 'Other', tooltip: 'Other' }, ["Person Name", "Other"]),
+      ...getShapeByType('Person', 'other', { menuId: "personShapes", title: 'Other', tooltip: 'Other' }, ["Person Name", "Other"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -169,7 +169,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('PersonGroup', 'groupOfPeople', { title: 'Group of People', tooltip: 'Group of People' }, "Group of People"),
+      ...getShapeByType('PersonGroup', 'groupOfPeople', { menuId: "groupPeople", title: 'Group of People', tooltip: 'Group of People' }, "Group of People"),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -180,7 +180,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'communicationHolder', { title: 'Communication Holder', tooltip: 'Communication Holder' }, 'Communication Holder'),
+      ...getShapeByType(null, 'communicationHolder', { menuId: "communicationHolder", title: 'Communication Holder', tooltip: 'Communication Holder' }, 'Communication Holder'),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Hold Person Communication',
@@ -188,7 +188,7 @@ export function getPersonShapes() {
       },
     },
     {
-      ...getShapeByType(null, 'externalCommunicationHolder', { title: 'External Communication Holder', tooltip: 'External Communication Holder' }, 'External Communication Holder'),
+      ...getShapeByType(null, 'externalCommunicationHolder', { menuId: "communicationHolder", title: 'External Communication Holder', tooltip: 'External Communication Holder' }, 'External Communication Holder'),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Hold Person Communication',
@@ -196,7 +196,7 @@ export function getPersonShapes() {
       },
     },
     {
-      ...getShapeByType('NaturalObserver', 'communicationNaturalObserver', { title: 'Natural Observer', tooltip: 'Natural Observer' }, ""),
+      ...getShapeByType('NaturalObserver', 'communicationNaturalObserver', { menuId: "communicationNaturalObserver", title: 'Natural Observer', tooltip: 'Natural Observer' }, ""),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Show Entity is Naturally Identified',
@@ -204,7 +204,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'communicationMixturePerson1', { title: 'Communication Mixture', tooltip: 'Communication Mixture' }, {
+      ...getShapeByType(null, 'communicationMixturePerson1', { menuId: "commMix", title: 'Communication Mixture', tooltip: 'Communication Mixture' }, {
         content: [
           {
             content: "Comm Mix",
@@ -246,7 +246,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'communicationMixturePerson2', { title: 'Communication Mixture', tooltip: 'Communication Mixture' }, {
+      ...getShapeByType(null, 'communicationMixturePerson2', { menuId: "commMix", title: 'Communication Mixture', tooltip: 'Communication Mixture' }, {
         content: [
           {
             content: "Comm Mix",
@@ -288,7 +288,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'personAspect', { title: 'Person Aspect', tooltip: 'Person Aspect' }, {
+      ...getShapeByType(null, 'personAspect', { menuId: "personAspect", title: 'Person Aspect', tooltip: 'Person Aspect' }, {
         content: [
           {
             content: 'Person Aspect',
@@ -302,7 +302,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'groupPerson1', { title: 'Group', tooltip: 'Group' }, {
+      ...getShapeByType(null, 'groupPerson1', { menuId: "commMix", title: 'Group', tooltip: 'Group' }, {
         content: [
           {
             content: "Group",
@@ -344,7 +344,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'commHolderGroup', { title: 'Comm Holder Group', tooltip: 'Comm Holder Group' }, 'Communication Holder'),
+      ...getShapeByType('Overlap', 'commHolderGroup', { menuId: "communicationHolder", title: 'Comm Holder Group', tooltip: 'Comm Holder Group' }, 'Communication Holder'),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Group of Communication Holder',
@@ -352,7 +352,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'externalCommHolderGroup', { title: 'External Comm Holder Group', tooltip: 'External Comm Holder Group' }, 'External Communication Holder'),
+      ...getShapeByType('Overlap', 'externalCommHolderGroup', { menuId: "communicationHolder", title: 'External Comm Holder Group', tooltip: 'External Comm Holder Group' }, 'External Communication Holder'),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Group of External Communication Holder',
@@ -360,7 +360,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('cover', 'coverPerson', { title: 'Cover', tooltip: 'Cover' }, ''),
+      ...getShapeByType('cover', 'coverPerson', { menuId: "cover", title: 'Cover', tooltip: 'Cover' }, ''),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Use to Cover a Person',
@@ -368,7 +368,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('mobility', 'mobilityPerson', { title: 'Mobility', tooltip: 'Mobility' }, ''),
+      ...getShapeByType('mobility', 'mobilityPerson', { menuId: "personShapes", title: 'Mobility', tooltip: 'Mobility' }, ''),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Movement of a Person',
@@ -376,7 +376,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Continuity', 'continuityPerson', { title: 'Continuity', tooltip: 'Continuity' }, {
+      ...getShapeByType('Continuity', 'continuityPerson', { menuId: "empty", title: 'Continuity', tooltip: 'Continuity' }, {
         strokeWidth: 0,
         strokeDashArray: "",
         fill: "transparent",
@@ -389,7 +389,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('PersonNoFrame', 'personWithNumber', { title: 'P[n]', tooltip: 'P[n]' }, ["Pn"]),
+      ...getShapeByType('PersonNoFrame', 'personWithNumber', { menuId: "personShapes", title: 'P[n]', tooltip: 'P[n]' }, ["Pn"]),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Denote Person With Number',
@@ -397,7 +397,7 @@ export function getPersonShapes() {
       }
     },
     {
-      ...getShapeByType('Person', 'PersonWithNumberAndFrame123', { title: 'x[n]', tooltip: 'x[n]' }, ["x[n]"]),
+      ...getShapeByType('Person', 'PersonWithNumberAndFrame123', { menuId: "personShapes", title: 'x[n]', tooltip: 'x[n]' }, ["x[n]"]),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
       tooltip: {
         content: 'Denote Person With Number',
@@ -414,7 +414,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'Person',
         'physicalSystem',
-        { title: 'Physical System', tooltip: 'Physical System' },
+        { menuId: "system", title: 'Physical System', tooltip: 'Physical System' },
         ['System']
       ),
       constraints:
@@ -431,7 +431,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'PersonNoFrame',
         'physicalSystem1',
-        { title: 'Physical System', tooltip: 'Physical System' },
+        { menuId: "system", title: 'Physical System', tooltip: 'Physical System' },
         ['System']
       ),
       constraints:
@@ -448,7 +448,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         '',
         'physicalSystem2',
-        { title: 'Physical System', tooltip: 'Physical System' },
+        { menuId: "system", title: 'Physical System', tooltip: 'Physical System' },
         ['System']
       ),
       constraints:
@@ -465,7 +465,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'PersonGroup',
         'groupPhysicalSystem',
-        { title: 'Group Physical System', tooltip: 'Group Physical System' },
+        { menuId: "groupSystem", title: 'Group Physical System', tooltip: 'Group Physical System' },
         'Change Shape'
       ),
       constraints:
@@ -482,7 +482,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'Overlap',
         'groupPhysicalSystem1',
-        { title: 'Group Physical System', tooltip: 'Group Physical System' },
+        { menuId: "system", title: 'Group Physical System', tooltip: 'Group Physical System' },
         'Systems'
       ),
       constraints:
@@ -499,7 +499,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'DottedGroup',
         'groupPhysicalSyste2',
-        { title: 'Group Physical System', tooltip: 'Group Physical System' },
+        { menuId: "system", title: 'Group Physical System', tooltip: 'Group Physical System' },
         'Change Shape'
       ),
       constraints:
@@ -517,6 +517,7 @@ export function getTheoryPersonShapes(): any {
         '',
         'constantCharacteristics',
         {
+          menuId: "constantCharaceristic",
           title: 'Constant Characteristics',
           tooltip: 'Constant Characteristics',
         },
@@ -536,7 +537,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'mobility',
         'mobilitySystem',
-        { title: 'Mobility', tooltip: 'Mobility' },
+        { menuId: "system", title: 'Mobility', tooltip: 'Mobility' },
         'Identify Our Mobility'
       ),
       constraints:
@@ -553,7 +554,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         '',
         'groupSystem',
-        { title: 'Group', tooltip: 'Group' },
+        { menuId: "commMix", title: 'Group', tooltip: 'Group' },
         {
           content: [
             {
@@ -626,7 +627,8 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'linkednode',
         'linkedNodeSystem',
-        { title: 'Linked Node', tooltip: 'Linked Node' },
+    
+      { menuId: "linkedNode",title: 'Linked Node', tooltip: 'Linked Node' },
         ''
       ),
       constraints:
@@ -643,7 +645,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         '',
         'sn2',
-        { title: 'S[n]', tooltip: 'S[n]' },
+        { menuId: "system", title: 'S[n]', tooltip: 'S[n]' },
         'Sn'
       ),
       constraints:
@@ -660,7 +662,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'Text',
         'sn3',
-        { title: 'S[n]', tooltip: 'S[n]' },
+        { menuId: "system", title: 'S[n]', tooltip: 'S[n]' },
         'Sn'
       ),
       constraints:
@@ -677,7 +679,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'Person',
         'sn',
-        { title: 'S[n]', tooltip: 'S[n]' },
+        { menuId: "system", title: 'S[n]', tooltip: 'S[n]' },
         ['Sn']
       ),
       constraints:
@@ -694,7 +696,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'PersonNoFrame',
         'sn1',
-        { title: 'S[n]', tooltip: 'S[n]' },
+        { menuId: "system", title: 'S[n]', tooltip: 'S[n]' },
         ['Sn']
       ),
       constraints:
@@ -711,7 +713,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'Person',
         'xn',
-        { title: 'x[n]', tooltip: 'x[n]' },
+        { menuId: "system", title: 'x[n]', tooltip: 'x[n]' },
         ['Xn']
       ),
       constraints:
@@ -728,7 +730,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'PersonNoFrame',
         'xn1',
-        { title: 'x[n]', tooltip: 'x[n]' },
+        { menuId: "system", title: 'x[n]', tooltip: 'x[n]' },
         ['Xn']
       ),
       constraints:
@@ -745,7 +747,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'StrokeRect',
         's',
-        { title: 'S', tooltip: 'S' },
+        { menuId: "system", title: 'S', tooltip: 'S' },
         'S'
       ),
       constraints:
@@ -762,7 +764,7 @@ export function getTheoryPersonShapes(): any {
       ...getShapeByType(
         'DottedOverlap',
         'S',
-        { title: 'S', tooltip: 'S' },
+        { menuId: "system", title: 'S', tooltip: 'S' },
         'S'
       ),
       constraints:

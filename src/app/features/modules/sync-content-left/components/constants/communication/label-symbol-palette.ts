@@ -5,7 +5,7 @@ export function getLabelShapes(): any {
   let labelsShape = [
     {
       id: 'informationlabel',
-      addInfo: { title: 'Information Label', tooltip: 'Information Label' },
+      addInfo: { menuId: "edit", title: 'Information Label', tooltip: 'Information Label' },
       type: 'Bezier',
       sourcePoint: {
         x: 30,
@@ -45,7 +45,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'communication12',
-      addInfo: { title: 'Communication', tooltip: 'Communication' },
+      addInfo: { menuId: "edit", title: 'Communication', tooltip: 'Communication' },
       type: 'Bezier',
       sourcePoint: {
         x: 30,
@@ -85,7 +85,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'toDO',
-      addInfo: { title: 'To Do', tooltip: 'To Do' },
+      addInfo: { menuId: "edit", title: 'To Do', tooltip: 'To Do' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -125,7 +125,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'pointTo',
-      addInfo: { title: 'Point To', tooltip: 'Point To' },
+      addInfo: { menuId: "edit", title: 'Point To', tooltip: 'Point To' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -165,7 +165,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'giveRiseTo',
-      addInfo: { title: 'Give Rise To', tooltip: 'Give Rise To' },
+      addInfo: { menuId: "edit", title: 'Give Rise To', tooltip: 'Give Rise To' },
       type: 'Straight',
       sourcePoint: {
         x: -5, y: 800,
@@ -202,7 +202,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'errorToProblem',
-      addInfo: { title: 'Error to Problem', tooltip: 'Error to Problem' },
+      addInfo: { menuId: "edit", title: 'Error to Problem', tooltip: 'Error to Problem' },
       type: 'Straight',
       sourcePoint: {
         x: -5, y: 800,
@@ -240,7 +240,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'relatedTo',
-      addInfo: { title: 'Related To', tooltip: 'Related To' },
+      addInfo: { menuId: "edit", title: 'Related To', tooltip: 'Related To' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -280,7 +280,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'by',
-      addInfo: { title: 'by', tooltip: 'by' },
+      addInfo: { menuId: "edit", title: 'by', tooltip: 'by' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -320,7 +320,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'depend',
-      addInfo: { title: 'Depend', tooltip: 'by' },
+      addInfo: { menuId: "edit", title: 'Depend', tooltip: 'by' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -360,7 +360,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'agree',
-      addInfo: { title: 'Agree', tooltip: 'Agree' },
+      addInfo: { menuId: "edit", title: 'Agree', tooltip: 'Agree' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -400,7 +400,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'match',
-      addInfo: { title: 'Match', tooltip: 'Match' },
+      addInfo: { menuId: "edit", title: 'Match', tooltip: 'Match' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -440,7 +440,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'have',
-      addInfo: { title: 'Have', tooltip: 'Have' },
+      addInfo: { menuId: "edit", title: 'Have', tooltip: 'Have' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -480,7 +480,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'Interact',
-      addInfo: { title: 'Interact', tooltip: 'Interact' },
+      addInfo: { menuId: "edit", title: 'Interact', tooltip: 'Interact' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -520,7 +520,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'Use',
-      addInfo: { title: 'Use', tooltip: 'Use' },
+      addInfo: { menuId: "edit", title: 'Use', tooltip: 'Use' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -560,7 +560,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'compare',
-      addInfo: { title: 'Compare', tooltip: 'Compare' },
+      addInfo: { menuId: "edit", title: 'Compare', tooltip: 'Compare' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -600,7 +600,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'attach',
-      addInfo: { title: 'Attach', tooltip: 'Attach' },
+      addInfo: { menuId: "edit", title: 'Attach', tooltip: 'Attach' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -640,7 +640,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'identify',
-      addInfo: { title: 'Identify', tooltip: 'Identify' },
+      addInfo: { menuId: "edit", title: 'Identify', tooltip: 'Identify' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -680,7 +680,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'define',
-      addInfo: { title: 'Define', tooltip: 'Define' },
+      addInfo: { menuId: "edit", title: 'Define', tooltip: 'Define' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -720,7 +720,7 @@ export function getLabelShapes(): any {
     },
     {
       id: 'visuallyIdentify',
-      addInfo: { title: 'Usually Identify', tooltip: 'Usually Identify' },
+      addInfo: { menuId: "edit", title: 'Usually Identify', tooltip: 'Usually Identify' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -760,7 +760,7 @@ export function getLabelShapes(): any {
     },
     {
       id: "curlBracesLeft1",
-      addInfo: {title: "Curl Braces", tooltip: "Curl Braces"},
+      addInfo: { menuId: "edit",title: "Curl Braces", tooltip: "Curl Braces"},
       shape: {
         type: "Native",
         content: '<g  transform="translate(2,2)">\n                    <rect height="120" width="30" stroke-width="1" stroke="1" fill="transparent"/>\n                    <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" d="M 30 0 A 15 20 0 0 0 15 20 L 15 50 A 15 10 0 0 1 0 60 A 15 10 0 0 1 15 70 L 15 100 A 15 20 0 0 0 30 120"/>\n                </g>',
@@ -787,7 +787,7 @@ export function getLabelShapes(): any {
     },
     {
       id: "curlBracesRight2",
-      addInfo: {title: "Curl Braces", tooltip: "Curl Braces"},
+      addInfo: { menuId: "edit",title: "Curl Braces", tooltip: "Curl Braces"},
       shape: {
         type: "Native",
         content: '<g transform="translate(2,2)">\n                    <rect height="120" width="30" stroke-width="1" stroke="1" fill="transparent"/>\n                    <path vector-effect="non-scaling-stroke" stroke="black" stroke-width="1" fill="transparent" d="M 0 0 A 15 20 0 0 1 15 20 L 15 50 A 15 10 0 0 0 30 60 A 15 10 0 0 0 15 70 L 15 100 A 15 20 0 0 1 0 120" />\n                </g>',

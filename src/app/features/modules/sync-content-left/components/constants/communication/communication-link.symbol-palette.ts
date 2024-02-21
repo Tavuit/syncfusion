@@ -6,7 +6,7 @@ export function getCommunicationLinksShapes() {
     {
 
       id: 'communicationLink',
-      addInfo: { title: 'Communication Link', tooltip: 'Communication Link' },
+      addInfo: { menuId: "edit", title: 'Communication Link', tooltip: 'Communication Link' },
       type: 'Straight',
       sourcePoint: {
         x: 30,
@@ -50,7 +50,7 @@ export function getCommunicationLinksShapes() {
       constraints: ConnectorConstraints.Tooltip | ConnectorConstraints.Default | ConnectorConstraints.AllowDrop,
     },
     {
-      ...getShapeByType('Arrow', 'communicationLinkLeft', { title: 'Communication Link', tooltip: 'Communication Link' }, {
+      ...getShapeByType('Arrow', 'communicationLinkLeft', { menuId: "edit", title: 'Communication Link', tooltip: 'Communication Link' }, {
         content: [
           {
             content: "Communicate",
@@ -88,7 +88,7 @@ export function getCommunicationLinksShapes() {
       },
     },
     {
-      ...getShapeByType('Arrow', 'bidirectionalCommunicationLink', { title: 'Bidirectional Communication Link', tooltip: 'Bidirectional Communication Link' }, {
+      ...getShapeByType('Arrow', 'bidirectionalCommunicationLink', { menuId: "edit", title: 'Bidirectional Communication Link', tooltip: 'Bidirectional Communication Link' }, {
         content: [
           {
             content: "Communicate",
@@ -128,7 +128,7 @@ export function getCommunicationLinksShapes() {
       },
     },
     {
-      ...getShapeByType('WideArrow', 'rightCommunicationLink', { title: 'Right Communication Link', tooltip: 'Right Communication Link' }, {
+      ...getShapeByType('WideArrow', 'rightCommunicationLink', { menuId: "edit", title: 'Right Communication Link', tooltip: 'Right Communication Link' }, {
         content: "Information",
       }),
       constraints: NodeConstraints.Default | NodeConstraints.Tooltip | NodeConstraints.AllowDrop,
@@ -138,7 +138,7 @@ export function getCommunicationLinksShapes() {
       }
     },
     {
-      ...getShapeByType('WideArrow', 'leftCommunicationLink', { title: 'Left Communication Link', tooltip: 'Left Communication Link' }, {
+      ...getShapeByType('WideArrow', 'leftCommunicationLink', { menuId: "edit", title: 'Left Communication Link', tooltip: 'Left Communication Link' }, {
         content: "Information",
         direction: "left",
       }),
@@ -149,7 +149,7 @@ export function getCommunicationLinksShapes() {
       }
     },
     {
-      ...getShapeByType('BiWideArrow', 'biDirectionalArrow', { title: 'Bidirectional Arrow', tooltip: 'Bidirectional Arrow' }, 'Information'),
+      ...getShapeByType('BiWideArrow', 'biDirectionalArrow', { menuId: "edit", title: 'Bidirectional Arrow', tooltip: 'Bidirectional Arrow' }, 'Information'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -160,7 +160,7 @@ export function getCommunicationLinksShapes() {
       }
     },
     {
-      ...getShapeByType('CylinderArrow', 'communicationLink1', { title: 'Communication Link', tooltip: 'Communication Link' }, 'Information'),
+      ...getShapeByType('CylinderArrow', 'communicationLink1', { menuId: "edit", title: 'Communication Link', tooltip: 'Communication Link' }, 'Information'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |

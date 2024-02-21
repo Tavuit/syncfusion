@@ -65,7 +65,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
 
   }
   currentDomain: EDomain
-  currentModel: import("e:/code/syncfusion/src/app/shared/enums/diagram.enum").EDiagramModel;
+  currentModel: any;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,
@@ -112,12 +112,21 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   public handleContextMenuOpen(args: DiagramBeforeMenuOpenEventArgs) {
-    let bpmnShape =
-      (!this.diagram?.selectedItems?.nodes[0]?.addInfo &&
+    let bpmnShape;
+    if (this.diagram.selectedItems.nodes.length) {
+      bpmnShape = (
+        !this.diagram?.selectedItems?.nodes[0]?.addInfo &&
         this.diagram?.selectedItems?.nodes[0]?.children?.length > 0
-        ? this.diagram.getObject(this.diagram.selectedItems.nodes[0].children[0])
-        : this.diagram.selectedItems.nodes[0]) as Node;
-    if (this.diagram?.selectedItems?.nodes[0] && bpmnShape?.addInfo) {
+          ? this.diagram.getObject(
+              this.diagram.selectedItems.nodes[0].children[0]
+            )
+          : this.diagram.selectedItems.nodes[0]
+      ) as Node;
+    } else if (this.diagram.selectedItems.connectors.length) {
+      bpmnShape = this.diagram.selectedItems.connectors[0];
+    }
+    
+    if (bpmnShape?.addInfo) {
       let menuId = (bpmnShape?.addInfo as any).menuId;
       args.hiddenItems = this.diagramContextMenuService.mappedArrayContext
         .reduce((arr, item) => {
@@ -127,6 +136,12 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
           return arr;
         }, [])
         .concat("baseCopy", "basePaste", "baseCut", "baseEdit", "baseSelect");
+      args.hiddenItems.forEach((a) => {
+        // console.log('#${a}.e-menu-item', `#${a}.e-menu-item`);
+        // if ($(`#${a}.e-menu-item`).length > 0) {
+        //   $(`#${a}.e-menu-item`).addClass("e-menu-hide");
+        // }
+      });
     } else {
       args.hiddenItems = this.diagramContextMenuService.mappedArrayContext.reduce((arr, item) => {
         return arr.concat(item.id);
@@ -172,7 +187,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       this.handleInsertComponent(GroupPropertyComponent);
     }
     dropGrouped(args.element, args.target, false, this.diagram);
-    console.log(this.diagram.saveDiagram())
+    // console.log(this.diagram.saveDiagram())
   }
 
   propertyChange(data) {
@@ -206,7 +221,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       selectedItemDivID = this.selectedNode?.id;
       selectedItemDivID = selectedItemDivID + SALT;
       const $wrapper = document.getElementById(selectedItemDivID)
-      console.log(selectedItemDivID, $wrapper)
+      // console.log(selectedItemDivID, $wrapper)
       let mqInput: any = $wrapper.querySelector("math-field");
       mqInput.executeCommand(['insert', operator]);
       // const updatedNode = this.selectedNode;

@@ -5,7 +5,7 @@ import { rectPorts } from 'src/app/features/modules/sync-content-left/components
 export function getAnalysisShapes() {
   let analysisShapes = [
     {
-      ...getShapeByType('', 'principle', { title: 'Principle', tooltip: 'Principle' }, 'Principle'),
+      ...getShapeByType('', 'principle', { menuId: "principle", title: 'Principle', tooltip: 'Principle' }, 'Principle'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -27,7 +27,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'referencerect', { title: 'Reference', tooltip: 'Reference' }, 'Reference'),
+      ...getShapeByType('', 'referencerect', { menuId: "reference", title: 'Reference', tooltip: 'Reference' }, 'Reference'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -38,7 +38,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'sentenceAnalysis', { title: 'Sentence Analysis', tooltip: 'Sentence Analysis' }, 'Sentence Analysis'),
+      ...getShapeByType('', 'sentenceAnalysis', { menuId: "sentenceAnalysis", title: 'Sentence Analysis', tooltip: 'Sentence Analysis' }, 'Sentence Analysis'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -49,7 +49,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'analysis', { title: 'Analysis', tooltip: 'Analysis' }, 'Analysis'),
+      ...getShapeByType('', 'analysis', { menuId: "sentenceAnalysis", title: 'Analysis', tooltip: 'Analysis' }, 'Analysis'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -60,7 +60,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'feedback', { title: 'Feedback', tooltip: 'Feedback' }, 'Feedback'),
+      ...getShapeByType('', 'feedback', { menuId: "feedback", title: 'Feedback', tooltip: 'Feedback' }, 'Feedback'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -71,7 +71,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'operatingPrinciple', { title: 'Operating Principle', tooltip: 'Operating Principle' }, 'Principle'),
+      ...getShapeByType('', 'operatingPrinciple', { menuId: "operatingPrinciple", title: 'Operating Principle', tooltip: 'Operating Principle' }, 'Principle'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -82,7 +82,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'error', { title: 'Error', tooltip: 'Error' }, 'Error'),
+      ...getShapeByType('', 'error', { menuId: "error", title: 'Error', tooltip: 'Error' }, 'Error'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -93,7 +93,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'compensator', { title: 'Compensator', tooltip: 'Compensator' }, 'Compensator'),
+      ...getShapeByType('', 'compensator', { menuId: "compensator", title: 'Compensator', tooltip: 'Compensator' }, 'Compensator'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -104,7 +104,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'problem', { title: 'Problem', tooltip: 'Problem' }, 'Problem'),
+      ...getShapeByType('', 'problem', { menuId: "problem", title: 'Problem', tooltip: 'Problem' }, 'Problem'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -115,7 +115,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'problemStatement', { title: 'Problem Statement', tooltip: 'Problem Statement' }, 'Problem Statement'),
+      ...getShapeByType('', 'problemStatement', { menuId: "problemStatement", title: 'Problem Statement', tooltip: 'Problem Statement' }, 'Problem Statement'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -126,7 +126,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'principle1', { title: 'Principle', tooltip: 'Principle' }, 'Main Set of Principles'),
+      ...getShapeByType('', 'principle1', { menuId: "mainSetofPrinciple", title: 'Principle', tooltip: 'Principle' }, 'Main Set of Principles'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -137,7 +137,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'principle2', { title: 'Principle', tooltip: 'Principle' }, 'Sub Set of Principles'),
+      ...getShapeByType('', 'principle2', { menuId: "subSetofPrinciple", title: 'Principle', tooltip: 'Principle' }, 'Sub Set of Principles'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -148,7 +148,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'analysisWindow', { title: 'Analysis Window', tooltip: 'Analysis Window' }, 'Analysis Window'),
+      ...getShapeByType('', 'analysisWindow', { menuId: "analysisWindow", title: 'Analysis Window', tooltip: 'Analysis Window' }, 'Analysis Window'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -159,7 +159,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('ECF', 'edfDiamond', { title: 'Error Correction Function', tooltip: 'Error Correction Function' }, 'Error Correction Function'),
+      ...getShapeByType('ECF', 'edfDiamond', { menuId: "empty", title: 'Error Correction Function', tooltip: 'Error Correction Function' }, 'Error Correction Function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -170,7 +170,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'ecfRect', { title: 'Error Correction Function', tooltip: 'Error Correction Function' }, 'Error Correction Function'),
+      ...getShapeByType('', 'ecfRect', { menuId: "empty", title: 'Error Correction Function', tooltip: 'Error Correction Function' }, 'Error Correction Function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -181,7 +181,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'problemDevelopment', { title: 'Problem Development', tooltip: 'Problem Development' }, {
+      ...getShapeByType('Circle', 'problemDevelopment', { menuId: "problemDevelopment", title: 'Problem Development', tooltip: 'Problem Development' }, {
         content: [
           {
             content: "Problem Name Development",
@@ -207,7 +207,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'principleAspect', { title: 'Principle Aspect', tooltip: 'Principle Aspect' }, 'Principle Aspect'),
+      ...getShapeByType('', 'principleAspect', { menuId: "principleAspect", title: 'Principle Aspect', tooltip: 'Principle Aspect' }, 'Principle Aspect'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -218,7 +218,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('redcross', 'redcrossanalysis', { title: 'Red Cross', tooltip: 'Red Cross' }, null),
+      ...getShapeByType('redcross', 'redcrossanalysis', { menuId: "empty", title: 'Red Cross', tooltip: 'Red Cross' }, null),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -229,7 +229,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'solutionanalysis', { title: 'Solution', tooltip: 'Solution' }, 'Analysis'),
+      ...getShapeByType('', 'solutionanalysis', { menuId: "solution", title: 'Solution', tooltip: 'Solution' }, 'Analysis'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -240,7 +240,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('', 'group4', { title: 'Group', tooltip: 'Group' }, {
+      ...getShapeByType('', 'group4', { menuId: "commMix", title: 'Group', tooltip: 'Group' }, {
         content: [
           {
             content: "Group",
@@ -285,7 +285,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Continuity', 'continuity4', { title: 'Continuity', tooltip: 'Continuity' }, {
+      ...getShapeByType('Continuity', 'continuity4', { menuId: "empty", title: 'Continuity', tooltip: 'Continuity' }, {
         strokeWidth: 1,
         strokeDashArray: "10 5",
       }),
@@ -299,7 +299,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'analyses', { title: 'Analyses', tooltip: 'Analyses' }, 'Analyses'),
+      ...getShapeByType('Overlap', 'analyses', { menuId: "sentenceAnalysis", title: 'Analyses', tooltip: 'Analyses' }, 'Analyses'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -310,7 +310,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'errors', { title: 'Errors', tooltip: 'Errors' }, 'Errors'),
+      ...getShapeByType('Overlap', 'errors', { menuId: "error", title: 'Errors', tooltip: 'Errors' }, 'Errors'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -321,7 +321,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'problems', { title: 'Problems', tooltip: 'Problems' }, 'Problems'),
+      ...getShapeByType('Overlap', 'problems', { menuId: "problem", title: 'Problems', tooltip: 'Problems' }, 'Problems'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -332,7 +332,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'feedbacks', { title: 'Feedbacks', tooltip: 'Feedbacks' }, 'Feedbacks'),
+      ...getShapeByType('Overlap', 'feedbacks', { menuId: "feedback", title: 'Feedbacks', tooltip: 'Feedbacks' }, 'Feedbacks'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -343,7 +343,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'compensators', { title: 'Compensators', tooltip: 'Compensators' }, 'Compensators'),
+      ...getShapeByType('Overlap', 'compensators', { menuId: "compensator", title: 'Compensators', tooltip: 'Compensators' }, 'Compensators'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -354,7 +354,7 @@ export function getAnalysisShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'solutionsanalysis', { title: 'Solutions', tooltip: 'Solutions' }, 'Solutions'),
+      ...getShapeByType('Overlap', 'solutionsanalysis', { menuId: "solution", title: 'Solutions', tooltip: 'Solutions' }, 'Solutions'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |

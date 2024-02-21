@@ -527,7 +527,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'questions', { title: 'Questions', tooltip: 'Questions' }, 'Questions'),
+      ...getShapeByType('Overlap', 'questions', { menuId: "question", title: 'Questions', tooltip: 'Questions' }, 'Questions'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -538,7 +538,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Overlap', 'answers', { title: 'Answers', tooltip: 'Answers' }, 'Answers'),
+      ...getShapeByType('Overlap', 'answers', { menuId: "answer", title: 'Answers', tooltip: 'Answers' }, 'Answers'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -549,7 +549,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'x', { title: 'x', tooltip: 'x' }, 'x'),
+      ...getShapeByType('', 'x', { menuId: "communication", title: 'x', tooltip: 'x' }, 'x'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -560,7 +560,7 @@ export function getCommunicationShapes() {
       }
     },
     {
-      ...getShapeByType('Text', 'x1', { title: 'x', tooltip: 'x' }, 'x'),
+      ...getShapeByType('Text', 'x1', { menuId: "communication", title: 'x', tooltip: 'x' }, 'x'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |

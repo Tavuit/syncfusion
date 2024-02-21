@@ -5,7 +5,7 @@ import { getShapeByType } from 'src/app/utils/constants';
 export function getAreaAndLocationShapes() {
   let areaAndLocation = [
     {
-      ...getShapeByType('', 'locationOfOperation', { title: 'Location of Operation', tooltip: 'Location of Operation' }, 'Location'),
+      ...getShapeByType('', 'locationOfOperation', { menuId: "location", title: 'Location of Operation', tooltip: 'Location of Operation' }, 'Location'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -16,7 +16,7 @@ export function getAreaAndLocationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'siteOfOperationRect', { title: 'Site of Operation', tooltip: 'Site of Operation' }, 'Site'),
+      ...getShapeByType('', 'siteOfOperationRect', { menuId: "location", title: 'Site of Operation', tooltip: 'Site of Operation' }, 'Site'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -27,7 +27,7 @@ export function getAreaAndLocationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'mainArea', { title: 'Main Area', tooltip: 'Main Area' }, {
+      ...getShapeByType('', 'mainArea', { menuId: "location", title: 'Main Area', tooltip: 'Main Area' }, {
         content: [
           {
             content: "Main Area",
@@ -52,7 +52,7 @@ export function getAreaAndLocationShapes() {
       }
     },
     {
-      ...getShapeByType('House', 'siteOfOperation', { title: 'Site of Operation', tooltip: 'Site of Operation' }, 'Site'),
+      ...getShapeByType('House', 'siteOfOperation', { menuId: "location", title: 'Site of Operation', tooltip: 'Site of Operation' }, 'Site'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -63,7 +63,7 @@ export function getAreaAndLocationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'workingareaAL', { title: 'Working Area', tooltip: 'Working Area' }, {
+      ...getShapeByType('Circle', 'workingareaAL', { menuId: "location", title: 'Working Area', tooltip: 'Working Area' }, {
         fill: "none",
         radius: 75,
         content: [
@@ -82,7 +82,7 @@ export function getAreaAndLocationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'locationAL', { title: 'Location', tooltip: 'Location' }, {
+      ...getShapeByType('Circle', 'locationAL', { menuId: "location", title: 'Location', tooltip: 'Location' }, {
         fill: "none",
         radius: 30,
         content: [
@@ -101,7 +101,7 @@ export function getAreaAndLocationShapes() {
       }
     },
     {
-      ...getShapeByType('mobility', 'mobilityAL', { title: 'Mobility', tooltip: 'Mobility' }, null),
+      ...getShapeByType('mobility', 'mobilityAL', { menuId: "empty", title: 'Mobility', tooltip: 'Mobility' }, null),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |

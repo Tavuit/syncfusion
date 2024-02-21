@@ -6,7 +6,7 @@ export function getEquationsShape(): NodeModel[] {
   let equationsShape: NodeModel[] = [
     {
       id: "equationWithBorder",
-      addInfo: {title: "Equation with border", tooltip: 'Equation with border' },
+      addInfo: {title: "Equation with border", tooltip: 'Equation with border', menuId: "equation", },
 
       shape: {
         type: "HTML",
@@ -21,7 +21,7 @@ export function getEquationsShape(): NodeModel[] {
     },
     {
       id: "equationWithNoBorder",
-      addInfo: {title: "Equation with no border", tooltip: "Equation with no border"},
+      addInfo: {title: "Equation with no border", tooltip: "Equation with no border", menuId: "equation",},
       shape: {
         type: "HTML",
         content:`<div class='input-wrapper' style='height:100%; width: 100%'><math-field style=";border: unset;background: transparent;" id="mathquill-mathquill-input-border" style='height:100%; width: 100%;'></math-field></div>`,

@@ -5,7 +5,7 @@ import { getShapeByType } from 'src/app/utils/constants';
 export function getApplicationShapes() {
   const applicationShapes = [
     {
-      ...getShapeByType(null, 'application', { title: 'Application', tooltip: 'Application' }, 'Application'),
+      ...getShapeByType(null, 'application', { title: 'Application', tooltip: 'Application', menuId: "application", }, 'Application'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -16,7 +16,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'communicationFunction', { title: 'Communication Function', tooltip: 'Communication Function' }, 'Communication Function'),
+      ...getShapeByType(null, 'communicationFunction', { menuId: "commFunction", title: 'Communication Function', tooltip: 'Communication Function' }, 'Communication Function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -27,7 +27,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType(null, 'communicationResult', { title: 'Communication Result', tooltip: 'Communication Result' }, 'Communication Result'),
+      ...getShapeByType(null, 'communicationResult', { menuId: "commResult", title: 'Communication Result', tooltip: 'Communication Result' }, 'Communication Result'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -49,7 +49,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'commAppMixture', { title: 'Comm App Mixture', tooltip: 'Comm App Mixture' }, {
+      ...getShapeByType('Circle', 'commAppMixture', {menuId: "empty", title: 'Comm App Mixture', tooltip: 'Comm App Mixture' }, {
         fill: "white",
         radius: 35,
         content: [
@@ -69,7 +69,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'commAppMixture1', { title: 'Comm App Mixture', tooltip: 'Comm App Mixture' }, {
+      ...getShapeByType('', 'commAppMixture1', { menuId: "commMix", title: 'Comm App Mixture', tooltip: 'Comm App Mixture' }, {
         content: [
           {
             content: "Communication Application Mixture",
@@ -88,7 +88,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('CommunicationGrouped', 'communicationFunctionGrouped', { title: 'Communication Function', tooltip: 'Communication Function' }, [
+      ...getShapeByType('CommunicationGrouped', 'communicationFunctionGrouped', { menuId: "entity", title: 'Communication Function', tooltip: 'Communication Function' }, [
         "Communication Function",
         "Communication Function",
         "Communication Function",
@@ -103,7 +103,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('WhatWeDo', 'whatWeDo', { title: 'What We Do', tooltip: 'What We Do' }, ["Communication", "Application", "What We Do"]),
+      ...getShapeByType('WhatWeDo', 'whatWeDo', { menuId: "entity", title: 'What We Do', tooltip: 'What We Do' }, ["Communication", "Application", "What We Do"]),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -114,7 +114,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('DualBox', 'DualBox', { title: 'What We Do', tooltip: 'What We Do' }, 'What We Do'),
+      ...getShapeByType('DualBox', 'DualBox', { menuId: "entity", title: 'What We Do', tooltip: 'What We Do' }, 'What We Do'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -125,7 +125,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'action', { title: 'Action', tooltip: 'Action' }, 'Action'),
+      ...getShapeByType('', 'action', { menuId: "action", title: 'Action', tooltip: 'Action' }, 'Action'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -136,7 +136,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'reason', { title: 'Reason', tooltip: 'Reason' }, 'Reason'),
+      ...getShapeByType('', 'reason', { menuId: "reason", title: 'Reason', tooltip: 'Reason' }, 'Reason'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -147,7 +147,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'work1234', { title: 'Work', tooltip: 'Work' }, 'Work'),
+      ...getShapeByType('', 'work1234', { menuId: "work", title: 'Work', tooltip: 'Work' }, 'Work'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -169,7 +169,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('emptycontainer', 'emptycontainer', { title: 'Empty Container', tooltip: 'Empty Container' }, null),
+      ...getShapeByType('emptycontainer', 'emptycontainer', { menuId: "emptyContainer", title: 'Empty Container', tooltip: 'Empty Container' }, null),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -180,7 +180,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'work', { title: 'Work', tooltip: 'Work' }, {
+      ...getShapeByType('Circle', 'work', { menuId: "workinput", title: 'Work', tooltip: 'Work' }, {
         fill: "white",
         radius: 40,
         content: [
@@ -200,7 +200,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Sub', 'subFunction', { title: 'Sub Function', tooltip: 'Sub Function' }, 'Sub Communication Function'),
+      ...getShapeByType('Sub', 'subFunction', { menuId: "subFunction", title: 'Sub Function', tooltip: 'Sub Function' }, 'Sub Communication Function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -211,7 +211,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Sub', 'subApplication', { title: 'Sub Application', tooltip: 'Sub Application' }, 'Sub Application'),
+      ...getShapeByType('Sub', 'subApplication', { menuId: "subApplication", title: 'Sub Application', tooltip: 'Sub Application' }, 'Sub Application'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -222,7 +222,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Sub', 'subResult', { title: 'Sub Result', tooltip: 'Sub Result' }, 'Sub Result'),
+      ...getShapeByType('Sub', 'subResult', { menuId: "subResult", title: 'Sub Result', tooltip: 'Sub Result' }, 'Sub Result'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -233,7 +233,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Group', 'groupFunction', { title: 'Group Function', tooltip: 'Group Function' }, 'Group Function'),
+      ...getShapeByType('Group', 'groupFunction', { menuId: "groupFunction", title: 'Group Function', tooltip: 'Group Function' }, 'Group Function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -244,7 +244,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Group', 'groupApplication', { title: 'Group Application', tooltip: 'Group Application' }, 'Group Application'),
+      ...getShapeByType('Group', 'groupApplication', { menuId: "groupApplication", title: 'Group Application', tooltip: 'Group Application' }, 'Group Application'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -255,7 +255,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Group', 'groupResult', { title: 'Group Result', tooltip: 'Group Result' }, 'Group Communication Result'),
+      ...getShapeByType('Group', 'groupResult', { menuId: "groupResult", title: 'Group Result', tooltip: 'Group Result' }, 'Group Communication Result'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -266,7 +266,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'group1', { title: 'Group', tooltip: 'Group' }, {
+      ...getShapeByType('', 'group1', { menuId: "commMix", title: 'Group', tooltip: 'Group' }, {
         content: [
           {
             content: "Group",
@@ -311,7 +311,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Continuity', 'continuityApplication', { title: 'Continuity', tooltip: 'Continuity' }, {
+      ...getShapeByType('Continuity', 'continuityApplication', { menuId: "empty", title: 'Continuity', tooltip: 'Continuity' }, {
         strokeWidth: 1,
         strokeDashArray: "10 5",
       }),
@@ -325,7 +325,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'a', { title: 'A', tooltip: 'A' }, 'A'),
+      ...getShapeByType('', 'a', { menuId: "application", title: 'A', tooltip: 'A' }, 'A'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -336,7 +336,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Text', 'a1', { title: 'A', tooltip: 'A' }, 'A'),
+      ...getShapeByType('Text', 'a1', { menuId: "empty", title: 'A', tooltip: 'A' }, 'A'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -347,7 +347,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'functionx', { title: 'f(x)', tooltip: 'f(x)' }, 'f(x)'),
+      ...getShapeByType('', 'functionx', { menuId: "functionx", title: 'f(x)', tooltip: 'f(x)' }, 'f(x)'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -358,7 +358,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Text', 'functionx1', { title: 'f(x)', tooltip: 'f(x)' }, 'f(x)'),
+      ...getShapeByType('Text', 'functionx1', { menuId: "empty", title: 'f(x)', tooltip: 'f(x)' }, 'f(x)'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -369,7 +369,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('', 'function0', { title: 'f()', tooltip: 'f()' }, 'f()'),
+      ...getShapeByType('', 'function0', { menuId: "functionx", title: 'f()', tooltip: 'f()' }, 'f()'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
@@ -380,7 +380,7 @@ export function getApplicationShapes() {
       }
     },
     {
-      ...getShapeByType('Text', 'communicationFunction12', { title: 'Communication Function', tooltip: 'Communication Function' }, 'communication function'),
+      ...getShapeByType('Text', 'communicationFunction12', {  menuId: "empty", title: 'Communication Function', tooltip: 'Communication Function' }, 'communication function'),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |

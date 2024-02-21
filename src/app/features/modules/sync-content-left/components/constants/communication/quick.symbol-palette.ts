@@ -10,7 +10,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
   let quickEntities: NodeModel[] = [
     {
       id: 'quickperson',
-      addInfo: { title: 'Person', tooltip: 'Person' },
+      addInfo: { menuId: "personShapes", title: 'Person', tooltip: 'Person' },
       shape: {
         type: 'Native',
         content: `
@@ -150,7 +150,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     },
     {
       id: 'quickperson1',
-      addInfo: { title: 'Person', tooltip: 'Person' },
+      addInfo: { menuId: "personShapes", title: 'Person', tooltip: 'Person' },
       shape: {
         type: 'Native',
         content: `
@@ -301,7 +301,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickcommunicationEntity',
       addInfo: {
-        title: 'Communication Entity',
+        menuId: "communication", title: 'Communication Entity',
         tooltip: 'Communication Entity',
       },
       shape: {
@@ -377,7 +377,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     },
     {
       id: 'quickCommtext',
-      addInfo: { title: 'Communication', tooltip: 'Communication' },
+      addInfo: { menuId: "communication", title: 'Communication', tooltip: 'Communication' },
       shape: {
         type: 'Native',
         content: `
@@ -415,7 +415,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     },
     {
       id: 'quickApplication',
-      addInfo: { title: 'Application', tooltip: 'Application' },
+      addInfo: { menuId: "application", title: 'Application', tooltip: 'Application' },
       shape: {
         type: 'Native',
         content: `
@@ -502,6 +502,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickcommunicationFunction',
       addInfo: {
+        menuId: "commFunction",
         title: 'Communication Function',
         tooltip: 'Communication Function',
       },
@@ -591,6 +592,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickCommunicationResult',
       addInfo: {
+        menuId: "commResult",
         title: 'Communication Result',
         tooltip: 'Communication Result',
       },
@@ -680,6 +682,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickcommunicationFunction1',
       addInfo: {
+    menuId: "empty",
         title: 'Communication Function',
         tooltip: 'Communication Function',
       },
@@ -769,6 +772,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickCommAppMixture',
       addInfo: {
+    menuId: "empty",
         title: 'Communication App Mixture',
         tooltip: 'Communication App Mixture',
       },
@@ -819,6 +823,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickcommAppMixture1',
       addInfo: {
+    menuId: "empty",
         title: 'Communication App Mixture',
         tooltip: 'Communication App Mixture',
       },
@@ -869,6 +874,7 @@ export function getQuickEntitiesShapes(): NodeModel[] {
     {
       id: 'quickCommAppMixture2',
       addInfo: {
+    menuId: "empty",
         title: 'Communication App Mixture',
         tooltip: 'Communication App Mixture',
       },
@@ -946,7 +952,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         'Person',
         'quickPhysicalSystem',
-        { title: 'Physical System', tooltip: 'Physical System' },
+        { menuId: "system", title: 'Physical System', tooltip: 'Physical System' },
         ['System']
       ),
       constraints:
@@ -963,7 +969,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         'PersonNoFrame',
         'quickPhysicalSystem1',
-        { title: 'Physical System', tooltip: 'Physical System' },
+        { menuId: "system", title: 'Physical System', tooltip: 'Physical System' },
         ['System']
       ),
       constraints:
@@ -980,7 +986,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickTheory',
-        { title: 'Theory', tooltip: 'Theory' },
+        { menuId: "theory", title: 'Theory', tooltip: 'Theory' },
         'Theory'
       ),
       constraints:
@@ -997,7 +1003,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickTheorem',
-        { title: 'Theorem', tooltip: 'Theorem' },
+        { menuId: "theorem", title: 'Theorem', tooltip: 'Theorem' },
         'Theorem'
       ),
       constraints:
@@ -1014,24 +1020,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickApplyTheory',
-        { title: 'Apply Theory', tooltip: 'Apply Theory' },
-        'Apply'
-      ),
-      constraints:
-        NodeConstraints.Default |
-        NodeConstraints.Tooltip |
-        NodeConstraints.AllowDrop |
-        NodeConstraints.Rotate,
-      tooltip: {
-        content: 'Apply Application Theory',
-        position: 'TopRight',
-      },
-    },
-    {
-      ...getShapeByType(
-        '',
-        'quickApplyTheory',
-        { title: 'Apply Theory', tooltip: 'Apply Theory' },
+        { menuId: "theory", title: 'Apply Theory', tooltip: 'Apply Theory' },
         'Apply'
       ),
       constraints:
@@ -1048,7 +1037,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickInstrument',
-        { title: 'Instrument', tooltip: 'Instrument' },
+        { menuId: "method", title: 'Instrument', tooltip: 'Instrument' },
         'Instrument'
       ),
       constraints:
@@ -1065,7 +1054,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickMethod',
-        { title: 'Method', tooltip: 'Method' },
+        { menuId: "method", title: 'Method', tooltip: 'Method' },
         'Method'
       ),
       constraints:
@@ -1082,7 +1071,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickInputElement',
-        { title: 'Input Element', tooltip: 'Input Element' },
+        { menuId: "inputElement", title: 'Input Element', tooltip: 'Input Element' },
         [
           {
             content: "Input Element",
@@ -1105,7 +1094,7 @@ export function getTheoryQuickEntitiesShapes() {
       ...getShapeByType(
         '',
         'quickAddedFunction',
-        { title: 'Added Function', tooltip: 'Added Function' },
+        { menuId: "addedFunction", title: 'Added Function', tooltip: 'Added Function' },
         'Added Function'
       ),
       constraints:

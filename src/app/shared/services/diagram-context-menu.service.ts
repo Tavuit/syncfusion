@@ -17,10 +17,15 @@ export class DiagramContextMenuService {
       }
       return brr;
     }, []);
+    // console.log('listFilter', listFilter);
     if (listFilter.length > 0) {
       arr.push(...listFilter);
     }
     return arr;
   }, []);
-  constructor() { }
+
+  // public mappedArrayContext = menuItems;
+  constructor() { 
+    console.log("🚀 ~ DiagramContextMenuService ~ mappedArrayContext=menuItems.reduce ~ mappedArrayContext:", this.mappedArrayContext)
+  }
 }

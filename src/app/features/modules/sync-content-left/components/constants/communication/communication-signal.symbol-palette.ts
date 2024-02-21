@@ -5,7 +5,7 @@ import { getShapeByType } from 'src/app/utils/constants';
 export function getCommunicationSignalShapes() {
   let communicationSignal = [
     {
-      ...getShapeByType('Circle', 'greenCommSignal', { title: 'Green Comm Signal', tooltip: 'Green Comm Signal' }, {
+      ...getShapeByType('Circle', 'greenCommSignal', { menuId: "edit", title: 'Green Comm Signal', tooltip: 'Green Comm Signal' }, {
         fill: "LimeGreen",
         radius: 12.5,
         isPoint: true,
@@ -21,7 +21,7 @@ export function getCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'redCommSignal', { title: 'Red Comm Signal', tooltip: 'Red Comm Signal' }, {
+      ...getShapeByType('Circle', 'redCommSignal', { menuId: "edit", title: 'Red Comm Signal', tooltip: 'Red Comm Signal' }, {
         fill: "Red",
         radius: 12.5,
         isPoint: true,
@@ -37,7 +37,7 @@ export function getCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'blueCommSignal', { title: 'Blue Comm Signal', tooltip: 'Blue Comm Signal' }, {
+      ...getShapeByType('Circle', 'blueCommSignal', { menuId: "edit", title: 'Blue Comm Signal', tooltip: 'Blue Comm Signal' }, {
         fill: "Blue",
         radius: 12.5,
         isPoint: true,
@@ -53,7 +53,7 @@ export function getCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Arrow', 'greenSignalPath', { title: 'Green Signal Path', tooltip: 'Green Signal Path' }, {
+      ...getShapeByType('Arrow', 'greenSignalPath', { menuId: "edit", title: 'Green Signal Path', tooltip: 'Green Signal Path' }, {
         shape: {
           target: "Arrow",
         },
@@ -81,7 +81,7 @@ export function getCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Arrow', 'redSignalPath', { title: 'Red Signal Path', tooltip: 'Red Signal Path' }, {
+      ...getShapeByType('Arrow', 'redSignalPath', { menuId: "edit", title: 'Red Signal Path', tooltip: 'Red Signal Path' }, {
         shape: {
           target: "Arrow",
         },
@@ -109,7 +109,7 @@ export function getCommunicationSignalShapes() {
       },
     },
     {
-      ...getShapeByType('Arrow', 'blueSignalPath', { title: 'Blue Signal Path', tooltip: 'Blue Signal Path' }, {
+      ...getShapeByType('Arrow', 'blueSignalPath', { menuId: "edit", title: 'Blue Signal Path', tooltip: 'Blue Signal Path' }, {
         shape: {
           target: "Arrow",
         },
@@ -143,7 +143,7 @@ export function getCommunicationSignalShapes() {
 export function getTheoryCommunicationSignalShapes() {
   let theoryCommunicationSignal = [
     {
-      ...getShapeByType('Circle', 'greenSignal', { title: 'Green Signal', tooltip: 'Green Signal' }, {
+      ...getShapeByType('Circle', 'greenSignal', { menuId: "edit", title: 'Green Signal', tooltip: 'Green Signal' }, {
         fill: "LimeGreen",
         radius: 10,
         isPoint: true,
@@ -159,7 +159,7 @@ export function getTheoryCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Circle', 'redSignal', { title: 'Red Signal', tooltip: 'Red Signal' }, {
+      ...getShapeByType('Circle', 'redSignal', { menuId: "edit", title: 'Red Signal', tooltip: 'Red Signal' }, {
         fill: "Red",
         radius: 10,
         isPoint: true,
@@ -175,7 +175,7 @@ export function getTheoryCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Arrow', 'greenSignalPath', { title: 'Green Signal Path', tooltip: 'Green Signal Path' }, {
+      ...getShapeByType('Arrow', 'greenSignalPath', { menuId: "edit", title: 'Green Signal Path', tooltip: 'Green Signal Path' }, {
         style: {
           fill: "LimeGreen",
           strokeColor: "LimeGreen",
@@ -194,7 +194,7 @@ export function getTheoryCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('Arrow', 'redSignalPath', { title: 'Red Signal Path', tooltip: 'Red Signal Path' }, {
+      ...getShapeByType('Arrow', 'redSignalPath', { menuId: "edit", title: 'Red Signal Path', tooltip: 'Red Signal Path' }, {
         style: {
           fill: "Red",
           strokeColor: "Red",
@@ -213,7 +213,7 @@ export function getTheoryCommunicationSignalShapes() {
       }
     },
     {
-      ...getShapeByType('linkednode', 'linkednodesignal', { title: 'Linked Node', tooltip: 'Linked Node' }, null),
+      ...getShapeByType('linkednode', 'linkednodesignal', { menuId: "edit", title: 'Linked Node', tooltip: 'Linked Node' }, null),
       constraints:
         NodeConstraints.Default |
         NodeConstraints.Tooltip |
