@@ -7,6 +7,7 @@
   (selectionChange)="selectChange($event)"
   [contextMenuSettings]="contextMenuSettings"
   (contextMenuOpen)="handleContextMenuOpen($event)"
+  (contextMenuClick)="handleClickContextMenu($event)"
   [rulerSettings]="rulerSettings"
   [dataSourceSettings]="data"
   (propertyChange)="propertyChange($event)"
@@ -29,3 +30,13 @@
     <button (click)="handleCancel()">Cancel</button>
   </div>
 </ng-template>
+
+<input
+  #fileRef
+  type="file"
+  id="fileUploadToEditor"
+  name="fileUploadToEditor"
+  style="display: none;"
+  [accept]="'image/*'"
+  (change)="chooseFile($event)"
+/>

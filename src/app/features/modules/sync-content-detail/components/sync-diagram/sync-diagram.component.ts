@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
+  ElementRef,
   OnDestroy,
   OnInit,
   ViewChild,
@@ -31,13 +32,14 @@ import { DragDropFormService } from 'src/app/features/modules/sync-content-detai
 import { EDialogSize, SyncDialogComponent } from 'src/app/shared/base-components/views/sync-dialog/sync-dialog.component';
 import { EDomain } from 'src/app/shared/enums/core.enum';
 import { CoreService } from 'src/app/shared/services/core.service';
-import { EQUATIONS_DATA, dropGrouped } from 'src/app/utils/constants';
+import { EQUATIONS_DATA, dropGrouped, drawShape, randomId } from 'src/app/utils/constants';
 import { DiagramService } from "../../../../../shared/services/diagram.service";
 import { contextMenuSettings, rulerSettings, tooltipSettings } from "../../constants/diagram.constant";
 import { DiagramContextMenuService } from './../../../../../shared/services/diagram-context-menu.service';
 import { IAnnotationContent, RibbonService } from './../../../sync-header/components/sync-ribbon/services/ribbon.service';
 import { LabelPropertyComponent } from './../label-property/label-property.component';
 import { EDiagramModel } from 'src/app/shared/enums/diagram.enum';
+import { MenuEventArgs } from '@syncfusion/ej2-angular-navigations';
 @Component({
   selector: 'sync-diagram',
   standalone: true,
@@ -48,6 +50,7 @@ import { EDiagramModel } from 'src/app/shared/enums/diagram.enum';
 export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild("diagram") diagram?: DiagramComponent;
   @ViewChild('customComponent', { read: ViewContainerRef }) customComponent: ViewContainerRef;
+  @ViewChild('fileRef') fileRef: ElementRef;
   private _destroyed: Subject<void> = new Subject<void>();
   private customComponentInstance;
   public contextMenuSettings: ContextMenuSettingsModel = {
@@ -67,6 +70,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   }
   public currentDomain: EDomain
   public currentModel: EDiagramModel;
+  public selectedContextMenuId = '';
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService,
@@ -148,6 +152,173 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
         return arr.concat(item.id);
       }, []);
     }
+  }
+
+  public handleClickContextMenu(args: MenuEventArgs) {
+    this.selectedContextMenuId = args.item.id;
+    if ([
+      "commfunctionreplacefunctionwithsketch",
+      "applicationreplaceapplicationwithsketch",
+    ].includes(this.selectedContextMenuId.toLowerCase())) {
+      return;
+    }
+    if ((this.selectedContextMenuId.toLowerCase().includes("picture") && (!this.selectedContextMenuId.toLowerCase().includes("pointpicture"))) || this.selectedContextMenuId.toLowerCase().includes("image")) {
+      if (this.fileRef) {
+        this.fileRef.nativeElement.click();
+      }
+      // $("#fileUploadToDiagrams").attr("accept", "image/*");
+      // $("#fileUploadToDiagrams").click();
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("video") && (!this.selectedContextMenuId.toLowerCase().includes("pointvideo"))) {
+      if (this.fileRef) {
+        this.fileRef.nativeElement.click();
+      }
+      // $("#fileUploadToDiagrams").attr("accept", "video/*");
+      // $("#fileUploadToDiagrams").click();
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("audio") && (!this.selectedContextMenuId.toLowerCase().includes("pointaudio"))) {
+      // $("#fileUploadToDiagrams").attr("accept", "audio/*");
+      // $("#fileUploadToDiagrams").click();
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("sketch")) {
+
+
+      let truyNode = this.diagram.selectedItems.nodes[0];
+
+      // sketchContextClick(truyNode.id);
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("text")) {
+      // addTextOnClick(this.selectedContextMenuId.toLowerCase());
+    }
+// nuoc co hay
+// kiem tra, va rut gon lai doan ma dang sau dong nay, ok?
+    if (this.selectedContextMenuId.toLowerCase().includes("tocollection") && this.selectedContextMenuId.toLowerCase().includes("point")) {
+      // pointNodeToEntity("pointTo", "collection", "Point To");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("toword") && this.selectedContextMenuId.toLowerCase().includes("point")) {
+      // pointNodeToEntity("pointTo", "word", "Point To");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("toanswer") && this.selectedContextMenuId.toLowerCase().includes("point")) {
+      // pointNodeToEntity("pointTo", "answer", "Point To");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("toentity") && this.selectedContextMenuId.toLowerCase().includes("point") && this.selectedContextMenuId.toLowerCase().includes("word")) {
+      // pointNodeToEntity("pointTo", "word", "Point To");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("toentity") && this.selectedContextMenuId.toLowerCase().includes("point") && (!this.selectedContextMenuId.toLowerCase().includes("word"))) {
+      // pointNodeToEntity("pointTo", "entity", "Point To");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("byentity") && this.selectedContextMenuId.toLowerCase().includes("define") && this.selectedContextMenuId.toLowerCase().includes("word")) {
+      // pointNodeToEntity("define", "word", "Defined by");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("byentity") && this.selectedContextMenuId.toLowerCase().includes("define") && (!this.selectedContextMenuId.toLowerCase().includes("word"))) {
+      // pointNodeToEntity("define", "entity", "Defined by");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("identifyentity") && this.selectedContextMenuId.toLowerCase().includes("from") && this.selectedContextMenuId.toLowerCase().includes("word")) {
+      // pointNodeToEntity("define", "word", "Identifies");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("identifyentity") && this.selectedContextMenuId.toLowerCase().includes("from") && (!this.selectedContextMenuId.toLowerCase().includes("word"))) {
+      // pointNodeToEntity("define", "entity", "Identifies");
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("identifywordinsentence")) {
+      // let item = drawShape(communicationData.find((a) => a.id === "word"));
+      // item.id += randomId();
+      // let entity = this.diagram.add(item);
+      // let selected = this.diagram.selectedItems.properties.nodes[0];
+      // if (selected.id.startsWith("group") && !selected.parentId) {
+      //   selected = this.diagram.getObject(
+      //     this.diagram.selectedItems.properties.nodes[0].children[0]
+      //   );
+      // }
+      // setTimeout(() => {
+      //   dropGrouped(entity, selected, true, this.diagram);
+      // });
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("identifypartofsentence")) {
+      // let item = drawShape(communicationData.find((a) => a.id === "word"));
+      // item.id += randomId();
+      // item.annotations[0].content = "Part";
+      // let entity = this.diagram.add(item);
+      // let selected = this.diagram.selectedItems.properties.nodes[0];
+      // if (selected.id.startsWith("group") && !selected.parentId) {
+      //   selected = this.diagram.getObject(
+      //     this.diagram.selectedItems.properties.nodes[0].children[0]
+      //   );
+      // }
+      // setTimeout(() => {
+      //   dropGrouped(entity, selected, true, this.diagram);
+      // });
+    }
+
+    if (this.selectedContextMenuId.toLowerCase().includes("information") && this.selectedContextMenuId.toLowerCase().includes("point")) {
+      // pointNodeToEntity("pointTo", "information", "Point To");
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("groupofentities") && this.selectedContextMenuId.toLowerCase().includes("point")) {
+      // pointNodeToEntity("pointTo", "entities", "Point To");
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("entityidentifyentitybyword")) {
+      // pointNodeToEntity("pointTo", "word", "Identified by");
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("entitydefinewordfromentity")) {
+      // pointNodeToEntity("define", "word", "Defined by");
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("addcommunicationholder")) {
+      // addCommHolderOnClick();
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("relate") || this.selectedContextMenuId.toLowerCase().includes("associate")) {
+      // relatePersonOperatingPrinciple(this.selectedContextMenuId.toLowerCase());
+    }
+    //if (
+    // this.selectedContextMenuId.toLowerCase().includes("addword")
+    // ) {
+    //  funAddWordToDictionary(this.selectedContextMenuId.toLowerCase());
+    // }
+    // if (
+    //   this.selectedContextMenuId.toLowerCase().includes("addentity")
+    //) {
+    //  funAddEntityToCollection(this.selectedContextMenuId.toLowerCase());
+    // }
+
+    if (
+      // checkIdHanleClickfunAddPartToApplication(this.selectedContextMenuId.toLowerCase()) ||
+      this.selectedContextMenuId.toLowerCase().includes("addpart")
+    ) {
+      // funAddPartToApplication(this.selectedContextMenuId.toLowerCase());
+    }
+
+    if (this.selectedContextMenuId.toLowerCase() === "functionxaddsubfunction") {
+      // funAddPartToApplication(this.selectedContextMenuId.toLowerCase());
+    }
+    if (this.selectedContextMenuId.toLowerCase() === "commfunctionaddsubfunction") {
+      // funCommunicationFunctionSub();
+    }
+    console.log(this.selectedContextMenuId.toLowerCase());
+    if (this.selectedContextMenuId.toLowerCase().includes("sendsignalred")) {
+      // sendSignal(args.item, "red");
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("sendsignalgreen")) {
+      // sendSignal(args.item, "green");
+    }
+    if (this.selectedContextMenuId.toLowerCase().includes("coverperson")) {
+      // coverPerson(args.item);
+    }
+    if (
+      this.selectedContextMenuId.toLowerCase().includes("hidecover") ||
+      this.selectedContextMenuId.toLowerCase().includes("showcover") ||
+      this.selectedContextMenuId.toLowerCase().includes("showperson")
+    ) {
+      // hideShowCover(this.selectedContextMenuId.toLowerCase());
+    }
+    
   }
 
   public dropped(args: IDropEventArgs): void {
@@ -255,6 +426,11 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public handleCancel() {
     this.showPopup = false;
+  }
+
+  public chooseFile(event) {
+    const selectedFile = event.target.files[0];
+    this.diagramContextMenuService.replaceFileToDiagrams(selectedFile, this.diagram, this.selectedContextMenuId);
   }
 
   ngOnDestroy() {
