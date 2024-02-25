@@ -1,6 +1,15 @@
 :host ::ng-deep #default {
   height: 158px;
 
+  @keyframes FadeOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   #default_filemenu {
     background-color: var(--green-600);
     color: var(--white);
@@ -13,7 +22,12 @@
   .e-content {
     height: calc(158px - 44px) !important;
 
+    .e-item.e-active {
+      animation: FadeOut 600ms cubic-bezier(0.25, 0.1, 0.25, 1) 1000s 1 normal none running !important;
+    }
+
     .e-item {
+      background: white;
       height: 100% !important;
 
       .e-ribbon-tab-item {
