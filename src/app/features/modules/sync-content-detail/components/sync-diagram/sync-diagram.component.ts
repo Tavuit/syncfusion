@@ -50,7 +50,9 @@ import { MenuEventArgs } from '@syncfusion/ej2-angular-navigations';
 export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   @ViewChild("diagram") diagram?: DiagramComponent;
   @ViewChild('customComponent', { read: ViewContainerRef }) customComponent: ViewContainerRef;
-  @ViewChild('fileRef') fileRef: ElementRef;
+  @ViewChild('fileImageRef') fileImageRef: ElementRef;
+  @ViewChild('fileVideoRef') fileVideoRef: ElementRef;
+  @ViewChild('fileAudioRef') fileAudioRef: ElementRef;
   private _destroyed: Subject<void> = new Subject<void>();
   private customComponentInstance;
   public contextMenuSettings: ContextMenuSettingsModel = {
@@ -163,35 +165,27 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       return;
     }
     if ((this.selectedContextMenuId.toLowerCase().includes("picture") && (!this.selectedContextMenuId.toLowerCase().includes("pointpicture"))) || this.selectedContextMenuId.toLowerCase().includes("image")) {
-      if (this.fileRef) {
-        this.fileRef.nativeElement.click();
+      if (this.fileImageRef) {
+        this.fileImageRef.nativeElement.click();
       }
-      // $("#fileUploadToDiagrams").attr("accept", "image/*");
-      // $("#fileUploadToDiagrams").click();
     }
     if (this.selectedContextMenuId.toLowerCase().includes("video") && (!this.selectedContextMenuId.toLowerCase().includes("pointvideo"))) {
-      if (this.fileRef) {
-        this.fileRef.nativeElement.click();
+      if (this.fileVideoRef) {
+        this.fileVideoRef.nativeElement.click();
       }
-      // $("#fileUploadToDiagrams").attr("accept", "video/*");
-      // $("#fileUploadToDiagrams").click();
     }
     if (this.selectedContextMenuId.toLowerCase().includes("audio") && (!this.selectedContextMenuId.toLowerCase().includes("pointaudio"))) {
-      // $("#fileUploadToDiagrams").attr("accept", "audio/*");
-      // $("#fileUploadToDiagrams").click();
+      if (this.fileAudioRef) {
+        this.fileAudioRef.nativeElement.click();
+      }
     }
     if (this.selectedContextMenuId.toLowerCase().includes("sketch")) {
-
-
-      let truyNode = this.diagram.selectedItems.nodes[0];
-
-      // sketchContextClick(truyNode.id);
+      const truyNodeId = this.diagram.selectedItems.nodes[0].id;
+      this.diagramContextMenuService.sketchContextClick(truyNodeId, this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("text")) {
-      // addTextOnClick(this.selectedContextMenuId.toLowerCase());
+      this.diagramContextMenuService.addTextOnClick(this.selectedContextMenuId.toLowerCase(), this.diagram);
     }
-// nuoc co hay
-// kiem tra, va rut gon lai doan ma dang sau dong nay, ok?
     if (this.selectedContextMenuId.toLowerCase().includes("tocollection") && this.selectedContextMenuId.toLowerCase().includes("point")) {
       // pointNodeToEntity("pointTo", "collection", "Point To");
     }
@@ -272,7 +266,7 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       // pointNodeToEntity("define", "word", "Defined by");
     }
     if (this.selectedContextMenuId.toLowerCase().includes("addcommunicationholder")) {
-      // addCommHolderOnClick();
+      this.diagramContextMenuService.onAddCommHolder(this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("relate") || this.selectedContextMenuId.toLowerCase().includes("associate")) {
       // relatePersonOperatingPrinciple(this.selectedContextMenuId.toLowerCase());
@@ -299,9 +293,8 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       // funAddPartToApplication(this.selectedContextMenuId.toLowerCase());
     }
     if (this.selectedContextMenuId.toLowerCase() === "commfunctionaddsubfunction") {
-      // funCommunicationFunctionSub();
+      this.diagramContextMenuService.funCommunicationFunctionSub(this.diagram);
     }
-    console.log(this.selectedContextMenuId.toLowerCase());
     if (this.selectedContextMenuId.toLowerCase().includes("sendsignalred")) {
       // sendSignal(args.item, "red");
     }
@@ -309,14 +302,14 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       // sendSignal(args.item, "green");
     }
     if (this.selectedContextMenuId.toLowerCase().includes("coverperson")) {
-      // coverPerson(args.item);
+      this.diagramContextMenuService.coverPerson(this.diagram);
     }
     if (
       this.selectedContextMenuId.toLowerCase().includes("hidecover") ||
       this.selectedContextMenuId.toLowerCase().includes("showcover") ||
       this.selectedContextMenuId.toLowerCase().includes("showperson")
     ) {
-      // hideShowCover(this.selectedContextMenuId.toLowerCase());
+      this.diagramContextMenuService.hideShowCover(this.selectedContextMenuId.toLowerCase(), this.diagram);
     }
     
   }

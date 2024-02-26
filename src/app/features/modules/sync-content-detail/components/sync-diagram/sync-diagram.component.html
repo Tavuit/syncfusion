@@ -32,11 +32,31 @@
 </ng-template>
 
 <input
-  #fileRef
+  #fileImageRef
   type="file"
   id="fileUploadToEditor"
   name="fileUploadToEditor"
   style="display: none;"
   [accept]="'image/*'"
+  (change)="chooseFile($event)"
+/>
+
+<input
+  #fileVideoRef
+  type="file"
+  id="fileUploadToEditor"
+  name="fileUploadToEditor"
+  style="display: none;"
+  [accept]="'video/*'"
+  (change)="chooseFile($event)"
+/>
+
+<input
+  #fileAudioRef
+  type="file"
+  id="fileUploadToEditor"
+  name="fileUploadToEditor"
+  style="display: none;"
+  [accept]="'audio/*'"
   (change)="chooseFile($event)"
 />
