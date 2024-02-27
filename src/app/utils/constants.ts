@@ -7519,3 +7519,34 @@ export function camelize(str) {
     .replace(/\s+/g, "")
     .replace(/[^\w\s]/gi, "");
 }
+
+export function getTypeAddPartToApplication(id) {
+  const listIdGroupSub = [
+    "applicationaddsubtoapplication",
+    "commfunctionaddpartoffunction",
+    "commresultaddsubapplicationresult",
+  ];
+  if (listIdGroupSub.includes(id)) {
+    return "groupApplicationSub";
+  }
+  return "groupApplicationPart";
+}
+
+export function getAnnotationAddPartToApplication(id) {
+  if (
+    id === "applicationaddsubtoapplication" ||
+    id === "functionxaddsubfunction"
+  ) {
+    return ["Sub Application 1", "Application"];
+  }
+  if (id === "commfunctionaddpartoffunction") {
+    return ["Function 1", "Communication Function"];
+  }
+  if (id === "commresultaddparttoresult") {
+    return ["Part1", "Communication Result"];
+  }
+  if (id === "commresultaddsubapplicationresult") {
+    return ["Sub Application 1", "Communication Result"];
+  }
+  return ["Part1", "Application"];
+}

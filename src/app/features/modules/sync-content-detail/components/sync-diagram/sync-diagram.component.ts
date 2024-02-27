@@ -158,6 +158,40 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public handleClickContextMenu(args: MenuEventArgs) {
     this.selectedContextMenuId = args.item.id;
+    const propertyText = (args.item as any).properties.text;
+    console.log("🚀 ~ SyncDiagramComponent ~ handleClickContextMenu ~ args:", args)
+    console.log("🚀 ~ SyncDiagramComponent ~ handleClickContextMenu ~ this.selectedContextMenuId:", this.selectedContextMenuId)
+
+    switch (propertyText.toLowerCase()) {
+      case "Delete".toLowerCase():
+        this.diagram.remove(this.diagram.selectedItems.nodes[0]);
+        return;
+      case "Copy".toLowerCase():
+        this.diagram.copy();
+        return;
+      case "Paste".toLowerCase():
+        this.diagram.paste();
+        return;
+      case "Cut".toLowerCase():
+        this.diagram.cut();
+        return;
+      case "Edit Text".toLowerCase():
+        this.diagram.startTextEdit(
+          this.diagram.selectedItems.nodes[0],
+          this.diagram.selectedItems.nodes[0].annotations[0].id
+        );
+        return;
+      case "Select All".toLowerCase():
+        this.diagram.selectAll();
+        return;
+      case "add input":
+        this.diagramContextMenuService.addInput(this.diagram);
+        return;
+      case "remove input":
+        this.diagramContextMenuService.removeInput(this.diagram);
+        return;
+    }
+
     if ([
       "commfunctionreplacefunctionwithsketch",
       "applicationreplaceapplicationwithsketch",
@@ -223,34 +257,11 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("identifywordinsentence")) {
-      // let item = drawShape(communicationData.find((a) => a.id === "word"));
-      // item.id += randomId();
-      // let entity = this.diagram.add(item);
-      // let selected = this.diagram.selectedItems.properties.nodes[0];
-      // if (selected.id.startsWith("group") && !selected.parentId) {
-      //   selected = this.diagram.getObject(
-      //     this.diagram.selectedItems.properties.nodes[0].children[0]
-      //   );
-      // }
-      // setTimeout(() => {
-      //   dropGrouped(entity, selected, true, this.diagram);
-      // });
+      this.diagramContextMenuService.identifyWordInSentence(this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("identifypartofsentence")) {
-      // let item = drawShape(communicationData.find((a) => a.id === "word"));
-      // item.id += randomId();
-      // item.annotations[0].content = "Part";
-      // let entity = this.diagram.add(item);
-      // let selected = this.diagram.selectedItems.properties.nodes[0];
-      // if (selected.id.startsWith("group") && !selected.parentId) {
-      //   selected = this.diagram.getObject(
-      //     this.diagram.selectedItems.properties.nodes[0].children[0]
-      //   );
-      // }
-      // setTimeout(() => {
-      //   dropGrouped(entity, selected, true, this.diagram);
-      // });
+      this.diagramContextMenuService.identifyPartInSentence(this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("information") && this.selectedContextMenuId.toLowerCase().includes("point")) {
@@ -281,16 +292,19 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
     //) {
     //  funAddEntityToCollection(this.selectedContextMenuId.toLowerCase());
     // }
-
+    const listIdClick = [
+      "applicationaddsubtoapplication",
+      "commresultaddsubapplicationresult",
+    ];
     if (
-      // checkIdHanleClickfunAddPartToApplication(this.selectedContextMenuId.toLowerCase()) ||
+      listIdClick.includes(this.selectedContextMenuId.toLowerCase()) ||
       this.selectedContextMenuId.toLowerCase().includes("addpart")
     ) {
-      // funAddPartToApplication(this.selectedContextMenuId.toLowerCase());
+      this.diagramContextMenuService.funAddPartToApplication(this.selectedContextMenuId.toLowerCase(), this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase() === "functionxaddsubfunction") {
-      // funAddPartToApplication(this.selectedContextMenuId.toLowerCase());
+      this.diagramContextMenuService.funAddPartToApplication(this.selectedContextMenuId.toLowerCase(), this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase() === "commfunctionaddsubfunction") {
       this.diagramContextMenuService.funCommunicationFunctionSub(this.diagram);

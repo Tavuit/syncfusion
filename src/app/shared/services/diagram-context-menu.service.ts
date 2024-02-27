@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { menuItems } from 'src/app/features/modules/sync-content-detail/constants/diagram.constant';
-import { camelize, commLinkData, communicationData, drawShape, otherData, personData, randomId } from 'src/app/utils/constants';
+import { camelize, commLinkData, communicationData, drawShape, dropGrouped, getAnnotationAddPartToApplication, getTypeAddPartToApplication, otherData, personData, randomId } from 'src/app/utils/constants';
 
 let nodeAppendData = {
   // Position of the node
@@ -35,7 +35,6 @@ export class DiagramContextMenuService {
       }
       return brr;
     }, []);
-    // console.log('listFilter', listFilter);
     if (listFilter.length > 0) {
       arr.push(...listFilter);
     }
@@ -230,5 +229,138 @@ export class DiagramContextMenuService {
       diagram.selectedItems.nodes[0].style.opacity = 1;
     }
     diagram.dataBind();
+  }
+
+  public addInput(diagram) {
+    let ports = {
+      id: "LeftMiddle" + randomId(),
+      offset: {
+        x: 0,
+        y: 0.5,
+      },
+      visibility: 1,
+      shape: "Circle",
+      width: 2,
+      height: 2,
+      verticalAlignment: "Center",
+      horizontalAlignment: "Center",
+    };
+    const selected = diagram.selectedItems.nodes[0];
+    const heightNew = selected.height + 10;
+    selected.offsetY =
+      selected.offsetY - selected.height / 2 + heightNew / 2;
+    selected.height = heightNew;
+    diagram.dataBind();
+
+    let portLength = diagram.selectedItems.nodes[0].ports.length - 3;
+    diagram.selectedItems.nodes[0].ports.forEach((a) => {
+      if (a.id.toLowerCase().startsWith("left")) {
+        ports.offset = {
+          x: a.offset.x,
+          y: (diagram.selectedItems.nodes[0].ports.length - 3 + 1) / (diagram.selectedItems.nodes[0].ports.length - 3 + 2),
+        };
+        a.offset = {
+          x: a.offset.x,
+          y: portLength / (diagram.selectedItems.nodes[0].ports.length - 3 + 2),
+        };
+        portLength--;
+        diagram.dataBind();
+      }
+    });
+    diagram.addPorts(diagram.selectedItems.nodes[0], [ports]);
+  }
+
+  public removeInput(diagram) {
+    const selectedRemove = diagram.selectedItems.nodes[0];
+        const heightNewRemove = selectedRemove.height - 10;
+        selectedRemove.offsetY =
+          selectedRemove.offsetY -
+          selectedRemove.height / 2 +
+          heightNewRemove / 2;
+        selectedRemove.height = heightNewRemove;
+        diagram.dataBind();
+
+        let bdem1 = diagram.selectedItems.nodes[0].ports.length - 3;
+        let bcodinh = diagram.selectedItems.nodes[0].ports.length - 3;
+
+        diagram.selectedItems.nodes[0].ports.forEach((a) => {
+          if (a.id.toLowerCase().startsWith("left")) {
+
+            if (bdem1 == bcodinh) {
+              bdem1--;
+            }
+
+            if (bdem1 != bcodinh) {
+              a.offset = {
+                x: a.offset.x,
+                y: bdem1 / bcodinh,
+              };
+
+              bdem1--;
+            }
+          }
+
+        });
+        diagram.dataBind();
+        diagram.selectedItems.nodes[0].ports.forEach((a) => {
+          if (a.id.toLowerCase().startsWith("left")) {
+
+            if ((a.offset.x == 0) && (a.offset.y == 0)) {
+              diagram.removePorts(diagram.selectedItems.nodes[0], [a]);
+            }
+          }
+
+        });
+        diagram.dataBind();
+  }
+
+  public identifyWordInSentence(diagram) {
+    let item = drawShape(communicationData.find((a) => a.id === "word") as any);
+    item.id += randomId();
+    let entity = diagram.add(item);
+    let selected = diagram.selectedItems.properties.nodes[0];
+    if (selected.id.startsWith("group") && !selected.parentId) {
+      selected = diagram.getObject(
+        diagram.selectedItems.properties.nodes[0].children[0]
+      );
+    }
+    setTimeout(() => {
+      dropGrouped(entity, selected, true, diagram);
+    });
+  }
+
+  public identifyPartInSentence(diagram) {
+    let item = drawShape(communicationData.find((a) => a.id === "word") as any);
+      item.id += randomId();
+      item.annotations[0].content = "Part";
+      let entity = diagram.add(item);
+      let selected = diagram.selectedItems.properties.nodes[0];
+      if (selected.id.startsWith("group") && !selected.parentId) {
+        selected = diagram.getObject(
+          diagram.selectedItems.properties.nodes[0].children[0]
+        );
+      }
+      setTimeout(() => {
+        dropGrouped(entity, selected, true, diagram);
+      });
+  }
+
+  public funAddPartToApplication(id: string, diagram) {
+
+    const type = getTypeAddPartToApplication(id);
+    const annotation = getAnnotationAddPartToApplication(id);
+    const node = diagram.selectedItems.properties.nodes[0];
+    let item = drawShape({
+      id: "communicationFunctionGrouped" + randomId(),
+      title: "Communication Function",
+      annotation,
+      menuId: "entity",
+      toolTip: "What We Do as Entity",
+      type,
+    });
+    item.offsetX = node.offsetX;
+    item.offsetY = node.offsetY;
+    diagram.add(item);
+    diagram.remove(diagram.selectedItems.properties.nodes[0]);
   }
 }
