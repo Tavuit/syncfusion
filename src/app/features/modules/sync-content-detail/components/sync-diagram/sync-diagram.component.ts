@@ -159,7 +159,6 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
   public handleClickContextMenu(args: MenuEventArgs) {
     this.selectedContextMenuId = args.item.id;
     const propertyText = (args.item as any).properties.text;
-    console.log("🚀 ~ SyncDiagramComponent ~ handleClickContextMenu ~ args:", args)
     console.log("🚀 ~ SyncDiagramComponent ~ handleClickContextMenu ~ this.selectedContextMenuId:", this.selectedContextMenuId)
 
     switch (propertyText.toLowerCase()) {
@@ -275,12 +274,14 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
     }
     if (this.selectedContextMenuId.toLowerCase().includes("entitydefinewordfromentity")) {
       // pointNodeToEntity("define", "word", "Defined by");
+      console.log('run here');
     }
     if (this.selectedContextMenuId.toLowerCase().includes("addcommunicationholder")) {
       this.diagramContextMenuService.onAddCommHolder(this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("relate") || this.selectedContextMenuId.toLowerCase().includes("associate")) {
       // relatePersonOperatingPrinciple(this.selectedContextMenuId.toLowerCase());
+      console.log('run here');
     }
     //if (
     // this.selectedContextMenuId.toLowerCase().includes("addword")

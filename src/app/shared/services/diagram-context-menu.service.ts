@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ConnectorConstraints } from '@syncfusion/ej2-angular-diagrams';
 import { menuItems } from 'src/app/features/modules/sync-content-detail/constants/diagram.constant';
 import { camelize, commLinkData, communicationData, drawShape, dropGrouped, getAnnotationAddPartToApplication, getTypeAddPartToApplication, otherData, personData, randomId } from 'src/app/utils/constants';
 
@@ -362,5 +363,121 @@ export class DiagramContextMenuService {
     item.offsetY = node.offsetY;
     diagram.add(item);
     diagram.remove(diagram.selectedItems.properties.nodes[0]);
+  }
+
+  public relatePersonOperatingPrinciple(id: string, diagram) {
+    let idFind = "";
+    let ellipseBasic = "ellipseBasic";
+    if (id.includes("withoperatingprinciple")) {
+      idFind = "operatingPrinciple";
+    } else if (id.includes("withprinciplesaspect")) {
+      idFind = "principleAspect";
+    } else if (id.includes("withpersonaspect")) {
+      idFind = "personAspect";
+    } else if (id.includes("withmainsetofprinciple")) {
+      idFind = "principle1";
+    } else if (id.includes("withsubsetofprinciple")) {
+      idFind = "principle2";
+    } else if (id.includes("withtheory")) {
+      idFind = "theory";
+    } else if (id.includes("withutilizationtheory")) {
+      idFind = "utilizationTheory";
+    } else {
+      idFind = "principle";
+    }
+  
+    const itemActive = diagram.selectedItems.properties.nodes[0];
+  
+    let findItem;
+  
+    if (id.includes("withperson")) {
+      //can phai viet annotation o dang annotation:"",
+      findItem = drawShape({
+        id: "person",
+        title: "person",
+        annotation: "",
+        menuId: "person",
+        toolTip: "person",
+        type: "Person",
+      });
+    }
+  
+    if (!(id.includes("withperson"))) {
+      // findItem = {...getItemById(idFind)};
+      findItem.width = 150;
+      findItem.height = 80;
+    }
+  
+    const offerXNode = itemActive.offsetX - itemActive.width / 2 + 75;
+    findItem.offsetX = offerXNode;
+    findItem.offsetY = itemActive.offsetY + 300;
+  
+    findItem.id = findItem.id + randomId();
+    // drawPortCircle(findItem);
+    const itemPrinciple = diagram.add(findItem);
+  
+    if (id.includes("withperson")) {
+      itemPrinciple.annotations[0].content = "Person Name No Title";
+    }
+  
+    if (id.includes("withentity")) {
+      itemPrinciple.annotations[0].content = "Entity";
+    }
+  
+    // let findItem2 = {...getItemById(ellipseBasic)};
+  
+    // findItem2.offsetX = itemActive.offsetX + 400;
+    // findItem2.offsetY = itemActive.offsetY + 150;
+    // findItem2.id = findItem2.id + randomId();
+    // drawPortCircle(findItem2);
+    // const itemEllipseBasic = diagram.add(findItem2);
+  
+    if (id.includes("associate")) {
+      // itemEllipseBasic.annotations[0].content = "Associate";
+      diagram.dataBind();
+    }
+    // let findItem3 = {...getItemById("itemHidden")};
+    // findItem3.offsetX = itemActive.offsetX + 600;
+    // findItem3.offsetY = itemActive.offsetY + 145;
+    // findItem3.id = findItem3.id + randomId();
+    // const itemHidden = diagram.add(findItem3);
+    diagram.connectors = diagram.connectors.concat([
+      {
+        id: "connector" + randomId(),
+        sourceID: itemActive.id,
+        // targetID: itemEllipseBasic.id,
+        type: "Orthogonal",
+        segments: [
+          {
+            type: "Orthogonal",
+            direction: "Right",
+          },
+        ],
+        constraints:
+          ConnectorConstraints.Default |
+          ConnectorConstraints.DragSegmentThumb,
+      },
+      {
+        id: "connector" + randomId(),
+        sourceID: itemPrinciple.id,
+        // targetID: itemEllipseBasic.id,
+        type: "Orthogonal",
+        segments: [
+          {
+            type: "Orthogonal",
+            direction: "Right",
+          },
+        ],
+        constraints:
+          ConnectorConstraints.Default |
+          ConnectorConstraints.DragSegmentThumb,
+      },
+      {
+        id: "connector" + randomId(),
+        // sourceID: itemEllipseBasic.id,
+        // targetID: itemHidden.id,
+        type: "Orthogonal",
+      },
+    ]);
   }
 }

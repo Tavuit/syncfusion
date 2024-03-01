@@ -7507,6 +7507,554 @@ export const otherData: any[] = [
   },
 ];
 
+export const applicationRects = [
+  {
+    id: "application",
+    title: "Application",
+    annotation: "Application",
+    menuId: "application",
+    toolTip: "Represents an Actual Application",
+  },
+  {
+    id: "communicationFunction",
+    title: "Communication Function",
+    annotation: "Communication Function",
+    menuId: "commFunction",
+    toolTip: "Function of Our Communication",
+  },
+  {
+    id: "communicationResult",
+    title: "Communication Result",
+    annotation: "Communication Result",
+    menuId: "commResult",
+    toolTip: "Result of an Application",
+  },
+  {
+    id: "communicationFunction1",
+    title: "Communication Function",
+    annotation: "Communication Function",
+    toolTip: "Represent Communication Function",
+    type: "Text",
+  },
+  {
+    id: "commAppMixture",
+    title: "Comm App Mixture",
+    annotation: {
+      fill: "white",
+      radius: 35,
+      content: [
+        {
+          content: "Comm & App Mixture",
+        },
+      ],
+      ports: rectPorts,
+    },
+    menuId: "empty",
+    toolTip: "Communication Application Mixture",
+    type: "Circle",
+  },
+  {
+    id: "commAppMixture1",
+    title: "Comm App Mixture",
+    annotation: {
+      content: [
+        {
+          content: "Communication Application Mixture",
+        },
+      ],
+      height: 80,
+      width: 80,
+    },
+    menuId: "commMix",
+    toolTip: "Multi Inputs Comm & App Mixture",
+  },
+  {
+    id: "communicationFunctionGrouped",
+    title: "Communication Function",
+    annotation: [
+      "Communication Function",
+      "Communication Function",
+      "Communication Function",
+    ],
+    menuId: "entity",
+    toolTip: "What We Do as Entity",
+    type: "CommunicationGrouped",
+  },
+  {
+    id: "whatWeDo",
+    title: "What We Do",
+    annotation: ["Communication", "Application", "What We Do"],
+    menuId: "entity",
+    toolTip: "What We Do as Entity",
+    type: "WhatWeDo",
+  },
+  {
+    id: "whatWeDo1",
+    title: "What We Do",
+    annotation: "What We Do",
+    toolTip: "Represent Things That We Do",
+    menuId: "entity",
+    type: "DualBox",
+  },
+  {
+    id: "action",
+    title: "Action",
+    annotation: "Action",
+    menuId: "action",
+    toolTip: "An Action That We Take",
+  },
+  {
+    id: "reason",
+    title: "Reason",
+    annotation: "Reason",
+    menuId: "reason",
+    toolTip: "Reason For an Action",
+  },
+  {
+    id: "work1234",
+    title: "Work",
+    annotation: "Work",
+    menuId: "work",
+    toolTip: "Work That we Do",
+  },
+  {
+    id: "application1",
+    title: "Application",
+    annotation: "application",
+    toolTip: "Represent Application",
+    type: "Text",
+  },
+  {
+    id: "emptycontainer",
+    title: "Empty Container",
+    toolTip: "A Container to Add Part to",
+    menuId: "emptyContainer",
+    type: "emptycontainer",
+  },
+  {
+    id: "work",
+    title: "Work",
+    annotation: {
+      fill: "white",
+      radius: 40,
+      content: [
+        {
+          content: "Work",
+        },
+      ],
+      ports: rectPorts,
+    },
+    menuId: "workinput",
+    toolTip: "People Work Together",
+    type: "Circle",
+  },
+  {
+    id: "subFunction",
+    title: "Sub Function",
+    annotation: "Sub Communication Function",
+    menuId: "subFunction",
+    toolTip: "Function Inside Function",
+    type: "Sub",
+  },
+  {
+    id: "subApplication",
+    title: "Sub Application",
+    annotation: "Sub Application",
+    menuId: "subApplication",
+    toolTip: "Application Inside Application",
+    type: "Sub",
+  },
+  {
+    id: "subResult",
+    title: "Sub Result",
+    annotation: "Sub Result",
+    menuId: "subResult",
+    toolTip: "Result Inside Result",
+    type: "Sub",
+  },
+  {
+    id: "groupFunction",
+    title: "Group Function",
+    annotation: "Group Communication Function",
+    menuId: "groupFunction",
+    toolTip: "Group Communication Function",
+    type: "Group",
+  },
+  {
+    id: "groupApplication",
+    title: "Group Application",
+    annotation: "Group Application",
+    menuId: "groupApplication",
+    toolTip: "Denote Group of Application",
+    type: "Group",
+  },
+  {
+    id: "groupResult",
+    title: "Group Result",
+    annotation: "Group Communication Result",
+    menuId: "groupResult",
+    toolTip: "Group Communication Result",
+    type: "Group",
+  },
+  {
+    id: "group1",
+    title: "Group",
+    annotation: {
+      content: [
+        {
+          content: "Group",
+        },
+      ],
+      ports: [
+        {
+          id: "left-1",
+          offset: {x: 0, y: 0.25},
+          visibility: PortVisibility.Visible,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "left-2",
+          offset: {x: 0, y: 0.75},
+          visibility: PortVisibility.Visible,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "right",
+          offset: {x: 1, y: 0.5},
+          visibility: PortVisibility.Visible,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+      ],
+      height: 75,
+      width: 50,
+    },
+    menuId: "commMix",
+    toolTip: "Use to Group or Add Entities",
+  },
+  {
+    id: "continuityApplication",
+    title: "Continuity",
+    annotation: {
+      strokeWidth: 1,
+      strokeDashArray: "10 5",
+    },
+    menuId: "empty",
+    toolTip: "Show Continuity of Entity",
+    type: "Continuity",
+  },
+  {
+    id: "a",
+    title: "A",
+    annotation: "A",
+    menuId: "application",
+    toolTip: "Represents an Actual Application",
+  },
+  {
+    id: "a1",
+    title: "A",
+    annotation: "A",
+    toolTip: "Represent Application",
+    menuId: "empty",
+    type: "Text",
+  },
+  {
+    id: "functionx",
+    title: "f(x)",
+    annotation: "f(x)",
+    menuId: "functionx",
+    toolTip: "Function of Our Communication",
+  },
+  {
+    id: "functionx1",
+    title: "f(x)",
+    annotation: "f(x)",
+    toolTip: "Represent Communication Function",
+    menuId: "empty",
+    type: "Text",
+  },
+  {
+    id: "function0",
+    title: "f()",
+    annotation: "f()",
+    menuId: "functionx",
+    toolTip: "Function of Our Communication",
+  },
+  {
+    id: "communicationFunction12",
+    title: "Communication Function",
+    annotation: "communication function",
+    toolTip: "Represent Communication Function",
+    menuId: "empty",
+    type: "Text",
+  },
+];
+
+export const analysisData = [
+  {
+    id: "principle",
+    title: "Principle",
+    annotation: "Principle",
+    menuId: "principle",
+    toolTip: "Represent Actual Principle",
+  },
+  {
+    id: "parentPrinciple",
+    title: "Parent Principle",
+    annotation: "Principle",
+    menuId: "principle",
+    toolTip: "Represent Parent Principle",
+  },
+  {
+    id: "referencerect",
+    title: "Reference",
+    annotation: "Reference",
+    menuId: "reference",
+    toolTip: "Represent an Actual Reference",
+  },
+  {
+    id: "sentenceAnalysis",
+    title: "Sentence Analysis",
+    annotation: "Sentence Analysis",
+    menuId: "sentenceAnalysis",
+    toolTip: "Represent Sentence Analysis",
+  },
+  {
+    id: "analysis",
+    title: "Analysis",
+    annotation: "Analysis",
+    menuId: "sentenceAnalysis",
+    toolTip: "Represent Actual Analysis",
+  },
+  {
+    id: "feedback",
+    title: "Feedback",
+    annotation: "Feedback",
+    menuId: "feedback",
+    toolTip: "Represent a Feedback",
+  },
+  {
+    id: "operatingPrinciple",
+    title: "Operating Principle",
+    annotation: "Principle",
+    menuId: "operatingPrinciple",
+    toolTip: "Represent Actual Principle",
+  },
+  {
+    id: "error",
+    title: "Error",
+    annotation: "Error",
+    menuId: "error",
+    toolTip: "Represent an Actual Error",
+  },
+  {
+    id: "compensator",
+    title: "Compensator",
+    annotation: "Compensator",
+    menuId: "compensator",
+    toolTip: "Represent an Actual Compensator",
+  },
+  {
+    id: "problem",
+    title: "Problem",
+    annotation: "Problem",
+    menuId: "problem",
+    toolTip: "Represent an Actual Problem",
+  },
+  {
+    id: "problemStatement",
+    title: "Problem Statement",
+    annotation: "Problem Statement",
+    menuId: "problemStatement",
+    toolTip: "Problem Statement as Entity",
+  },
+  {
+    id: "principle1",
+    title: "Principle",
+    annotation: "Main Set of Principles",
+    menuId: "mainSetofPrinciple",
+    toolTip: "Represent a Main Set of Principles",
+  },
+  {
+    id: "principle2",
+    title: "Principle",
+    annotation: "Sub Set of Principles",
+    menuId: "subSetofPrinciple",
+    toolTip: "Represent a Subset of Principles",
+  },
+  {
+    id: "analysisWindow",
+    title: "Analysis Window",
+    annotation: "Analysis Window",
+    menuId: "analysisWindow",
+    toolTip: "Represents an Actual Analysis",
+  },
+  {
+    id: "edfDiamond",
+    title: "Error Correction Function",
+    annotation: "Error Correction Function",
+    toolTip: "The Error Correction Function",
+    menuId: "empty",
+    type: "ECF",
+  },
+  {
+    id: "ecfRect",
+    title: "Error Correction Function",
+    annotation: "Error Correction Function",
+    menuId: "empty",
+    toolTip: "Enable Error Correction",
+  },
+  {
+    id: "problemDevelopment",
+    title: "Problem Development",
+    annotation: {
+      content: [
+        {
+          content: "Problem Name Development",
+          offset: {
+            x: 0.5,
+            y: 1,
+          },
+          margin: {
+            top: 30,
+          },
+        },
+      ],
+      radius: 150,
+      fill: "White",
+    },
+    toolTip: "Problem Development From Error",
+    menuId: "problemDevelopment",
+    type: "Circle",
+  },
+  {
+    id: "principleAspect",
+    title: "Principle Aspect",
+    annotation: "Principle Aspect",
+    menuId: "principleAspect",
+    toolTip: "Identify Aspect of a Principle",
+  },
+  {
+    id: "redcrossanalysis",
+    title: "Red Cross",
+    toolTip: "Use to Cross Out Entity",
+    menuId: "empty",
+    type: "redcross",
+  },
+  {
+    id: "solutionanalysis",
+    title: "Solution",
+    annotation: "Analysis",
+    menuId: "solution",
+    toolTip: "Represent an Actual Solution",
+  },
+  {
+    id: "group4",
+    title: "Group",
+    annotation: {
+      content: [
+        {
+          content: "Group",
+        },
+      ],
+      ports: [
+        {
+          id: "left-1",
+          offset: {x: 0, y: 0.25},
+          visibility: PortVisibility.Visible,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "left-2",
+          offset: {x: 0, y: 0.75},
+          visibility: PortVisibility.Visible,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+        {
+          id: "right",
+          offset: {x: 1, y: 0.5},
+          visibility: PortVisibility.Visible,
+          shape: "X",
+          width: 4,
+          height: 4,
+        },
+      ],
+      height: 75,
+      width: 50,
+    },
+    menuId: "commMix",
+    toolTip: "Use to Group or Add Entities",
+  },
+  {
+    id: "continuity4",
+    title: "Continuity",
+    annotation: {
+      strokeWidth: 1,
+      strokeDashArray: "10 5",
+    },
+    menuId: "empty",
+    toolTip: "Show Continuity of Entity",
+    type: "Continuity",
+  },
+  {
+    id: "analyses",
+    title: "Analyses",
+    annotation: "Analyses",
+    menuId: "sentenceAnalysis",
+    toolTip: "Represents a Group of Analysis",
+    type: "Overlap",
+  },
+  {
+    id: "errors",
+    title: "Errors",
+    annotation: "Errors",
+    menuId: "error",
+    toolTip: "Represent a Group of Error",
+    type: "Overlap",
+  },
+  {
+    id: "problems",
+    title: "Problems",
+    annotation: "Problems",
+    menuId: "problem",
+    toolTip: "Represents a Group of Problem",
+    type: "Overlap",
+  },
+  {
+    id: "feedbacks",
+    title: "Feedbacks",
+    annotation: "Feedbacks",
+    menuId: "feedback",
+    toolTip: "Represents a Group of Feedback",
+    type: "Overlap",
+  },
+  {
+    id: "compensators",
+    title: "Compensators",
+    annotation: "Compenstors",
+    menuId: "compensator",
+    toolTip: "Represent a Group of Feedback",
+    type: "Overlap",
+  },
+  {
+    id: "solutionsanalysis",
+    title: "Solutions",
+    annotation: "Solutions",
+    menuId: "solution",
+    toolTip: "Represent a Group of Solutions",
+    type: "Overlap",
+  },
+];
+
 export function randomId() {
   return (Math.random() + 1).toString(36).substring(7);
 }
@@ -7550,3 +8098,52 @@ export function getAnnotationAddPartToApplication(id) {
   }
   return ["Part1", "Application"];
 }
+
+// export function getItemById(id) {
+//   let shape = allShapes.find((x) => x.id === id);
+//   if (shape !== undefined) {
+//     return shape;
+//   }
+// }
+
+// let persons = personData.map((shape) => drawShape(shape as any));
+// let communication = communicationData.map((shape) => drawShape(shape as any));
+// let application = applicationRects.map((shape) => drawShape(shape as asny))
+// let commLink = personData.map((shape) => drawShape(shape as any));;
+// let analysis = analysisData.map((item) => drawShape(item as any));;
+// let commSignal = getCommSignal();
+// let area = getCommAreAndLocation();
+// let others = getCommOthers();
+// let commlabel = getCommLabel();
+// let quickComm = getQuickComm();
+// let system = getThoerySystem();
+// let thoery = getTheory();
+// let fundamental = getThoeryFundamental();
+// let interface = getTheoryInterface();
+// let theorySignal = getTheorySignal();
+// let instrument = getTheoryInstrument();
+// let functions = getTheoryFunction();
+// let stability = getTheoryStability();
+// let thoerylabel = getTheoryLabel();
+
+// const allShapes = []
+//   .concat(persons)
+//   .concat(communication)
+//   .concat(application)
+//   .concat(commLink)
+//   .concat(analysis)
+//   .concat(commSignal)
+//   .concat(area)
+//   .concat(others)
+//   .concat(commlabel)
+//   .concat(system)
+//   .concat(thoery)
+//   .concat(fundamental)
+//   .concat(interface)
+//   .concat(theorySignal)
+//   .concat(instrument)
+//   .concat(functions)
+//   .concat(stability)
+//   .concat(thoerylabel)
+//   // .concat(getEquations('commPalette'))
+//   // .concat(getEquations('theoryPalette'));
