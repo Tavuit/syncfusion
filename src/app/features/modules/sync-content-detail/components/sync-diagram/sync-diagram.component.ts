@@ -5,6 +5,7 @@ import {
   ElementRef,
   OnDestroy,
   OnInit,
+  Renderer2,
   ViewChild,
   ViewContainerRef
 } from '@angular/core';
@@ -80,6 +81,8 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
     private toastrService: ToastrService,
     private dragDropFormService: DragDropFormService,
     private diagramContextMenuService: DiagramContextMenuService,
+    private elRef: ElementRef,
+    private renderer: Renderer2
   ) {
   }
   ngAfterViewInit(): void {
@@ -143,23 +146,28 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
           return arr;
         }, [])
         .concat("baseCopy", "basePaste", "baseCut", "baseEdit", "baseSelect");
-      args.hiddenItems.forEach((a) => {
-        // console.log('#${a}.e-menu-item', `#${a}.e-menu-item`);
-        // if ($(`#${a}.e-menu-item`).length > 0) {
-        //   $(`#${a}.e-menu-item`).addClass("e-menu-hide");
-        // }
+      args.hiddenItems.forEach((id) => {
+        const element = this.elRef.nativeElement.querySelector(`#${id}.e-menu-item`);
+        if (element) {
+          this.renderer.addClass(element, 'e-menu-hide');
+        }
       });
     } else {
       args.hiddenItems = this.diagramContextMenuService.mappedArrayContext.reduce((arr, item) => {
         return arr.concat(item.id);
       }, []);
+      args.hiddenItems.forEach((id) => {
+        const element = this.elRef.nativeElement.querySelector(`#${id}.e-menu-item`);
+        if (element) {
+          this.renderer.addClass(element, 'e-menu-hide');
+        }
+      });
     }
   }
 
   public handleClickContextMenu(args: MenuEventArgs) {
     this.selectedContextMenuId = args.item.id;
     const propertyText = (args.item as any).properties.text;
-    console.log("🚀 ~ SyncDiagramComponent ~ handleClickContextMenu ~ this.selectedContextMenuId:", this.selectedContextMenuId)
 
     switch (propertyText.toLowerCase()) {
       case "Delete".toLowerCase():
@@ -220,39 +228,39 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       this.diagramContextMenuService.addTextOnClick(this.selectedContextMenuId.toLowerCase(), this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("tocollection") && this.selectedContextMenuId.toLowerCase().includes("point")) {
-      // pointNodeToEntity("pointTo", "collection", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "collection", "Point To", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("toword") && this.selectedContextMenuId.toLowerCase().includes("point")) {
-      // pointNodeToEntity("pointTo", "word", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "word", "Point To", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("toanswer") && this.selectedContextMenuId.toLowerCase().includes("point")) {
-      // pointNodeToEntity("pointTo", "answer", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "answer", "Point To", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("toentity") && this.selectedContextMenuId.toLowerCase().includes("point") && this.selectedContextMenuId.toLowerCase().includes("word")) {
-      // pointNodeToEntity("pointTo", "word", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "word", "Point To", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("toentity") && this.selectedContextMenuId.toLowerCase().includes("point") && (!this.selectedContextMenuId.toLowerCase().includes("word"))) {
-      // pointNodeToEntity("pointTo", "entity", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "entity", "Point To", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("byentity") && this.selectedContextMenuId.toLowerCase().includes("define") && this.selectedContextMenuId.toLowerCase().includes("word")) {
-      // pointNodeToEntity("define", "word", "Defined by");
+      this.diagramContextMenuService.pointNodeToEntity("define", "word", "Defined by", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("byentity") && this.selectedContextMenuId.toLowerCase().includes("define") && (!this.selectedContextMenuId.toLowerCase().includes("word"))) {
-      // pointNodeToEntity("define", "entity", "Defined by");
+      this.diagramContextMenuService.pointNodeToEntity("define", "entity", "Defined by", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("identifyentity") && this.selectedContextMenuId.toLowerCase().includes("from") && this.selectedContextMenuId.toLowerCase().includes("word")) {
-      // pointNodeToEntity("define", "word", "Identifies");
+      this.diagramContextMenuService.pointNodeToEntity("define", "word", "Identifies", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("identifyentity") && this.selectedContextMenuId.toLowerCase().includes("from") && (!this.selectedContextMenuId.toLowerCase().includes("word"))) {
-      // pointNodeToEntity("define", "entity", "Identifies");
+      this.diagramContextMenuService.pointNodeToEntity("define", "entity", "Identifies", this.diagram);
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("identifywordinsentence")) {
@@ -264,35 +272,23 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
     }
 
     if (this.selectedContextMenuId.toLowerCase().includes("information") && this.selectedContextMenuId.toLowerCase().includes("point")) {
-      // pointNodeToEntity("pointTo", "information", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "information", "Point To", this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("groupofentities") && this.selectedContextMenuId.toLowerCase().includes("point")) {
-      // pointNodeToEntity("pointTo", "entities", "Point To");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "entities", "Point To", this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("entityidentifyentitybyword")) {
-      // pointNodeToEntity("pointTo", "word", "Identified by");
+      this.diagramContextMenuService.pointNodeToEntity("pointTo", "word", "Identified by", this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("entitydefinewordfromentity")) {
-      // pointNodeToEntity("define", "word", "Defined by");
-      console.log('run here');
+      this.diagramContextMenuService.pointNodeToEntity("define", "word", "Defined by", this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("addcommunicationholder")) {
       this.diagramContextMenuService.onAddCommHolder(this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("relate") || this.selectedContextMenuId.toLowerCase().includes("associate")) {
-      // relatePersonOperatingPrinciple(this.selectedContextMenuId.toLowerCase());
-      console.log('run here');
+      this.diagramContextMenuService.relatePersonOperatingPrinciple(this.selectedContextMenuId.toLowerCase(), this.diagram);
     }
-    //if (
-    // this.selectedContextMenuId.toLowerCase().includes("addword")
-    // ) {
-    //  funAddWordToDictionary(this.selectedContextMenuId.toLowerCase());
-    // }
-    // if (
-    //   this.selectedContextMenuId.toLowerCase().includes("addentity")
-    //) {
-    //  funAddEntityToCollection(this.selectedContextMenuId.toLowerCase());
-    // }
     const listIdClick = [
       "applicationaddsubtoapplication",
       "commresultaddsubapplicationresult",
@@ -311,10 +307,11 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       this.diagramContextMenuService.funCommunicationFunctionSub(this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("sendsignalred")) {
-      // sendSignal(args.item, "red");
+      this.diagramContextMenuService.sendSignal(args.item, "red", this.diagram);
     }
     if (this.selectedContextMenuId.toLowerCase().includes("sendsignalgreen")) {
-      // sendSignal(args.item, "green");
+      this.diagramContextMenuService.sendSignal(args.item, "green", this.diagram);
+
     }
     if (this.selectedContextMenuId.toLowerCase().includes("coverperson")) {
       this.diagramContextMenuService.coverPerson(this.diagram);
@@ -367,7 +364,6 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       this.handleInsertComponent(GroupPropertyComponent);
     }
     dropGrouped(args.element, args.target, false, this.diagram);
-    // console.log(this.diagram.saveDiagram())
   }
 
   propertyChange(data) {
@@ -401,7 +397,6 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
       selectedItemDivID = this.selectedNode?.id;
       selectedItemDivID = selectedItemDivID + SALT;
       const $wrapper = document.getElementById(selectedItemDivID)
-      // console.log(selectedItemDivID, $wrapper)
       let mqInput: any = $wrapper.querySelector("math-field");
       mqInput.executeCommand(['insert', operator]);
       // const updatedNode = this.selectedNode;

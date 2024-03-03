@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ConnectorConstraints } from '@syncfusion/ej2-angular-diagrams';
 import { menuItems } from 'src/app/features/modules/sync-content-detail/constants/diagram.constant';
-import { camelize, commLinkData, communicationData, drawShape, dropGrouped, getAnnotationAddPartToApplication, getTypeAddPartToApplication, otherData, personData, randomId } from 'src/app/utils/constants';
+import { camelize, commLabelData, commLinkData, communicationData, drawPortCircle, drawShape, drawShape0, dropGrouped, everyShape, getAnnotationAddPartToApplication, getItemById, getTypeAddPartToApplication, otherData, personData, randomId } from 'src/app/utils/constants';
 
 let nodeAppendData = {
   // Position of the node
@@ -403,7 +403,7 @@ export class DiagramContextMenuService {
     }
   
     if (!(id.includes("withperson"))) {
-      // findItem = {...getItemById(idFind)};
+      findItem = getItemById(idFind) ? {...getItemById(idFind)} : findItem;
       findItem.width = 150;
       findItem.height = 80;
     }
@@ -413,7 +413,7 @@ export class DiagramContextMenuService {
     findItem.offsetY = itemActive.offsetY + 300;
   
     findItem.id = findItem.id + randomId();
-    // drawPortCircle(findItem);
+    drawPortCircle(findItem);
     const itemPrinciple = diagram.add(findItem);
   
     if (id.includes("withperson")) {
@@ -424,28 +424,28 @@ export class DiagramContextMenuService {
       itemPrinciple.annotations[0].content = "Entity";
     }
   
-    // let findItem2 = {...getItemById(ellipseBasic)};
+    let findItem2 = {...getItemById(ellipseBasic)} as any;
   
-    // findItem2.offsetX = itemActive.offsetX + 400;
-    // findItem2.offsetY = itemActive.offsetY + 150;
-    // findItem2.id = findItem2.id + randomId();
-    // drawPortCircle(findItem2);
-    // const itemEllipseBasic = diagram.add(findItem2);
+    findItem2.offsetX = itemActive.offsetX + 400;
+    findItem2.offsetY = itemActive.offsetY + 150;
+    findItem2.id = findItem2.id + randomId();
+    drawPortCircle(findItem2);
+    const itemEllipseBasic = diagram.add(findItem2);
   
     if (id.includes("associate")) {
-      // itemEllipseBasic.annotations[0].content = "Associate";
+      itemEllipseBasic.annotations[0].content = "Associate";
       diagram.dataBind();
     }
-    // let findItem3 = {...getItemById("itemHidden")};
-    // findItem3.offsetX = itemActive.offsetX + 600;
-    // findItem3.offsetY = itemActive.offsetY + 145;
-    // findItem3.id = findItem3.id + randomId();
-    // const itemHidden = diagram.add(findItem3);
+    let findItem3 = {...getItemById("itemHidden")} as any;
+    findItem3.offsetX = itemActive.offsetX + 600;
+    findItem3.offsetY = itemActive.offsetY + 145;
+    findItem3.id = findItem3.id + randomId();
+    const itemHidden = diagram.add(findItem3);
     diagram.connectors = diagram.connectors.concat([
       {
         id: "connector" + randomId(),
         sourceID: itemActive.id,
-        // targetID: itemEllipseBasic.id,
+        targetID: itemEllipseBasic.id,
         type: "Orthogonal",
         segments: [
           {
@@ -460,7 +460,7 @@ export class DiagramContextMenuService {
       {
         id: "connector" + randomId(),
         sourceID: itemPrinciple.id,
-        // targetID: itemEllipseBasic.id,
+        targetID: itemEllipseBasic.id,
         type: "Orthogonal",
         segments: [
           {
@@ -474,10 +474,86 @@ export class DiagramContextMenuService {
       },
       {
         id: "connector" + randomId(),
-        // sourceID: itemEllipseBasic.id,
-        // targetID: itemHidden.id,
+        sourceID: itemEllipseBasic.id,
+        targetID: itemHidden.id,
         type: "Orthogonal",
       },
     ]);
+  }
+
+  public pointNodeToEntity(type, ent, textContent, diagram) {
+
+    let oldEdge = diagram.getObject(
+      diagram.getObject(diagram.selectedItems.properties.nodes[0].outEdges[0])
+        ?.targetWrapper?.nodeId
+    );
+  
+    let ktrahinhdang = diagram.selectedItems.properties.nodes[0].id;
+    let entity;
+  
+    if (ktrahinhdang.includes("wordCommunication")) {
+      entity = drawShape0((communicationData as any).find((a) => a.id === ent));
+    }
+  
+    if (!ktrahinhdang.includes("wordCommunication")) {
+      entity = drawShape((communicationData as any).find((a) => a.id === ent));
+    }
+  
+  
+    entity.id += randomId();
+    const itemSelected = diagram.selectedItems.properties.nodes[0];
+    let offsetXD = itemSelected.offsetX;
+    let offsetYD = itemSelected.offsetY;
+    let width = itemSelected.width < 250 ? 250 : itemSelected.width;
+    entity.offsetX = offsetXD + width;
+    entity.offsetY = offsetYD;
+    let addItem = diagram.add(entity);
+    if (ent == "word") {
+      addItem.annotations[0].content = "Entity";
+    }
+  
+    if (ent == "answer") {
+      addItem.annotations[0].content = "Answer";
+    }
+    if (oldEdge && ent !== "entities") {
+      dropGrouped(addItem, oldEdge, true, diagram);
+      // diagram.dataBind();
+      setTimeout(() => {
+        if (
+          oldEdge.parentId &&
+          diagram.getObject(diagram.getObject(oldEdge?.parentId).children[0])
+            .inEdges[0]
+        ) {
+          diagram.remove(
+            diagram.getObject(
+              diagram.getObject(diagram.getObject(oldEdge?.parentId).children[0])
+                .inEdges[0]
+            )
+          );
+        }
+      });
+    }
+  
+    if (oldEdge && ent === "entities") {
+      oldEdge.offsetY += 250;
+      diagram.dataBind();
+    }
+    let connector = drawShape(commLabelData.find((a) => a.id === type));
+    connector.id += randomId();
+    connector.annotations[0].content = textContent;
+    connector.sourceID = diagram.selectedItems.properties.nodes[0].id;
+    connector.targetID = addItem.id;
+    let connectorAdd = diagram.add(connector);
+  }
+
+  public sendSignal(node, type, diagram) {
+    // TODO: handle send signal
+    if (diagram.selectedItems.properties.nodes[0].outEdges[0]) {
+      let connector = diagram.getObject(
+        diagram.selectedItems.properties.nodes[0].outEdges[0]
+      );
+      let target = diagram.getObject(connector.properties.targetID);
+      let source = diagram.getObject(connector.properties.sourceID);
+    }
   }
 }
