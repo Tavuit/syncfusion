@@ -4,7 +4,9 @@ import {
   PaletteModel,
   SymbolPaletteModule,
   SymbolPreviewModel,
-  MarginModel
+  MarginModel,
+  NodeModel,
+  SymbolInfo
 } from '@syncfusion/ej2-angular-diagrams';
 import {ExpandMode} from '@syncfusion/ej2-angular-navigations';
 import {height, width} from '../constants/communication/common';
@@ -58,8 +60,22 @@ export class SyncSymbolPaletteComponent implements OnDestroy{
     this.expandMode = 'Single';
   }
 
-  public getSymbolInfo(symbol: any) {
-    return {fill: "white", fontSize: 10, description: {text: symbol?.['addInfo']?.['tooltip']}};
+  public getSymbolInfo(symbol: NodeModel): SymbolInfo {
+    return {
+      fit: true,
+      tooltip:
+        symbol.addInfo !== null && symbol.addInfo !== undefined
+          ? symbol?.addInfo?.['toolTip']
+          : symbol.id,
+      description: {
+        overflow: "Wrap",
+        text:
+          symbol?.addInfo !== null && symbol?.addInfo !== undefined
+            ? symbol?.addInfo?.['title']
+            : symbol.id,
+        wrap: "WrapWithOverflow",
+      },
+    };
   };
 
   ngOnDestroy() {
