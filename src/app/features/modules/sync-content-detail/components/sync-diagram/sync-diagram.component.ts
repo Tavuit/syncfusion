@@ -144,8 +144,8 @@ export class SyncDiagramComponent implements OnInit, OnDestroy, AfterViewInit {
             arr.push(item.id);
           }
           return arr;
-        }, [])
-        .concat("baseCopy", "basePaste", "baseCut", "baseEdit", "baseSelect");
+        }, []).concat("baseCopy", "basePaste", "baseCut", "baseEdit", "baseSelect");
+        
       args.hiddenItems.forEach((id) => {
         const element = this.elRef.nativeElement.querySelector(`#${id}.e-menu-item`);
         if (element) {
