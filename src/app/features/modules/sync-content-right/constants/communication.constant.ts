@@ -297,5 +297,3 @@ export const COMM_PROJECT_MODEL_MAP = CTreeViewDataComm.reduce((prev, curr) => {
     [curr.enums]: curr,
   };
 }, {});
-
-console.log(COMM_PROJECT_MODEL_MAP);
