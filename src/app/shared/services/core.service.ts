@@ -56,6 +56,7 @@ export class CoreService {
   }
 
   public setModel(model: TDiagramModel): void {
+    this.saveCurrentDiagram();
     this._model.next(model);
   }
 
@@ -146,5 +147,23 @@ export class CoreService {
       this._currentModel.value,
       this.getDiagramModelByType(this._currentModel.value)
     );
+  }
+
+  removeDiagramModel(currentDomain: EDomain, currentDiagram: EDiagramModel) {
+    delete this.diagramStore[currentDiagram];
+    const domainDiagramProject = this._projectDiagramModel.getValue()[currentDomain];
+    const currentIndex = domainDiagramProject.findIndex(projectDiagram => projectDiagram.LABEL == currentDiagram);
+    const leftIndex = currentIndex - 1;
+    const rightIndex = currentIndex + 1;
+    const leftModel = domainDiagramProject[leftIndex]?.LABEL;
+    const rightModel = domainDiagramProject[rightIndex]?.LABEL;
+    const newProjectDiagramModel = {
+      ...this._projectDiagramModel.getValue(),
+      [currentDomain]: domainDiagramProject.filter(projectDiagram => projectDiagram.LABEL !== currentDiagram)
+    }
+    this._projectDiagramModel.next(
+      newProjectDiagramModel
+    );
+    this.setCurrentModel(leftModel || rightModel)
   }
 }

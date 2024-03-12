@@ -42,6 +42,8 @@ export class SyncContentDetailComponent implements OnInit, OnDestroy {
   public currentDiagramModel: TDiagramModel;
   public currentModelDiagramList: IDiagramModel[];
   selectedDiagramModel: IDiagramModel;
+  public currentDomain: EDomain;
+  currentProjectDiagramModel: EDiagramModel;
   constructor(
     private diagramService: DiagramService,
     private coreService: CoreService
@@ -53,6 +55,7 @@ export class SyncContentDetailComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this._destroyed))
       .pipe(distinctUntilChanged())
       .subscribe(domain => {
+        this.currentDomain = domain;
         if (domain === EDomain.COMMUNICATION) {
           this.coreService.setCurrentModel(
             EDiagramModel.COMM_MAIN_PROJECT_MODEL
@@ -83,6 +86,13 @@ export class SyncContentDetailComponent implements OnInit, OnDestroy {
         this.selectedDiagramModel = rs;
         this.diagramService.setDiagram(rs?.DATA as any);
       });
+
+    this.coreService
+      .getCurrentModel()
+      .pipe(takeUntil(this._destroyed))
+      .subscribe(rs => {
+        this.currentProjectDiagramModel = rs;
+      });
   }
 
   openPage(data: IDiagramModel) {
@@ -95,6 +105,16 @@ export class SyncContentDetailComponent implements OnInit, OnDestroy {
 
   closePage(diagramModelType: IDiagramModel) {
     //Todo handle check logic when close page
+    if (this.currentModelDiagramList.length === 1) {
+      alert('Cannot close!!\nAt least one pages need to be open.');
+      return;
+    } else {
+      //Remove tab;
+      this.coreService.removeDiagramModel(
+        this.currentDomain,
+        diagramModelType.LABEL
+      );
+    }
   }
 
   public compareFunc(a, b) {
