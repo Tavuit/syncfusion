@@ -11,8 +11,8 @@ export class SymbolPaletteService {
   public transformSymbolPalette(symbolElement: NodeListOf<Element>) {
     if (symbolElement?.length) {
       for (let i = 0; i < symbolElement.length; i++) {
-        let titleText = symbolElement[i].querySelector(':scope > g > text');
-        let toolTip = symbolElement[i].parentElement.getAttribute('title');
+        let titleText = symbolElement?.[i]?.querySelector(':scope > g > text');
+        let toolTip = symbolElement?.[i]?.parentElement.getAttribute('title');
         let native_element = symbolElement[i].querySelector(':scope > g > g');
 
         let sizeRect = native_element.querySelector('rect');
@@ -49,8 +49,8 @@ export class SymbolPaletteService {
         native_element.setAttribute('transform', translate);
 
         // Translating Text
-        let textSpan = titleText.querySelector('tspan');
-        let text = textSpan.innerHTML;
+        let textSpan = titleText?.querySelector('tspan');
+        let text = textSpan?.innerHTML;
         let foreignElement = document.createElementNS(
           'http://www.w3.org/2000/svg',
           'foreignObject'
@@ -84,9 +84,9 @@ export class SymbolPaletteService {
         toolTipDiv.style.lineHeight = '13px';
         toolTipDiv.innerHTML = toolTip;
         toolTipElement.appendChild(toolTipDiv);
-        titleText.parentElement.appendChild(foreignElement);
-        titleText.parentElement.appendChild(toolTipElement);
-        titleText.remove();
+        titleText?.parentElement.appendChild(foreignElement);
+        titleText?.parentElement.appendChild(toolTipElement);
+        titleText?.remove();
       }
     }
   };
@@ -148,6 +148,7 @@ export class SymbolPaletteService {
         for (let j = 0; j < textAttributes.length; j++) {
           textElement.setAttribute(textAttributes[j].name, textAttributes[j].value);
         }
+        textElement.style.transform = "translate(80px,10px)";
         textElement.appendChild(title);
         // const translate = 'translate(80, 30.5) rotate(0deg, 110.5, 40.5)';
         // transform: rotate(0deg, 110.5, 40.5) translate(0.5, 30.5);

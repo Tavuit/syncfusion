@@ -41,7 +41,7 @@ export class SyncSymbolPaletteComponent implements OnDestroy{
     top: 15,
     bottom: 15
   };
-
+  private openedPlatteIds = [];
   constructor(
     private coreService: CoreService,
     private symbolPaletteService: SymbolPaletteService,
@@ -65,13 +65,18 @@ export class SyncSymbolPaletteComponent implements OnDestroy{
 
   public paletteExpanding(event: IPaletteExpandArgs) {
     if (event.isExpanded) {
-      const equation = event.element.querySelector(`#${event.palette.id || ''}`);
-      const symbolDraggable = equation.querySelectorAll(
-        '.e-symbol-draggable > svg'
-      );
-      const canvasSymbols = equation.querySelectorAll(".e-symbol-draggable > canvas");
-      this.symbolPaletteService.transformSymbolPalette(symbolDraggable);
-      this.symbolPaletteService.convertCanvasToSvg(canvasSymbols);
+      if (this.openedPlatteIds.includes(event.palette.id)) {
+        return;
+      } else {
+        this.openedPlatteIds.push(event.palette.id);
+        const equation = event.element.querySelector(`#${event.palette.id || ''}`);
+        const symbolDraggable = equation.querySelectorAll(
+          '.e-symbol-draggable > svg'
+        );
+        const canvasSymbols = equation.querySelectorAll(".e-symbol-draggable > canvas");
+        this.symbolPaletteService.transformSymbolPalette(symbolDraggable);
+        this.symbolPaletteService.convertCanvasToSvg(canvasSymbols);
+      }
     }
   }
 
