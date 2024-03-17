@@ -12,7 +12,7 @@ import {
 import {ExpandMode} from '@syncfusion/ej2-angular-navigations';
 import {height, width} from '../constants/communication/common';
 import { CoreService } from 'src/app/shared/services/core.service';
-import {map, Subject, takeUntil} from "rxjs";
+import {map, Subject, takeUntil, tap} from "rxjs";
 import { EDomain } from 'src/app/shared/enums/core.enum';
 import { palettesCommunication, palettesTheory } from '../constants/symbol-palette.constant';
 import { SymbolPaletteService } from 'src/app/features/modules/sync-content-left/services/symbol-palette.service';
@@ -46,8 +46,16 @@ export class SyncSymbolPaletteComponent implements OnDestroy{
     private coreService: CoreService,
     private symbolPaletteService: SymbolPaletteService,
   ) {
+    
+  }
+
+  ngOnInit(): void {
+    this.expandMode = 'Single';
     this.coreService.getDomain()
       .pipe(
+        tap(() => {
+          this.openedPlatteIds = [];
+        }),
         map((domain: EDomain) => {
           if (domain === EDomain.COMMUNICATION) {
             return palettesCommunication;
@@ -57,10 +65,6 @@ export class SyncSymbolPaletteComponent implements OnDestroy{
         takeUntil(this._destroyed)
       )
       .subscribe((palettes)=> this.palettes = palettes)
-  }
-
-  ngOnInit(): void {
-    this.expandMode = 'Single';
   }
 
   public paletteExpanding(event: IPaletteExpandArgs) {

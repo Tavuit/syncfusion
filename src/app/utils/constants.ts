@@ -1110,7 +1110,7 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
         },
 
         height: 108,
-        width: 414,
+        width: 300,
         ports: [
           {
             id: 'left',
@@ -1169,7 +1169,7 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
           fontSize: 10,
         },
         height: 108,
-        width: 414,
+        width: 300,
         constraints: NodeConstraints.Default | NodeConstraints.Rotate,
       };
     case 'CommunicationGrouped2':
@@ -1563,7 +1563,7 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
           },
         ],
         height: 90,
-        width: 500,
+        width: 280,
         constraints: NodeConstraints.Default | NodeConstraints.Rotate,
       };
     case 'CylinderArrow':
@@ -1600,8 +1600,8 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
             content: annotation,
           },
         ],
-        height: 50,
-        width: 550,
+        height: 0.001,
+        width: 0.003,
         constraints: NodeConstraints.Default | NodeConstraints.Rotate,
       };
     case 'Arrow':
@@ -2601,7 +2601,7 @@ export function getShapeByType(type, id: string, addInfo: Object, annotation) {
           },
         ],
         height: 150,
-        width: 700,
+        width: 400,
       };
     case 'squareemptycontainer':
       return {
