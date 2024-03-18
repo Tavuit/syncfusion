@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { everyShape } from 'src/app/utils/constants';
+import { everyShape, personData } from 'src/app/utils/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +11,14 @@ export class SymbolPaletteService {
   public transformSymbolPalette(symbolElement: NodeListOf<Element>) {
     if (symbolElement?.length) {
       for (let i = 0; i < symbolElement.length; i++) {
+        const findNode = everyShape.find(it => it.id === symbolElement[i].id);
+        const svgElement = symbolElement[i];
+        svgElement.setAttribute('style', 'pointer-events: none; transform-origin: 0px 0px; overflow: hidden; margin-left: 0px; margin-top: 15px;');
         let titleText = symbolElement?.[i]?.querySelector(':scope > g > text');
         let toolTip = symbolElement?.[i]?.parentElement.getAttribute('title');
+        if (findNode) {
+          toolTip = findNode.addInfo?.[0]?.toolTip || (findNode.addInfo as any)?.toolTip || '';
+        }
         let native_element = symbolElement[i].querySelector(':scope > g > g');
 
         let sizeRect = native_element.querySelector('rect');
@@ -34,7 +40,6 @@ export class SymbolPaletteService {
 
         let tx = -sx * 60;
         let ty = -sy * 2 + 5;
-
         let transform = native_element.getAttribute('transform');
         let arr = transform?.split(' ') || [];
         transform = '';
@@ -44,7 +49,6 @@ export class SymbolPaletteService {
           }
         }
         transform += `translate(${tx}, ${ty}) scale(${sx}, ${sy})`;
-        // native_element.setAttribute('transform', transform);
         const translate = 'translate(-65, 0)';
         native_element.setAttribute('transform', translate);
 
@@ -55,7 +59,7 @@ export class SymbolPaletteService {
           'http://www.w3.org/2000/svg',
           'foreignObject'
         );
-        foreignElement.setAttribute('x', '100');
+        foreignElement.setAttribute('x', '70');
         foreignElement.setAttribute('y', '5');
         foreignElement.setAttribute('height', '26px');
         foreignElement.setAttribute('width', '200px');
