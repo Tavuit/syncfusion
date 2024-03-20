@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { everyShape, personData } from 'src/app/utils/constants';
+import { allShapes } from 'src/app/utils/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +11,13 @@ export class SymbolPaletteService {
   public transformSymbolPalette(symbolElement: NodeListOf<Element>) {
     if (symbolElement?.length) {
       for (let i = 0; i < symbolElement.length; i++) {
-        const findNode = everyShape.find(it => it.id === symbolElement[i].id);
+        const findNode = allShapes.find(it => it.id === symbolElement[i].id);
         const svgElement = symbolElement[i];
-        svgElement.setAttribute('style', 'pointer-events: none; transform-origin: 0px 0px; overflow: hidden; margin-left: 0px; margin-top: 15px;');
+        svgElement.setAttribute('style', 'pointer-events: none; transform-origin: 0px 0px; overflow: hidden; margin-left: 0px; margin-top: 15px; width: 250px; height: 70px');
         let titleText = symbolElement?.[i]?.querySelector(':scope > g > text');
         let toolTip = symbolElement?.[i]?.parentElement.getAttribute('title');
         if (findNode) {
-          toolTip = findNode.addInfo?.[0]?.toolTip || (findNode.addInfo as any)?.toolTip || '';
+          toolTip = findNode.toolTip || '';
         }
         let native_element = symbolElement[i].querySelector(':scope > g > g');
 
@@ -59,7 +59,7 @@ export class SymbolPaletteService {
           'http://www.w3.org/2000/svg',
           'foreignObject'
         );
-        foreignElement.setAttribute('x', '70');
+        foreignElement.setAttribute('x', '80');
         foreignElement.setAttribute('y', '5');
         foreignElement.setAttribute('height', '26px');
         foreignElement.setAttribute('width', '200px');
@@ -67,9 +67,9 @@ export class SymbolPaletteService {
         let titleDiv = document.createElement('div');
         titleDiv.style.height = '20px';
         titleDiv.style.width = '180px';
-        titleDiv.style.fontSize = '12px';
+        titleDiv.style.fontSize = '11px';
         titleDiv.style.fontWeight = 'bold';
-        titleDiv.style.lineHeight = '13px';
+        titleDiv.style.lineHeight = '12px';
         titleDiv.innerHTML = text;
         foreignElement.appendChild(titleDiv);
 
@@ -77,15 +77,15 @@ export class SymbolPaletteService {
           'http://www.w3.org/2000/svg',
           'foreignObject'
         );
-        toolTipElement.setAttribute('x', '70');
+        toolTipElement.setAttribute('x', '80');
         toolTipElement.setAttribute('y', '35');
         toolTipElement.setAttribute('width', '200px');
         toolTipElement.setAttribute('height', '40px');
         let toolTipDiv = document.createElement('div');
         toolTipDiv.style.height = '40px';
         toolTipDiv.style.width = '200px';
-        toolTipDiv.style.fontSize = '12px';
-        toolTipDiv.style.lineHeight = '13px';
+        toolTipDiv.style.fontSize = '11px';
+        toolTipDiv.style.lineHeight = '12px';
         toolTipDiv.innerHTML = toolTip;
         toolTipElement.appendChild(toolTipDiv);
         titleText?.parentElement.appendChild(foreignElement);
@@ -185,7 +185,7 @@ export class SymbolPaletteService {
   }
 
   private getTitleById(id) {
-    let shape = everyShape.find((x) => x.id === id);
+    let shape = allShapes.find((x) => x.id === id);
     if (shape !== undefined) {
       return shape.addInfo[0].title;
     } else {
