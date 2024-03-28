@@ -153,3 +153,7 @@ body {
     display: none;
   }
 }
+
+math-field::part(menu-toggle) {
+  display: none;
+}
